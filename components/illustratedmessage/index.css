@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
 	--spectrum-illustrated-message-illustration-to-content: var(--spectrum-spacing-200);
 	--spectrum-illustrated-message-description-to-action: var(--spectrum-spacing-300);
 	/* @passthrough -- settings for nested button group */
-	--mod-buttongroup-justify-content: center;
+	--spectrum-buttongroup-justify-content: center;
 
 	/* Illustration */
 	--spectrum-illustrated-message-illustration-color: var(--spectrum-neutral-content-color-default);
@@ -74,57 +74,55 @@ governing permissions and limitations under the License.
 
 .spectrum-IllustratedMessage {
 	block-size: 100%;
-	display: var(--mod-illustrated-message-display, grid);
+	display: grid;
 	grid-template-areas:
 		". illustration ."
 		"body body body";
 	text-align: center;
-	pointer-events: var(--mod-illustrated-message-pointer-events, auto);
-	max-inline-size: var(--mod-illustrated-message-vertical-maximum-width, var(--spectrum-illustrated-message-vertical-maximum-width));
+	pointer-events: auto;
+	max-inline-size: var(--spectrum-illustrated-message-vertical-maximum-width);
 }
 
 .spectrum-IllustratedMessage-illustration {
-	margin-block-end: var(--mod-illustrated-message-illustration-to-heading, var(--spectrum-illustrated-message-illustration-to-heading));
-	color: var(--highcontrast-illustrated-message-illustration-color, var(--mod-illustrated-message-illustration-color, var(--spectrum-illustrated-message-illustration-color)));
+	margin-block-end: var(--spectrum-illustrated-message-illustration-to-heading);
+	color: var(--spectrum-illustrated-message-illustration-color);
 	fill: currentColor;
 	stroke: currentColor;
-	block-size: var(--mod-illustrated-message-illustration-block-size, var(--mod-illustrated-message-illustration-size, var(--spectrum-illustrated-message-illustration-size)));
-	inline-size: var(--mod-illustrated-message-illustrated-inline-size, var(--mod-illustrated-message-illustration-size, var(--spectrum-illustrated-message-illustration-size)));
+	block-size: var(--spectrum-illustrated-message-illustration-size);
+	inline-size: var(--spectrum-illustrated-message-illustration-size);
 	grid-area: illustration;
 }
 
 .spectrum-IllustratedMessage-heading {
-	font-family: var(--mod-illustrated-message-title-font-family, var(--spectrum-illustrated-message-title-font-family));
-	font-weight: var(--mod-illustrated-message-title-font-weight, var(--spectrum-illustrated-message-title-font-weight));
-	font-style: var(--mod-illustrated-message-title-font-style, var(--spectrum-illustrated-message-title-font-style));
-	font-size: var(--mod-illustrated-message-title-font-size, var(--spectrum-illustrated-message-title-font-size));
-	line-height: var(--mod-illustrated-message-title-line-height, var(--spectrum-illustrated-message-title-line-height));
+	font-family: var(--spectrum-illustrated-message-title-font-family);
+	font-weight: var(--spectrum-illustrated-message-title-font-weight);
+	font-style: var(--spectrum-illustrated-message-title-font-style);
+	font-size: var(--spectrum-illustrated-message-title-font-size);
+	line-height: var(--spectrum-illustrated-message-title-line-height);
 
-	color: var(--mod-illustrated-message-title-color, var(--spectrum-illustrated-message-title-color));
+	color: var(--spectrum-illustrated-message-title-color);
 
 	margin-block-start: 0;
-	margin-block-end: var(--mod-illustrated-message-heading-to-description, var(--spectrum-illustrated-message-heading-to-description));
+	margin-block-end: var(--spectrum-illustrated-message-heading-to-description);
 }
 
 .spectrum-IllustratedMessage-description {
-	position: var(--mod-illustrated-message-description-position);
-	z-index: var(--mod-illustrated-message-description-z-index);
-	pointer-events: var(--mod-illustrated-message-description-pointer-events, auto);
+	pointer-events: auto;
 
-	font-family: var(--mod-illustrated-message-description-font-family, var(--spectrum-illustrated-message-description-font-family));
-	font-weight: var(--mod-illustrated-message-description-font-weight, var(--spectrum-illustrated-message-description-font-weight));
-	font-style: var(--mod-illustrated-message-description-font-style, var(--spectrum-illustrated-message-description-font-style));
-	font-size: var(--mod-illustrated-message-description-font-size, var(--spectrum-illustrated-message-description-font-size));
-	line-height: var(--mod-illustrated-message-description-line-height, var(--spectrum-illustrated-message-description-line-height));
+	font-family: var(--spectrum-illustrated-message-description-font-family);
+	font-weight: var(--spectrum-illustrated-message-description-font-weight);
+	font-style: var(--spectrum-illustrated-message-description-font-style);
+	font-size: var(--spectrum-illustrated-message-description-font-size);
+	line-height: var(--spectrum-illustrated-message-description-line-height);
 
-	color: var(--mod-illustrated-message-description-color, var(--spectrum-illustrated-message-description-color));
+	color: var(--spectrum-illustrated-message-description-color);
 
 	margin-block: 0;
 }
 
 .spectrum-IllustratedMessage--horizontal {
-	--mod-buttongroup-justify-content: flex-start;
-	max-inline-size: var(--mod-illustrated-message-horizontal-maximum-width, var(--spectrum-illustrated-message-horizontal-maximum-width));
+	--spectrum-buttongroup-justify-content: flex-start;
+	max-inline-size: var(--spectrum-illustrated-message-horizontal-maximum-width);
 	text-align: start;
 	gap: var(--spectrum-illustrated-message-illustration-to-content);
 	grid-template-areas: "illustration body";
@@ -136,7 +134,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-IllustratedMessage-actions {
-	margin-block-start: var(--mod-illustrated-message-description-to-action, var(--spectrum-illustrated-message-description-to-action));
+	margin-block-start: var(--spectrum-illustrated-message-description-to-action);
 }
 
 .spectrum-IllustratedMessage-content {
@@ -144,7 +142,7 @@ governing permissions and limitations under the License.
 }
 
 @media (forced-colors: active) {
-	.spectrum-IllustratedMessage {
-		--highcontrast-illustrated-message-illustration-color: CanvasText;
+	.spectrum-IllustratedMessage-illustration {
+		color: CanvasText;
 	}
 }

@@ -13,37 +13,42 @@
 
 /* @passthrough start */
 .spectrum-Meter {
-	--mod-progressbar-max-size: var(--mod-meter-max-width, var(--spectrum-meter-maximum-width));
-	--mod-progressbar-min-size: var(--mod-meter-min-width, var(--spectrum-meter-minimum-width));
+	--spectrum-progressbar-max-size: var(--spectrum-meter-maximum-width);
+	--spectrum-progressbar-min-size: var(--spectrum-meter-minimum-width);
 	--spectrum-meter-help-text-to-progress-bar: var(--spectrum-spacing-75);
-	--mod-progressbar-thickness: var(--spectrum-meter-thickness-medium);
+	--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-medium);
 
 	&.spectrum-Meter--sizeS {
-		--mod-progressbar-thickness: var(--spectrum-meter-thickness-small);
+		--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-small);
 	}
 
 	&.spectrum-Meter--sizeL {
-		--mod-progressbar-thickness: var(--spectrum-meter-thickness-large);
+		--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-large);
 	}
 
 	&.spectrum-Meter--sizeXL {
-		--mod-progressbar-thickness: var(--spectrum-meter-thickness-extra-large);
+		--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-extra-large);
 	}
 
 	&.is-positive {
-		--mod-progressbar-fill-color: var(--spectrum-positive-visual-color);
+		/* @passthrough start */
+		--spectrum-progressbar-fill-color: var(--spectrum-positive-visual-color);
+		/* @passthrough end */
 	}
 
 	&.is-notice {
-		--mod-progressbar-fill-color: var(--spectrum-notice-visual-color);
+		/* @passthrough start */
+		--spectrum-progressbar-fill-color: var(--spectrum-notice-visual-color);
+		/* @passthrough end */
 	}
 
 	&.is-negative {
-		--mod-progressbar-fill-color: var(--spectrum-negative-visual-color);
+		/* @passthrough start */
+		--spectrum-progressbar-fill-color: var(--spectrum-negative-visual-color);
+		/* @passthrough end */
 	}
 
 	.spectrum-ProgressBar-helptext {
-		margin-block-start: var(--mod-meter-help-text-to-progress-bar, var(--spectrum-meter-help-text-to-progress-bar));
+		margin-block-start: var(--spectrum-meter-help-text-to-progress-bar);
 	}
 }
-/* @passthrough end */

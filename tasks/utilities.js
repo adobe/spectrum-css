@@ -159,7 +159,7 @@ function validateComponentName(componentName) {
 }
 
 /**
- * This regex will find all the custom properties that start with --mod-
+ * This regex will find all the custom properties that start with the prefix
  * and are defined inside a var() function. The last capture group will
  * ignore any mod properties that are followed by a colon, to exclude
  * sub-component passthrough properties that should not be listed as mods.

@@ -11,18 +11,6 @@
     ".spectrum-ColorLoupe.is-open",
     ".spectrum-ColorLoupe:dir(rtl)"
   ],
-  "modifiers": [
-    "--mod-colorloupe-animation-distance",
-    "--mod-colorloupe-drop-shadow-blur",
-    "--mod-colorloupe-drop-shadow-color",
-    "--mod-colorloupe-drop-shadow-x",
-    "--mod-colorloupe-drop-shadow-y",
-    "--mod-colorloupe-inner-border-color",
-    "--mod-colorloupe-inner-border-width",
-    "--mod-colorloupe-offset",
-    "--mod-colorloupe-outer-border-color",
-    "--mod-colorloupe-outer-border-width"
-  ],
   "component": [
     "--spectrum-color-loupe-bottom-to-color-handle",
     "--spectrum-color-loupe-height",
@@ -59,5 +47,5 @@
     "--spectrum-picked-color"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-colorloupe-outer-border-color"]
+  "high-contrast": []
 }

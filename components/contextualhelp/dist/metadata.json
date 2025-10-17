@@ -8,25 +8,6 @@
     ".spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body",
     ".spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading"
   ],
-  "modifiers": [
-    "--mod-contextual-help-body-color",
-    "--mod-contextual-help-body-line-height",
-    "--mod-contextual-help-body-sans-serif-font-family",
-    "--mod-contextual-help-body-sans-serif-font-style",
-    "--mod-contextual-help-body-sans-serif-font-weight",
-    "--mod-contextual-help-body-size",
-    "--mod-contextual-help-content-spacing",
-    "--mod-contextual-help-heading-size",
-    "--mod-contextual-help-link-spacing",
-    "--mod-contextual-help-min-inline-size",
-    "--mod-contextual-help-padding",
-    "--mod-contextual-help-popover-maximum-width",
-    "--mod-contextual-help-title-color",
-    "--mod-contextual-help-title-font-style",
-    "--mod-contextual-help-title-font-weight",
-    "--mod-contextual-help-title-line-height",
-    "--mod-contextual-help-title-sans-serif-font-family"
-  ],
   "component": [
     "--spectrum-contextual-help-body-color",
     "--spectrum-contextual-help-body-line-height",
@@ -52,6 +33,8 @@
     "--spectrum-body-sans-serif-font-weight",
     "--spectrum-corner-radius-large-default",
     "--spectrum-line-height-200",
+    "--spectrum-popover-animation-distance",
+    "--spectrum-popover-corner-radius",
     "--spectrum-sans-font-family-stack",
     "--spectrum-spacing-100",
     "--spectrum-spacing-300",
@@ -61,10 +44,7 @@
     "--spectrum-title-sans-serif-font-style",
     "--spectrum-title-sans-serif-font-weight"
   ],
-  "passthroughs": [
-    "--mod-popover-animation-distance",
-    "--mod-popover-corner-radius"
-  ],
+  "passthroughs": [],
   "high-contrast": [
     "--highcontrast-contextual-help-body-color",
     "--highcontrast-contextual-help-title-color"
