@@ -1,7 +1,6 @@
 ---
-"@spectrum-css/accordion": major
-"@spectrum-css/actionbar": major
-"@spectrum-css/actiongroup": major
+"@spectrum-css/asset": major
+"@spectrum-css/assetcard": major
 ---
 
 This update removes `--mod-*` custom property hooks per SWC-1264, see also the RFC for extensible styling.
