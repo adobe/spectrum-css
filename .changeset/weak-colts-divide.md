@@ -7,6 +7,7 @@
 "@spectrum-css/badge": major
 "@spectrum-css/miller": major
 "@spectrum-css/well": major
+"@spectrum-css/page": major
 ---
 
 This update removes `--mod-*` custom property hooks per SWC-1264, see also the RFC for extensible styling. In addition, this update cleans up any component-level custom properties that did not rely on the CSS cascade to define the styles; this was done to reduce the number of custom properties that are defined at the component level and trim down the size of the CSS we are shipping to consumers.
