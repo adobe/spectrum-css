@@ -15,12 +15,12 @@
 import fs from "node:fs";
 import path from "node:path";
 
-import { processCSS } from "../../../tasks/component-builder.js";
-import { dirs } from "../../../tasks/utilities.js";
+import { processCSS } from "../../tasks/component-builder.js";
+import { dirs } from "../../tasks/utilities.js";
 
 import "colors";
 
-const bundleRoot = path.resolve(dirs.root, "tools", "bundle");
+const bundleRoot = path.resolve(dirs.root, "bundle");
 
 /**
  * Bundle all the components into a single CSS file

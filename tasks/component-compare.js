@@ -377,7 +377,7 @@ async function main(
 	const promises = [];
 	// Copy the bundled CSS to the output directory
 	const renderAssets = [
-		join(dirs.root, "tools", "bundle", "dist", "index.min.css"),
+		join(dirs.root, "bundle", "dist", "index.min.css"),
 		join(require.resolve("diff2html"), "..", "..", "bundles", "css", "diff2html.min.css"),
 		join(require.resolve("diff2html"), "..", "..", "bundles", "js", "diff2html.min.js"),
 	];

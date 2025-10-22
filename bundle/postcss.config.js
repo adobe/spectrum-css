@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-import { dirs } from "../../tasks/utilities.js";
+import { dirs } from "../tasks/utilities.js";
 
 /**
  * This config is used only to process the source files when created;

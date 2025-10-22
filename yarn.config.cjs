@@ -213,7 +213,7 @@ module.exports = defineConfig({
 		function validatePackageJson(workspace) {
 			const isRoot = workspace.cwd === ".";
 			const isToken = workspace.cwd === "tokens";
-			const isBundle = workspace.cwd === "tools/bundle";
+			const isBundle = workspace.cwd === "bundle";
 
 			/**
 			 * -------------- GLOBAL --------------

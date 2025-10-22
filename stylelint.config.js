@@ -16,12 +16,11 @@ module.exports = {
 	ignoreFiles: [
 		// Static utility assets
 		"tokens/custom-*/*.css",
-		"tools/generator/**/*.css",
 		// Compiled and generated files
 		"**/dist/**",
 		".storybook/storybook-static/**/*.css",
 		"**/*-generated.css",
-		"tools/bundle/src/*.css",
+		"bundle/src/*.css",
 		"**/node_modules/**",
 		// Test files
 		"plugins/*/expected/*.css",
@@ -221,7 +220,7 @@ module.exports = {
 		},
 		{
 			/* Allow "tree shaking" of unused custom properties in the bundle */
-			files: ["tools/bundle/**/*.css"],
+			files: ["bundle/**/*.css"],
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": [
 					true,

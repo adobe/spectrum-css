@@ -93,7 +93,7 @@ jobs:
           exitOnceUploaded: true
           onlyChanged: true
           traceChanged: true
-          untraced: ".github/* plugins/stylelint-*/* tools/* .changeset/*"
+          untraced: ".github/* plugins/stylelint-*/* bundle/* .changeset/*"
           autoAcceptChanges: "(main|spectrum-two)"
           # Lets VRT pass without running so as not to waste snapshots
           skip: ${{ inputs.skip }}

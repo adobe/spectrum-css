@@ -115,7 +115,7 @@ jobs:
                         - components/*/*.md
                         - plugins/*/*.md
                         - tokens/*.md
-                        - tools/*/*.md
+                        - bundle/*.md
                         - ui-icons/*.md
                       plugins:
                         - plugins/**/*
