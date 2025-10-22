@@ -13,14 +13,3 @@ Support is provided for the `240px` and `192px` sizes outlined in the design req
 The `forced-colors` media query has been moved to the bottom of the file consistent with our other component implementations.
 
 Stories, tests and documentation have been updated to be consistent with these changes.
-
-The following mods have been removed:
-
-```css
---mod-colorwheel-height
---mod-colorwheel-width
---mod-colorwheel-min-width
---mod-colorwheel-path-borders
---mod-colorwheel-colorarea-margin
---mod-colorwheel-border-width
-```

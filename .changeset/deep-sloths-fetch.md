@@ -16,9 +16,3 @@ The emphasized has changed from an `accent` background color to a `neutral` back
 `--spectrum-actionbar-spacing-label-to-action-group`
 `--spectrum-actionbar-spacing-action-group-edge`
 `--spectrum-actionbar-close-button-to-counter`
-
-#### New mods
-
-`--mod-actionbar-minimum-width`
-`--mod-actionbar-spacing-action-group-edge`
-`--mod-actionbar-spacing-label-to-action-group`

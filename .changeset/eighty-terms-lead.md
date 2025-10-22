@@ -12,24 +12,7 @@ The medium component variation is the default and a t-shirt size medium variatio
 
 A tooltip may be displayed to a user indicating whether interacting with the component will clear or edit the rating. A control and documentation example have been added.
 
-A rating may have a partially filled star. The width and fill of this star is controlled by adding `.is-partial` to the parent `span` with classes of `spectrum-Rating-icon` and `is-selected` and then setting `--mod-rating-icon-fill` to the necessary fill percentage (e.g. `50%`).
-
-##### New mods
-
-`--mod-rating-width`
-`--mod-rating-height`
-`--mod-rating-bottom-to-content-area`
-`--mod-rating-edge-to-content-area`
-`--mod-rating-top-to-content-area`
-`--mod-rating-icon-fill`
-
-##### Removed mods
-
-`--mod-rating-icon-spacing-vertical-top`
-`--mod-rating-icon-count`
-`--mod-rating-indicator-border-radius`
-`--mod-rating-indicator-height`
-`--mod-rating-icon-color-key-focus`
+A rating may have a partially filled star. The width and fill of this star is controlled by adding `.is-partial` to the parent `span` with classes of `spectrum-Rating-icon` and `is-selected` and then setting the fill to the necessary percentage (e.g. `50%`).
 
 ##### New custom properties
 

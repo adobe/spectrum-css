@@ -30,15 +30,3 @@ The light and no border variants have been removed. Individual swatches have a b
 `--spectrum-swatch-disabled-icon-border-opacity`
 `--spectrum-swatch-icon-color`
 `--spectrum-swatch-rectangle-width-multiplier`
-
-##### New mods
-
-`--mod-add-button-background`
-`--mod-add-button-background-down`
-`--mod-add-button-background-hover`
-`--mod-add-button-background-keyboard-focus`
-`--mod-corner-radius-full`
-`--mod-mixed-button-background`
-`--mod-swatchgroup-border-color`
-`--mod-swatch-border-color-rgb`
-`--mod-swatch-border-opacity`

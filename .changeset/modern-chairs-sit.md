@@ -13,11 +13,6 @@ Class names updated to match naming convention (remove hyphens and capitalize se
 `.spectrum-Dialog-header-content` > `.spectrum-Dialog-headerContent`
 `.spectrum-Dialog-footer-content` > `.spectrum-Dialog-footerContent`
 
-_New Mods_
-`--mod-takeover-dialog-grid-spacing`
-`--mod-takeover-dialog-spacing-header-content-gap`
-`--mod-takeover-dialog-title-font-size`
-
 #### Modal updates
 
 - Modal component now uses the updated margin token (`window-to-edge`) found in the takeover dialog design specs. This work also introduced `--spectrum-modal-takeover-window-to-edge`

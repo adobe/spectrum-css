@@ -46,30 +46,3 @@
 `--spectrum-slider-handle-large`
 `--spectrum-slider-handle-medium`
 `--spectrum-slider-handle-small`
-
-#### New mods
-
-`--mod-slider-editable-control-to-text-field`
-`--mod-slider-editable-field-inline-size`
-`--mod-slider-disabled-border-color`
-`--mod-slider-emphasized-tick-mark-color`
-`--mod-slider-emphasized-track-fill-color`
-`--mod-slider-inline-size`
-`--mod-slider-label-font-style`
-`--mod-slider-label-font-weight`
-`--mod-slider-ramp-track-fill-color`
-`--mod-slider-tick-mark-color-filled-track`
-`--mod-slider-track-height-medium`
-
-#### Removed mods
-
-`--mod-disabled-border-color`
-`--mod-sectrum-slider-ramp-handle-border-color-active`
-`--mod-slider-handle-border-width-down`
-`--mod-slider-handle-gap`
-`--mod-slider-ramp-handle-background-color`
-`--mod-slider-tick-handle-background-color`
-`--mod-slider-tick-mark-color-disabled`
-`--mod-slider-track-handleoffset`
-`--mod-slider-track-margin-offset`
-`--mod-slider-track-middle-handleoffset`

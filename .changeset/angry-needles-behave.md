@@ -15,7 +15,7 @@ Updates:
 `--spectrum-radio-text-font-weight`
 `--spectrum-radio-text-font-style`
 
-#### Modified tokens
+#### Updated tokens
 
 `--spectrum-radio-emphasized-accent-color`
 `--spectrum-radio-emphasized-accent-color-hover`

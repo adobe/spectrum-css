@@ -58,18 +58,6 @@ To use the bold treatment (which is reserved for high-attention alerts only), yo
 
 Because subtle and bold treatments draw a similar level of attention you should choose only one to use consistently within a single product.
 
-##### New mods
-
-`--mod-inlinealert-border-and-icon-color-neutral`
-`--mod-inlinealert-min-spacing-header-to-icon`
-`--mod-inlinealert-spacing-content-link-button`
-`--mod-inlinealert-spacing-header-content`
-
-##### Removed mods
-
-`--mod-inlinealert-spacing-header-content-button`
-`--mod-inlinealert-spacing-header-to-icon`
-
 ##### New custom properties
 
 `--spectrum-inlinealert-min-spacing-header-to-icon`

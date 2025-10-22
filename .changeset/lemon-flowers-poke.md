@@ -40,23 +40,3 @@ Dialog buttons may be displayed either horizontally or vertically.
 `--spectrum-alert-dialog-edge-to-content`
 `--spectrum-alert-dialog-heading-size`
 `--spectrum-alert-dialog-title-to-description`
-
-##### Removed mods
-
-`--mod-alert-dialog-body-font-size`
-`--mod-alert-dialog-description-to-buttons`
-`--mod-alert-dialog-divider-to-description`
-`--mod-alert-dialog-padding`
-`--mod-alert-dialog-title-to-divider`
-`--mod-alert-dialog-title-to-icon`
-
-##### New mods
-
-`--mod-alert-dialog-background-color`
-`--mod-alert-dialog-corner-radius`
-`--mod-alert-dialog-description-content-size`
-`--mod-alert-dialog-description-to-button-group`
-`--mod-alert-dialog-edge-to-content`
-`--mod-alert-dialog-heading-size`
-`--mod-alert-dialog-minimum-title-to-icon`
-`--mod-alert-dialog-title-to-description`

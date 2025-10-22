@@ -3,9 +3,9 @@
 "@spectrum-css/helptext": minor
 ---
 
-### Combobox S2 Migration
+### Combobox S2 migration
 
-#### New Changes
+#### New changes
 
 - Removed quiet styling variant
 - Updated corner radius to match S2 specifications
@@ -20,11 +20,3 @@
 `--spectrum-combobox-line-height-cjk`
 `--spectrum-combobox-spacing-alert-icon-to-text`
 `--spectrum-combobox-spacing-to-help-text`
-
-### New mods
-
-`--mod-combobox-line-height-cjk`
-`--mod-combobox-popover-animation-distance`
-`--mod-combobox-spacing-alert-icon-to-text`
-`--mod-combobox-spacing-to-help-text`
-`--mod-combobox-textfield-background-color`

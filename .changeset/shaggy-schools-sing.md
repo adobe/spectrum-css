@@ -2,12 +2,9 @@
 "@spectrum-css/search": major
 ---
 
-#### Spectrum 2 migration
+### Spectrum 2 search migration
 
 Search now uses Spectrum 2 tokens and specifications. The following items have been adjusted:
 
-- Quiet variant has been deprecated and code removed (including removal of the custom property `--mod-search-quiet-button-offset`).
+- Quiet variant has been deprecated and code removed.
 - Updates to colors, corner rounding, and spacing.
-- Custom property mod adjustments:
-  - Added `--mod-search-top-to-icon`.
-  - Removed `--mod-workflow-icon-size-100`.
