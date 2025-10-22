@@ -1,6 +1,7 @@
 ---
 "@spectrum-css/alertdialog": major
 "@spectrum-css/asset": major
+"@spectrum-css/assetcard": major
 "@spectrum-css/well": major
 ---
 
