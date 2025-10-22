@@ -40,7 +40,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["default", "subtle", "outline"],
+			options: ["subtle", "outline"],
 			control: "select",
 		},
 		variant: {
@@ -61,17 +61,15 @@ export default {
 				type: { summary: "string" },
 				category: "Advanced",
 			},
-			options: ["none", "fixed-inline-start", "fixed-inline-end", "fixed-block-start", "fixed-block-end"],
+			options: ["fixed-inline-start", "fixed-inline-end", "fixed-block-start", "fixed-block-end"],
 			control: "select",
 		},
 	},
 	args: {
 		rootClass: "spectrum-Badge",
 		size: "m",
-		style: "default",
 		variant: "neutral",
-		iconSet: "workflow",
-		fixed: "none"
+		iconSet: "workflow"
 	},
 	parameters: {
 		design: {

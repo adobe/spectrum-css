@@ -4,6 +4,7 @@
 "@spectrum-css/assetcard": major
 "@spectrum-css/assetlist": major
 "@spectrum-css/avatar": major
+"@spectrum-css/badge": major
 "@spectrum-css/miller": major
 "@spectrum-css/well": major
 ---

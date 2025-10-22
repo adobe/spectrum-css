@@ -15,7 +15,7 @@ export const Template = ({
 	iconName,
 	iconSet = "workflow",
 	variant = "neutral",
-	style = "default",
+	style,
 	fixed,
 	customStyles = {},
 	customClasses = [],
@@ -28,8 +28,8 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--style-${style}`]: style !== "default",
-				[`${rootClass}--${fixed}`]: typeof fixed !== "undefined" && fixed !== "none",
+				[`${rootClass}--${style}`]: typeof style !== "undefined",
+				[`${rootClass}--${fixed}`]: typeof fixed !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
