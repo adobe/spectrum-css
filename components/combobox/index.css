@@ -120,10 +120,6 @@
 	--spectrum-combobox-readonly-text-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-combobox-readonly-border-color-disabled: var(--spectrum-disabled-border-color);
 	--spectrum-combobox-readonly-input-border-color: var(--spectrum-combobox-border-color-default);
-
-	/* @passthroughs start -- settings for nested divider component */
-	--mod-divider-inline-minimum-size: auto;
-	/* @passthroughs end -- settings for nested divider component */
 }
 
 .spectrum-Combobox--sizeS {
@@ -187,6 +183,11 @@
 
 	.spectrum-Combobox-popover {
 		--mod-popover-animation-distance: var(--mod-combobox-popover-animation-distance);
+	}
+
+	.spectrum-Divider {
+		/* @passthroughs -- width for nested divider component */
+		--spectrum-divider-horizontal-minimum-width: auto;
 	}
 
 	&.is-readOnly {
