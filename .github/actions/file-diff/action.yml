@@ -31,5 +31,5 @@ outputs:
     total-size:
         description: "Total size of the files in bytes."
 runs:
-    using: "node20"
+    using: "node22"
     main: "index.js"
