@@ -20,7 +20,7 @@
 
 .spectrum-MillerColumns-item {
 	display: inline-block;
-	inline-size: var(--spectrum-field-width-large);
+	inline-size: var(--spectrum-field-default-width-large);
 	vertical-align: top;
 	outline: none;
 	margin: 0;
