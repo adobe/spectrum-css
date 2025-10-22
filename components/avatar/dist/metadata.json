@@ -25,28 +25,11 @@
     ".spectrum-Avatar.is-focused:not(.is-disabled):after",
     ".spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after"
   ],
-  "modifiers": [
-    "--mod-avatar-block-size",
-    "--mod-avatar-border-radius",
-    "--mod-avatar-color-opacity",
-    "--mod-avatar-color-opacity-disabled",
-    "--mod-avatar-focus-indicator-color",
-    "--mod-avatar-focus-indicator-gap",
-    "--mod-avatar-focus-indicator-thickness",
-    "--mod-avatar-inline-size"
-  ],
+  "modifiers": [],
   "component": [
     "--spectrum-avatar-block-size",
     "--spectrum-avatar-border-color",
-    "--spectrum-avatar-border-color-default",
-    "--spectrum-avatar-border-radius",
-    "--spectrum-avatar-border-thickness",
     "--spectrum-avatar-border-width",
-    "--spectrum-avatar-color-opacity",
-    "--spectrum-avatar-color-opacity-disabled",
-    "--spectrum-avatar-focus-indicator-color",
-    "--spectrum-avatar-focus-indicator-gap",
-    "--spectrum-avatar-focus-indicator-thickness",
     "--spectrum-avatar-inline-size",
     "--spectrum-avatar-opacity-disabled",
     "--spectrum-avatar-size-100",
@@ -73,5 +56,5 @@
     "--spectrum-focus-indicator-thickness"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-avatar-focus-indicator-color"]
+  "high-contrast": []
 }
