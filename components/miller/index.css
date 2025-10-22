@@ -15,21 +15,21 @@
 	overflow-x: auto;
 	white-space: nowrap;
 	user-select: none;
-	padding: var(--mod-millercolumns-padding, var(--spectrum-spacing-100)) 0;
+	padding: var(--spectrum-spacing-100) 0;
 }
 
 .spectrum-MillerColumns-item {
 	display: inline-block;
-	inline-size: var(--mod-millercolumns-inline-size, 272px);
+	inline-size: var(--spectrum-field-default-width-large);
 	vertical-align: top;
 	outline: none;
 	margin: 0;
 	padding: 0;
-	margin-inline-end: var(--mod-millercolumns-margin-inline-end, var(--spectrum-spacing-100));
+	margin-inline-end: var(--spectrum-spacing-100);
 	overflow: auto;
 	block-size: 100%;
 
 	&:first-child {
-		margin-inline-start: var(--mod-millercolumns-margin-inline-start, var(--spectrum-spacing-100));
+		margin-inline-start: var(--spectrum-spacing-100);
 	}
 }
