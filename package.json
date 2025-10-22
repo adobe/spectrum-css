@@ -29,6 +29,7 @@
 		"compare": "cross-env NODE_ENV=production yarn bundle && yarn component:compare",
 		"component:build": "node --no-warnings ./tasks/component-builder.js",
 		"component:compare": "node --no-warnings ./tasks/component-compare.js --tag next",
+		"component:remove-mods": "bash ./tasks/remove-modifiers.sh",
 		"component:report": "node --no-warnings ./tasks/component-reporter.js",
 		"dev": "cross-env NODE_ENV=development nx run storybook:build:docs",
 		"docs:report": "yarn report",
