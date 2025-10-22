@@ -7,6 +7,7 @@
     ".spectrum-Combobox .spectrum-Combobox-content",
     ".spectrum-Combobox .spectrum-Combobox-label",
     ".spectrum-Combobox .spectrum-Combobox-popover",
+    ".spectrum-Combobox .spectrum-Divider",
     ".spectrum-Combobox--sideLabel .spectrum-Combobox-content",
     ".spectrum-Combobox--sideLabel .spectrum-Combobox-helptext",
     ".spectrum-Combobox--sideLabel .spectrum-Combobox-label",
@@ -230,6 +231,7 @@
     "--spectrum-disabled-background-color",
     "--spectrum-disabled-border-color",
     "--spectrum-disabled-content-color",
+    "--spectrum-divider-horizontal-minimum-width",
     "--spectrum-field-label-to-component",
     "--spectrum-field-top-to-progress-circle-extra-large",
     "--spectrum-field-top-to-progress-circle-large",
@@ -271,7 +273,6 @@
     "--spectrum-workflow-icon-size-75"
   ],
   "passthroughs": [
-    "--mod-divider-inline-minimum-size",
     "--mod-picker-button-background-color",
     "--mod-picker-button-background-color-disabled",
     "--mod-picker-button-border-color",
