@@ -15,7 +15,7 @@ export default {
 			handles: ['click input[type="checkbox"]'],
 		},
 	},
-	tags: ['!dev'],
+	tags: ['!dev', 'migrated'],
 };
 
 const Checkbox = (args = {}, context = {}) => html`

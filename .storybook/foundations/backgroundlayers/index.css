@@ -1,0 +1,56 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+/* for use only in editing contexts */
+.spectrum-BackgroundLayers-edit-elevated {
+	--spectrum-backgroundlayers-shadow-horizontal: 0;
+	--spectrum-backgroundlayers-shadow-vertical: 0;
+	--spectrum-backgroundlayers-shadow-blur: 5px;
+	--spectrum-backgroundlayers-shadow-color: light-dark(var(--spectrum-gray-600), var(--spectrum-gray-100));
+
+	background-color: var(--spectrum-background-elevated-color);
+	box-shadow: var(--spectrum-backgroundlayers-shadow-horizontal) var(--spectrum-backgroundlayers-shadow-vertical) var(--spectrum-backgroundlayers-shadow-blur) var(--spectrum-backgroundlayers-shadow-color);
+}
+
+.spectrum-BackgroundLayers-edit-layer2 {
+	background-color: var(--spectrum-background-layer-2-color);
+	border: 2px solid rgb(180 180 180 / 25%);
+}
+
+.spectrum-BackgroundLayers-edit-layer1 {
+	background-color: var(--spectrum-background-layer-1-color);
+}
+
+.spectrum-BackgroundLayers-edit-pasteboard {
+	background-color: var(--spectrum-background-pasteboard-color);
+}
+
+/* only used in browsing contexts */
+.spectrum-BackgroundLayers-browse-elevated {
+	--spectrum-backgroundlayers-shadow-horizontal: 0;
+	--spectrum-backgroundlayers-shadow-vertical: 0;
+	--spectrum-backgroundlayers-shadow-blur: 5px;
+	--spectrum-backgroundlayers-shadow-color: light-dark(var(--spectrum-gray-600), var(--spectrum-gray-100));
+
+	background-color: var(--spectrum-background-elevated-color);
+	box-shadow: var(--spectrum-backgroundlayers-shadow-horizontal) var(--spectrum-backgroundlayers-shadow-vertical) var(--spectrum-backgroundlayers-shadow-blur) var(--spectrum-backgroundlayers-shadow-color);
+}
+
+.spectrum-BackgroundLayers-browse-layer1 {
+	background-color: var(--spectrum-background-layer-1-color);
+}
+
+.spectrum-BackgroundLayers-browse-base {
+	border: 2px solid rgb(180 180 180 / 25%);
+	background-color: var(--spectrum-background-base-color);
+}
