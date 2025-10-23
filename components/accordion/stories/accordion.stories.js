@@ -1,19 +1,21 @@
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { isQuiet, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { AccordionGroup } from "./accordion.test.js";
+import { AccordionGroup, testsContent as accordionContent, directActionsContent, longerContent } from "./accordion.test.js";
 import { Template } from "./template.js";
 
 /**
- * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
+ * The accordion element contains a list of items that can be expanded or collapsed to reveal
+ * additional content or information associated with each item. There can be zero expanded items,
+ * exactly one expanded item, or more than one item expanded at a time, depending on the
+ * configuration. This list of items is defined by child accordion item elements.
  *
- * ## Density options
- *
- * Accordion has three density options and requires that you specify one of the density types: compact, regular, or spacious.
+ * Accordion has three density options: regular (default), compact, or spacious. While all the
+ * densities maintain the same font size, compact density reduces vertical spacing between rows,
+ * while spacious density increases it.
  */
 export default {
 	title: "Accordion",
@@ -49,6 +51,46 @@ export default {
 			options: ["compact", "regular", "spacious"],
 			control: "select",
 		},
+		hasNoInlinePadding: {
+			name: "No inline padding styling",
+			description: "Displays accordion item headers without default inline padding.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: { type: "boolean" },
+		},
+		isQuiet,
+		hasActionButtons: {
+			name: "Has action buttons",
+			description: "Adds an action button to each accordion item header, in the direct actions section.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Direct actions",
+			},
+			control: { type: "boolean" },
+		},
+		actionButtonIconName: {
+			name: "Action button icon",
+			...(IconStories?.argTypes?.iconName ?? {}),
+			if: { arg: "hasActionButtons", truthy: true },
+			table: {
+				type: { summary: "string" },
+				category: "Direct actions",
+			},
+		},
+		hasSwitches: {
+			name: "Has switches",
+			description: "Adds a switch to each accordion item header, in the direct actions section.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Direct actions",
+			},
+			control: { type: "boolean" },
+		},
 	},
 	args: {
 		rootClass: "spectrum-Accordion",
@@ -56,6 +98,11 @@ export default {
 		density: "regular",
 		collapseAll: false,
 		disableAll: false,
+		isQuiet: false,
+		hasNoInlinePadding: false,
+		hasActionButtons: false,
+		actionButtonIconName: "Circle",
+		hasSwitches: false,
 	},
 	parameters: {
 		actions: {
@@ -68,101 +115,19 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
-/* Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions. */
-const content = new Map([
-	[
-		"Are any Adobe products free?",
-		{
-			content:
-				"Yes, Adobe offers free products like Acrobat Reader, Aero, Fill & Sign, Photoshop Express, and Adobe Scan. You can also use Creative Cloud Express, Fresco, and Lightroom Mobile for free, with the option of making in-app purchases.",
-			isDisabled: true,
-		},
-	],
-	[
-		"Are Adobe products worth it?",
-		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					"Adobe makes some of the most widely used software applications in the world, many of which are industry standard. Get started with free apps like Adobe Acrobat Reader, Aero, Fill & Sign, Photoshop Express, and Adobe Scan. Or consider Creative Cloud, with plans starting at just US$9.99/mo. Every Adobe Creative Cloud plan includes perks like free stock images and fonts, collaboration tools, and cloud storage as well as regular feature updates to deliver the latest technology.",
-					Link({
-						url: "https://www.adobe.com/creativecloud/plans.html",
-						text: "Learn more about Adobe Creative Cloud plans and pricing.",
-					}),
-				],
-			}),
-			isOpen: true,
-		},
-	],
-	[
-		"Which Adobe product is best for editing PDFs?",
-		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					"You can edit PDFs with Adobe Acrobat, which is available in two editions: Standard and Pro. Acrobat Standard provides basic tools to create, edit, and sign PDFs on Windows devices. Acrobat Pro is the complete PDF solution with tools to edit, convert, and sign PDFs across web, mobile, and tablet, as well as on Windows and macOS computers. If you'd like to try before you buy, you can get a free 7-day trial of Acrobat Pro.",
-					Link({
-						url: "https://www.adobe.com/acrobat.html",
-						text: "Learn more about Acrobat.",
-					}),
-				],
-			}),
-		},
-	],
-	[
-		"How many products does Adobe have?",
-		{
-			content:
-				"Adobe offers nearly 100 products. Get creative with industry-standard apps like Adobe Photoshop, Illustrator InDesign, and Lightroom. Create, edit, and sign PDFs with Adobe Acrobat and Acrobat Sign. And deliver exceptional customer experiences with our marketing and commerce apps such as Adobe Experience Manager, Campaign, and Target.",
-			isOpen: true,
-		},
-	],
-	[
-		"How much do Adobe products cost?",
-		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					"Creative Cloud plans start at US$9.99/mo. You can subscribe to specific Single App plans or get 20+ creative apps and services in the Creative Cloud All Apps plan.",
-					Link({
-						url: "https://www.adobe.com/creativecloud/plans.html",
-						text: "Explore Creative Cloud plans.",
-					}),
-				],
-			}),
-		},
-	],
-	[
-		"What are the most popular Adobe products?",
-		{
-			content:
-				"Adobe makes some of the most widely used software in the world, including popular apps like Acrobat Pro, Photoshop, Illustrator, InDesign, Lightroom, and Premiere Pro.",
-		},
-	],
-	[
-		"How can I get a student discount on Adobe products?",
-		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					`Students who provide a valid school-issued email address at purchase are eligible to save over 60% on Creative Cloud All Apps, which includes 20+ apps such as Photoshop, Illustrator, InDesign, Acrobat Pro, and more. ${Link(
-						{
-							url: "https://www.adobe.com/creativecloud/buy/students.html",
-							text: "Learn more about Creative Cloud for students.",
-						}
-					)}`,
-				],
-			}),
-		},
-	]
-]);
-
+/**
+ * The default accordion displays at medium size with a regular density.
+ */
 export const Default = AccordionGroup.bind({});
 Default.args = {
-	items: content,
+	items: accordionContent,
 };
 Default.parameters = {
 	chromatic: { disableSnapshot: false },
@@ -180,33 +145,129 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
+
+/**
+ * Accordion items have a default width for each size, but a custom width can also be set to any
+ * width that meets or exceeds the minimum width.
+ *
+ * This example also uses the body typography element with class `.spectrum-Body` for the
+ * accordion item's content. If using typography, the t-shirt size of the typography element
+ * may need to be adjusted to match the accordion item's font size. The body typography component
+ * shown here is a size "S," in contrast with the the accordion's "M" size.
+ */
+export const CustomWidth = AccordionGroup.bind({});
+CustomWidth.tags = ["!dev"];
+CustomWidth.storyName = "Custom width";
+CustomWidth.args = {
+	items: longerContent,
+	customStyles: {
+		"--spectrum-accordion-item-width": "auto",
+	},
+};
+CustomWidth.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The compact density has less vertical spacing between rows.
+ */
 export const Compact = Template.bind({});
 Compact.tags = ["!dev"];
 Compact.args = {
-	items: content,
+	items: accordionContent,
 	density: "compact",
 };
 Compact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Compact.storyName = "Density - Compact";
+Compact.storyName = "Density: Compact";
 
+/**
+ * The spacious density has more vertical spacing between rows.
+ */
 export const Spacious = Template.bind({});
 Spacious.tags = ["!dev"];
 Spacious.args = {
-	items: content,
+	items: accordionContent,
 	density: "spacious",
 };
 Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Spacious.storyName = "Density - Spacious";
+Spacious.storyName = "Density: Spacious";
 
+/**
+ * Direct actions within accordion items are supported. A quiet
+ * [action button](/?path=/docs/actionbutton--default), a
+ * [switch](/?path=/docs/switch--default), or both can be added to
+ * each accordion item header.
+ */
+export const DirectActions = Template.bind({});
+DirectActions.tags = ["!dev"];
+DirectActions.args = {
+	items: directActionsContent
+};
+DirectActions.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Individual accordion items can be disabled by applying the `.is-disabled` class to the
+ * `.spectrum-Accordion-item` element. This example also demonstrates the use of the disabled
+ * attribute on the heading button.
+ */
+export const Disabled = Template.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	items: accordionContent,
+	disableAll: true,
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The optional quiet style for accordion has no dividers between sections. This style works best
+ * when a clear layout (vertical stack, table, grid) makes it easy to see and understand because
+ * too many quiet components in a small space can be hard to differentiate. This can be applied by
+ * adding the `.spectrum-Accordion--quiet` class alongside the parent `.spectrum-Accordion` class.
+ */
+export const Quiet = Template.bind({});
+Quiet.tags = ["!dev"];
+Quiet.args = {
+	items: accordionContent,
+	isQuiet: true,
+};
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Implementations may choose to remove inline padding from the accordion item headers by adding
+ * the `.spectrum-Accordion--noInlinePadding` class alongside the parent `.spectrum-Accordion`
+ * class. Accordion item header padding will be removed, but the body text content will keep its
+ * own padding from the edge.
+ */
+export const NoInlinePadding = Template.bind({});
+NoInlinePadding.storyName = "No inline padding";
+NoInlinePadding.tags = ["!dev"];
+NoInlinePadding.args = {
+	items: accordionContent,
+	hasNoInlinePadding: true,
+};
+NoInlinePadding.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Each of the different sizes has varying font sizes, and varying vertical spacing between the
+ * rows. Medium is the default size.
+ */
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withBorder: false,
 	withHeading: false,
-	items: content,
+	items: accordionContent,
 	...args,
 }, context);
 Sizing.tags = ["!dev"];

@@ -8,16 +8,10 @@
 		"group:vite"
 	],
 	"labels": ["dependencies", "skip_vrt", "ready-for-review"],
-	"rangeStrategy": "bump",
 	"packageRules": [
 		{
-		"matchDatasources": ["npm"],
-		"minimumReleaseAge": "1 month"
-		},
-		{
-			"matchUpdateTypes": ["major"],
-			"matchBaseBranches": ["main"],
-			"enabled": false
+			"matchDatasources": ["npm"],
+			"minimumReleaseAge": "1 month"
 		},
 		{
 			"groupName": "storybook ecosystem",

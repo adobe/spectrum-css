@@ -1,9 +1,11 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { ContextualHelpGroup } from "./contextualhelp.test.js";
 import { Template } from "./template.js";
+
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Contextual help shows a user extra information in relation to another component or view.
@@ -31,61 +33,40 @@ export default {
 		iconName: {
 			name: "Icon",
 			type: { name: "string", required: true },
-			defaultValue: "Info",
+			defaultValue: "InfoCircle",
 			table: {
 				type: { summary: "string" },
 				category: "Component",
 				defaultValue: { summary: "Info" },
 			},
-			options: ["Info", "Help"],
+			options: ["InfoCircle", "HelpCircle"],
 			control: "select",
 		},
 		iconSet: { table: { disable: true } },
 		popoverPlacement: {
-			name: "Popover Placement",
-			type: { name: "string", required: true },
-			defaultValue: "bottom-start",
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-				defaultValue: { summary: "Info" },
-			},
-			options: [
-				"top",
-				"top-left",
-				"top-right",
-				"top-start",
-				"top-end",
-				"bottom",
-				"bottom-left",
-				"bottom-right",
-				"bottom-start",
-				"bottom-end",
-				"left",
-				"left-top",
-				"left-bottom",
-				"start",
-				"start-top",
-				"start-bottom",
-				"right",
-				"right-top",
-				"right-bottom",
-				"end",
-				"end-top",
-				"end-bottom",
-			],
-			control: "select",
+			...Popover.argTypes.position,
+			name: "Popover placement",
 		},
-		link: { table: { disable: true } },
+		link: {
+			name: "Has link",
+			type: { name: "boolean", required: false },
+			defaultValue: false,
+			table: {
+				summary: "boolean",
+				category: "Component",
+				defaultValue: { summary: false }
+			}
+		},
 	},
 	args: {
 		rootClass: "spectrum-ContextualHelp",
-		iconName: "Info",
+		iconName: "InfoCircle",
 		iconSet: "workflow",
 		popoverPlacement: "bottom-start",
+		link: false,
 		title: "Permission required",
 		body: "Your admin must grant you permission before you can create a new document. Please contact your admin for more information.",
-		customStyles: { "inline-size": "275px" },
+		customStyles: { "inline-size": "var(--spectrum-contextual-help-min-inline-size)" },
 	},
 	parameters: {
 		actions: {
@@ -97,12 +78,11 @@ export default {
 		},
 		packageJson,
 		metadata,
-		docs: {
-			story: {
-				height: "200px",
-			},
+		status: {
+			type: "migrated",
 		},
 	},
+	tags: ["migrated"]
 };
 
 /**
@@ -131,122 +111,33 @@ WithLink.parameters = {
 WithLink.storyName = "Default - info icon with link";
 
 /**
- * In order to further customize the contextual help popover, implementations can set `--mod-spectrum-contextual-help-popover-maximum-width` to their desired max width.
- */
-export const MaxWidthPopover = Template.bind({});
-MaxWidthPopover.tags = ["!dev"];
-MaxWidthPopover.args = {
-	customStyles: {
-		"inline-size": "275px",
-		"--mod-spectrum-contextual-help-popover-maximum-width": "180px",
-		"margin-bottom": "270px",
-	},
-};
-MaxWidthPopover.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "auto",
-		},
-	},
-};
-MaxWidthPopover.storyName = "Default - max width popover";
-
-/**
  * This is an example of the contextual help component within a popover with a placement of `top`. Read more about the 22 available placement positions in the [popover documentation](/docs/components-popover--docs).
  */
 export const TopPopover = Template.bind({});
 TopPopover.tags = ["!dev"];
 TopPopover.args = {
 	popoverPlacement: "top",
-	customStyles: {
-		"inline-size": "275px",
-		"margin-top": "170px",
-	},
 };
 TopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "auto",
-		},
-	},
 };
 TopPopover.storyName = "Default - top popover";
 
 /**
  * When displaying help or resources to learn more, the contextual help should use the help icon. The content in this variant provides more detailed, in-depth guidance about a task, UI element, tool or keyboard shortcuts.
+ *
+ * All variants and positions of the contextual help component can be configured with a help icon.
  */
 export const HelpDefault = Template.bind({});
 HelpDefault.tags = ["!dev"];
 HelpDefault.args = {
-	iconName: "Help",
+	iconName: "HelpCircle",
 	title: "Need help?",
 };
 HelpDefault.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 HelpDefault.storyName = "Help icon";
-
-export const HelpWithLink = Template.bind({});
-HelpWithLink.tags = ["!dev"];
-HelpWithLink.args = {
-	link: {
-		text: "Learn about permissions",
-		url: "#",
-	},
-	iconName: "Help",
-	title: "Need help?",
-	body: "Reach out to your admin for help regarding the document you are trying to create.",
-};
-HelpWithLink.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-HelpWithLink.storyName = "Help icon - with link";
-
-export const HelpTopPopover = Template.bind({});
-HelpTopPopover.tags = ["!dev"];
-HelpTopPopover.args = {
-	popoverPlacement: "top",
-	customStyles: {
-		"inline-size": "275px",
-		"margin-top": "170px",
-	},
-	title: "Need help?",
-	body: "Reach out to your admin for help regarding the document you are trying to create.",
-	iconName: "Help",
-};
-HelpTopPopover.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "auto",
-		},
-	},
-};
-HelpTopPopover.storyName = "Help icon - top popover";
-
-export const HelpMaxWidthPopover = Template.bind({});
-HelpMaxWidthPopover.tags = ["!dev"];
-HelpMaxWidthPopover.args = {
-	customStyles: {
-		"inline-size": "275px",
-		"--mod-spectrum-contextual-help-popover-maximum-width": "180px",
-		"margin-bottom": "270px",
-	},
-	title: "Need help?",
-	body: "Reach out to your admin for help regarding the document you are trying to create.",
-	iconName: "Help",
-};
-HelpMaxWidthPopover.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "auto",
-		},
-	},
-};
-HelpMaxWidthPopover.storyName = "Help icon - max width popover";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ContextualHelpGroup.bind({});

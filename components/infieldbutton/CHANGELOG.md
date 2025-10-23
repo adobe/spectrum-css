@@ -1,5 +1,68 @@
 # Change log
 
+## 7.0.0-next.3
+
+### Patch Changes
+
+📝 [#4114](https://github.com/adobe/spectrum-css/pull/4114) [`7061eee`](https://github.com/adobe/spectrum-css/commit/7061eee2ada0b64bb68e37f93329c57e8dba4586) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Remove unused key-focus and border mods. Note that border and key focus styles were previously removed in the migration to Spectrum 2, and the mod removals here do not have any visual impact to the infield button.
+
+Also updates transition to use `background-color` instead of `border-color`.
+
+Also fixes a flash bug in WHCM: when hovered, the infield button was flashing/blinking before changing to the appropriate hover color.
+
+## 7.0.0-next.2
+
+### Major Changes
+
+- [#3642](https://github.com/adobe/spectrum-css/pull/3642) [`646763a`](https://github.com/adobe/spectrum-css/commit/646763a9f7940b66def0329e3c4bae66e42d36b2) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### Spectrum 2 migration
+
+In-field buttons are used to represent actions within input fields. They're currently used inside number field. This component has updated colors, corner radius, and icons compared to the Spectrum 1 version. The "Error" and "Key-focus" variants have been removed, since this now utilizes those states from the parent component.
+
+The position styles and controls have also been removed now that there's a consistent corner radius.
+
+##### Removed mods
+
+Due to deprecation of the position variants in the infield button, some spacing and border radius mods have been removed.
+
+`--mod-infield-button-inner-edge-to-fill`
+`--mod-infield-button-stacked-border-radius-reset`
+`--mod-infield-button-stacked-bottom-border-block-end-width`
+`--mod-infield-button-stacked-bottom-border-radius-end-end`
+`--mod-infield-button-stacked-bottom-border-radius-end-start`
+`--mod-infield-button-stacked-fill-padding-inline`
+`--mod-infield-button-stacked-fill-padding-inner`
+
+##### New tokens
+
+These new tokens are the inline variant & stepper (number field) use case. The padding changes here.
+
+`--spectrum-in-field-button-side-edge-to-fill-small`
+`--spectrum-in-field-button-side-edge-to-fill-medium`
+`--spectrum-in-field-button-side-edge-to-fill-large`
+`--spectrum-in-field-button-side-edge-to-fill-extra-large`
+`--spectrum-field-edge-to-icon-75`
+`--spectrum-field-edge-to-icon-100`
+`--spectrum-field-edge-to-icon-200`
+`--spectrum-field-edge-to-icon-300`
+
+## 7.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 6.2.0
 
 ### Minor Changes
@@ -12,8 +75,11 @@ Ensure accurate exports are present for each component. Specifically, adding `th
 
 ### Patch Changes
 
-- [#3615](https://github.com/adobe/spectrum-css/pull/3615) [`f09c84a`](https://github.com/adobe/spectrum-css/commit/f09c84ae9922d67b6fe237d693afee0fab53fa67) Thanks [@Rajdeepc](https://github.com/Rajdeepc)! - ### Infield button fast follows
-  - Updated infield button disabled border color to use `--spectrum-gray-300` for spectrum-two theme and `--spectrum-gray-200` for other themes.
+- [#3615](https://github.com/adobe/spectrum-css/pull/3615) [`f09c84a`](https://github.com/adobe/spectrum-css/commit/f09c84ae9922d67b6fe237d693afee0fab53fa67) Thanks [@Rajdeepc](https://github.com/Rajdeepc)!
+
+#### Infield button fast follows
+
+Updated infield button disabled border color to use `--spectrum-gray-300` for spectrum-two theme and `--spectrum-gray-200` for other themes.
 
 ## 6.1.1
 

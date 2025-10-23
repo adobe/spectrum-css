@@ -1,7 +1,8 @@
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PickerGroup } from "./picker.test.js";
@@ -17,7 +18,7 @@ export default {
 		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
-			description: "The text for the field label",
+			description: "The label text that is displayed above or to the side of the Picker. This uses a separate Label component outside of the Picker markup.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -32,16 +33,21 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
+			control: {
+				type: "select",
+				labels: {
+					side: "side (inline start)",
+				},
+			},
 			options: ["top", "side"],
-			control: { type: "select" },
 		},
 		withSwitch: {
-			name: "Show switch component",
-			description: "Display a separate switch component after the picker. Helpful for testing alignment with the picker when using the side label.",
+			name: "Display Switch component",
+			description: "Displays a Switch component after the Picker. This is used for testing the vertical alignment between the side label, Picker, and Switch.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Advanced",
+				category: "Content",
 			},
 			control: "boolean",
 			if: { arg: "labelPosition", eq: "side" },
@@ -54,11 +60,10 @@ export default {
 				type: { summary: "boolean" },
 				category: "Advanced",
 			},
-			control: "boolean",
 		},
 		placeholder: {
-			name: "Placeholder",
-			description: "The placeholder text prompts a user to select an option from the picker menu. It disappears once a user selects an option. This will not be displayed if the `value` control is set.",
+			name: "Value or placeholder",
+			description: "The text within the Picker that represents its current value or placeholder.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -66,15 +71,16 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		currentValue: {
-			name: "Value",
-			description: "The value shows the option that a user has selected.",
-			type: { name: "string" },
+		currentValue: { table: { disable: true } },
+		contentIconName: {
+			...(IconStories?.argTypes?.iconName ?? {}),
+			name: "Icon",
+			description: "Optional workflow icon that appears before the value/placeholder text within the picker.",
+			if: { arg: "showWorkflowIcon", eq: true },
 			table: {
-				type: { summary: "string" },
-				category: "Content",
+				type: { summary: "boolean" },
+				category: "Advanced",
 			},
-			control: { type: "text" },
 		},
 		helpText: {
 			name: "Help text",
@@ -86,12 +92,18 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		isQuiet,
 		isOpen,
 		isKeyboardFocused,
 		isDisabled,
-		isLoading,
-		isInvalid,
+		isLoading: {
+			...isLoading,
+			description: "When in the loading state, a progress circle will display next to the disclosure icon.",
+			if: { arg: "isDisabled", eq: false }
+		},
+		isInvalid: {
+			...isInvalid,
+			description: "When in the invalid state, some styles change on the Picker, and an invalid icon displays next to the disclosure icon.",
+		},
 		isHovered,
 		isActive,
 		popoverContent: { table: { disable: true } },
@@ -104,8 +116,8 @@ export default {
 		placeholder: "Select a country",
 		helpText: "",
 		currentValue: "",
+		contentIconName: "Image",
 		showWorkflowIcon: false,
-		isQuiet: false,
 		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
@@ -128,30 +140,28 @@ export default {
 		],
 	},
 	parameters: {
-		docs: {
-			story: {
-				height: "400px"
-			}
-		},
 		design: {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=739-1453",
 		},
 		packageJson,
 		metadata,
+		downState: {
+			selectors: [".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"],
+		},
+		status: {
+			type: "migrated",
+		},
 	},
+	decorators: [
+		withDownStateDimensionCapture,
+	],
+	tags: ["migrated"],
 };
 
 export const Default = PickerGroup.bind({});
 Default.args = {};
 Default.tags = ["!autodocs"];
-Default.parameters = {
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
-};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = PickerGroup.bind({});
@@ -176,11 +186,6 @@ Standard.storyName = "Default";
 Standard.tags = ["!dev"];
 Standard.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
 };
 
 /**
@@ -209,11 +214,6 @@ SelectedValue.args = {
 SelectedValue.tags = ["!dev"];
 SelectedValue.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
 };
 
 /**
@@ -266,11 +266,6 @@ Invalid.args = {
 };
 Invalid.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
 };
 
 export const Loading = Template.bind({});
@@ -283,52 +278,6 @@ Loading.args = {
 };
 Loading.parameters = {
 	chromatic: { disableSnapshot: true },
-};
-
-/**
- * Quiet pickers have no visible background. This style works best when a clear layout (vertical stack, table, grid)
- * makes it easy to parse the buttons. Too many quiet components in a small space can be hard to read.
- */
-export const Quiet = ClosedAndOpenTemplate.bind({});
-Quiet.tags = ["!dev"];
-Quiet.args = {
-	isQuiet: true,
-};
-Quiet.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
-};
-
-export const QuietDisabled = DisabledTemplate.bind({});
-QuietDisabled.storyName = "Quiet and disabled";
-QuietDisabled.tags = ["!dev"];
-QuietDisabled.args = {
-	isDisabled: true,
-	isQuiet: true,
-};
-QuietDisabled.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const QuietInvalid = ClosedAndOpenTemplate.bind({});
-QuietInvalid.storyName = "Quiet and invalid";
-QuietInvalid.tags = ["!dev"];
-QuietInvalid.args = {
-	isInvalid: true,
-	isQuiet: true,
-	helpText: "Select a country.",
-};
-QuietInvalid.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
 };
 
 /**

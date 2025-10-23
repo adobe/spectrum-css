@@ -63,9 +63,9 @@ jobs:
                   fetch-depth: 0
 
             - name: Use Node LTS version
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v6
               with:
-                  node-version: 20.19.5
+                  node-version: 22.21.0
                   cache: yarn
 
             - name: Enable Corepack
@@ -80,7 +80,7 @@ jobs:
                   path: |
                       .cache/yarn
                       node_modules
-                  key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+                  key: ubuntu-latest-node22-${{ hashFiles('yarn.lock') }}
 
             ## --- INSTALL --- ##
             # If statement isn't needed here b/c yarn will leverage the cache if it exists
@@ -102,7 +102,7 @@ jobs:
                   filter_mode: diff_context
                   level: error
                   reporter: github-pr-review
-                #   stylelint_input: "components/*/index.css components/*/themes/*.css"
+                #   stylelint_input: "components/*/index.css"
                   stylelint_input: "${{ inputs.styles_added_files }} ${{ inputs.styles_modified_files }}"
                   stylelint_config: "${{ github.workspace }}/stylelint.config.js"
                   packages: 'stylelint-header stylelint-config-standard stylelint-selector-bem-pattern stylelint-order stylelint-use-logical'

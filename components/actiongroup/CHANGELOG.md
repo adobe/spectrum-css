@@ -1,12 +1,93 @@
 # Change log
 
-## 6.2.0
+## 7.0.0-next.3
 
-### Minor Changes
+### Patch Changes
 
-📝 [#4218](https://github.com/adobe/spectrum-css/pull/4218) [`2df53f8`](https://github.com/adobe/spectrum-css/commit/2df53f8b9ef6d6a031ca99726aa7f0475443ca03) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [#4085](https://github.com/adobe/spectrum-css/pull/4085) [`082862e`](https://github.com/adobe/spectrum-css/commit/082862eb80c6e0ac1c801b1d538e4d2f2bb919b4) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-Ensure accurate exports are present for each component. Specifically, adding `themes/*` assets where present and removing`index-*.css` exports where those assets do not exist.
+### Action menu component (now with custom styles!)
+
+Introduces `@spectrum-css/actionmenu`, a composition of `ActionButton`, `Popover`, and `Menu` to present action lists from a trigger. Now with custom styles!
+
+- Adds wrapper classes: `spectrum-ActionMenu`, `spectrum-ActionMenu-trigger`, `spectrum-ActionMenu-popover`, and `spectrum-ActionMenu-menu`.
+- Supports long press triggers and four placements (start/end, top/bottom) via the underlying popover API.
+- Design reference: [Figma S2 token specs](https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=20959-21513&node-type=frame&t=jbePQKK1yLdrHG2M-11).
+
+#### Migration notes
+
+- If you previously composed an action menu manually (action button + popover + menu), you can adopt the new wrapper classes without changing the underlying markup semantics. Ensure the trigger has `aria-haspopup="menu"` and manages `aria-expanded` according to your application logic.
+- For spacing customizations previously done with ad‑hoc margins, switch to the new `--spectrum-actionmenu-button-to-menu-gap` custom property.
+
+Example markup:
+
+```html
+<div class="spectrum-ActionMenu">
+	<button
+		class="spectrum-ActionMenu-trigger spectrum-ActionButton"
+		aria-haspopup="menu"
+		aria-expanded="false"
+	>
+		<!-- icon/label -->
+	</button>
+	<div class="spectrum-ActionMenu-popover spectrum-Popover">
+		<ul class="spectrum-ActionMenu-menu spectrum-Menu">
+			<!-- menu items -->
+		</ul>
+	</div>
+	<!-- popover positioning/visibility is owned by your implementation -->
+	<!-- use long-press behavior when appropriate to your UX -->
+	<!-- use Popover placement options: bottom-start, bottom-end, start-top, end-top -->
+</div>
+```
+
+### Menu refinements
+
+Updates `@spectrum-css/menu` styles to align with latest Spectrum 2 design specifications and improve accessibility.
+
+- Updated `.is-selectableMultiple .spectrum-Menu-itemCheckbox` to `.is-selectableMultiple:not(:has(.is-selectable)) .spectrum-Menu-itemCheckbox` to prevent clash with the `.is-selectable` placement.
+- Non-breaking; no class or DOM changes required.
+
+### Action button refinements
+
+- Selection styling now applies when components use ARIA pressed/expanded semantics, not just `.is-selected`.
+- Implemented with `:where()` to keep selector specificity low and prevent downstream specificity battles.
+- Non-breaking; no class changes required.
+
+### Action group refinements
+
+Aligns selection behavior of grouped items with action button updates.
+
+- Adds `:where([aria-pressed="true"], [aria-expanded="true"])` alongside `.is-selected` on items to cover more accessibility use-cases while keeping specificity low.
+- Non-breaking; no class changes required.
+
+## 7.0.0-next.2
+
+### Major Changes
+
+📝 [#4249](https://github.com/adobe/spectrum-css/pull/4249) [`9629fe3`](https://github.com/adobe/spectrum-css/commit/9629fe37cad996d47c827a3eabcdf39092a27b0d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes `--mod-*` custom property hooks per SWC-1264, see also the RFC for extensible styling.
+
+- Remove all `--mod-*` custom property hooks.
+- Keep existing class selectors and variants unchanged.
+- Update stories to reflect the removal of the `--mod-*` override layer.
+
+Breaking change: the `--mod-*` override layer is removed. Consumers should set `--spectrum-*` variables directly where customization is needed.
+
+## 7.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/actionbutton@8.0.0-next.0
 
 ## 7.0.0
 
@@ -226,7 +307,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 4.1.10
 
-📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.9...@spectrum-css/actiongroup@4.1.10)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.9...@spectrum-css/actiongroup@4.1.10)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
@@ -342,7 +423,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - refactor(actiongroup)!: replace focus-ring with focus-visible([d792847](https://github.com/adobe/spectrum-css/commit/d792847))
 
-### 🛑 BREAKING CHANGE
+### 🛑 BREAKING CHANGES
 
 - use native focus-visible pseudo class for focus styling
 
@@ -378,7 +459,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 3.0.56
 
-📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.55...@spectrum-css/actiongroup@3.0.56)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.55...@spectrum-css/actiongroup@3.0.56)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
@@ -431,6 +512,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ## 3.0.48
 
 🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.47...@spectrum-css/actiongroup@3.0.48)
+
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 ## 3.0.47

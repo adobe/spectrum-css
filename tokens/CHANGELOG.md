@@ -1,5 +1,828 @@
 # Change log
 
+## 16.1.0-next.10
+
+### Patch Changes
+
+📝 [#4219](https://github.com/adobe/spectrum-css/pull/4219) [`ff1d0c8`](https://github.com/adobe/spectrum-css/commit/ff1d0c8d156305e2291b5519320d7069e0d7f68f) Thanks [@renovate](https://github.com/apps/renovate)!
+
+Updated from [@adobe/spectrum-tokens](https://github.com/adobe/spectrum-tokens) [13.15.0](https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe/spectrum-tokens%4013.15.0) -> [13.15.1](https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe/spectrum-tokens%4013.15.1).
+
+### Updated
+
+- `--spectrum-standard-panel-gripper-color`: Updated from `var(--spectrum-gray-200)` to `var(--spectrum-gray-500)`.
+
+- [#593](https://github.com/adobe/spectrum-tokens/pull/593) [`1e860c4`](https://github.com/adobe/spectrum-tokens/commit/1e860c4436c58ceca6f4500ea7e24d6d8cdd20c8) Thanks [@mrcjhicks](https://github.com/mrcjhicks)!
+
+## 16.1.0-next.9
+
+### Minor Changes
+
+📝 [#4170](https://github.com/adobe/spectrum-css/pull/4170) [`eb23c3b`](https://github.com/adobe/spectrum-css/commit/eb23c3b2acc5e39684319b2fd46990c2e76add0c) Thanks [@renovate](https://github.com/apps/renovate)!
+
+Updated from [@adobe/spectrum-tokens](https://github.com/adobe/spectrum-tokens) [13.14.0](https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe/spectrum-tokens%4013.14.0) -> [13.15.0](https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe/spectrum-tokens%4013.15.0).
+
+### Newly added
+
+| Token name                                          | Token value                                                     |
+| --------------------------------------------------- | --------------------------------------------------------------- |
+| `--spectrum-static-fuchsia-400`                     | `rgb(247, 181, 255)`                                            |
+| `--spectrum-static-fuchsia-600`                     | `rgb(236, 105, 255)`                                            |
+| `--spectrum-static-fuchsia-800`                     | `rgb(200, 68, 220)`                                             |
+| `--spectrum-static-indigo-400`                      | `rgb(192, 201, 255)`                                            |
+| `--spectrum-static-indigo-600`                      | `rgb(145, 151, 254)`                                            |
+| `--spectrum-static-indigo-800`                      | `rgb(122, 106, 253)`                                            |
+| `--spectrum-static-magenta-400`                     | `rgb(255, 185, 208)`                                            |
+| `--spectrum-static-magenta-600`                     | `rgb(255, 112, 159)`                                            |
+| `--spectrum-static-magenta-800`                     | `rgb(240, 45, 110)`                                             |
+| `--spectrum-static-red-400`                         | `rgb(255, 188, 180)`                                            |
+| `--spectrum-static-red-600`                         | `rgb(255, 118, 101)`                                            |
+| `--spectrum-static-red-800`                         | `rgb(240, 56, 35)`                                              |
+| `--spectrum-static-cyan-400`                        | `rgb(138, 213, 255)`                                            |
+| `--spectrum-static-cyan-600`                        | `rgb(48, 167, 254)`                                             |
+| `--spectrum-static-cyan-800`                        | `rgb(18, 134, 205)`                                             |
+| `--spectrum-static-chartreuse-400`                  | `rgb(182, 219, 0)`                                              |
+| `--spectrum-static-chartreuse-600`                  | `rgb(143, 172, 0)`                                              |
+| `--spectrum-static-chartreuse-800`                  | `rgb(114, 137, 0)`                                              |
+| `--spectrum-static-green-400`                       | `rgb(107, 227, 162)`                                            |
+| `--spectrum-static-green-600`                       | `rgb(107, 227, 162)`                                            |
+| `--spectrum-static-green-800`                       | `rgb(7, 147, 85)`                                               |
+| `--spectrum-static-orange-400`                      | `rgb(255, 193, 94)`                                             |
+| `--spectrum-static-orange-600`                      | `rgb(252, 125, 0)`                                              |
+| `--spectrum-static-orange-800`                      | `rgb(212, 91, 0)`                                               |
+| `--spectrum-static-purple-400`                      | `rgb(221, 193, 246)`                                            |
+| `--spectrum-static-purple-600`                      | `rgb(191, 138, 238)`                                            |
+| `--spectrum-static-purple-800`                      | `rgb(166, 92, 231)`                                             |
+| `--spectrum-static-turquoise-400`                   | `rgb(111, 221, 228)`                                            |
+| `--spectrum-static-turquoise-600`                   | `rgb(15, 177, 192)`                                             |
+| `--spectrum-static-turquoise-800`                   | `rgb(10, 141, 153)`                                             |
+| `--spectrum-gradient-stop-1-avatar`                 | `0`                                                             |
+| `--spectrum-gradient-stop-2-avatar`                 | `0.6666`                                                        |
+| `--spectrum-gradient-stop-3-avatar`                 | `1`                                                             |
+| `--spectrum-drop-shadow-ambient-color`              | `rgba(0, 0, 0, 0.08)` (light)<br/>`rgba(0, 0, 0, 0.24)` (dark)  |
+| `--spectrum-drop-shadow-transition-color`           | `rgba(0, 0, 0, 0.04)` (light)<br/>`rgba(0, 0, 0, 0.12)` (dark)  |
+| `--spectrum-drop-shadow-emphasized-key-color`       | `rgba(0, 0, 0, 0.08)` (light)</br/>`rgba(0, 0, 0, 0.24)` (dark) |
+| `--spectrum-drop-shadow-emphasized-hover-key-color` | `rgba(0, 0, 0, 0.12)` (light)</br/>`rgba(0, 0, 0, 0.36)` (dark) |
+| `--spectrum-drop-shadow-elevated-key-color`         | `rgba(0, 0, 0, 0.12)` (light)</br/>`rgba(0, 0, 0, 0.36)` (dark) |
+| `--spectrum-drop-shadow-dragged-key-color`          | `rgba(0, 0, 0, 0.16)` (light)</br/>`rgba(0, 0, 0, 0.48)` (dark) |
+
+## 16.1.0-next.8
+
+### Minor Changes
+
+📝 [#4120](https://github.com/adobe/spectrum-css/pull/4120) [`5b694c5`](https://github.com/adobe/spectrum-css/commit/5b694c58be813fd82315252dab721e94bf769a71) Thanks [@renovate](https://github.com/apps/renovate)!
+
+`@adobe/spectrum-tokens@13.12.0` ->`@adobe/spectrum-tokens@13.13.0`
+
+### Added
+
+- `--spectrum-select-box-horizontal-minimum-width`: `188px` (desktop), `220px` (mobile)
+
+### Updated
+
+- `--spectrum-select-box-edge-to-checkbox`: Updated from a variable sizing based on the viewport to a fixed value (`8px`).
+
+## 16.1.0-next.7
+
+### Minor Changes
+
+📝 [#4003](https://github.com/adobe/spectrum-css/pull/4003) [`7f48b7c`](https://github.com/adobe/spectrum-css/commit/7f48b7c6384f8c7d598637226a17aff1c8e8b61c) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Adds custom tokens for Tabs in Spectrum 2. This is intended to be a temporary change until the tokens have been added to the spectrum-tokens package.
+
+## 16.1.0-next.6
+
+### Minor Changes
+
+📝 [#4067](https://github.com/adobe/spectrum-css/pull/4067) [`f6843c6`](https://github.com/adobe/spectrum-css/commit/f6843c698a2aac7c15ba949e28c56e4ff49c8c4a) Thanks [@renovate](https://github.com/apps/renovate)!
+
+Updated from [@adobe/spectrum-tokens](https://github.com/adobe/spectrum-tokens) [13.10.1](https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe/spectrum-tokens%4013.10.1) -> [13.12.0](https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe/spectrum-tokens%4013.12.0).
+
+### Newly deprecated
+
+- `--spectrum-card-minimum-width`: This token has been deprecated, use `--spectrum-card-minimum-width-default` instead.
+- `--spectrum-tree-view-item-to-item`: This token has been deprecated, use `--spectrum-tree-view-item-to-item-default` instead.
+
+### Newly added
+
+| Token name                                       | Token value                            |
+| ------------------------------------------------ | -------------------------------------- |
+| `--spectrum-component-xs-regular-font-family`    | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-xs-regular-font-size`      | `--spectrum-font-size-50`              |
+| `--spectrum-component-xs-regular-font-weight`    | `--spectrum-regular-font-weight`       |
+| `--spectrum-component-xs-regular-letter-spacing` | `--spectrum-letter-spacing`            |
+| `--spectrum-component-xs-regular-line-height`    | `--spectrum-line-height-font-size-50`  |
+| `--spectrum-component-xs-medium-font-family`     | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-xs-medium-font-size`       | `--spectrum-font-size-50`              |
+| `--spectrum-component-xs-medium-font-weight`     | `--spectrum-medium-font-weight`        |
+| `--spectrum-component-xs-medium-letter-spacing`  | `--spectrum-letter-spacing`            |
+| `--spectrum-component-xs-medium-line-height`     | `--spectrum-line-height-font-size-50`  |
+| `--spectrum-component-xs-bold-font-family`       | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-xs-bold-font-size`         | `--spectrum-font-size-50`              |
+| `--spectrum-component-xs-bold-font-weight`       | `--spectrum-bold-font-weight`          |
+| `--spectrum-component-xs-bold-letter-spacing`    | `--spectrum-letter-spacing`            |
+| `--spectrum-component-xs-bold-line-height`       | `--spectrum-line-height-font-size-50`  |
+| `--spectrum-component-s-regular-font-family`     | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-s-regular-font-size`       | `--spectrum-font-size-75`              |
+| `--spectrum-component-s-regular-font-weight`     | `--spectrum-regular-font-weight`       |
+| `--spectrum-component-s-regular-letter-spacing`  | `--spectrum-letter-spacing`            |
+| `--spectrum-component-s-regular-line-height`     | `--spectrum-line-height-font-size-75`  |
+| `--spectrum-component-s-medium-font-family`      | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-s-medium-font-size`        | `--spectrum-font-size-75`              |
+| `--spectrum-component-s-medium-font-weight`      | `--spectrum-medium-font-weight`        |
+| `--spectrum-component-s-medium-letter-spacing`   | `--spectrum-letter-spacing`            |
+| `--spectrum-component-s-medium-line-height`      | `--spectrum-line-height-font-size-75`  |
+| `--spectrum-component-s-bold-font-family`        | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-s-bold-font-size`          | `--spectrum-font-size-75`              |
+| `--spectrum-component-s-bold-font-weight`        | `--spectrum-bold-font-weight`          |
+| `--spectrum-component-s-bold-letter-spacing`     | `--spectrum-letter-spacing`            |
+| `--spectrum-component-s-bold-line-height`        | `--spectrum-line-height-font-size-75`  |
+| `--spectrum-component-m-regular-font-family`     | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-m-regular-font-size`       | `--spectrum-font-size-100`             |
+| `--spectrum-component-m-regular-font-weight`     | `--spectrum-regular-font-weight`       |
+| `--spectrum-component-m-regular-letter-spacing`  | `--spectrum-letter-spacing`            |
+| `--spectrum-component-m-regular-line-height`     | `--spectrum-line-height-font-size-100` |
+| `--spectrum-component-m-medium-font-family`      | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-m-medium-font-size`        | `--spectrum-font-size-100`             |
+| `--spectrum-component-m-medium-font-weight`      | `--spectrum-medium-font-weight`        |
+| `--spectrum-component-m-medium-letter-spacing`   | `--spectrum-letter-spacing`            |
+| `--spectrum-component-m-medium-line-height`      | `--spectrum-line-height-font-size-100` |
+| `--spectrum-component-m-bold-font-family`        | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-m-bold-font-size`          | `--spectrum-font-size-100`             |
+| `--spectrum-component-m-bold-font-weight`        | `--spectrum-bold-font-weight`          |
+| `--spectrum-component-m-bold-letter-spacing`     | `--spectrum-letter-spacing`            |
+| `--spectrum-component-m-bold-line-height`        | `--spectrum-line-height-font-size-100` |
+| `--spectrum-component-l-regular-font-family`     | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-l-regular-font-size`       | `--spectrum-font-size-200`             |
+| `--spectrum-component-l-regular-font-weight`     | `--spectrum-regular-font-weight`       |
+| `--spectrum-component-l-regular-letter-spacing`  | `--spectrum-letter-spacing`            |
+| `--spectrum-component-l-regular-line-height`     | `--spectrum-line-height-font-size-200` |
+| `--spectrum-component-l-medium-font-family`      | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-l-medium-font-size`        | `--spectrum-font-size-200`             |
+| `--spectrum-component-l-medium-font-weight`      | `--spectrum-medium-font-weight`        |
+| `--spectrum-component-l-medium-letter-spacing`   | `--spectrum-letter-spacing`            |
+| `--spectrum-component-l-medium-line-height`      | `--spectrum-line-height-font-size-200` |
+| `--spectrum-component-l-bold-font-family`        | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-l-bold-font-size`          | `--spectrum-font-size-200`             |
+| `--spectrum-component-l-bold-font-weight`        | `--spectrum-bold-font-weight`          |
+| `--spectrum-component-l-bold-letter-spacing`     | `--spectrum-letter-spacing`            |
+| `--spectrum-component-l-bold-line-height`        | `--spectrum-line-height-font-size-200` |
+| `--spectrum-component-xl-regular-font-family`    | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-xl-regular-font-size`      | `--spectrum-font-size-300`             |
+| `--spectrum-component-xl-regular-font-weight`    | `--spectrum-regular-font-weight`       |
+| `--spectrum-component-xl-regular-letter-spacing` | `--spectrum-letter-spacing`            |
+| `--spectrum-component-xl-regular-line-height`    | `--spectrum-line-height-font-size-300` |
+| `--spectrum-component-xl-medium-font-family`     | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-xl-medium-font-size`       | `--spectrum-font-size-300`             |
+| `--spectrum-component-xl-medium-font-weight`     | `--spectrum-medium-font-weight`        |
+| `--spectrum-component-xl-medium-letter-spacing`  | `--spectrum-letter-spacing`            |
+| `--spectrum-component-xl-medium-line-height`     | `--spectrum-line-height-font-size-300` |
+| `--spectrum-component-xl-bold-font-family`       | `--spectrum-sans-serif-font-family`    |
+| `--spectrum-component-xl-bold-font-size`         | `--spectrum-font-size-300`             |
+| `--spectrum-component-xl-bold-font-weight`       | `--spectrum-bold-font-weight`          |
+| `--spectrum-component-xl-bold-letter-spacing`    | `--spectrum-letter-spacing`            |
+| `--spectrum-component-xl-bold-line-height`       | `--spectrum-line-height-font-size-300` |
+| `--spectrum-component-padding-vertical-50`       | `3px` (desktop) and `5px` (mobile)     |
+| `--spectrum-component-padding-vertical-75`       | `4px` (desktop) and `5px` (mobile)     |
+| `--spectrum-component-padding-vertical-100`      | `7px` (desktop) and `9px` (mobile)     |
+| `--spectrum-component-padding-vertical-200`      | `10px` (desktop) and `13px` (mobile)   |
+| `--spectrum-component-padding-vertical-300`      | `13px` (desktop) and `17px` (mobile)   |
+| `--spectrum-card-minimum-width-default`          | `100px`                                |
+| `--spectrum-tree-view-item-to-item-default`      | `-1px`                                 |
+
+### Updated
+
+- `--spectrum-sans-serif-font-family`: `Adobe Clean` -> `Adobe Clean Spectrum VF`
+- `--spectrum-accordion-top-to-text-compact-medium`: `5px` -> `8px`
+- `--spectrum-accordion-top-to-text-spacious-medium`: `16px` -> `13px` (desktop) and `19px` -> `15px` (mobile)
+- `--spectrum-accordion-focus-indicator-gap`: `0px` -> `2px`
+- `--spectrum-accordion-top-to-text-medium`: `12px` -> `9px` (desktop) and `16px` -> `10px` (mobile)
+
+## 16.1.0-next.5
+
+### Patch Changes
+
+- [#3969](https://github.com/adobe/spectrum-css/pull/3969) [`d952e0c`](https://github.com/adobe/spectrum-css/commit/d952e0c4d234f5e742432fe906965a52a50b228e) Thanks [@renovate](https://github.com/apps/renovate)!
+
+Updated from [@adobe/spectrum-tokens](https://github.com/adobe/spectrum-tokens) v13.10.0 -> [13.10.1](https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe/spectrum-tokens%4013.10.1).
+
+- [#517](https://github.com/adobe/spectrum-tokens/pull/517) [`8f8f8a6`](https://github.com/adobe/spectrum-tokens/commit/8f8f8a60b7adf5105ced4f914cf30928117ddc5e) Thanks [@larz0](https://github.com/larz0)!
+
+#### Updated tokens
+
+- `accordion-focus-indicator-gap`
+  - value: `0px` -> `2px`
+- `accordion-top-to-text-medium`
+  - desktop.value: `12px` -> `9px`
+  - mobile.value: `16px` -> `10px`
+
+## 16.1.0-next.4
+
+### Patch Changes
+
+- [#3818](https://github.com/adobe/spectrum-css/pull/3818) [`f20e1e7`](https://github.com/adobe/spectrum-css/commit/f20e1e7ff402b591706cc791d9207fdedb80cd1e) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Adds `--spectrum-table-selected-row-background-color-rgb` to `light-vars.css` and `dark-vars.css` for custom tokens.
+
+## 16.1.0-next.3
+
+### Minor Changes
+
+- [#3758](https://github.com/adobe/spectrum-css/pull/3758) [`f0d187f`](https://github.com/adobe/spectrum-css/commit/f0d187ff016d49c46ac125cb37ae274644608505) Thanks [@renovate](https://github.com/apps/renovate)!
+
+#### @adobe/spectrum-tokens@13.7.0
+
+- [#499 0c1a81b](https://github.com/adobe/spectrum-css/pull/499) Thanks [@larz0](https://github.com/larz0)!
+
+Added new accordion tokens.
+
+<details open><summary>Added</summary>
+
+- `accordion-edge-to-content-area-small`
+- `accordion-edge-to-content-area-medium`
+- `accordion-edge-to-content-area-large`
+- `accordion-edge-to-content-area-extra-large`
+- `single-calendar-popover-minimum-width`
+- `single-calendar-popover-minimum-height`
+- `double-calendar-popover-minimum-width`
+- `double-calendar-popover-minimum-height`
+- `triple-calendar-popover-minimum-width`
+- `triple-calendar-popover-minimum-height`
+- `date-field-minimum-width`
+- `date-field-text-to-visual`
+- `time-field-minimum-width`
+- `time-field-text-to-visual`
+- `date-picker-visual-to-field-button`
+- `date-picker-text-to-visual`
+- `date-picker-minimum-width`
+- `segmented-text-field-gap`
+- `segmented-text-field-rounding`
+
+</details>
+
+### @adobe/spectrum-tokens@13.6.0
+
+- [#497 fc0682e](https://github.com/adobe/spectrum-css/pull/497) Thanks [@larz0](https://github.com/larz0)!
+
+Added horizontal card tokens.
+
+<details open><summary>Added</summary>
+
+- `card-horizontal-edge-to-content-compact`
+- `card-horizontal-edge-to-content-default`
+- `card-horizontal-edge-to-content-spacious`
+
+</details>
+
+### @adobe/spectrum-tokens@13.5.0
+
+- [#494 f569623](https://github.com/adobe/spectrum-css/pull/494) Thanks [@larz0](https://github.com/larz0)!
+
+Added vf-related-line-height tokens for desktop and mobile. These tokens are required for the upcoming composite typography tokens.
+
+<details open>
+<summary>Newly deprecated</summary>
+
+- `drop-zone-content-maximum-width`
+
+</details>
+
+<details open>
+<summary>Added</summary>
+
+- `line-height-font-size-25`
+- `line-height-font-size-50`
+- `line-height-font-size-75`
+- `line-height-font-size-100`
+- `line-height-font-size-200`
+- `line-height-font-size-300`
+- `line-height-font-size-400`
+- `line-height-font-size-500`
+- `line-height-font-size-600`
+- `line-height-font-size-700`
+- `line-height-font-size-800`
+- `line-height-font-size-900`
+- `line-height-font-size-1000`
+- `line-height-font-size-1100`
+- `line-height-font-size-1200`
+- `line-height-font-size-1300`
+- `line-height-font-size-1400`
+- `line-height-font-size-1500`
+
+</details>
+
+- [#3843](https://github.com/adobe/spectrum-css/pull/3843) [`1cdfcbf`](https://github.com/adobe/spectrum-css/commit/1cdfcbff6cb3369d710cec78733536d5dd72e7d4) Thanks [@renovate](https://github.com/apps/renovate)!
+
+### Tokens changed
+
+<p>Updated from <code>@adobe/spectrum-tokens@13.7.0</code> to <code>@adobe/spectrum-tokens@13.10.0</code>.</p>
+
+<p>This update introduces new tokens for accordion, field disclosure icons, icon sizes (add, drag handle, gripper, link out), and tag field dimensions, along with stack item and list view global properties.</p>
+
+<p>Note that deprecated tokens are still available but will be removed in a future release. Please migrate to new tokens as appropriate.</p>
+
+<details open>
+    <summary><b>Newly deprecated</b></summary>
+    <ul>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-regular-extra-large</code> -> <code>--spectrum-accordion-bottom-to-text-extra-large</code>
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-regular-large</code> -> <code>--spectrum-accordion-bottom-to-text-large</code>
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-regular-medium</code> -> <code>--spectrum-accordion-bottom-to-text-medium</code>
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-regular-small</code> -> <code>--spectrum-accordion-bottom-to-text-small</code>
+        </li>
+        <li><code>--spectrum-accordion-top-to-text-regular-extra-large</code> -> <code>--spectrum-accordion-top-to-text-extra-large</code></li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-regular-large</code> -> <code>--spectrum-accordion-top-to-text-large</code>
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-regular-medium</code> -> <code>--spectrum-accordion-top-to-text-medium</code>
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-regular-small</code> -> <code>--spectrum-accordion-top-to-text-small</code>
+        </li>
+    </ul>
+</details>
+
+<details open>
+    <summary><b>Added</b></summary>
+    <ul>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-extra-large</code><br/>
+            <em>desktop</em>: 19px<br/>
+            <em>mobile</em>: 21px
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-large</code><br/>
+            <em>desktop</em>: 17px<br/>
+            <em>mobile</em>: 19px
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-medium</code><br/>
+            <em>desktop</em>: 16px<br/>
+            <em>mobile</em>: 18px
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-small</code><br/>
+            <em>desktop</em>: 13px<br/>
+            <em>mobile</em>: 15px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-compact-medium</code><br />
+            <em>desktop</em>: 8px<br />
+            <em>mobile</em>: 14px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-compact-small</code><br />
+            <em>desktop</em>: 3px<br />
+            <em>mobile</em>: 4px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-extra-large</code><br/>
+            <em>desktop</em>: 19px<br/>
+            <em>mobile</em>: 21px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-large</code><br/>
+            <em>desktop</em>: 17px<br/>
+            <em>mobile</em>: 19px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-medium</code><br/>
+            <em>desktop</em>: 17px<br/>
+            <em>mobile</em>: 19px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-small</code><br/>
+            <em>desktop</em>: 10px<br/>
+            <em>mobile</em>: 12px
+        </li>
+        <li>
+            <code>--spectrum-add-icon-size-50</code><br/>
+            <em>desktop</em>: 8px<br/>
+            <em>mobile</em>: 10px
+        </li>
+        <li>
+            <code>--spectrum-add-icon-size-75</code><br/>
+            <em>desktop</em>: 10px<br/>
+            <em>mobile</em>: 12px
+        </li>
+        <li>
+            <code>--spectrum-add-icon-size-100</code><br/>
+            <em>desktop</em>: 12px<br/>
+            <em>mobile</em>: 14px
+        </li>
+        <li>
+            <code>--spectrum-add-icon-size-200</code><br/>
+            <em>desktop</em>: 14px<br/>
+            <em>mobile</em>: 16px
+        </li>
+        <li>
+            <code>--spectrum-add-icon-size-300</code><br/>
+            <em>desktop</em>: 16px<br/>
+            <em>mobile</em>: 18px
+        </li>
+        <li>
+            <code>--spectrum-drag-handle-icon-size-75</code><br/>
+            <em>desktop</em>: 10px<br/>
+            <em>mobile</em>: 12px
+        </li>
+        <li>
+            <code>--spectrum-drag-handle-icon-size-100</code><br/>
+            <em>desktop</em>: 12px<br/>
+            <em>mobile</em>: 14px
+        </li>
+        <li>
+            <code>--spectrum-drag-handle-icon-size-200</code><br/>
+            <em>desktop</em>: 14px<br/>
+            <em>mobile</em>: 16px
+        </li>
+        <li>
+            <code>--spectrum-drag-handle-icon-size-300</code><br/>
+            <em>desktop</em>: 16px<br/>
+            <em>mobile</em>: 18px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-compact-extra-large</code><br/>
+            <em>desktop</em>: 17px<br/>
+            <em>mobile</em>: 21px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-compact-large</code><br/>
+            <em>desktop</em>: 14px<br/>
+            <em>mobile</em>: 17px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-compact-medium</code><br/>
+            <em>desktop</em>: 11px<br/>
+            <em>mobile</em>: 13px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-compact-small</code><br/>
+            <em>desktop</em>: 7px<br/>
+            <em>mobile</em>: 9px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-extra-large</code><br/>
+            <em>desktop</em>: 21px<br/>
+            <em>mobile</em>: 26px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-large</code><br/>
+            <em>desktop</em>: 18px<br/>
+            <em>mobile</em>: 22px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-medium</code><br/>
+            <em>desktop</em>: 15px<br/>
+            <em>mobile</em>: 18px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-small</code><br/>
+            <em>desktop</em>: 11px<br/>
+            <em>mobile</em>: 13px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-spacious-extra-large</code><br/>
+            <em>desktop</em>: 25px<br/>
+            <em>mobile</em>: 31px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-spacious-large</code><br/>
+            <em>desktop</em>: 22px<br/>
+            <em>mobile</em>: 27px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-spacious-medium</code><br/>
+            <em>desktop</em>: 19px<br/>
+            <em>mobile</em>: 23px
+        </li>
+        <li>
+            <code>--spectrum-field-top-to-disclosure-icon-spacious-small</code><br/>
+            <em>desktop</em>: 15px<br/>
+            <em>mobile</em>: 18px
+        </li>
+        <li>
+            <code>--spectrum-gripper-icon-size-100</code><br/>
+            <em>desktop</em>: 12px<br/>
+            <em>mobile</em>: 14px
+        </li>
+        <li>
+            <code>--spectrum-label-to-description-0</code><br/>
+            <em>value</em>: 0px
+        </li>
+        <li>
+            <code>--spectrum-link-out-icon-size-300</code><br/>
+            <em>desktop</em>: 16px<br/>
+            <em>mobile</em>: 18px
+        </li>
+        <li>
+            <code>--spectrum-link-out-icon-size-400</code><br/>
+            <em>desktop</em>: 18px<br/>
+            <em>mobile</em>: 20px
+        </li>
+        <li>
+            <code>--spectrum-list-view-end-edge-to-content</code><br/>
+            <em>desktop</em>: 14px<br/>
+            <em>mobile</em>: 16px
+        </li>
+        <li>
+            <code>--spectrum-list-view-item-bottom-corner-radius</code><br/>
+            <em>value</em>: 4px
+        </li>
+        <li>
+            <code>--spectrum-list-view-item-top-corner-radius</code><br/>
+            <em>value</em>: 4px
+        </li>
+        <li>
+            <code>--spectrum-list-view-minimum-height</code><br/>
+            <em>desktop</em>: 28px<br/>
+            <em>mobile</em>: 32px
+        </li>
+        <li>
+            <code>--spectrum-list-view-minimum-width</code><br/>
+            <em>desktop</em>: 180px<br/>
+            <em>mobile</em>: 200px
+        </li>
+        <li>
+            <code>--spectrum-stack-item-action-to-navigation</code><br/>
+            <em>desktop</em>: 6px<br/>
+            <em>mobile</em>: 8px
+        </li>
+        <li>
+            <code>--spectrum-stack-item-background-color-down</code><br/>
+            <em>value</em>: var(--spectrum-gray-100)
+        </li>
+        <li>
+            <code>--spectrum-stack-item-background-color-hover</code><br/>
+            <em>value</em>: var(--spectrum-gray-100)
+        </li>
+        <li>
+            <code>--spectrum-stack-item-background-color-key-focus</code><br/>
+            <em>value</em>: var(--spectrum-gray-100)
+        </li>
+        <li>
+            <code>--spectrum-stack-item-drag-handle-to-control</code><br/>
+            <code>--spectrum-stack-item-header-to-item</code><br/>
+            <em>desktop</em>: 3px<br/>
+            <em>mobile</em>: 4px
+        </li>
+        <li>
+            <code>--spectrum-stack-item-item-to-item</code><br/>
+            <em>desktop</em>: 3px<br/>
+            <em>mobile</em>: 4px
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-extra-large</code><br/>
+            <em>desktop</em>: 19px<br/>
+            <em>mobile</em>: 21px
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-large</code><br/>
+            <em>desktop</em>: 17px<br/>
+            <em>mobile</em>: 19px
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-medium</code><br/>
+            <em>desktop</em>: 16px<br/>
+            <em>mobile</em>: 18px
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-small</code><br/>
+            <em>desktop</em>: 13px<br/>
+            <em>mobile</em>: 15px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-extra-large</code><br/>
+            <em>desktop</em>: 19px<br/>
+            <em>mobile</em>: 21px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-large</code><br/>
+            <em>desktop</em>: 17px<br/>
+            <em>mobile</em>: 19px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-medium</code><br/>
+            <em>desktop</em>: 17px<br/>
+            <em>mobile</em>: 19px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-small</code><br/>
+            <em>desktop</em>: 10px<br/>
+            <em>mobile</em>: 12px
+        </li>
+        <li>
+            <code>--spectrum-stack-item-background-color-hover</code><br/>
+            <em>value</em>: var(--spectrum-gray-100)
+        </li>
+        <li>
+            <code>--spectrum-stack-item-background-color-down</code><br/>
+            <em>value</em>: var(--spectrum-gray-100)
+        </li>
+        <li>
+            <code>--spectrum-stack-item-background-color-key-focus</code><br/>
+            <em>value</em>: var(--spectrum-gray-100)
+        </li>
+        <li>
+            <code>--spectrum-stack-item-selected-background-color-default</code><br/>
+            <em>value</em>: var(--spectrum-gray-100)
+        </li>
+        <li>
+            <code>--spectrum-stack-item-selected-background-color-hover</code><br/>
+            <em>value</em>: var(--spectrum-gray-200)
+        </li>
+        <li>
+            <code>--spectrum-stack-item-selected-background-color-down</code><br/>
+            <em>value</em>: var(--spectrum-gray-200)
+        </li>
+        <li>
+            <code>--spectrum-stack-item-selected-background-color-key-focus</code><br/>
+            <em>value</em>: var(--spectrum-gray-200)
+        </li>
+        <li>
+            <code>--spectrum-stack-item-selected-background-color-emphasized</code><br/>
+            <em>value</em>: var(--spectrum-accent-background-color-default)
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-compact-small</code><br />
+            <em>desktop</em>: 3px<br />
+            <em>mobile</em>: 4px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-compact-medium</code><br />
+            <em>desktop</em>: 8px<br />
+            <em>mobile</em>: 14px
+        </li>
+    </ul>
+</details>
+
+<details open>
+    <summary><b>Updated</b></summary>
+    <ul>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-regular-extra-large</code><br />
+            <em>desktop</em>: 12px -> 15px<br />
+            <em>mobile</em>: 15px -> 21px
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-regular-large</code><br />
+            <em>desktop</em>: 11px -> 14px<br />
+            <em>mobile</em>: 14px -> 19px
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-regular-small</code><br />
+            <em>desktop</em>: 7px -> 9px<br />
+            <em>mobile</em>: 9px -> 12px
+        </li>
+        <li>
+            <code>--spectrum-accordion-bottom-to-text-spacious-small</code><br />
+            <em>value</em>: 15px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-compact-extra-large</code><br />
+            <em>desktop</em>: 5px -> 8px<br />
+            <em>mobile</em>: 7px -> 11px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-compact-large</code><br />
+            <em>desktop</em>: 4px -> 8px<br />
+            <em>mobile</em>: 7px -> 14px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-regular-extra-large</code><br />
+            <em>desktop</em>: 13px -> 17px<br />
+            <em>mobile</em>: 14px -> 21px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-regular-large</code><br />
+            <em>desktop</em>: 12px -> 16px<br />
+            <em>mobile</em>: 14px -> 19px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-spacious-extra-large</code><br />
+            <em>desktop</em>: 13px -> 17px<br />
+            <em>mobile</em>: 14px -> 21px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-spacious-large</code><br />
+            <em>desktop</em>: 12px -> 16px<br />
+            <em>mobile</em>: 14px -> 19px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-spacious-medium</code><br />
+            <em>desktop</em>: 12px -> 16px<br />
+            <em>mobile</em>: 14px -> 19px
+        </li>
+        <li>
+            <code>--spectrum-accordion-top-to-text-spacious-small</code><br />
+            <em>desktop</em>: 9px -> 11px<br />
+            <em>mobile</em>: 12px -> 15px
+        </li>
+    </ul>
+</details>
+
+## 16.1.0-next.2
+
+### Minor Changes
+
+- [#3669](https://github.com/adobe/spectrum-css/pull/3669) [`87d7d99`](https://github.com/adobe/spectrum-css/commit/87d7d99260e758e697668cc17962b0b36d075c65) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Package update from `@adobe/spectrum-tokens@13.0.0-beta.58` to `@adobe/spectrum-tokens@13.3.0`.
+
+#### New custom properties
+
+- `--spectrum-card-background-loading-color`
+- `--spectrum-card-background-well-color`
+- `--spectrum-card-default-width-extra-small`
+- `--spectrum-card-default-width-small`
+- `--spectrum-card-default-width-medium`
+- `--spectrum-card-default-width-large`
+- `--spectrum-card-default-width-extra-large`
+- `--spectrum-card-description-to-footer`
+- `--spectrum-card-edge-to-content-default-extra-small`
+- `--spectrum-card-edge-to-content-default-small`
+- `--spectrum-card-edge-to-content-default-medium`
+- `--spectrum-card-edge-to-content-default-large`
+- `--spectrum-card-edge-to-content-default-extra-large`
+- `--spectrum-card-edge-to-content-compact-extra-small`
+- `--spectrum-card-edge-to-content-compact-small`
+- `--spectrum-card-edge-to-content-compact-medium`
+- `--spectrum-card-edge-to-content-compact-large`
+- `--spectrum-card-edge-to-content-compact-extra-large`
+- `--spectrum-card-edge-to-content-spacious-extra-small`
+- `--spectrum-card-edge-to-content-spacious-small`
+- `--spectrum-card-edge-to-content-spacious-medium`
+- `--spectrum-card-edge-to-content-spacious-large`
+- `--spectrum-card-edge-to-content-spacious-extra-large`
+- `--spectrum-card-header-to-description`
+- `--spectrum-card-minimum-width-extra-small`
+- `--spectrum-card-minimum-width-small`
+- `--spectrum-card-minimum-width-medium`
+- `--spectrum-card-minimum-width-large`
+- `--spectrum-card-minimum-width-extra-large`
+- `--spectrum-card-maximum-width-extra-small`
+- `--spectrum-card-maximum-width-small`
+- `--spectrum-card-maximum-width-medium`
+- `--spectrum-card-maximum-width-large`
+- `--spectrum-card-maximum-width-extra-large`
+- `--spectrum-card-minimum-height-extra-small`
+- `--spectrum-card-minimum-height-small`
+- `--spectrum-card-minimum-height-medium`
+- `--spectrum-card-minimum-height-large`
+- `--spectrum-card-minimum-height-extra-large`
+- `--spectrum-card-selection-background-size-small`
+- `--spectrum-card-selection-background-size-medium`
+- `--spectrum-card-selection-background-size-large`
+- `--spectrum-card-selection-background-size-extra-large`
+- `--spectrum-collection-card-minimum-height-extra-small`
+- `--spectrum-collection-card-minimum-height-small`
+- `--spectrum-collection-card-minimum-height-medium`
+- `--spectrum-collection-card-minimum-height-large`
+- `--spectrum-collection-card-minimum-height-extra-large`
+- `--spectrum-collection-card-minimum-height-hero-extra-small`
+- `--spectrum-collection-card-minimum-height-hero-small`
+- `--spectrum-collection-card-minimum-height-hero-medium`
+- `--spectrum-collection-card-minimum-height-hero-large`
+- `--spectrum-collection-card-minimum-height-hero-extra-large`
+- `--spectrum-segmented-control-item-maximum-width`
+- `--spectrum-user-card-minimum-height-small`
+- `--spectrum-user-card-minimum-height-medium`
+- `--spectrum-user-card-minimum-height-large`
+- `--spectrum-user-card-minimum-height-extra-large`
+- `--spectrum-user-card-minimum-height-title-below-small`
+- `--spectrum-user-card-minimum-height-title-below-medium`
+- `--spectrum-user-card-minimum-height-title-below-large`
+- `--spectrum-user-card-minimum-height-title-below-extra-large`
+
+#### Updated custom properties
+
+- `--spectrum-card-selection-background-color` was mapped to `var(--spectrum-gray-100)`; updated to:
+  - light: `var(--spectrum-transparent-white-600)`
+  - dark: `var(--spectrum-transparent-black-600)`
+
+## 16.1.0-next.1
+
+### Patch Changes
+
+📝 [#2673](https://github.com/adobe/spectrum-css/pull/2673) [`89a3f2b`](https://github.com/adobe/spectrum-css/commit/89a3f2bfeed257a5eefeef229efaa3cc7555980c) Thanks [@mdt2](https://github.com/mdt2)!
+
+Adds `--spectrum-corner-radius-1000: 9999px;` to global-vars.css to override value of 0.5. This should ensure our components that use this custom property are properly rounded (i.e. the fully rounded swatch or search field).
+
+## 16.1.0-next.0
+
+### Minor Changes
+
+📝 [#3412](https://github.com/adobe/spectrum-css/pull/3412) [`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b) Thanks [@cdransf](https://github.com/cdransf)!
+
+Adds custom vars for coachmark action menu vertical spacing. These help provide consistent spacing between states when the action menu is and is not visible.
+
+In `tokens/custom/large-vars.css`: `--spectrum-coachmark-action-menu-vertical-offset`.
+In `tokens/custom/medium-vars.css`: `--spectrum-coachmark-action-menu-vertical-offset`.
+
 ## 16.0.2
 
 ### Patch Changes
@@ -2437,7 +3260,6 @@ New JSON format! The new `tokens/dist/json/tokens.json` asset provides a queryab
 📝 [#3359](https://github.com/adobe/spectrum-css/pull/3359) [`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b) Thanks [@cdransf](https://github.com/cdransf)!
 
 - This resolves our remaining stylelint issues around undefined tokens, rule order, unused values and color syntax.
-
   - Updates invalid color syntax from `rgba(N, N, N, N)` to `rgba(N N N / N)`.
   - In cases of duplicate properties, preserves the property that would be applied given current code structure.
   - Updates misnamed tokens to use valid tokens (`table/index.css`).
@@ -2761,6 +3583,7 @@ chore: updated css properties
 ## 11.0.2
 
 🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.1...@spectrum-css/tokens@11.0.2)
+
 **Note:** Version bump only for package @spectrum-css/tokens
 
 ## 11.0.1
@@ -2770,6 +3593,8 @@ chore: updated css properties
 **Note:** Version bump only for package @spectrum-css/tokens
 
 ## 11.0.0
+
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.2...@spectrum-css/tokens@11.0.0)
 
 ### ✨ Features
 

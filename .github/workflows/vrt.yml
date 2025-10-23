@@ -54,9 +54,9 @@ jobs:
           CHROMATIC_SLUG: ${{ github.repository }}
 
       - name: Use Node LTS version
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20.19.5
+          node-version: 22.21.0
           cache: yarn
 
       - name: Enable Corepack
@@ -71,7 +71,7 @@ jobs:
           path: |
             .cache/yarn
             node_modules
-          key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+          key: ubuntu-latest-node22-${{ hashFiles('yarn.lock') }}
 
       ## --- INSTALL --- ##
       - name: Install dependencies
@@ -93,7 +93,7 @@ jobs:
           exitOnceUploaded: true
           onlyChanged: true
           traceChanged: true
-          untraced: ".github/* plugins/stylelint-*/* tools/* .changeset/*"
-          autoAcceptChanges: "main"
+          untraced: ".github/* plugins/stylelint-*/* bundle/* .changeset/*"
+          autoAcceptChanges: "(main|spectrum-two)"
           # Lets VRT pass without running so as not to waste snapshots
           skip: ${{ inputs.skip }}

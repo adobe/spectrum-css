@@ -1,5 +1,20 @@
 # Change log
 
+## 7.0.0-next.1
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### S2 logic button fix
+
+  Adds `border-style: solid` to the styles to avoid a 3D effect on the border.
+
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
 ## 6.2.0
 
 ### Minor Changes

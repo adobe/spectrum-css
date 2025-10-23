@@ -17,12 +17,14 @@ export const ActionButtons = (args, context) => {
 			${Template({
 				...args,
 				hasPopup: "true",
+				hasLongPress: true,
 				hideLabel: true,
 			}, context)}
 			${Template({
 				...args,
 				iconName: undefined,
 				hasPopup: "true",
+				hasLongPress: true,
 			}, context)}
 		</div>
 	`;
@@ -63,11 +65,6 @@ export const ActionButtonGroup = Variants({
 			staticColor: "black",
 		},
 		{
-			testHeading: "Static black - emphasized",
-			staticColor: "black",
-			isEmphasized: true,
-		},
-		{
 			testHeading: "Static black - quiet",
 			staticColor: "black",
 			isQuiet: true,
@@ -75,11 +72,6 @@ export const ActionButtonGroup = Variants({
 		{
 			testHeading: "Static white",
 			staticColor: "white",
-		},
-		{
-			testHeading: "Static white - emphasized",
-			staticColor: "white",
-			isEmphasized: true,
 		},
 		{
 			testHeading: "Static white - quiet",

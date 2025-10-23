@@ -81,7 +81,11 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
+	tags: ["unmigrated"],
 };
 
 export const Horizontal = SplitViewGroup.bind({});

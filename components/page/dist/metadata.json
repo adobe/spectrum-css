@@ -1,16 +1,9 @@
 {
   "sourceFile": "index.css",
   "selectors": [":root"],
-  "modifiers": ["--mod-page-background", "--mod-page-content-tap-highlight"],
-  "component": [
-    "--spectrum-page-background-color",
-    "--spectrum-page-content-tap-highlight"
-  ],
+  "modifiers": [],
+  "component": [],
   "global": ["--spectrum-gray-75", "--spectrum-transparent-black-25"],
-  "system-theme": [
-    "--system-root-page-background-color",
-    "--system-root-page-content-tap-highlight"
-  ],
   "passthroughs": [],
   "high-contrast": []
 }

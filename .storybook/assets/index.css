@@ -1,5 +1,3 @@
-/* stylelint-disable selector-class-pattern -- Targeting pre-defined Storybook classes */
-
 /*!
  * Copyright 2024 Adobe. All rights reserved.
  *
@@ -72,6 +70,13 @@ div.sb-bar > div > div > span:first-child {
 .docblock-argstable-body tr td {
 	letter-spacing: unset;
 	font-size: 11px;
+	max-inline-size: 400px;
+	overflow-x: auto;
+}
+
+.docblock-argstable-body tr td code {
+	white-space: pre-wrap;
+	line-height: inherit;
 }
 
 .docblock-argstable-body td > span:has(select),
@@ -119,4 +124,9 @@ select:focus,
 	border-color: rgb(2, 101, 220) !important;
 	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
 }
-/* stylelint-enable selector-class-pattern */
+
+nav.sidebar-container,
+div.sb-bar {
+	color: var(--spectrum-neutral-content-color-default) !important;
+	background-color: var(--spectrum-background-layer-2-color) !important;
+}

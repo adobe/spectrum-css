@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
+import { size, staticColor } from "@spectrum-css/preview/types";
 import { default as ProgressBar } from "@spectrum-css/progressbar/stories/progressbar.stories.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -8,7 +8,7 @@ import { MeterGroup } from "./meter.test.js";
 import { FillGroup, Template } from "./template.js";
 
 /**
- * The meter component is a visual representations of a quantity or an achievement. The progress is determined by user actions, rather than system actions.
+ * The meter component is a visual representation of a quantity or an achievement. The progress is determined by user actions, rather than system actions.
  *
  * Meter is implemented using [the progress bar component](/docs/components-progress-bar--docs). Refer to the progress bar documentation for additional details.
  *
@@ -19,7 +19,7 @@ export default {
 	component: "Meter",
 	argTypes: {
 		...ProgressBar.argTypes,
-		size: size(["s", "l"]),
+		size: size(["s", "m", "l", "xl"]),
 		isIndeterminate: { table: { disable: true } },
 		fill: {
 			name: "Fill color",
@@ -33,12 +33,23 @@ export default {
 			options: ["info", "notice", "positive", "negative"],
 			control: "select",
 		},
+		helpText: {
+			name: "Help text",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Component",
+			},
+			control: "text",
+		},
+		staticColor,
 	},
 	args: {
 		...ProgressBar.args,
 		rootClass: "spectrum-Meter",
-		size: "l",
+		size: "m",
 		label: "Storage space",
+		helpText: "",
 	},
 	parameters: {
 		design: {
@@ -47,11 +58,15 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 /**
- * By default, meters have a blue fill and are the large sizes.
+ * By default, meters have a blue fill and are medium-sized.
  *
  * Meters should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. These meters without a visible label should still include an “aria-label” or “aria-labelledby” in HTML, depending on the context. The label is always placed above the track.
  *
@@ -63,7 +78,7 @@ Default.args = {
 };
 
 /**
- * Meters come in two sizes: large and small. By default, meters are large. Use the small size when there are multiple meters shown at the same time in a more confined space, such as in tables or cards.
+ * Meters come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most frequently used option. Use the small size when there are multiple meters shown at the same time in a more confined space, such as in tables or cards.
  */
 export const Sizing = (args, context) => Sizes({
 	Template,
@@ -90,6 +105,39 @@ FillColors.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+export const StaticWhite = Template.bind({});
+StaticWhite.args = {
+	staticColor: "white",
+	value: 50,
+};
+StaticWhite.tags = ["!dev"];
+StaticWhite.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlack = Template.bind({});
+StaticBlack.args = {
+	staticColor: "black",
+	value: 50,
+};
+StaticBlack.tags = ["!dev"];
+StaticBlack.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The help text is placed below the meter. This helps to provide additional context for the user.
+ */
+export const HelpText = Template.bind({});
+HelpText.args = {
+	helpText: "This is a help text",
+	value: 50,
+};
+HelpText.tags = ["!dev"];
+HelpText.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+HelpText.storyName = "Help text";
 // ********* VRT ONLY ********* //
 export const WithForcedColors = MeterGroup.bind({});
 WithForcedColors.args = Default.args;

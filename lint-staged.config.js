@@ -1,7 +1,5 @@
 module.exports = {
 	"package.json": (files) => ([
-		/** why build? constraints checks for compiled dist output to validate exports */
-		"cross-env NODE_ENV=production yarn build",
 		"yarn constraints --fix",
 		"yarn install --refresh-lockfile",
 		`eslint --fix --cache --no-error-on-unmatched-pattern ${files.join(" ")}`,

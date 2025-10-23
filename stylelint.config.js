@@ -11,18 +11,16 @@ module.exports = {
 		"@spectrum-tools/stylelint-no-missing-var",
 		"@spectrum-tools/stylelint-no-unused-custom-properties",
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
-		"@spectrum-tools/stylelint-theme-alignment",
 		// "stylelint-high-performance-animation",
 	],
 	ignoreFiles: [
 		// Static utility assets
 		"tokens/custom-*/*.css",
-		"tools/generator/**/*.css",
 		// Compiled and generated files
 		"**/dist/**",
 		".storybook/storybook-static/**/*.css",
 		"**/*-generated.css",
-		"tools/bundle/src/*.css",
+		"bundle/src/*.css",
 		"**/node_modules/**",
 		// Test files
 		"plugins/*/expected/*.css",
@@ -50,13 +48,12 @@ module.exports = {
 			{
 				except: ["blockless-after-blockless", "first-nested"],
 				ignore: ["after-comment", "first-nested"],
-				ignoreAtRules: ["extend"],
 			},
 		],
 		"at-rule-no-unknown": [
 			true,
 			{
-				ignoreAtRules: ["extend", "each", "include", "mixin"],
+				ignoreAtRules: ["include"],
 			},
 		],
 		"block-no-empty": [true, {
@@ -76,7 +73,7 @@ module.exports = {
 				],
 			},
 		],
-		"custom-property-pattern": [/^(spectrum|mod|highcontrast|system|_)/, {}],
+		"custom-property-pattern": [/^(spectrum|mod|highcontrast|_)/, {}],
 		"declaration-block-no-duplicate-custom-properties": true,
 		"declaration-property-value-no-unknown": [
 			true,
@@ -164,7 +161,6 @@ module.exports = {
 		 * Local/custom plugins
 		 * -------------------------------------------------------------- */
 		"spectrum-tools/no-missing-var": true,
-		"spectrum-tools/theme-alignment": null,
 		"spectrum-tools/no-unused-custom-properties": null,
 		"spectrum-tools/no-unknown-custom-properties": null,
 	},
@@ -173,7 +169,7 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: ["components/*/index.css", "components/*/themes/spectrum.css"],
+			files: ["components/*/index.css"],
 			rules: {
 				"selector-class-pattern": [
 					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
@@ -186,8 +182,8 @@ module.exports = {
 						/** @note this is a list of custom properties that are allowed to be unknown */
 						ignoreList: [
 							/^--mod-/,
-							/^--system-/,
 							/^--spectrum-picked-color$/,
+							/^--spectrum-downstate-(height|width)$/,
 						],
 						skipDependencies: false,
 						disableFix: true,
@@ -219,33 +215,12 @@ module.exports = {
 		{
 			files: ["tokens*/**/*.css(?inline)?", "tokens/**/*.css"],
 			rules: {
-				"custom-property-pattern": [/^(spectrum|color|scale|system)/, {}],
+				"custom-property-pattern": [/^(spectrum|color|scale)/, {}],
 			}
 		},
 		{
-			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/*.css"],
-			rules: {
-				"spectrum-tools/no-unused-custom-properties": null,
-				"selector-class-pattern": [
-					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
-						resolveNestedSelectors: true
-					}
-				],
-			},
-		},
-		{
-			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/express.css", "components/*/themes/spectrum.css"],
-			rules: {
-				"spectrum-tools/theme-alignment": [true, {
-					baseFilename: "spectrum-two",
-				}],
-			},
-		},
-		{
 			/* Allow "tree shaking" of unused custom properties in the bundle */
-			files: ["tools/bundle/**/*.css"],
+			files: ["bundle/**/*.css"],
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": [
 					true,

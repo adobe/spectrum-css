@@ -1,5 +1,43 @@
 # Change log
 
+## 8.0.0-next.3
+
+### Patch Changes
+
+📝 [#4113](https://github.com/adobe/spectrum-css/pull/4113) [`cf4fc1a`](https://github.com/adobe/spectrum-css/commit/cf4fc1a01d23ba810f45a903ecc29a5c8aae33d1) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## Minor linting fixes
+
+- Removed unused custom properties across multiple components
+- Fixed color function notation by converting `rgba()` to `rgb()` where appropriate
+- Removed duplicate custom property declarations
+- Fixed deprecated CSS properties (e.g., `word-wrap` → `overflow-wrap`)
+- Removed unnecessary stylelint-disable comments
+
+_No visual or functional changes to components._
+
+## 8.0.0-next.2
+
+### Patch Changes
+
+📝 [#4044](https://github.com/adobe/spectrum-css/pull/4044) [`b1166bd`](https://github.com/adobe/spectrum-css/commit/b1166bd9e4542b3a665cc95498011a633c56e72a) Thanks [@5t3ph](https://github.com/5t3ph)!
+
+Replace deprecated `word-break: break-word` with `overflow-wrap: break-word` to align with modern CSS standards and improve cross-browser compatibility. This property was deprecated in Chrome 44 (July 2015) in favor of the standardized `overflow-wrap` property.
+
+## 8.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 7.2.0
 
 ### Minor Changes

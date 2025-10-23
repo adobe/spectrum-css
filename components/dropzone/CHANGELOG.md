@@ -1,5 +1,85 @@
 # Change log
 
+## 9.0.0-next.4
+
+### Patch Changes
+
+📝 [#4113](https://github.com/adobe/spectrum-css/pull/4113) [`cf4fc1a`](https://github.com/adobe/spectrum-css/commit/cf4fc1a01d23ba810f45a903ecc29a5c8aae33d1) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## Minor linting fixes
+
+- Removed unused custom properties across multiple components
+- Fixed color function notation by converting `rgba()` to `rgb()` where appropriate
+- Removed duplicate custom property declarations
+- Fixed deprecated CSS properties (e.g., `word-wrap` → `overflow-wrap`)
+- Removed unnecessary stylelint-disable comments
+
+_No visual or functional changes to components._
+
+## 9.0.0-next.3
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/illustratedmessage@10.0.0-next.0
+
+## 9.0.0-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`c88fcdc`](https://github.com/adobe/spectrum-css/commit/c88fcdcfa4866f4b3ff7a1027e4253b8f2114351)]:
+  - @spectrum-css/link@8.0.0-next.0
+
+## 9.0.0-next.1
+
+### Major Changes
+
+- [#3429](https://github.com/adobe/spectrum-css/pull/3429) [`924fc7f`](https://github.com/adobe/spectrum-css/commit/924fc7f040b84731c06fd3c59dbb1aca9001b642) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### Dropzone S2 Migration
+
+Since dropzone shares a lot of illustrated message's new content tokens (typography and spacing), tons of unused`--mods` were removed.
+
+The component reflects the [new design](https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=10141-2822&m=dev) of the borders that includes dash length and dash gap.
+
+##### SVG Border
+
+To support the intention of the design, an SVG element is used. There are custom `--mod` tokens to adjust the length of dashed lines and the gap between them. It's understood it may be too much to consume an additional element so there's a fallback where the SVG element is not necessary - dropzone will use the standard `border` CSS property.
+
+##### New mods
+
+`--mod-drop-zone-content-height`
+`--mod-drop-zone-edge-to-text`
+`--mod-drop-zone-title-line-height`
+`--mod-drop-zone-border-dash-length`
+`--mod-drop-zone-border-dash-gap`
+
+##### Removed mods
+
+`--mod-drop-zone-body-color`
+`--mod-drop-zone-body-font-family`
+`--mod-drop-zone-body-font-style`
+`--mod-drop-zone-body-font-weight`
+`--mod-drop-zone-body-line-height`
+`--mod-drop-zone-content-color`
+`--mod-drop-zone-content-edge-to-text`
+`--mod-drop-zone-content-font-size`
+`--mod-drop-zone-heading-color`
+`--mod-drop-zone-heading-font-family`
+`--mod-drop-zone-heading-font-size`
+`--mod-drop-zone-heading-font-style`
+`--mod-drop-zone-heading-font-weight`
+`--mod-drop-zone-heading-line-height`
+`--mod-drop-zone-heading-to-body` `--mod-drop-zone-illustration-to-heading` `--mod-drop-zone-illustration-to-title`
+
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/actionbutton@8.0.0-next.0
+
 ## 8.2.0
 
 ### Minor Changes

@@ -1,5 +1,184 @@
 # Change Log
 
+## 12.1.0-next.21
+
+### Patch Changes
+
+Updated dependencies []:
+
+- @spectrum-css/bundle@2.0.0-next.17
+
+## 12.1.0-next.20
+
+### Patch Changes
+
+Updated dependencies []:
+
+- @spectrum-css/bundle@2.0.0-next.16
+
+## 12.1.0-next.19
+
+### Patch Changes
+
+Updated dependencies [[`ff1d0c8`](https://github.com/adobe/spectrum-css/commit/ff1d0c8d156305e2291b5519320d7069e0d7f68f)]:
+
+- @spectrum-css/tokens@16.1.0-next.10
+- @spectrum-css/bundle@2.0.0-next.15
+
+## 12.1.0-next.18
+
+### Patch Changes
+
+Updated dependencies [[`eb23c3b`](https://github.com/adobe/spectrum-css/commit/eb23c3b2acc5e39684319b2fd46990c2e76add0c)]:
+
+- @spectrum-css/tokens@16.1.0-next.9
+- @spectrum-css/bundle@2.0.0-next.14
+
+## 12.1.0-next.17
+
+### Patch Changes
+
+Updated dependencies []:
+
+- @spectrum-css/bundle@2.0.0-next.13
+
+## 12.1.0-next.16
+
+### Patch Changes
+
+Updated dependencies []:
+
+- @spectrum-css/bundle@2.0.0-next.12
+
+## 12.1.0-next.15
+
+### Minor Changes
+
+📝 [#4165](https://github.com/adobe/spectrum-css/pull/4165) [`fa7a1b4`](https://github.com/adobe/spectrum-css/commit/fa7a1b4fc3b9feca7a0568eb1fd998fcdcb905fa) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- _feature_: Add the `resetArgs` function to the argEvents decorator
+- _fix_: Resolve minor lint warnings in the Storybook CSS assets
+
+## 12.0.5-next.14
+
+### Patch Changes
+
+Updated dependencies []:
+
+- @spectrum-css/bundle@2.0.0-next.11
+
+## 12.0.5-next.13
+
+### Patch Changes
+
+Updated dependencies [[`5b694c5`](https://github.com/adobe/spectrum-css/commit/5b694c58be813fd82315252dab721e94bf769a71)]:
+
+- @spectrum-css/tokens@16.1.0-next.8
+- @spectrum-css/bundle@2.0.0-next.10
+
+## 12.0.5-next.12
+
+### Patch Changes
+
+Updated dependencies []:
+
+- @spectrum-css/bundle@2.0.0-next.9
+
+## 12.0.5-next.11
+
+### Patch Changes
+
+Updated dependencies []:
+
+- @spectrum-css/bundle@2.0.0-next.8
+
+## 12.0.5-next.10
+
+### Patch Changes
+
+Updated dependencies []:
+
+- @spectrum-css/bundle@2.0.0-next.7
+
+## 12.0.5-next.9
+
+### Patch Changes
+
+Updated dependencies [[`7f48b7c`](https://github.com/adobe/spectrum-css/commit/7f48b7c6384f8c7d598637226a17aff1c8e8b61c)]:
+
+- @spectrum-css/tokens@16.1.0-next.7
+- @spectrum-css/bundle@2.0.0-next.6
+
+## 12.0.5-next.8
+
+### Patch Changes
+
+Updated dependencies [[`86dd51d`](https://github.com/adobe/spectrum-css/commit/86dd51d884878a3090cb8463ca0bf44f21ee9f87), [`f6843c6`](https://github.com/adobe/spectrum-css/commit/f6843c698a2aac7c15ba949e28c56e4ff49c8c4a)]:
+
+- @spectrum-css/ui-icons@2.0.0-next.2
+- @spectrum-css/tokens@16.1.0-next.6
+- @spectrum-css/bundle@2.0.0-next.5
+
+## 12.0.5-next.7
+
+### Patch Changes
+
+- Updated dependencies [[`d952e0c`](https://github.com/adobe/spectrum-css/commit/d952e0c4d234f5e742432fe906965a52a50b228e)]:
+  - @spectrum-css/tokens@16.1.0-next.5
+  - @spectrum-css/bundle@2.0.0-next.4
+
+## 12.0.5-next.6
+
+### Patch Changes
+
+- Updated dependencies [[`f20e1e7`](https://github.com/adobe/spectrum-css/commit/f20e1e7ff402b591706cc791d9207fdedb80cd1e)]:
+  - @spectrum-css/tokens@16.1.0-next.4
+  - @spectrum-css/bundle@2.0.0-next.3
+
+## 12.0.5-next.5
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/bundle@2.0.0-next.2
+
+## 12.0.5-next.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/bundle@2.0.0-next.1
+
+## 12.0.5-next.3
+
+### Patch Changes
+
+- Updated dependencies [[`d47295a`](https://github.com/adobe/spectrum-css/commit/d47295a06cf974c347d794ae4f71bc4c8c498025), [`f0d187f`](https://github.com/adobe/spectrum-css/commit/f0d187ff016d49c46ac125cb37ae274644608505), [`1cdfcbf`](https://github.com/adobe/spectrum-css/commit/1cdfcbff6cb3369d710cec78733536d5dd72e7d4), [`1b33315`](https://github.com/adobe/spectrum-css/commit/1b33315fa1b65d65fe940d3be4ea4395d5394655)]:
+  - @spectrum-css/bundle@2.0.0-next.0
+  - @spectrum-css/tokens@16.1.0-next.3
+  - @spectrum-css/ui-icons@2.0.0-next.1
+
+## 12.0.5-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`87d7d99`](https://github.com/adobe/spectrum-css/commit/87d7d99260e758e697668cc17962b0b36d075c65)]:
+  - @spectrum-css/tokens@16.1.0-next.2
+
+## 12.0.5-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`89a3f2b`](https://github.com/adobe/spectrum-css/commit/89a3f2bfeed257a5eefeef229efaa3cc7555980c)]:
+  - @spectrum-css/tokens@16.1.0-next.1
+
+## 12.0.5-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
 ## 12.0.5
 
 ### Patch Changes
@@ -110,7 +289,6 @@ This release also includes:
 📝 [#3458](https://github.com/adobe/spectrum-css/pull/3458) [`e1b7102`](https://github.com/adobe/spectrum-css/commit/e1b71027f92ce18feb3a63c100d2b4871fc73b9f) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Update the Chromatic add-on to the currently maintained package:
-
   - from "@chromaui/addon-visual-tests": "^1.0.0"
   - to "@chromatic-com/storybook": "^3.2.3"
 
@@ -336,7 +514,6 @@ This release also includes:
 📝 [#2820](https://github.com/adobe/spectrum-css/pull/2820) [`1711ef8`](https://github.com/adobe/spectrum-css/commit/1711ef8a7aa8da1858019b77ed52e1dd1b86d3bf) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Fixes for Storybook instance
-
   - Bring back testing preview global toggle to toolbar after it was accidentally removed in a previous release
   - Chromatic disable snapshot syntax corrected in multiple stories
   - Update when token assets are loaded to correct snapshot inconsistencies
@@ -510,7 +687,6 @@ This component has been deprecated. Use an action bar to allow users to perform 
 ### 🛑 BREAKING CHANGE
 
 - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
-
 - NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
 
 ## 6.0.1

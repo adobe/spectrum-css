@@ -1,5 +1,42 @@
 # Change log
 
+## 11.0.0-next.2
+
+### Patch Changes
+
+📝 [#4113](https://github.com/adobe/spectrum-css/pull/4113) [`cf4fc1a`](https://github.com/adobe/spectrum-css/commit/cf4fc1a01d23ba810f45a903ecc29a5c8aae33d1) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## Minor linting fixes
+
+- Removed unused custom properties across multiple components
+- Fixed color function notation by converting `rgba()` to `rgb()` where appropriate
+- Removed duplicate custom property declarations
+- Fixed deprecated CSS properties (e.g., `word-wrap` → `overflow-wrap`)
+- Removed unnecessary stylelint-disable comments
+
+_No visual or functional changes to components._
+
+## 11.0.0-next.1
+
+### Minor Changes
+
+- [#3656](https://github.com/adobe/spectrum-css/pull/3656) [`911c390`](https://github.com/adobe/spectrum-css/commit/911c390b9fa0b43187e5ab535874f2ed1ffeb88d) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - #### Including the touch action rule for draggable content
+
+  The slider, color slider, color area, color wheel, color handle all deserve to have their touch-action property managed so that trying to set the value of those interfaces doesn't cause page scrolling in touch context.
+
+  Adding `touch-action: none` to a slider or any draggable component is necessary to prevent the browser's default touch behaviors—such as scrolling, pinch-zooming, or double-tap zooming from interfering with the component's intended interaction.
+
+  These components also include `user-select: none` to prevent selection or highlighting of any text elements.
+
+## 11.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/colorloupe@8.0.0-next.0
+  - @spectrum-css/opacitycheckerboard@5.0.0-next.0
+
 ## 10.2.0
 
 ### Minor Changes

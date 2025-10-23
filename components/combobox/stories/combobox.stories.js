@@ -1,11 +1,12 @@
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isReadOnly, size } from "@spectrum-css/preview/types";
 import { within } from "@storybook/test";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
-import { Template, VariantGroup } from "./template.js";
+import { HelpTextTemplate, Template, VariantGroup } from "./template.js";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
@@ -14,11 +15,11 @@ import { Template, VariantGroup } from "./template.js";
  *
  * ### General notes
  *
- * - Combobox uses `.spectrum-PickerButton` instead of a `.spectrum-Picker`
+ * - Combobox uses `.spectrum-InfieldButton` as a menu trigger.
  * - The following classes must be added:
  *   - `.spectrum-Combobox-textfield` is required on the Textfield outer element (`.spectrum-Textfield`)
  *   - `.spectrum-Combobox-input` is required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
- *   - `.spectrum-Combobox-button` is required on the FieldButton (`.spectrum-ActionButton spectrum-ActionButton--sizeM`)
+ *   - `.spectrum-Combobox-button` is required on the InfieldButton (`.spectrum-InfieldButton`)
  *
  * ### Indicating validity and focus
  *
@@ -26,8 +27,7 @@ import { Template, VariantGroup } from "./template.js";
  *
  * - `.is-focused` - when the input or button is focused with the mouse
  * - `.is-keyboardFocused` - when the input or button is focused with the keyboard
- * - `.is-valid` - when the input has an explicit valid state
- * - `.is-invalid` - when the input has an explicit invalid state
+ * - `.is-invalid` - when the input has an explicit invalid state; should also show help text for error messaging
  * - `.is-disabled` - when the control is disabled; should also add to the `.spectrum-Combobox-textfield` and include a `[disabled]` attribute to the `.spectrum-Combobox-button`
  * - `.is-loading` - when the progress circle is being shown
  *
@@ -45,13 +45,23 @@ export default {
 			...isOpen,
 			if: { arg: "isReadOnly", truthy: false },
 		},
-		isQuiet,
 		isInvalid,
+		isHovered,
 		isFocused,
 		isKeyboardFocused,
 		isLoading,
 		isDisabled,
 		isReadOnly,
+		isLabelRequired: {
+			name: "Label required",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+			if: { arg: "showFieldLabel", truthy: true },
+		},
 		showFieldLabel: {
 			name: "Show field label",
 			type: { name: "boolean" },
@@ -78,9 +88,27 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["top", "left"],
+			options: ["top", "side"],
 			control: "select",
 			if: { arg: "showFieldLabel", truthy: true },
+		},
+		autocomplete: {
+			name: "Autocomplete",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		helpText: {
+			name: "Help text",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Component",
+			},
+			control: "text",
 		},
 		value: {
 			name: "Value",
@@ -98,43 +126,51 @@ export default {
 		rootClass: "spectrum-Combobox",
 		size: "m",
 		isOpen: false,
-		isQuiet: false,
 		isInvalid: false,
+		isHovered: false,
 		isFocused: false,
 		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
 		isReadOnly: false,
+		isLabelRequired: false,
 		showFieldLabel: false,
+		autocomplete: false,
 		testId: "combobox",
+		fieldLabelText: "Select location",
+		helpText: "",
+		value: "Ballard",
 		content: [
-			(passthroughs, context) => Menu({
-				role: "listbox",
-				subrole: "option",
-				selectionMode: "single",
-				hasDividers: true,
-				items: [
+			(passthroughs, context) =>
+				Menu(
 					{
-						label: "Ballard",
-						isSelected: true,
-						isChecked: true,
+						role: "listbox",
+						selectionMode: "single",
+						hasDividers: true,
+						items: [
+							{
+								label: "Ballard",
+								isSelected: true,
+								isChecked: true,
+							},
+							{
+								label: "Fremont",
+							},
+							{
+								label: "Greenwood",
+							},
+							{
+								type: "divider",
+							},
+							{
+								label: "United States of America",
+								isDisabled: true,
+							},
+						],
+						...passthroughs,
 					},
-					{
-						label: "Fremont",
-					},
-					{
-						label: "Greenwood",
-					},
-					{
-						type: "divider",
-					},
-					{
-						label: "United States of America",
-						isDisabled: true,
-					},
-				],
-				...passthroughs,
-			}, context),
+					context,
+				),
 		],
 	},
 	parameters: {
@@ -142,9 +178,19 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=727-2550",
 		},
+		downState: {
+			selectors: [".spectrum-InfieldButton:not(:disabled)"],
+		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
+	decorators: [
+		withDownStateDimensionCapture,
+	],
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 
@@ -155,11 +201,6 @@ export default {
 
 export const Default = ComboBoxGroup.bind({});
 Default.tags = ["!autodocs"];
-Default.args = {
-	isOpen: true,
-	fieldLabelText: "Select location",
-	value: "Ballard",
-};
 Default.parameters = {
 	chromatic: { delay: 1000 }
 };
@@ -167,37 +208,57 @@ Default.parameters = {
 // ********* DOCS ONLY ********* //
 export const DefaultGroup = VariantGroup.bind({});
 DefaultGroup.storyName = "Default";
-DefaultGroup.args = Default.args;
+DefaultGroup.args = {
+	isOpen: true,
+};
 DefaultGroup.tags = ["!dev"];
 DefaultGroup.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const QuietGroup = VariantGroup.bind({});
-QuietGroup.storyName = "Quiet";
-QuietGroup.args = {
-	...Default.args,
-	isQuiet: true,
-};
-QuietGroup.tags = ["!dev"];
-QuietGroup.parameters = {
-	chromatic: { disableSnapshot: true },
+/**
+ * Comboboxes can show help text to provide feedback to users. The description in the help text is flexible and encompasses a range of guidance. Sometimes this guidance is about what to input, and sometime it’s about how to input. This includes information such as:
+ *
+ * - An overall description of the input field
+ * - Hints for what kind of information needs to be input
+ * - Specific formatting examples or requirements
+ */
+export const HelpText = HelpTextTemplate.bind({});
+HelpText.tags = ["!dev"];
+HelpText.args = {
+	showHelpText: true,
+	helpText: "This is a help text. Select an option",
 };
 
 /**
- * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add the `.isReadOnly` class to the combobox. To enable this feature, add the .isReadOnly class to the combobox. Then within the nested textfield component, add the .isReadOnly class and readonly attribute to the `<input>` element.
-*/
+ * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add the `.is-readOnly` class to the combobox. To enable this feature, add the `.is-readOnly` class to the combobox. Then within the nested textfield component, add the `.is-readOnly class and readonly attribute to the `input` element.
+ */
 export const ReadOnly = Template.bind({});
 ReadOnly.tags = ["!dev"];
 ReadOnly.args = {
 	isReadOnly: true,
-	value: "Ballard"
+	value: "Ballard",
 };
 ReadOnly.parameters = {
-	chromatic: { disableSnapshot: true }
+	chromatic: { disableSnapshot: true },
 };
 
 ReadOnly.storyName = "Read-only";
+
+export const Sizing = (args, context) =>
+	Sizes(
+		{
+			Template,
+			withBorder: false,
+			withHeading: false,
+			...args,
+		},
+		context,
+	);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ComboBoxGroup.bind({});

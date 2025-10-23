@@ -21,6 +21,9 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 } = {}, context = {}) => {
+	const { globals = {} } = context;
+	const scale = globals.scale ?? "medium";
+
 	return html`
 		<div
 			class=${classMap({
@@ -34,18 +37,18 @@ export const Template = ({
 				isOpen: true,
 				trigger: (passthrough) => ActionButton({
 					...passthrough,
-					size: "xs",
+					size: scale === "medium" ? "xs" : "s",
 					iconName,
 					iconSet,
 					customClasses: [`${rootClass}-button`],
 				}, context),
 				content: [
-					title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : "",
-					body ? html`<p class="${rootClass}-body">${body}</p>` : "",
+					title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : nothing,
+					body ? html`<p class="${rootClass}-body">${body}</p>` : nothing,
 					link
 						? Link({
-								text: link.text,
-								url: link.url,
+								text: "Link text",
+								url: "#",
 								customClasses: [`${rootClass}-link`],
 						})
 						: nothing,
@@ -53,8 +56,6 @@ export const Template = ({
 				position: popoverPlacement,
 				customClasses: [`${rootClass}-popover`],
 				customStyles,
-				popoverWidth: 275,
-				popoverHeight: 150,
 			}, context)}
 		</div>
 	`;

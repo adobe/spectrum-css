@@ -1,5 +1,66 @@
 # Change log
 
+## 9.0.0-next.5
+
+### Patch Changes
+
+📝 [#4174](https://github.com/adobe/spectrum-css/pull/4174) [`1895ddb`](https://github.com/adobe/spectrum-css/commit/1895ddbe962989c8813cb1bf41f8bb0425b67e76) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Popover positioning "top-left" and "top-right" were using inline properties which caused the spacings to swap in RTL mode. This was unintended as the "right" and "left" naming conventions are meant to retain their location in LTR or RTL mode.
+
+## 9.0.0-next.4
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+## 9.0.0-next.3
+
+### Minor Changes
+
+📝 [#3965](https://github.com/adobe/spectrum-css/pull/3965) [`61f3c04`](https://github.com/adobe/spectrum-css/commit/61f3c04a4211f19be2c5db883653fb25309a39ea) Thanks [@cdransf](https://github.com/cdransf)!
+
+Restores drop shadow for nested popovers. This is done by moving the default popover to `box-shadow` and using `filter` for popovers with tip. This allows for visual consistency across all popovers.
+
+#### New mods
+
+`--mod-popover-box-shadow`
+
+#### New custom properties
+
+`--spectrum-popover-box-shadow`
+
+### Patch Changes
+
+📝 [#3995](https://github.com/adobe/spectrum-css/pull/3995) [`18c69aa`](https://github.com/adobe/spectrum-css/commit/18c69aa52f6e598aecd67d2b5e7dd945473402e6) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+Defines the missing `--spectrum-popover-border-width` custom property. The variable was already being used in our style definitions, but its value was lost at some point so it was undefined in the browser. This work should correct that.
+
+## 9.0.0-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 9.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`c6836fb`](https://github.com/adobe/spectrum-css/commit/c6836fb132effcfb09e4ca6d0d8923564bfe2914)]:
+  - @spectrum-css/divider@6.0.0-next.0
+
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/alertdialog@5.0.0-next.0
+  - @spectrum-css/menu@10.0.0-next.0
+  - @spectrum-css/dialog@13.0.0-next.0
+
 ## 8.3.0
 
 ### Minor Changes

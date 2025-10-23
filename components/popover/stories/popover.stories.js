@@ -1,6 +1,7 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { ArgGrid } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -8,15 +9,16 @@ import { html } from "lit";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PopoverGroup } from "./popover.test.js";
-import { FixedWidthSourceTemplate, Template, TipPlacementVariants } from "./template.js";
+import { Template } from "./template.js";
 
 /**
  * A popover is used to display transient content (menus, options, additional actions, etc.) and appears when clicking/tapping on a source (tools, buttons, etc.).
- * It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
+ * It stands out via its visual style (stroke and/or drop shadow) and floats on top of the rest of the interface.
  *
+ * ## Usage notes
  * - Popover's position and distance to its source should be handled by the implementation. Positioning in Storybook is only for demonstration purposes.
- * - When the `.is-open` class is present, popover is offset from the source by the spacing value defined in `--spectrum-popover-animation-distance`. This
- * offset is done with a CSS transform and animates with a CSS transition.
+ * - When the `.is-open` class is present, popover is offset from the source by the spacing value defined in `--spectrum-popover-animation-distance`. This offset is done with a CSS transform and animates with a CSS transition.
+ * - There may be cases where a popover has another sibling popover. Implementations can add `margin` styles to the sibling popover, set to `--spectrum-popover-animation-distance`, within their popover position calculations. See [the nested popover story](/docs/components-popover--docs#nested) below for an example.
  */
 export default {
 	title: "Popover",
@@ -71,40 +73,35 @@ export default {
 				"end-bottom",
 			],
 		},
-		popoverHeight: { table: { disable: true } },
-		popoverWidth: { table: { disable: true } },
 		popoverAlignment: { table: { disable: true } },
-		popoverWrapperStyles: { table: { disable: true } },
+		customWrapperStyles: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Popover",
 		isOpen: true,
 		withTip: false,
 		position: "bottom",
-		popoverHeight: 142,
-		popoverWidth: 89,
 	},
 	parameters: {
 		layout: "centered",
-		docs: {
-			story: {
-				height: "200px",
-			}
-		},
 		design: {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=42086-5684",
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 /**
- * By default, popovers do not have a tip. Popovers without a tip should be used when the source has a
- * visually distinct down state, in order to show the connection between the popover and its source.
+ * By default, popovers do not have a tip and are positioned at the top. Popovers without a tip should be used when the source has a
+ * visually distinct [down state](/docs/foundations-down-state--docs), in order to show the connection between the popover and its source.
  *
- * This example uses the [menu](?path=/docs/components-menu--docs) component within the popover, and a button as the source.
+ * This example uses the [menu](/docs/components-menu--docs) component within the popover, has a position of `bottom`, and uses a button as the source.
  */
 export const Default = PopoverGroup.bind({});
 Default.args = {
@@ -150,6 +147,10 @@ Nested.args = {
 		label: "Actions",
 		...passthroughs,
 	}, context),
+	customStyles: {
+		"--mod-popover-width": "0px",
+		"--mod-popover-height": "0px",
+	},
 	content: [
 		(passthroughs, context) => Menu({
 			items: [
@@ -163,6 +164,10 @@ Nested.args = {
 		(passthroughs, context) => Template({
 			position: "end-top",
 			isOpen: true,
+			customStyles: {
+				// nested popover spacing so that adjacent `.spectrum-Popover` divs don't "touch"
+				"margin": "var(--spectrum-popover-animation-distance)",
+			},
 			trigger: (passthroughs, context) => ActionButton({
 				label: "More actions",
 				...passthroughs,
@@ -193,6 +198,14 @@ Nested.args = {
 			...passthroughs,
 		}, context),
 	],
+};
+Nested.parameters = {
+	docs: {
+		story: {
+			height: "250px"
+		},
+
+	}
 };
 
 // ********* VRT ONLY ********* //
@@ -231,17 +244,17 @@ WithTip.parameters = {
  */
 // @see https://opensource.adobe.com/spectrum-web-components/components/popover/#dialog-popovers
 export const DialogStyle = Template.bind({});
-DialogStyle.storyName = "Dialog style content";
+DialogStyle.storyName = "Dialog-style content";
 DialogStyle.tags = ["!dev"];
 DialogStyle.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
+	trigger: undefined,
 	content: [
 		(passthroughs, context) => Dialog({
 			showModal: false,
 			size: "s",
-			isDismissable: false,
+			isDismissible: false,
 			heading: "Example heading",
 			hasFooter: false,
 			footer: [""],
@@ -260,11 +273,6 @@ DialogStyle.args = {
 };
 DialogStyle.parameters = {
 	layout: "padded",
-	docs: {
-		story: {
-			height: "350px",
-		},
-	},
 	chromatic: {
 		disableSnapshot: true,
 	},
@@ -281,18 +289,18 @@ DialogStyle.parameters = {
  * - Top and bottom popover positions use the same SVG. The CSS handles flipping the SVG vertically.
  * - Left, right, start, and end popover positions use the same SVG. The CSS handles flipping the SVG horizontally.
  */
-export const Positioning = TipPlacementVariants.bind({});
+export const Positioning = (args, context) => ArgGrid({
+	Template,
+	argKey: "position",
+	withBorder: false,
+	...args,
+}, context);
 Positioning.storyName = "Positioning options";
 Positioning.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
-	content: [() => html`<span style="padding: 0 7px">Basic text content, with some added padding.</span>`],
-	skipAlignment: true,
-	popoverWrapperStyles: {
-		"display": "block",
-		"height": "150px",
-	},
+	trigger: undefined,
+	content: [() => html`<p style="padding: 0 7px; margin: 0; inline-size: 150px;">Basic text content, with some added padding.</p>`],
 };
 Positioning.tags = ["!dev"];
 Positioning.parameters = {
@@ -313,12 +321,20 @@ Positioning.parameters = {
  * top and bottom popovers, or half the height of the source for side popovers. The following
  * example sets this custom property to `50px` for a source button that is `100px` wide.
  */
-export const TipOffset = FixedWidthSourceTemplate.bind({});
+export const TipOffset = Template.bind({});
 TipOffset.storyName = "Tip positioning and inline offset";
 TipOffset.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
+	position: "bottom-start",
+	trigger: (passthroughs, context) => ActionButton({
+		...passthroughs,
+		label: "Source",
+		customStyles: {
+			...passthroughs?.customStyles ?? {},
+			"min-width": "100px",
+		},
+	}, context),
 	content: [
 		() => Menu({
 			items: [
@@ -337,11 +353,11 @@ TipOffset.args = {
 			],
 		}),
 	],
+	customWrapperStyles: {
+		"width": "300px",
+	},
 	customStyles: {
 		"--spectrum-popover-pointer-edge-offset": "50px",
-	},
-	popoverWrapperStyles: {
-		"display": "block",
 	},
 };
 TipOffset.tags = ["!dev"];

@@ -121,7 +121,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
+	tags: ["unmigrated"],
 };
 
 export const Default = CalendarGroup.bind({});

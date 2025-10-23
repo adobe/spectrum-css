@@ -127,9 +127,7 @@ module.exports = defineConfig({
 		 * @returns {void}
 		 */
 		function validateComponentPackageJson(workspace, folderName) {
-			// Check the folder to see if there's a themes directory
-			const hasThemes = existsSync(join(workspace.cwd, "themes"));
-			const hasDist = existsSync(join(workspace.cwd, "dist"));
+			const hasDist = isComponent(workspace);
 			const hasIndexCSS = existsSync(join(workspace.cwd, "index.css"));
 			const hasOtherCSS = fg.sync(["*.css", "!index.css"], { cwd: workspace.cwd, onlyFiles: true }).length > 0;
 
@@ -159,15 +157,9 @@ module.exports = defineConfig({
 				...(hasDist ? {
 					"./dist/*": "./dist/*",
 					"./index.css": "./dist/index.css",
-					...(hasDist && hasThemes ? {
-						"./index-*.css": "./dist/index-*.css",
-					} : {}),
 					"./metadata.json": "./dist/metadata.json",
 				} : hasOtherCSS ? {
 					"./*.css": "./*.css",
-				} : {}),
-				...(hasDist && hasThemes ? {
-					"./themes/*": "./dist/themes/*"
 				} : {}),
 				"./stories/*": "./stories/*",
 			});
@@ -221,7 +213,7 @@ module.exports = defineConfig({
 		function validatePackageJson(workspace) {
 			const isRoot = workspace.cwd === ".";
 			const isToken = workspace.cwd === "tokens";
-			const isBundle = workspace.cwd === "tools/bundle";
+			const isBundle = workspace.cwd === "bundle";
 
 			/**
 			 * -------------- GLOBAL --------------
@@ -273,13 +265,13 @@ module.exports = defineConfig({
 					// Don't remove tooling dependencies
 					if (!dependency.startsWith("@spectrum-css/")) continue;
 
-					if (!components.includes(dependency.replace("@spectrum-css/", "")) && dependency !== "@spectrum-css/tokens") {
-						// Remove the dependencies that are not in the components directory
-						workspace.remove(`dependencies.${dependency}`);
-					}
-					else {
+					if (Yarn.workspace({ ident: dependency })?.manifest?.version) {
 						// Update the version of the dependency to the latest local version
 						workspace.set(`dependencies.${dependency}`, Yarn.workspace({ ident: dependency }).manifest.version);
+					}
+					else {
+						// Remove the dependencies that are not in the components directory
+						workspace.unset(`dependencies.${dependency}`);
 					}
 				}
 			}

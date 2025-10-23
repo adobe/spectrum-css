@@ -1,5 +1,101 @@
 # Change log
 
+## 5.0.0-next.4
+
+### Major Changes
+
+- [#3725](https://github.com/adobe/spectrum-css/pull/3725) [`f977e60`](https://github.com/adobe/spectrum-css/commit/f977e60a7f32eb7147bd1546d04a02557011e7d9) Thanks [@cdransf](https://github.com/cdransf)!
+
+#### S2 migration
+
+This migrates the `alert dialog` component to the latest Spectrum 2 designs. Custom properties have been remapped and added per the design specification.
+
+The icon in the dialog header has been moved from the right side to the left.
+
+The dialog divider has been removed.
+
+Primary button style has been updated to filled.
+
+The following variants remain supported:
+
+- Confirmation
+- Information
+- Destructive
+- Warning (with `AlertDiamond` icon)
+- Error (with `AlertTriangle` icon)
+
+Dialog buttons may be displayed either horizontally or vertically.
+
+##### Removed custom properties
+
+`--spectrum-alert-dialog-description-to-buttons`
+`--spectrum-alert-dialog-divider-to-description`
+`--spectrum-alert-dialog-padding`
+`--spectrum-alert-dialog-title-size`
+`--spectrum-alert-dialog-title-to-divider`
+`--spectrum-alert-dialog-title-to-icon`
+
+##### New custom properties
+
+`--spectrum-alert-dialog-background-color`
+`--spectrum-alert-dialog-corner-radius`
+`--spectrum-alert-dialog-description-font-size`
+`--spectrum-alert-dialog-description-to-button-group`
+`--spectrum-alert-dialog-edge-to-content`
+`--spectrum-alert-dialog-heading-size`
+`--spectrum-alert-dialog-title-to-description`
+
+##### Removed mods
+
+`--mod-alert-dialog-body-font-size`
+`--mod-alert-dialog-description-to-buttons`
+`--mod-alert-dialog-divider-to-description`
+`--mod-alert-dialog-padding`
+`--mod-alert-dialog-title-to-divider`
+`--mod-alert-dialog-title-to-icon`
+
+##### New mods
+
+`--mod-alert-dialog-background-color`
+`--mod-alert-dialog-corner-radius`
+`--mod-alert-dialog-description-content-size`
+`--mod-alert-dialog-description-to-button-group`
+`--mod-alert-dialog-edge-to-content`
+`--mod-alert-dialog-heading-size`
+`--mod-alert-dialog-minimum-title-to-icon`
+`--mod-alert-dialog-title-to-description`
+
+## 5.0.0-next.3
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/modal@8.0.0-next.1
+  - @spectrum-css/underlay@7.0.0-next.0
+
+## 5.0.0-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`cb1b957`](https://github.com/adobe/spectrum-css/commit/cb1b957c05ecf02d3f473de09a8bfd5f2b5d42bf)]:
+  - @spectrum-css/modal@7.1.1-next.0
+
+## 5.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`c6836fb`](https://github.com/adobe/spectrum-css/commit/c6836fb132effcfb09e4ca6d0d8923564bfe2914)]:
+  - @spectrum-css/divider@6.0.0-next.0
+
+## 5.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/buttongroup@10.0.0-next.0
+
 ## 4.2.0
 
 ### Minor Changes

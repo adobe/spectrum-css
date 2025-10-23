@@ -1,0 +1,28 @@
+---
+"@spectrum-css/link": major
+---
+
+### Spectrum 2 link migration
+
+The link component is updated with S2 specifications, colors, and typography. There is a new inline variant which uses the `.spectrum-Link--inline` class and the default is the standalone variant.
+
+#### Note
+
+- Quiet styling does not apply to the inline variant so that it is distinguishable from the surrounding text and the underline indicator is clear
+
+#### Color
+
+`spectrum-link-focus-indicator-color`
+`spectrum-link-focus-indicator-thickness`
+`spectrum-link-focus-indicator-gap`
+`spectrum-link-corner-radius`
+
+#### Typography
+
+`spectrum-link-line-height`
+`spectrum-link-line-height-cjk-100`
+`spectrum-link-font-size`
+`spectrum-link-font-style`
+`spectrum-link-font-weight`
+`spectrum-link-text-underline-thickness`
+`spectrum-link-text-underline-gap`

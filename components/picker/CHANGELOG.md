@@ -1,5 +1,80 @@
 # Change log
 
+## 10.0.0-next.4
+
+### Major Changes
+
+📝 [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`7ac2952`](https://github.com/adobe/spectrum-css/commit/7ac2952d16e9760121e3a33390d14f6e336d587d) Thanks [@pfulton](https://github.com/pfulton)!
+
+#### Picker: remove quiet variant
+
+This removes the quiet variant for the picker component based on design feedback. Prior to this change, there was an odd state where the quiet picker scaled with the foundations down state applied.
+
+##### Removed mods
+
+`--mod-picker-background-color-disabled`
+
+**Additionally:** all of the quiet variant mods have been removed.
+
+`--mod-picker-inline-size-quiet`
+`--mod-picker-min-inline-size-quiet`
+`--mod-picker-spacing-edge-to-disclosure-icon-quiet`
+`--mod-picker-spacing-edge-to-text-quiet`
+`--mod-picker-spacing-label-to-picker-quiet`
+
+## 10.0.0-next.3
+
+### Major Changes
+
+- [#3792](https://github.com/adobe/spectrum-css/pull/3792) [`032001b`](https://github.com/adobe/spectrum-css/commit/032001b4eb1e6f15bb30fcc18b42cd001f790024) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### Component refactor
+
+- Refactors Picker component to use proper custom property naming conventions
+- Adds size-specific animation distances for Popover component
+- Improves component structure with proper class by renaming `spectrum-Picker` to `spectrum-Picker-button`
+- `spectrum-Picker` now encapsulates help text, label, and popover components
+- Adds `flex-shrink` to progress circle for better layout control when truncation and loading is visible
+- Updates Popover animation distance to use `spectrum-Picker` custom properties
+
+##### New token
+
+`--spectrum-picker-popover-animation-distance`
+
+##### Renamed tokens
+
+`spectrum-picker-spacing-picker-to-popover` --> `--spectrum-picker-popover-animation-distance`
+
+## 10.0.0-next.2
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### S2 picker fixes
+
+  This work addresses some regressions noticed in the migrated S2 picker component. Mainly, S2 border colors were fixed (most of them are transparent, including disabled).
+
+  PRs used as reference:
+  - [Picker docs to storybook migration](https://github.com/adobe/spectrum-css/pull/3200)
+  - [S2 picker migration](https://github.com/adobe/spectrum-css/pull/2697)
+
+## 10.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/progresscircle@6.0.0-next.0
+
+## 10.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/helptext@8.0.0-next.0
+  - @spectrum-css/menu@10.0.0-next.0
+  - @spectrum-css/popover@9.0.0-next.0
+
 ## 9.2.0
 
 ### Minor Changes
@@ -12,7 +87,9 @@ Ensure accurate exports are present for each component. Specifically, adding `th
 
 ### Patch Changes
 
-- [#3607](https://github.com/adobe/spectrum-css/pull/3607) [`7797847`](https://github.com/adobe/spectrum-css/commit/7797847c723d530f34d610516e04150092557af1) Thanks [@blunteshwar](https://github.com/blunteshwar)! - Updated border-color for Open not hover state of picker from --spectrum-gray-900 to --spectrum-gray-800 as specified in the spec
+- [#3607](https://github.com/adobe/spectrum-css/pull/3607) [`7797847`](https://github.com/adobe/spectrum-css/commit/7797847c723d530f34d610516e04150092557af1) Thanks [@blunteshwar](https://github.com/blunteshwar)!
+
+Updated border-color for open state of picker from `--spectrum-gray-900` to `--spectrum-gray-800`.
 
 ## 9.1.3
 

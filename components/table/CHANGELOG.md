@@ -1,5 +1,164 @@
 # Change log
 
+## 9.0.0-next.4
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+## 9.0.0-next.3
+
+### Minor Changes
+
+📝 [#3818](https://github.com/adobe/spectrum-css/pull/3818) [`f20e1e7`](https://github.com/adobe/spectrum-css/commit/f20e1e7ff402b591706cc791d9207fdedb80cd1e) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+#### S2 table migration (continued)
+
+##### Net-new features
+
+- New sparkline SVGs available for cell content
+
+##### Description of other S2 table work
+
+A new `.spectrum-Table-headCell--alignEnd` class was created to correspond to tables that may have end-aligned numerical data so the head cell follows the text alignment correctly.
+
+Semantically, if a table should enable column sorting, the content of a column's head cell should actually be a button, since it is triggering an action. If the column header cell could trigger a menu, the content of that cell should also be a button. New markup has been included to improve the semantic design of the content of header cells, utilizing button components to signify an action can be triggered, or a menu can be triggered.
+
+In Storybook, new stories have been added to the docs page and the testing grid for Chromatic. These stories include `WithMenuButton`, `WithChartContent`. Documentation has been added for each of these stories, as well as expanded in other stories.
+
+##### Modifier changes
+
+###### Renamed modifiers
+
+| Old modifier                   | New modifier                              |
+| ------------------------------ | ----------------------------------------- |
+| `--mod-table-row-active-color` | `--mod-table-row-background-color-active` |
+
+###### New modifiers
+
+- `--mod-table-header-font-style`
+- `--mod-table-header-icons-color-active`
+- `--mod-table-header-icons-color-default`
+- `--mod-table-header-icons-color-hover`
+- `--mod-table-header-icons-color-key-focus`
+- `--mod-table-row-font-family`
+- `--mod-table-row-font-style`
+- `--mod-table-row-text-color-active`
+- `--mod-table-row-text-color-hover`
+
+###### Removed modifiers
+
+- `--mod-table-header-background-color-quiet`
+- `--mod-table-row-background-color-quiet`
+
+## 9.0.0-next.2
+
+### Major Changes
+
+📝 [#3799](https://github.com/adobe/spectrum-css/pull/3799) [`c86d476`](https://github.com/adobe/spectrum-css/commit/c86d476f4a470dbca86b823d399583fd76d37871) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+#### S2 table migration
+
+Compared to the S1 table, this component has updated corner rounding, updated color tokens, some updated spacing, and an overall refreshed look.
+
+##### Net-new features
+
+- The S2 table supports an empty state, rendering an illustrated message component.
+- As data is loading to the table, this component will render a progress circle during the loading state.
+- There are 2 selection modes: single-select and multi-select. Multi-select tables (`selectionMode: "multiple"`) render an indeterminate checkbox in the `thead`/`div` equivalent. Single-select tables (`selectionMode: "single"`) do not render the indeterminate checkbox in the header row. (Note: the `selectionMode` arg is disabled and will not render in the Storybook control table.)
+- For tables with sortable column, there are three new S2 icons used: `Sort` to indicate "general" sorting, `SortUp` for ascending sort direction, `SortDown` for descending sort direction.
+- Tables support thumbnail, avatar, and icon components as content within a cell.
+- Focus indicators for entire rows have been updated for rows to include a side focus indicator.
+
+###### Description of other S2 table work
+
+T-shirt sizing for tables is not technically supported, so t-shirt size classes (i.e. `.spectrum-Table--sizeS`), have been removed across all density variants.
+
+The `.spectrum-Table-cell--alignRight` class has been renamed to `.spectrum-Table-cell--alignEnd` to reflect the preference for "logical" positioning. The `.spectrum-Table-cell--alignCenter` class has been refactored to `.spectrum-Table-cell--alignStart`.
+
+In S1, the CSS table component only supported thumbnails. Because the S2 table supports thumbnails, as well as avatars and icons, most of the language regarding thumbnails has also changed. For instance, the `showThumbnail` storybook arg was refactored to `visualElement`. The following CSS classes have been removed or refactored to remove the thumbnail language in favor of "visual" instead:
+
+- `.spectrum-Table-thumbnailInner` >> `.spectrum-Table-visualInner`
+- `.spectrum-Table-row--thumbnail` >> **removed**
+- `.spectrum-Table-cell--thumbnail` >> **removed**
+- `.spectrum-Table-thumbnailInner` >> **removed**
+- `.spectrum-Table-thumbnailContent` >> **removed**
+- `.spectrum-Table-thumbnailInner` >> **removed**
+
+The drop zones have been refactored to approach the drop zone indicators as pseudo elements, as opposed to `outline` properties.
+
+Because there are multiple sort icons in the S2 table, `.spectrum-Table-sortedIcon` has been renamed to `.spectrum-Table-sortIcon`.
+
+Individual cell focus rings have rounded corners.
+
+The outer table border extends all the way around the `thead`/`div` equivalent.
+
+In Storybook, several new stories have been added to the docs page and the testing grid for Chromatic. These stories include `EmptyState`, `LoadingState`, `SingleSelect`, `NumericalData`, `TableStates`, `Sortable`. Documentation has been added for each of these stories, as well as expanded in other stories.
+
+##### Modifiers
+
+###### Renamed
+
+| Old Modifier                                       | New modifier                                      |
+| -------------------------------------------------- | ------------------------------------------------- |
+| `--mod-table-border-radius--quiet`                 | `--mod-table-border-radius-quiet`                 |
+| `--mod-table-header-top-to-text`                   | `--mod-table-header-row-top-to-text`              |
+| `--mod-table-header-bottom-to-text`                | `--mod-table-header-row-bottom-to-text`           |
+| `--mod-table-cell-inline-space`                    | `--mod-table-cell-inline-spacing`                 |
+| `--mod-table-checkbox-to-text`                     | `--mod-table-checkbox-to-cell-content`            |
+| `--mod-table-header-background-color--quiet`       | `--mod-table-header-background-color-quiet`       |
+| `--mod-table-header-bottom-to-text`                | `--mod-table-header-row-bottom-to-text`           |
+| `--mod-table-header-top-to-text`                   | `--mod-table-header-row-top-to-text`              |
+| `--mod-table-min-row-height--compact`              | `--mod-table-min-row-height-compact`              |
+| `--mod-table-min-row-height--spacious`             | `--mod-table-min-row-height-spacious`             |
+| `--mod-table-outer-border-inline-width--quiet`     | `--mod-table-outer-border-inline-width-quiet`     |
+| `--mod-table-row-background-color--quiet`          | `--mod-table-row-background-color-quiet`          |
+| `--mod-table-row-checkbox-block-spacing--compact`  | `--mod-table-row-checkbox-block-spacing-compact`  |
+| `--mod-table-row-checkbox-block-spacing--spacious` | `--mod-table-row-checkbox-block-spacing-spacious` |
+| `--mod-table-thumbnail-to-text`                    | `--mod-table-visual-to-text`                      |
+
+###### New
+
+- `--mod-table-avatar-size`
+- `--mod-table-avatar-size-compact`
+- `--mod-table-avatar-size-spacious`
+- `--mod-table-section-header-inline-start-spacing`
+- `--mod-table-summary-row-bottom-to-text`
+- `--mod-table-summary-row-min-height`
+- `--mod-table-summary-row-top-to-text`
+
+###### Removed
+
+- `--mod-table-edge-to-content`
+- `--mod-table-header-row-checkbox-block-spacing`
+- `--mod-table-avatar-size-spacious`
+- `--mod-table-row-bottom-to-text--compact`
+- `--mod-table-row-bottom-to-text--spacious`
+- `--mod-table-row-top-to-text--compact`
+- `--mod-table-row-top-to-text--spacious`
+- `--mod-table-thumbnail-block-spacing"`
+- `--mod-table-thumbnail-block-spacing-compact`
+- `--mod-table-thumbnail-block-spacing-spacious`
+
+## 9.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/thumbnail@9.0.0-next.0
+
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/button@15.0.0-next.0
+  - @spectrum-css/checkbox@11.0.0-next.0
+
 ## 8.2.0
 
 ### Minor Changes

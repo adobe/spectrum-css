@@ -1,5 +1,173 @@
 # Change log
 
+## 10.0.0-next.6
+
+### Patch Changes
+
+📝 [#4085](https://github.com/adobe/spectrum-css/pull/4085) [`082862e`](https://github.com/adobe/spectrum-css/commit/082862eb80c6e0ac1c801b1d538e4d2f2bb919b4) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+### Action menu component (now with custom styles!)
+
+Introduces `@spectrum-css/actionmenu`, a composition of `ActionButton`, `Popover`, and `Menu` to present action lists from a trigger. Now with custom styles!
+
+- Adds wrapper classes: `spectrum-ActionMenu`, `spectrum-ActionMenu-trigger`, `spectrum-ActionMenu-popover`, and `spectrum-ActionMenu-menu`.
+- Supports long press triggers and four placements (start/end, top/bottom) via the underlying popover API.
+- Design reference: [Figma S2 token specs](https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=20959-21513&node-type=frame&t=jbePQKK1yLdrHG2M-11).
+
+#### Migration notes
+
+- If you previously composed an action menu manually (action button + popover + menu), you can adopt the new wrapper classes without changing the underlying markup semantics. Ensure the trigger has `aria-haspopup="menu"` and manages `aria-expanded` according to your application logic.
+- For spacing customizations previously done with ad‑hoc margins, switch to the new `--spectrum-actionmenu-button-to-menu-gap` custom property.
+
+Example markup:
+
+```html
+<div class="spectrum-ActionMenu">
+	<button
+		class="spectrum-ActionMenu-trigger spectrum-ActionButton"
+		aria-haspopup="menu"
+		aria-expanded="false"
+	>
+		<!-- icon/label -->
+	</button>
+	<div class="spectrum-ActionMenu-popover spectrum-Popover">
+		<ul class="spectrum-ActionMenu-menu spectrum-Menu">
+			<!-- menu items -->
+		</ul>
+	</div>
+	<!-- popover positioning/visibility is owned by your implementation -->
+	<!-- use long-press behavior when appropriate to your UX -->
+	<!-- use Popover placement options: bottom-start, bottom-end, start-top, end-top -->
+</div>
+```
+
+### Menu refinements
+
+Updates `@spectrum-css/menu` styles to align with latest Spectrum 2 design specifications and improve accessibility.
+
+- Updated `.is-selectableMultiple .spectrum-Menu-itemCheckbox` to `.is-selectableMultiple:not(:has(.is-selectable)) .spectrum-Menu-itemCheckbox` to prevent clash with the `.is-selectable` placement.
+- Non-breaking; no class or DOM changes required.
+
+### Action button refinements
+
+- Selection styling now applies when components use ARIA pressed/expanded semantics, not just `.is-selected`.
+- Implemented with `:where()` to keep selector specificity low and prevent downstream specificity battles.
+- Non-breaking; no class changes required.
+
+### Action group refinements
+
+Aligns selection behavior of grouped items with action button updates.
+
+- Adds `:where([aria-pressed="true"], [aria-expanded="true"])` alongside `.is-selected` on items to cover more accessibility use-cases while keeping specificity low.
+- Non-breaking; no class changes required.
+
+## 10.0.0-next.5
+
+### Minor Changes
+
+📝 [#4058](https://github.com/adobe/spectrum-css/pull/4058) [`d831bd0`](https://github.com/adobe/spectrum-css/commit/d831bd09e3a32cb0245692d73a4272101d5a0b88) Thanks [@5t3ph](https://github.com/5t3ph)!
+
+This handles a few remaining items from the initial S2 migration:
+
+- update to use the correct "LinkOut" icon (previously unavailable)
+- add "Unavailable" icon
+  - the functionality in WC will be to open an explanatory popover
+
+Additionally, per design review, updates were made regarding valid feature combos:
+
+- **Not allowed:**
+  - external links with: thumbnails, drill-in, unavailable, or selection modes
+  - thumbnails with: drill-in, external links
+  - new "unavailable" with: selection modes, external links
+
+## 10.0.0-next.4
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+## 10.0.0-next.3
+
+### Major Changes
+
+- [#3686](https://github.com/adobe/spectrum-css/pull/3686) [`cda60f4`](https://github.com/adobe/spectrum-css/commit/cda60f4f68ea1863b605fe992682664379d51278) Thanks [@5t3ph](https://github.com/5t3ph)! - ### Spectrum 2 migration
+
+  Menu now uses Spectrum 2 tokens and specifications.
+
+  Removes custom menu item background color tokens: `@adobe/spectrum-tokens` has been updated to include many tokens relating to the menu component, including some that replace custom tokens that had previously been added. As such, these custom menu item color tokens that are now available from `@adobe/spectrum-tokens` have been removed.
+
+  In addition to other small token and minor style changes, there were several new features that were added to this version of menu, including:
+  - A thumbnail can now be used in place of an icon
+  - A section description can now be included below the menu section heading
+  - The actions area previously held action switches for multi-select, and in this version, an external link action icon can be included in that area
+
+  ### New mods
+  - `--mod-menu-item-corner-radius`
+  - `--mod-menu-item-linkout-icon-height`
+  - `--mod-menu-item-linkout-icon-width`
+  - `--mod-menu-item-thumbnail-height`
+  - `--mod-menu-item-thumbnail-opacity-disabled`
+  - `--mod-menu-item-thumbnail-to-label`
+  - `--mod-menu-item-thumbnail-width`
+  - `--mod-menu-item-top-to-thumbnail`
+  - `--mod-menu-item-top-to-workflow-icon`
+  - `--mod-menu-section-description-color`
+  - `--mod-menu-section-description-font-size`
+  - `--mod-menu-section-description-font-weight`
+  - `--mod-menu-section-description-line-height`
+  - `--mod-menu-section-description-line-height-cjk`
+  - `--mod-menu-section-header-to-description`
+
+## 10.0.0-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/switch@7.0.0-next.0
+
+## 10.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`c6836fb`](https://github.com/adobe/spectrum-css/commit/c6836fb132effcfb09e4ca6d0d8923564bfe2914)]:
+  - @spectrum-css/divider@6.0.0-next.0
+
+## 10.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/checkbox@11.0.0-next.0
+  - @spectrum-css/tray@6.0.0-next.0
+
+## 10.0.0
+
+### Minor Changes
+
+📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Minified and gzipped outputs available for all compiled CSS assets.
+
+### Patch Changes
+
+📝 [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Dependency alignment across the project.
+
+  Set component peerDependencies as optional to reduce console warnings on downstream projects.
+
+- Updated dependencies [[`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee), [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
+  - @spectrum-css/checkbox@11.0.0
+  - @spectrum-css/divider@5.1.0
+  - @spectrum-css/icon@9.1.0
+  - @spectrum-css/switch@6.1.0
+  - @spectrum-css/tray@6.0.0
+  - @spectrum-css/tokens@16.0.1
+
 ## 9.3.0
 
 ### Minor Changes
@@ -20,33 +188,9 @@ Minor linting fix of replacing `rgba` to the `rgb` shorthand syntax.
 
 ### Minor Changes
 
-- [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)! - By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
+📝 [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-## 10.0.0
-
-### Minor Changes
-
-📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
-
-## New feature
-
-Minified and gzipped outputs available for all compiled CSS assets.
-
-### Patch Changes
-
-📝 [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
-
-- Dependency alignment across the project.
-
-  Set component peerDependencies as optional to reduce console warnings on downstream projects.
-
-- Updated dependencies [[`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee), [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
-  - @spectrum-css/checkbox@11.0.0
-  - @spectrum-css/divider@5.1.0
-  - @spectrum-css/icon@9.1.0
-  - @spectrum-css/switch@6.1.0
-  - @spectrum-css/tray@6.0.0
-  - @spectrum-css/tokens@16.0.1
+By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
 
 ## 9.1.1
 

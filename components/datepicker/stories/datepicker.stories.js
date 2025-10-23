@@ -74,14 +74,13 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2---Desktop?node-id=112153-679",
 		},
-		docs: {
-			story: {
-				height: "50px"
-			}
-		},
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
+	tags: ["unmigrated"],
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 
@@ -105,11 +104,6 @@ DefaultGroup.args = {};
 DefaultGroup.tags = [ "!dev"];
 DefaultGroup.storyName = "Default";
 DefaultGroup.parameters = {
-	docs: {
-		story: {
-			height: "350px",
-		}
-	},
 	chromatic: { disableSnapshot: true },
 };
 
@@ -123,11 +117,6 @@ Quiet.args = {
 };
 Quiet.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "350px",
-		}
-	},
 };
 
 /**

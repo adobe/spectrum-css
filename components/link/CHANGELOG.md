@@ -1,5 +1,58 @@
 # Change log
 
+## 8.0.0-next.2
+
+### Minor Changes
+
+- [#3861](https://github.com/adobe/spectrum-css/pull/3861) [`911a7cf`](https://github.com/adobe/spectrum-css/commit/911a7cf8b3a651f3e86d67b7b1c08ee1de540c17) Thanks [@cdransf](https://github.com/cdransf)! - Fixes keyboard focus shift by changing padding to outline-offset
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### S2 link fix
+
+  This work adds the static color focus ring tokens to links (so that static white and static black links do _not_ have the usual blue focus ring).
+
+## 8.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 8.0.0-next.0
+
+### Major Changes
+
+📝 [#3570](https://github.com/adobe/spectrum-css/pull/3570) [`c88fcdc`](https://github.com/adobe/spectrum-css/commit/c88fcdcfa4866f4b3ff7a1027e4253b8f2114351) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### Link S2 migration
+
+The link component is updated with S2 specifications, colors, and typography. There is a new inline variant which uses the `.spectrum-Link--inline` modifier class and the default is the standalone variant.
+
+##### Note
+
+- Quiet styling does not apply to the inline variant so that it is distinguishable from the surrounding text and the underline indicator is clear
+- `--mod-spectrum-link-font-weight` can be used to adjust inline variant to match surrounding text. Apply font weights to this mod `inherit` does not apply.
+
+#### New tokens
+
+##### Color
+
+`spectrum-link-focus-indicator-color`
+`spectrum-link-focus-indicator-thickness`
+`spectrum-link-focus-indicator-gap`
+`spectrum-link-corner-radius`
+
+##### Typography
+
+`spectrum-link-line-height`
+`spectrum-link-line-height-cjk-100`
+`spectrum-link-font-size`
+`spectrum-link-font-style`
+`spectrum-link-font-weight`
+`spectrum-link-text-underline-thickness`
+`spectrum-link-text-underline-gap`
+
 ## 7.2.0
 
 ### Minor Changes

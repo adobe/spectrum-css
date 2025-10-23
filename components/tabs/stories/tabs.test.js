@@ -1,22 +1,9 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
-const ExampleLabelOnlyTabContent = [
-	{
-		label: "Selected",
-		isSelected: true,
-	},
-	{
-		label: "Disabled",
-		isDisabled: true,
-	},
-	{
-		label: "Tab 3",
-	},
-];
-
 export const TabsGroups = Variants({
 	Template,
+	withSizes: false,
 	wrapperStyles: {
 		"column-gap": "80px",
 	},
@@ -25,43 +12,17 @@ export const TabsGroups = Variants({
 			testHeading: "Default",
 		},
 		{
-			testHeading: "Emphasized",
-			isEmphasized: true,
-		},
-		{
-			testHeading: "Quiet",
-			isQuiet: true,
-		},
-		{
-			testHeading: "Quiet emphasized",
-			isQuiet: true,
-			isEmphasized: true,
-		},
-		{
 			testHeading: "Compact",
 			isCompact: true,
-			isQuiet: true,
-		},
-		{
-			testHeading: "Compact emphasized",
-			isCompact: true,
-			isQuiet: true,
-			isEmphasized: true,
 		},
 		{
 			testHeading: "Vertical tabs",
 			orientation: "vertical",
 		},
 		{
-			testHeading: "Emphasized vertical tabs",
-			orientation: "vertical",
-			isEmphasized: true,
-		},
-		{
 			testHeading: "Compact vertical tabs",
 			orientation: "vertical",
 			isCompact: true,
-			isQuiet: true,
 		},
 		{
 			testHeading: "Right vertical tabs",
@@ -76,7 +37,49 @@ export const TabsGroups = Variants({
 			testHeading: "Compact overflow",
 			orientation: "overflow",
 			isCompact: true,
-			isQuiet: true,
+		},
+		{
+			testHeading: "Hover colors",
+			withStates: false,
+			content: [
+				{
+					label: "Hovered unselected tab",
+					icon: "Folder",
+					isHovered: true,
+				},
+				{
+					label: "Hovered selected tab",
+					icon: "Image",
+					isSelected: true,
+					isHovered: true,
+				},
+				{
+					label: "Unhovered unselected tab",
+					icon: "File",
+				},
+				{
+					label: "Disabled tab",
+					icon: "Archive",
+					isDisabled: true,
+				}
+			]
+		},
+		{
+			testHeading: "Disabled tabs",
+			withStates: false,
+			content: [
+				{
+					label: "Selected tab",
+					icon: "Archive",
+					isSelected: true,
+					isDisabled: true,
+				},
+				{
+					label: "Unselected tab",
+					icon: "File",
+					isDisabled: true,
+				}
+			]
 		},
 		{
 			testHeading: "With anchor tags",
@@ -86,11 +89,31 @@ export const TabsGroups = Variants({
 	stateData: [
 		{
 			testHeading: "Label only",
-			content: ExampleLabelOnlyTabContent,
+			labelOnly: true,
 		},
 		{
 			testHeading: "Icon only",
-			iconOnly: true
+			iconOnly: true,
 		},
+		{
+			testHeading: "Selected tab focused",
+			content: [
+				{
+					label: "Tab 1",
+					icon: "Folder",
+				},
+				{
+					label: "Selected focused tab",
+					icon: "Image",
+					isSelected: true,
+					isFocused: true,
+				},
+				{
+					label: "Tab 3",
+					icon: "File",
+				}
+			],
+			ignore: ["Overflow", "Compact overflow"],
+		}
 	]
 });

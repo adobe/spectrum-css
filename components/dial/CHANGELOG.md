@@ -1,5 +1,28 @@
 # Change log
 
+## 6.0.0-next.1
+
+### Patch Changes
+
+📝 [#4113](https://github.com/adobe/spectrum-css/pull/4113) [`cf4fc1a`](https://github.com/adobe/spectrum-css/commit/cf4fc1a01d23ba810f45a903ecc29a5c8aae33d1) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## Minor linting fixes
+
+- Removed unused custom properties across multiple components
+- Fixed color function notation by converting `rgba()` to `rgb()` where appropriate
+- Removed duplicate custom property declarations
+- Fixed deprecated CSS properties (e.g., `word-wrap` → `overflow-wrap`)
+- Removed unnecessary stylelint-disable comments
+
+_No visual or functional changes to components._
+
+## 6.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
 ## 5.3.0
 
 ### Minor Changes
@@ -12,7 +35,9 @@ Ensure accurate exports are present for each component. Specifically, adding `th
 
 ### Minor Changes
 
-- [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)! - By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
+📝 [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
 
 ## 5.1.0
 

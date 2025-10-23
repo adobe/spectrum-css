@@ -7,9 +7,6 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 /**
  * @todo load order should not influence the icon size but it is; fix this
@@ -57,7 +54,9 @@ export const Template = ({
 	isFocused = false,
 	isActive = false,
 	isDisabled = false,
+	isOpen = false,
 	hasPopup = "false",
+	hasLongPress = false,
 	popupId,
 	hideLabel = false,
 	staticColor,
@@ -76,7 +75,8 @@ export const Template = ({
 			aria-label=${ifDefined(hideLabel ? label : undefined)}
 			aria-haspopup=${ifDefined(hasPopup && hasPopup !== "false" ? hasPopup : undefined)}
 			aria-controls=${hasPopup && hasPopup !== "false" ? popupId : undefined}
-			aria-pressed=${isSelected ? "true" : "false"}
+			aria-pressed=${ifDefined(isSelected ? "true" : undefined)}
+			aria-expanded=${ifDefined(hasPopup && hasPopup !== "false" ? isOpen ? "true" : "false" : undefined)}
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
@@ -86,7 +86,6 @@ export const Template = ({
 				[`${rootClass}--static${capitalize(staticColor)}`]:
 					typeof staticColor !== "undefined",
 				["is-disabled"]: isDisabled,
-				["is-selected"]: isSelected,
 				["is-hover"]: isHovered,
 				["is-focus-visible"]: isFocused,
 				["is-active"]: isActive,
@@ -94,25 +93,37 @@ export const Template = ({
 			})}
 			id=${id}
 			data-testid=${testId ?? id}
+			popovertarget=${ifDefined(hasPopup && hasPopup !== "false" ? popupId : undefined)}
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
-			@click=${onclick ?? function() {
-				updateArgs({
-					isSelected: !isSelected
-				});
+			@click=${function () {
+				if (isDisabled) return;
+				if (typeof onclick === "function") onclick();
+				else {
+					updateArgs({
+						isSelected: !isSelected,
+						isOpen: !isOpen,
+					});
+				}
 			}}
-			@focusin=${function() {
+			@focusin=${function () {
 				updateArgs({ isFocused: true });
 			}}
 			@focusout=${function() {
 				updateArgs({ isFocused: false });
 			}}
 		>
-			${when(hasPopup && hasPopup !== "false", () =>
+			${when(hasLongPress && hasPopup && hasPopup !== "false", () =>
 				Icon({
 					size,
-					iconName: "CornerTriangle",
+					iconName: "CornerTriangle" + ({
+						xs: "75",
+						s: "75",
+						m: "100",
+						l: "200",
+						xl: "300",
+					}[size] || "100"),
 					setName: "ui",
 					customClasses: [`${rootClass}-hold`],
 				}, context)
@@ -134,64 +145,78 @@ export const Template = ({
 	`;
 };
 
+/**
+ * Displays multiple action buttons in a row, with different combinations of
+ * label, icon, and hold button (has pop-up).
+ */
 export const ActionButtonsWithIconOptions = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
 		columnGap: "12px",
 	},
-	content: html`
-		${Template({
+	content: [
+		Template({
 			...args,
 			iconName: undefined,
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			hideLabel: true,
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
-		}, context)}
-		${Template({
+			hasLongPress: true,
+		}, context),
+		Template({
 			...args,
 			iconName: undefined,
 			hasPopup: "true",
-		}, context)}
-	`
+			hasLongPress: true,
+		}, context)
+	],
 }, context);
 
+/**
+ * Displays two action buttons in a row:
+ * - icon only action button
+ * - icon only action button with hold button (has pop-up)
+ */
 export const IconOnlyOption = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
 		columnGap: "12px",
 	},
-	content: html`
-		${Template({
+	content: [
+		Template({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
-		}, context)}
-		${Template({
+			hasLongPress: true,
+		}, context),
+		Template({
 			...args,
 			hideLabel: true,
 			isQuiet: true,
 			hasPopup: "true",
-		}, context)}
-	`
+			hasLongPress: true,
+		}, context),
+	],
 }, context);
 
+/**
+ * Displays multiple groups of action buttons for:
+ * default, selected, disabled, and selected + disabled
+ */
 export const TreatmentTemplate = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
-	wrapperStyles: {
-		rowGap: "12px",
-	},
 	content: html`${[
 		{ isSelected: false, isDisabled: false, heading: "Default" },
 		{ isSelected: true, isDisabled: false, heading: "Selected" },
@@ -200,10 +225,13 @@ export const TreatmentTemplate = (args, context) => Container({
 	].map(({ isSelected, isDisabled, heading }) => Container({
 		withBorder: false,
 		heading: heading,
+		containerStyles: {
+			rowGap: "8px",
+		},
 		content: ActionButtonsWithIconOptions({
 			...args,
 			isSelected,
 			isDisabled,
-		})
+		}, context)
 	}, context))}`,
 }, context);

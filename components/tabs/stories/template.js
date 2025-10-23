@@ -10,20 +10,15 @@ import { when } from "lit/directives/when.js";
 import { html, literal } from "lit/static-html.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Tabs",
 	customClasses = [],
-	size = "m",
 	orientation = "horizontal",
-	isQuiet = false,
 	isOpen = false,
-	isEmphasized = false,
 	isCompact = false,
 	iconOnly = false,
+	labelOnly = false,
 	hasRightAlignedTabs = false,
 	useAnchors = false,
 	id = getRandomId("tabs"),
@@ -43,39 +38,19 @@ export const Template = ({
 	// Note: Lit must use the 'literal' function for dynamic tags to work.
 	const tabMarkup = useAnchors ? literal`a` : literal`div`;
 
-	const selectionIndicator = (isSelected) => when(
-		isSelected,
-		() => html`
-			<div
-				class="${rootClass}-selectionIndicator"
-				style=${ifDefined(
-					styleMap({
-						blockSize: isVertical ? "100%" : undefined,
-						inlineSize: !isVertical ? "100%" : undefined,
-						maxInlineSize: isOverflow ? "50px" : undefined,
-						marginInlineStart: isVertical ? "calc(-1 * var(--spectrum-tabs-start-to-edge))" : undefined,
-						insetInline: hasRightAlignedTabs ? "auto calc(-1* var(--spectrum-tabs-start-to-edge))" : undefined,
-					})
-				)}
-			></div>`
-	);
-
 	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
 				[`${rootClass}--horizontal`]: isHorizontal || isOverflow,
 				[`${rootClass}--vertical`]: isVertical,
 				[`${rootClass}--vertical-right`]: hasRightAlignedTabs,
-				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--emphasized`]: isEmphasized,
-				[`${rootClass}--compact`]: isCompact && isQuiet,
+				[`${rootClass}--compact`]: isCompact,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
 			id=${ifDefined(id)}
+			role="tablist"
 		>
 			${when(!isOverflow, () => repeat(
 				content,
@@ -88,23 +63,32 @@ export const Template = ({
 									[`${rootClass}-item`]: true,
 									"is-selected": item?.isSelected ?? false,
 									"is-disabled": item?.isDisabled ?? false,
+									"is-focus-visible": item?.isFocused ?? false,
+									"is-hover": item?.isHovered ?? false,
 								})}
-								tabindex="0"
+								tabindex=${item?.isDisabled ? "-1" : "0"}
 								id=${getRandomId("tab-item")}
+								role="tab"
+								aria-selected=${item?.isSelected ?? false}
+								aria-disabled=${item?.isDisabled ?? false}
 							>
-								${when(item.icon, () =>
+								${when(item.icon && !labelOnly, () =>
 									Icon({
 										iconName: item.icon,
 										setName: "workflow",
-										size,
 									}, context)
 								)}
 								${when(item.label && !iconOnly, () => html`
-									<span class="${rootClass}-itemLabel">
+									<span
+										class="${rootClass}-itemLabel"
+										id=${getRandomId("tab-item-label")}
+									>
 										${item.label}
 									</span>
 								`)}
-								${selectionIndicator(item.isSelected)}
+								${when(item.isSelected, () => html`
+									<div class="${rootClass}-selectionIndicator"></div>
+								`)}
 							</${tabMarkup}>
 						`;
 					}
@@ -115,12 +99,10 @@ export const Template = ({
 			), () => html`
 				${Picker({
 					isQuiet: true,
-					size,
 					isOpen,
 					placeholder: !iconOnly ? content?.[0].label : Icon({
 						iconName: content?.[0].icon,
 						setName: "workflow",
-						size,
 					}, context),
 					name: content?.[0].label,
 					id: "tab-selector",
@@ -130,7 +112,6 @@ export const Template = ({
 					popoverContent: [
 						() => Menu({
 							selectionMode: "none",
-							size,
 							role: "listbox",
 							subrole: "option",
 							customStyles: { minWidth: "max-content" },
@@ -145,7 +126,7 @@ export const Template = ({
 						}, context),
 					]
 				}, context)}
-				${selectionIndicator(true)}
+				<div class="${rootClass}-selectionIndicator"></div>
 			`)}
 		</div>
 	`;
@@ -183,7 +164,7 @@ export const OverflowGroup = (args, context) => Container({
 			withBorder: false,
 			heading: "Compact overflow",
 			containerStyles: { "gap": "8px", },
-			content: Template({...args, isCompact: true, isQuiet: true}, context),
+			content: Template({...args, isCompact: true}, context),
 		}, context)}
 	`
 }, context);
@@ -201,84 +182,21 @@ export const VerticalGroup = (args, context) => Container({
 		}, context)}
 		${Container({
 			withBorder: false,
-			heading: "Emphasized, with label and icon",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, isEmphasized: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
 			heading: "Label only",
 			containerStyles: {"gap": "8px"},
 			content: Template({...args, content: LabelOnlyTabsContent, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Emphasized, with label only",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, }, context),
 		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Compact, with label and icon",
 			containerStyles: {"gap": "8px"},
-			content: Template({...args, isCompact: true, isQuiet: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Compact, emphasized, with label and icon",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, isEmphasized: true, isCompact: true, isQuiet: true, }, context),
+			content: Template({...args, isCompact: true, }, context),
 		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Compact, label only",
 			containerStyles: {"gap": "8px"},
-			content: Template({...args, content: LabelOnlyTabsContent, isCompact: true, isQuiet: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Compact, emphasized label only",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, isCompact: true, isQuiet: true, }, context),
-		}, context)}
-	`
-}, context);
-
-/* Shows variants of quiet story in a single group. */
-export const QuietGroup = (args, context) => Container({
-	direction: "column",
-	withBorder: false,
-	withHeading: false,
-	content: html`
-		${Container({
-			withBorder: false,
-			heading: "Label and icon",
-			content: Template(args, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Emphasized, with label and icon",
-			content: Template({...args, isEmphasized: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Label only",
-			content: Template({...args, content: LabelOnlyTabsContent, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Emphasized, with label only",
-			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Icon only",
-			content: Template({...args, iconOnly: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Emphasized, icon-only",
-			content: Template({...args, isEmphasized: true, iconOnly: true, }, context),
+			content: Template({...args, content: LabelOnlyTabsContent, isCompact: true, }, context),
 		}, context)}
 	`
 }, context);
@@ -291,13 +209,8 @@ export const CompactGroup = (args, context) => Container({
 	content: html`
 		${Container({
 			withBorder: false,
-			heading: "Label and icon (quiet)",
+			heading: "Label and icon",
 			content: Template(args, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Emphasized, with label and icon (quiet)",
-			content: Template({...args, isEmphasized: true, }, context),
 		}, context)}
 		${Container({
 			withBorder: false,
@@ -306,18 +219,8 @@ export const CompactGroup = (args, context) => Container({
 		}, context)}
 		${Container({
 			withBorder: false,
-			heading: "Emphasized, with label only (quiet)",
-			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Icon only (quiet)",
+			heading: "Icon only",
 			content: Template({...args, iconOnly: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Emphasized, icon-only (quiet)",
-			content: Template({...args, isEmphasized: true, iconOnly: true, }, context),
 		}, context)}
 	`
 }, context);

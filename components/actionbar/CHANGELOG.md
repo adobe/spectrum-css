@@ -1,5 +1,63 @@
 # Change log
 
+## 11.0.0-next.3
+
+### Major Changes
+
+📝 [#4249](https://github.com/adobe/spectrum-css/pull/4249) [`9629fe3`](https://github.com/adobe/spectrum-css/commit/9629fe37cad996d47c827a3eabcdf39092a27b0d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes `--mod-*` custom property hooks per SWC-1264, see also the RFC for extensible styling.
+
+- Remove all `--mod-*` custom property hooks.
+- Keep existing class selectors and variants unchanged.
+- Update stories to reflect the removal of the `--mod-*` override layer.
+
+Breaking change: the `--mod-*` override layer is removed. Consumers should set `--spectrum-*` variables directly where customization is needed.
+
+## 11.0.0-next.2
+
+### Major Changes
+
+- [#3657](https://github.com/adobe/spectrum-css/pull/3657) [`c06e995`](https://github.com/adobe/spectrum-css/commit/c06e9953caaaafa3c3f1841057e26c6212754ae5) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### Action bar S2 migration
+
+Action bar now has some updated colors, corner radius, and icons. There's a new look to the default and emphasized variants.
+
+The emphasized has changed from an `accent` background color to a `neutral` background color. In light mode, the clear button and action buttons are `staticWhite` and in dark mode they are `staticBlack`.
+
+##### New tokens
+
+`--spectrum-actionbar-emphasized-actionbutton-label-color`
+`--spectrum-actionbar-emphasized-icon-color`
+`--spectrum-actionbar-minimum-width`
+`--spectrum-actionbar-spacing-label-to-action-group`
+`--spectrum-actionbar-spacing-action-group-edge`
+`--spectrum-actionbar-close-button-to-counter`
+
+##### New modifiers
+
+`--mod-actionbar-minimum-width`
+`--mod-actionbar-spacing-action-group-edge`
+`--mod-actionbar-spacing-label-to-action-group`
+
+## 11.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 11.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/closebutton@7.0.0-next.0
+  - @spectrum-css/fieldlabel@11.0.0-next.0
+  - @spectrum-css/actiongroup@7.0.0-next.0
+  - @spectrum-css/popover@9.0.0-next.0
+
 ## 10.2.0
 
 ### Minor Changes

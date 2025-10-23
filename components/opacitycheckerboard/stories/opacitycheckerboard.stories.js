@@ -20,6 +20,16 @@ export default {
 			control: "text",
 			description: "Value for <code>--mod-opacity-checkerboard-position</code>. Accepts any valid CSS background-position property value.",
 		},
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-OpacityCheckerboard",
@@ -36,7 +46,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 export const Default = OpacityCheckboardGroup.bind({});

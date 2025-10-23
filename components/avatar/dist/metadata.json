@@ -3,6 +3,12 @@
   "selectors": [
     ".spectrum-Avatar",
     ".spectrum-Avatar--size100",
+    ".spectrum-Avatar--size1000",
+    ".spectrum-Avatar--size1100",
+    ".spectrum-Avatar--size1200",
+    ".spectrum-Avatar--size1300",
+    ".spectrum-Avatar--size1400",
+    ".spectrum-Avatar--size1500",
     ".spectrum-Avatar--size200",
     ".spectrum-Avatar--size300",
     ".spectrum-Avatar--size400",
@@ -11,33 +17,28 @@
     ".spectrum-Avatar--size600",
     ".spectrum-Avatar--size700",
     ".spectrum-Avatar--size75",
+    ".spectrum-Avatar--size800",
+    ".spectrum-Avatar--size900",
     ".spectrum-Avatar-image",
     ".spectrum-Avatar-link",
     ".spectrum-Avatar.is-disabled",
     ".spectrum-Avatar.is-focused:not(.is-disabled):after",
     ".spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after"
   ],
-  "modifiers": [
-    "--mod-avatar-block-size",
-    "--mod-avatar-border-radius",
-    "--mod-avatar-color-opacity",
-    "--mod-avatar-color-opacity-disabled",
-    "--mod-avatar-focus-indicator-color",
-    "--mod-avatar-focus-indicator-gap",
-    "--mod-avatar-focus-indicator-thickness",
-    "--mod-avatar-inline-size"
-  ],
+  "modifiers": [],
   "component": [
     "--spectrum-avatar-block-size",
-    "--spectrum-avatar-border-radius",
-    "--spectrum-avatar-color-opacity",
-    "--spectrum-avatar-color-opacity-disabled",
-    "--spectrum-avatar-focus-indicator-color",
-    "--spectrum-avatar-focus-indicator-gap",
-    "--spectrum-avatar-focus-indicator-thickness",
+    "--spectrum-avatar-border-color",
+    "--spectrum-avatar-border-width",
     "--spectrum-avatar-inline-size",
     "--spectrum-avatar-opacity-disabled",
     "--spectrum-avatar-size-100",
+    "--spectrum-avatar-size-1000",
+    "--spectrum-avatar-size-1100",
+    "--spectrum-avatar-size-1200",
+    "--spectrum-avatar-size-1300",
+    "--spectrum-avatar-size-1400",
+    "--spectrum-avatar-size-1500",
     "--spectrum-avatar-size-200",
     "--spectrum-avatar-size-300",
     "--spectrum-avatar-size-400",
@@ -45,14 +46,15 @@
     "--spectrum-avatar-size-500",
     "--spectrum-avatar-size-600",
     "--spectrum-avatar-size-700",
-    "--spectrum-avatar-size-75"
+    "--spectrum-avatar-size-75",
+    "--spectrum-avatar-size-800",
+    "--spectrum-avatar-size-900"
   ],
   "global": [
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
     "--spectrum-focus-indicator-thickness"
   ],
-  "system-theme": [],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-avatar-focus-indicator-color"]
+  "high-contrast": []
 }
