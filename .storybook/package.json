@@ -45,7 +45,7 @@
 		"@spectrum-css/ui-icons": "2.0.0-next.2"
 	},
 	"devDependencies": {
-		"@babel/core": "7.28.4",
+		"@babel/core": "7.28.5",
 		"@chromatic-com/storybook": "3.2.7",
 		"@etchteam/storybook-addon-status": "5.0.0",
 		"@storybook/addon-a11y": "8.4.7",
@@ -60,22 +60,21 @@
 		"@storybook/core-events": "8.4.7",
 		"@storybook/manager-api": "8.4.7",
 		"@storybook/preview-api": "8.4.7",
-		"@storybook/test-runner": "0.22.0",
 		"@storybook/theming": "8.4.7",
 		"@storybook/web-components-vite": "8.4.7",
 		"@whitespace/storybook-addon-html": "8.0.2",
-		"chromatic": "13.2.0",
+		"chromatic": "13.3.1",
 		"lit": "3.3.1",
 		"lodash-es": "4.17.21",
 		"npm-registry-fetch": "19.0.0",
 		"postcss": "8.5.6",
 		"prettier": "3.6.2",
-		"react": "19.1.1",
-		"react-dom": "19.1.1",
+		"react": "19.2.0",
+		"react-dom": "19.2.0",
 		"react-syntax-highlighter": "15.6.6",
 		"remark-gfm": "4.0.1",
-		"storybook": "8.4.7",
-		"vite": "7.1.7"
+		"storybook": "8.6.14",
+		"vite": "7.1.12"
 	},
 	"keywords": [
 		"design-system",
