@@ -2,29 +2,19 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Divider",
-    ".spectrum-Divider--sizeL",
-    ".spectrum-Divider--sizeS",
     ".spectrum-Divider--staticBlack",
-    ".spectrum-Divider--staticBlack.spectrum-Divider--sizeL",
+    ".spectrum-Divider--staticBlack:where(.spectrum-Divider--sizeL)",
     ".spectrum-Divider--staticWhite",
-    ".spectrum-Divider--staticWhite.spectrum-Divider--sizeL",
-    ".spectrum-Divider--vertical",
-    ".spectrum-Divider:not(.spectrum-Divider.spectrum-Divider--vertical)"
+    ".spectrum-Divider--staticWhite:where(.spectrum-Divider--sizeL)",
+    ".spectrum-Divider:where(.spectrum-Divider--sizeL)",
+    ".spectrum-Divider:where(.spectrum-Divider--sizeS)",
+    ".spectrum-Divider:where(.spectrum-Divider--vertical)",
+    ".spectrum-Divider:where(:not(.spectrum-Divider--vertical))"
   ],
-  "modifiers": [
-    "--mod-divider-background-color",
-    "--mod-divider-block-minimum-size",
-    "--mod-divider-inline-minimum-size",
-    "--mod-divider-thickness",
-    "--mod-divider-vertical-align",
-    "--mod-divider-vertical-height",
-    "--mod-divider-vertical-margin"
-  ],
+  "modifiers": [],
   "component": [
     "--spectrum-divider-background-color",
-    "--spectrum-divider-block-minimum-size",
     "--spectrum-divider-horizontal-minimum-width",
-    "--spectrum-divider-inline-minimum-size",
     "--spectrum-divider-thickness",
     "--spectrum-divider-thickness-large",
     "--spectrum-divider-thickness-medium",
@@ -40,5 +30,5 @@
     "--spectrum-transparent-white-800"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-divider-background-color"]
+  "high-contrast": []
 }
