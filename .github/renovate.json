@@ -14,11 +14,6 @@
 			"minimumReleaseAge": "1 month"
 		},
 		{
-			"matchUpdateTypes": ["major"],
-			"matchBaseBranches": ["main"],
-			"enabled": false
-		},
-		{
 			"groupName": "storybook ecosystem",
 			"matchPackageNames": ["storybook", "@storybook/*", "@types/storybook*"],
 			"enabled": false
