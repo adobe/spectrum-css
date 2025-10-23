@@ -151,7 +151,7 @@ export const uniqueUiIconBaseNames = getUniqueUiIconBaseNames(uiIconsWithDirecti
  * Workflow icon sizes. Does not apply to UI icons. Note: XXL is not part of the design
  * spec and may be deprecated in the future.
  */
-export const workflowSizes = ["xs", "s", "m", "l", "xl", "xxl"];
+export const workflowSizes = ["s", "m", "l", "xl"];
 
 /**
  * Create an object where the key is the UI icon name, and the value is an array of
