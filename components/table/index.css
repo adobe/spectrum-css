@@ -279,20 +279,20 @@
 
 	/* These styles get applied to the icon within that menu button. */
 	& .spectrum-Table-menuButton {
-		--mod-icon-color: var(--spectrum-table-header-icons-color-default);
+		color: var(--spectrum-table-header-icons-color-default);
 
 		&:hover {
-			--mod-icon-color: var(--spectrum-table-header-icons-color-hover);
+			color: var(--spectrum-table-header-icons-color-hover);
 		}
 
 		&:active {
-			--mod-icon-color: var(--spectrum-table-header-icons-color-active);
+			color: var(--spectrum-table-header-icons-color-active);
 		}
 
 		&:focus,
 		&:focus:hover,
 		&:focus-visible {
-			--mod-icon-color: var(--spectrum-table-header-icons-color-key-focus);
+			color: var(--spectrum-table-header-icons-color-key-focus);
 		}
 	}
 }

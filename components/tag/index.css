@@ -81,7 +81,7 @@
 	--mod-clear-button-icon-color-hover: currentColor;
 	--mod-clear-button-icon-color-key-focus: currentColor;
 
-	--mod-icon-size: var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size));
+	--spectrum-icon-size: var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size));
 
 	/* clear icon inline spacing + icon size */
 	--mod-clear-button-width: calc(var(--mod-tag-label-to-clear-icon, var(--spectrum-tag-label-to-clear-icon)) + var(--mod-tag-edge-to-clear-icon, var(--spectrum-tag-edge-to-clear-icon)) + var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size)));
