@@ -34,8 +34,8 @@ export const Template = ({
 					${ColorArea({
 						isDisabled,
 						customStyles: {
-							"--mod-colorarea-width": "80px",
-							"--mod-colorarea-height": "80px",
+							"--spectrum-colorarea-width": "80px",
+							"--spectrum-colorarea-height": "80px",
 						},
 						selectedColor,
 					}, context)}
