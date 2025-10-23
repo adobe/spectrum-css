@@ -73,6 +73,7 @@
     "--spectrum-border-width-100",
     "--spectrum-cjk-line-height-100",
     "--spectrum-font-size-100",
+    "--spectrum-icon-size",
     "--spectrum-informative-background-color-default",
     "--spectrum-line-height-100",
     "--spectrum-negative-background-color-default",
@@ -87,8 +88,7 @@
   "passthroughs": [
     "--mod-closebutton-align-self",
     "--mod-closebutton-margin-inline",
-    "--mod-closebutton-margin-top",
-    "--mod-icon-size"
+    "--mod-closebutton-margin-top"
   ],
   "high-contrast": [
     "--highcontrast-alert-banner-border-color",

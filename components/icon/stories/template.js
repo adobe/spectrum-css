@@ -20,7 +20,7 @@ import "../index.css";
  * @description Icon template that renders an icon based on the provided icon name and set name.
  * @param {IconProps} props
  * @param {string} props.rootClass
- * @param {"xs"|"s"|"m"|"l"|"xl"|"xxl"} props.size
+ * @param {"s"|"m"|"l"|"xl"} props.size
  * @param {"ui"|"workflow"} props.setName
  * @param {string} props.iconName Icon name; could be from either icon set.
  * @param {string} props.uiIconName Icon name selected from the UI icon set. When defined, takes precedence over iconName when setName == "ui".
@@ -115,7 +115,7 @@ export const Template = ({
 	};
 
 	const fillStyles = fill ? {
-		"--mod-icon-color": fill,
+		"color": fill,
 	} : {};
 	/**
 	 * Display full SVG file markup from global IconLoader data, when not using a reference to the sprite sheet.
@@ -209,7 +209,7 @@ export const IconWithLabelTemplate = (args, context) => html`
 	>
 		${Template({
 			useRef: true,
-			size: "xxl",
+			size: "xl",
 			setName: args.setName,
 			iconName: args?.iconName ?? undefined,
 			uiIconName: args?.uiIconName ?? undefined,

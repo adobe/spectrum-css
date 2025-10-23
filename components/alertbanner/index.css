@@ -108,7 +108,7 @@
 
 .spectrum-AlertBanner-icon {
 	/* @passthrough -- icon-size */
-	--mod-icon-size: var(--mod-alert-banner-icon-size, var(--spectrum-alert-banner-icon-size));
+	--spectrum-icon-size: var(--mod-alert-banner-icon-size, var(--spectrum-alert-banner-icon-size));
 
 	margin-block-start: calc(var(--mod-alert-banner-top-to-icon, var(--spectrum-alert-banner-top-to-workflow-icon)) - var(--mod-alert-banner-block-edge-to-button, var(--spectrum-alert-banner-block-edge-to-button)));
 	margin-inline-end: var(--mod-alert-banner-icon-to-text, var(--spectrum-alert-banner-icon-to-text));

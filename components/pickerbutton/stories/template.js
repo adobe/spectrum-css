@@ -56,7 +56,7 @@ export const Template = ({
 				${Icon({
 					iconName: iconSet === "ui" ? (uiIconName ?? "ChevronDown") : iconSet === "workflow" ? (workflowIconName ?? "ChevronDown") : "ChevronDown",
 					setName: iconSet,
-					size,
+					size: iconSet !== "workflow" ? size : "xs",
 					customClasses: [`${rootClass}-icon`],
 				}, context)}
 			</div>

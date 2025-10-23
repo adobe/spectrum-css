@@ -130,14 +130,9 @@
 	box-sizing: border-box;
 
 	transition: background-color var(--mod-picker-button-background-animation-duration, var(--spectrum-picker-button-background-animation-duration)) ease-in-out;
-
-	.spectrum-PickerButton--workflowicon & {
-		/* don't use padding tokens, rely on flexbox to center icons */
-		padding: 0;
-	}
 }
 
-.spectrum-PickerButton-icon {
+.spectrum-PickerButton .spectrum-Icon {
 	/* don't be small, ever */
 	flex-shrink: 0;
 	color: var(--highcontrast-picker-button-icon-color, var(--mod-picker-button-icon-color, var(--spectrum-picker-button-icon-color)));
