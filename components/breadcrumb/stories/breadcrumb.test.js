@@ -3,14 +3,9 @@ import { BreadcrumbTitleHeadings, Template } from "./template.js";
 
 export const BreadcrumbGroup = Variants({
 	Template,
-	withSizes: false,
 	testData: [
 		{
 			testHeading: "Default",
-		},
-		{
-			testHeading: "Large",
-			size: "l",
 		},
 		{
 			testHeading: "Multiline",
