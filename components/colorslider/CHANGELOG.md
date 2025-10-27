@@ -1,5 +1,50 @@
 # Change log
 
+## 9.0.0-next.3
+
+### Patch Changes
+
+📝 [#4113](https://github.com/adobe/spectrum-css/pull/4113) [`cf4fc1a`](https://github.com/adobe/spectrum-css/commit/cf4fc1a01d23ba810f45a903ecc29a5c8aae33d1) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## Minor linting fixes
+
+- Removed unused custom properties across multiple components
+- Fixed color function notation by converting `rgba()` to `rgb()` where appropriate
+- Removed duplicate custom property declarations
+- Fixed deprecated CSS properties (e.g., `word-wrap` → `overflow-wrap`)
+- Removed unnecessary stylelint-disable comments
+
+_No visual or functional changes to components._
+
+## 9.0.0-next.2
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+## 9.0.0-next.1
+
+### Minor Changes
+
+- [#3656](https://github.com/adobe/spectrum-css/pull/3656) [`911c390`](https://github.com/adobe/spectrum-css/commit/911c390b9fa0b43187e5ab535874f2ed1ffeb88d) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - #### Including the touch action rule for draggable content
+
+  The slider, color slider, color area, color wheel, color handle all deserve to have their touch-action property managed so that trying to set the value of those interfaces doesn't cause page scrolling in touch context.
+
+  Adding `touch-action: none` to a slider or any draggable component is necessary to prevent the browser's default touch behaviors—such as scrolling, pinch-zooming, or double-tap zooming from interfering with the component's intended interaction.
+
+  These components also include `user-select: none` to prevent selection or highlighting of any text elements.
+
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/colorhandle@11.0.0-next.0
+  - @spectrum-css/opacitycheckerboard@5.0.0-next.0
+
 ## 8.2.0
 
 ### Minor Changes

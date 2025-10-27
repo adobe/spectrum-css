@@ -12,22 +12,6 @@
  */
 
 /*
- * Medium/large scale
- * ------------------
- * In the "combined" versiom of the UI Icon SVGs, the medium and the large icons are
- * contained within the same SVG. The two separate elements are shown or hidden based
- * on the current platform scale.
- */
-
-.spectrum-UIIcon--medium {
-	display: var(--mod-ui-icon-medium-display, var(--spectrum-ui-icon-medium-display, block));
-}
-
-.spectrum-UIIcon--large {
-	display: var(--mod-ui-icon-large-display, var(--spectrum-ui-icon-large-display, none));
-}
-
-/*
  * UI icons list
  * -------------
  * - Unlike workflow icons, UI icons come in various sizes, defined by their own tokens.
@@ -429,4 +413,68 @@
 
 .spectrum-UIIcon-Asterisk300 {
 	--spectrum-icon-size: var(--spectrum-asterisk-icon-size-300);
+}
+
+/* Add */
+.spectrum-UIIcon-Add50 {
+	--spectrum-icon-size: var(--spectrum-add-icon-size-50);
+}
+
+.spectrum-UIIcon-Add75 {
+	--spectrum-icon-size: var(--spectrum-add-icon-size-75);
+}
+
+.spectrum-UIIcon-Add100 {
+	--spectrum-icon-size: var(--spectrum-add-icon-size-100);
+}
+
+.spectrum-UIIcon-Add200 {
+	--spectrum-icon-size: var(--spectrum-add-icon-size-200);
+}
+
+.spectrum-UIIcon-Add300 {
+	--spectrum-icon-size: var(--spectrum-add-icon-size-300);
+}
+
+/* Drag handle */
+.spectrum-UIIcon-DragHandle75 {
+	--spectrum-icon-size: var(--spectrum-drag-handle-icon-size-75);
+}
+
+.spectrum-UIIcon-DragHandle100 {
+	--spectrum-icon-size: var(--spectrum-drag-handle-icon-size-100);
+}
+
+.spectrum-UIIcon-DragHandle200 {
+	--spectrum-icon-size: var(--spectrum-drag-handle-icon-size-200);
+}
+
+.spectrum-UIIcon-DragHandle300 {
+	--spectrum-icon-size: var(--spectrum-drag-handle-icon-size-300);
+}
+
+/* Gripper */
+.spectrum-UIIcon-Gripper100 {
+	--spectrum-icon-size: var(--spectrum-gripper-icon-size-100);
+}
+
+/* Link out */
+.spectrum-UIIcon-LinkOut75 {
+	--spectrum-icon-size: var(--spectrum-link-out-icon-size-75);
+}
+
+.spectrum-UIIcon-LinkOut100 {
+	--spectrum-icon-size: var(--spectrum-link-out-icon-size-100);
+}
+
+.spectrum-UIIcon-LinkOut200 {
+	--spectrum-icon-size: var(--spectrum-link-out-icon-size-200);
+}
+
+.spectrum-UIIcon-LinkOut300 {
+	--spectrum-icon-size: var(--spectrum-link-out-icon-size-300);
+}
+
+.spectrum-UIIcon-LinkOut400 {
+	--spectrum-icon-size: var(--spectrum-link-out-icon-size-400);
 }

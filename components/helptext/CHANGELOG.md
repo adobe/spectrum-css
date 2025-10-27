@@ -1,5 +1,75 @@
 # Change log
 
+## 8.0.0-next.2
+
+### Minor Changes
+
+- [#3683](https://github.com/adobe/spectrum-css/pull/3683) [`e309613`](https://github.com/adobe/spectrum-css/commit/e309613c356ba5586b65cdcc26787d161a3b39e1) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - ### Combobox S2 Migration
+
+  #### New Changes
+  - Removed quiet styling variant
+  - Updated corner radius to match S2 specifications
+  - Changed outline thickness for better visibility
+  - Replaced picker button with in-field button component
+  - Added help text along with invalid state
+  - Modified the WHCM invalid/error state in help text
+
+  ### New tokens
+
+  `--spectrum-combobox-font-weight`
+  `--spectrum-combobox-line-height-cjk`
+  `--spectrum-combobox-spacing-alert-icon-to-text`
+  `--spectrum-combobox-spacing-to-help-text`
+
+  ### New mods
+
+  `--mod-combobox-line-height-cjk`
+  `--mod-combobox-popover-animation-distance`
+  `--mod-combobox-spacing-alert-icon-to-text`
+  `--mod-combobox-spacing-to-help-text`
+  `--mod-combobox-textfield-background-color`
+
+## 8.0.0-next.1
+
+### Major Changes
+
+📝 [#3628](https://github.com/adobe/spectrum-css/pull/3628) [`beee947`](https://github.com/adobe/spectrum-css/commit/beee9473b66a4e10c2e4c100a64a3d05fd3f5d44) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### Helptext S2 Migration
+
+The helptext S2 component has some updated spacing and typography tokens. The error message validation icon has also been updated.
+
+##### New mods
+
+`--mod-helptext-font-family`
+`--mod-helptext-font-style`
+`--mod-helptext-font-weight`
+`--mod-helptext-top-edge-to-workflow-icon`
+`--mod-helptext-bottom-edge-to-workflow-icon`
+
+##### Renamed mods
+
+`--mod-helptext-bottom-to-workflow-icon` >> `--mod-helptext-edge-to-workflow-icon`
+
+##### Deprecated tokens
+
+`--spectrum-help-text-top-to-workflow-icon-small`
+`--spectrum-help-text-top-to-workflow-icon-medium`
+`--spectrum-help-text-top-to-workflow-icon-large`
+`--spectrum-help-text-top-to-workflow-icon-extra-large`
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 7.2.0
 
 ### Minor Changes
@@ -13,8 +83,6 @@ Ensure accurate exports are present for each component. Specifically, adding `th
 ### Minor Changes
 
 📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
-
-## New feature
 
 Minified and gzipped outputs available for all compiled CSS assets.
 

@@ -1,5 +1,33 @@
 # Change log
 
+## 7.0.0-next.2
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+## 7.0.0-next.1
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### S2 switch fixes
+
+  This work addresses minor regressions in the Switch component. Animation tokens are reimplemented and their usage updated within the style definitions.
+
+  Reference:
+  - [S2 switch migration](https://github.com/adobe/spectrum-css/pull/2651)
+
+- [#3767](https://github.com/adobe/spectrum-css/pull/3767) [`ca78d52`](https://github.com/adobe/spectrum-css/commit/ca78d52408730381f6dd41567c980bdfc5697022) Thanks [@saashapina](https://github.com/saashapina)! - Fix active down state specificity by increasing the specificity of the active state selector. This change was necessary because the `postcss-hover-media-feature` plugin converts hover styles into a media query for devices that support hover. Without this adjustment, the hover styles could override the active down state styles due to the way CSS specificity and order are handled. By adding the additional `.spectrum-Switch` class in the active state selector, we ensure that the active state takes precedence over the hover state, maintaining the correct visual behavior of the switch component across different interaction states.
+
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
 ## 6.2.0
 
 ### Minor Changes

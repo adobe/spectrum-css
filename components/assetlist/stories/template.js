@@ -7,9 +7,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const AssetListItem = ({
 	rootClass = "spectrum-AssetList-item",
@@ -23,6 +20,8 @@ export const AssetListItem = ({
 	isSelectable = false,
 	isSelected = false,
 	isBranch = false,
+	isFocused = false,
+	isHovered = false,
 	onclick = () => {},
 } = {}, context = {}) => html`
 	<li
@@ -32,6 +31,10 @@ export const AssetListItem = ({
 			"is-selected": isSelected,
 			"is-branch": isBranch,
 			"is-navigated": isNavigated,
+			"is-focus-within": isFocused,
+			"is-focus-visible": isFocused,
+			"is-focused": isFocused,
+			"is-hover": isHovered,
 		})}
 		@click=${onclick}
 		tabindex="0"
@@ -45,10 +48,10 @@ export const AssetListItem = ({
 				customClasses: [`${rootClass}Selector`],
 			}, context)
 		)}
-		${when(image, () => 
+		${when(image, () =>
 			html`<img src=${image} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
 		)}
-		${when(iconName, () => 
+		${when(iconName, () =>
 			Icon({
 				iconName,
 				setName: iconSet,
@@ -76,6 +79,7 @@ export const AssetListItem = ({
 
 export const Template = ({
 	rootClass = "spectrum-AssetList",
+	isSelectable = false,
 	items = [],
 	customClasses = [],
 	id = getRandomId("assetlist"),
@@ -92,6 +96,7 @@ export const Template = ({
 				callback: AssetListItem,
 				args: {
 					rootClass: `${rootClass}-item`,
+					isSelectable,
 				},
 				context
 			})}

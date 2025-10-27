@@ -9,24 +9,19 @@ export const ClearButtonGroup = Variants({
 		{
 			testHeading: "Default",
 		},
-		{
-			testHeading: "Quiet",
-			isQuiet: true,
-		},
-		{
-			testHeading: "Static white",
-			staticColor: "white",
-		},
-		{
-			testHeading: "Static white - quiet",
-			staticColor: "white",
-			isQuiet: true,
-		},
 	],
 	stateData: [
 		{
 			testHeading: "Disabled",
 			isDisabled: true,
+		},
+		{
+			testHeading: "Hover",
+			isHovered: true,
+		},
+		{
+			testHeading: "Down",
+			isActive: true,
 		},
 	]
 });

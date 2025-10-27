@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/actionbar",
-	"version": "10.2.0",
+	"version": "11.0.0-next.3",
 	"description": "The Spectrum CSS actionbar component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -19,18 +19,16 @@
 		"./package.json": "./package.json",
 		"./dist/*": "./dist/*",
 		"./index.css": "./dist/index.css",
-		"./index-*.css": "./dist/index-*.css",
 		"./metadata.json": "./dist/metadata.json",
-		"./themes/*": "./dist/themes/*",
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/actiongroup": ">=6.0.0 <7.0.0",
-		"@spectrum-css/closebutton": ">=6.0.0 <7.0.0",
-		"@spectrum-css/fieldlabel": ">=10.0.0 <11.0.0",
-		"@spectrum-css/popover": ">=8.0.0 <9.0.0",
-		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+		"@spectrum-css/actiongroup": ">=7.0.0-next.0",
+		"@spectrum-css/closebutton": ">=7.0.0-next.0",
+		"@spectrum-css/fieldlabel": ">=11.0.0-next.0",
+		"@spectrum-css/popover": ">=9.0.0-next.0",
+		"@spectrum-css/tokens": ">=16.1.0-next.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/actiongroup": {
@@ -50,11 +48,11 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/actiongroup": "6.2.0",
-		"@spectrum-css/closebutton": "6.2.0",
-		"@spectrum-css/fieldlabel": "10.2.0",
-		"@spectrum-css/popover": "8.3.0",
-		"@spectrum-css/tokens": "16.0.2"
+		"@spectrum-css/actiongroup": "7.0.0-next.3",
+		"@spectrum-css/closebutton": "7.0.0-next.1",
+		"@spectrum-css/fieldlabel": "11.0.0-next.2",
+		"@spectrum-css/popover": "9.0.0-next.5",
+		"@spectrum-css/tokens": "16.1.0-next.10"
 	},
 	"keywords": [
 		"design-system",

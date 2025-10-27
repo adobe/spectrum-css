@@ -1,5 +1,119 @@
 # Change log
 
+## 8.0.0-next.3
+
+### Patch Changes
+
+📝 [#4113](https://github.com/adobe/spectrum-css/pull/4113) [`cf4fc1a`](https://github.com/adobe/spectrum-css/commit/cf4fc1a01d23ba810f45a903ecc29a5c8aae33d1) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## Minor linting fixes
+
+- Removed unused custom properties across multiple components
+- Fixed color function notation by converting `rgba()` to `rgb()` where appropriate
+- Removed duplicate custom property declarations
+- Fixed deprecated CSS properties (e.g., `word-wrap` → `overflow-wrap`)
+- Removed unnecessary stylelint-disable comments
+
+_No visual or functional changes to components._
+
+## 8.0.0-next.2
+
+### Major Changes
+
+- [#3681](https://github.com/adobe/spectrum-css/pull/3681) [`0a23664`](https://github.com/adobe/spectrum-css/commit/0a23664bd74cd7966c19381a01ddda51c95dc097) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### Number field S2 Migration
+
+  This work migrations the stepper/number field component to Spectrum 2! 🎉 The S1 stepper was very minimal, and didn't align with SWC or React's implementation. This migration should bring parity to the CSS component. New features include:
+  - the display name for this component has changed from `stepper` to `number field` (based on design's, React's and SWC's naming conventions.)
+    - _**Note:**_ The NPM package name has remained as "stepper," and hasn't yet changed to "number field.""
+  - an error state with alert icon
+  - optional help text
+  - embedded field label & optional positions
+
+  #### Quick overview
+
+  Because of all the new features and to align more with design, SWC and React, below is a quick recap of the following tokens & classes that have been renamed in the CSS:
+  - All `.spectrum-Stepper*` class names have been converted to `.spectrum-NumberField*`
+  - The `.hide-stepper` class has been converted to `.spectrum-NumberField--hiddenStepper`
+  - Custom properties have been renamed from `--spectrum-stepper*` to `--spectrum-numberfield*`
+  - Modifiable custom properties have been renamed from `--mod-stepper*` to `--mod-numberfield*`
+  - Markup has changed
+  - Styling lives on different elements
+  - Lots more Chromatic test coverage
+
+  #### Markup
+
+  Following React's lead, the markup of the number field has changed. More obviously, help text and field label components are embedded into `.spectrum-NumberField`, instead of necessitating separate components. The number field now incorporates an error state that better reflects the embedded textfield's error state, so there is now an alert icon within the markup in an invalid number field. Additionally, a new `.spectrum-NumberField-inputs` containing wrapper was introduced to encapsulate the textfield element and infield button elements. This container allowed for some extra alignment styles for those 2 elements and then freed up the opportunity to introduced an "unstyled" `input` (as described more below). Custom classes were also added to the nested textfield and input elements to ensure styles for number field were passed correctly to the correct elements (`.spectrum-NumberField-textfield` and `.spectrum-NumberField-input`).
+
+  Stemming from the infield button S2 migration, there is also an extra container for the inline (previously "stacked") stepper buttons.
+
+  #### Styling
+
+  The `.spectrum-NumberField-textfield` div is where the S2 design language lives (instead of on the input element), while the actual `input` (`.spectrum-NumberField-input`) is unstyled and incorporated more subtly. Breaking changes were introduced in all previous custom properties, where any `--spectrum-stepper-*` or `--mod-stepper-*` properties were renamed to `--spectrum-numberfield-*`or `--mod-numberfield-*`. This also applied to class names, where `.spectrum-Stepper` changed to `.spectrum-NumberField`. The `hide-stepper` class has also been updated to match our class naming conventions (`.spectrum-NumberField--hiddenStepper`).
+
+  #### Mods
+
+  Modifiable custom properties have been renamed from `--mod-stepper*` to `--mod-numberfield`.
+
+  ##### Removed custom properties include
+
+  --mod-stepper-animation-duration
+  --mod-stepper-button-border-width
+  --mod-stepper-button-width
+  --mod-stepper-button-width-quiet
+  --mod-stepper-buttons-background-color
+  --mod-stepper-buttons-border-color
+  --mod-stepper-buttons-border-color-focus
+  --mod-stepper-buttons-border-color-focus-hover
+  --mod-stepper-buttons-border-color-hover
+  --mod-stepper-buttons-border-color-keyboard-focus
+  --mod-stepper-buttons-border-style
+  --mod-stepper-buttons-border-width
+  --mod-stepper-focus-indicator-visibility
+  --mod-stepper-height (renamed to --mod-numberfield-block-size)
+  --mod-stepper-width (renamed to --mod-numberfield-inline-size)
+
+  ##### New custom properties include
+
+  --mod-numberfield-background-color
+  --mod-numberfield-background-color-disabled
+  --mod-numberfield-block-size (renamed from --mod-stepper-height)
+  --mod-numberfield-border-color-disabled
+  --mod-numberfield-border-color-invalid-default
+  --mod-numberfield-border-color-invalid-focus
+  --mod-numberfield-border-color-invalid-focus-hover
+  --mod-numberfield-border-color-invalid-hover
+  --mod-numberfield-border-color-invalid-keyboard-focus
+  --mod-numberfield-button-inline-offset
+  --mod-numberfield-font-family
+  --mod-numberfield-font-size
+  --mod-numberfield-font-style
+  --mod-numberfield-font-weight
+  --mod-numberfield-hidden-stepper-min-inline-size
+  --mod-numberfield-inline-size (renamed from --mod-stepper-width)
+  --mod-numberfield-label-to-field
+  --mod-numberfield-line-height
+  --mod-numberfield-min-inline-size
+  --mod-numberfield-spacing-block-end-edge-to-text
+  --mod-numberfield-spacing-block-start-edge-to-text
+  --mod-numberfield-spacing-field-to-helptext
+
+## 8.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/actionbutton@8.0.0-next.0
+  - @spectrum-css/infieldbutton@7.0.0-next.0
+  - @spectrum-css/textfield@9.0.0-next.0
+
 ## 7.2.0
 
 ### Minor Changes
@@ -12,8 +126,10 @@ Ensure accurate exports are present for each component. Specifically, adding `th
 
 ### Patch Changes
 
-- [#3621](https://github.com/adobe/spectrum-css/pull/3621) [`3aec28a`](https://github.com/adobe/spectrum-css/commit/3aec28aac60bdf32a585fa8ff38559d80b57ff86) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - - Updates `--spectrum-stepper-border-color-focus-hover` from `gray-800` to `gray-900`.
-  - Updates `--spectrum-stepper-buttons-border-color-keyboard-focus` from `gray-900` to `gray-800` to match the rest of the border color on keyboardFocus.
+📝 [#3621](https://github.com/adobe/spectrum-css/pull/3621) [`3aec28a`](https://github.com/adobe/spectrum-css/commit/3aec28aac60bdf32a585fa8ff38559d80b57ff86) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+- Updates `--spectrum-stepper-border-color-focus-hover` from `gray-800` to `gray-900`.
+- Updates `--spectrum-stepper-buttons-border-color-keyboard-focus` from `gray-900` to `gray-800` to match the rest of the border color on keyboardFocus.
 
 ## 7.1.2
 

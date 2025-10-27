@@ -1,5 +1,3 @@
-/* stylelint-disable selector-class-pattern -- Targeting pre-defined Storybook classes */
-
 /*!
  * Copyright 2024 Adobe. All rights reserved.
  *
@@ -29,21 +27,9 @@ body {
 }
 
 .spectrum {
-	/* Gradient that changes with the color theme. */
-	--spectrum-examples-gradient: linear-gradient(45deg, var(--spectrum-magenta-1500), var(--spectrum-blue-1500));
-
-	/* Gradients that do not change with the color theme, for use in static color backgrounds. */
-	--spectrum-examples-gradient-static-black: linear-gradient(45deg, rgb(255 241 246), rgb(238 245 255));
-	--spectrum-examples-gradient-static-white: linear-gradient(45deg, rgb(64 0 22), rgb(14 24 67));
-
 	color: var(--spectrum-neutral-content-color-default);
 	background-color: var(--spectrum-background-base-color);
 	-webkit-tap-highlight-color: rgb(0, 0, 0, 0%);
-}
-
-.spectrum.spectrum--legacy {
-	color: var(--spectrum-neutral-content-color-default);
-	background-color: var(--spectrum-background-layer-1-color);
 }
 
 .spectrum .spectrum-examples-static-black {
@@ -89,4 +75,14 @@ svg:has(symbol):not(:has(use)) {
 	overflow: visible !important;
 }
 
-/* stylelint-enable selector-class-pattern */
+#panel-tab-content tr th:nth-child(1),
+#panel-tab-content tr th:nth-child(3),
+#panel-tab-content tr td:nth-child(1),
+#panel-tab-content tr td:nth-child(3) {
+	min-inline-size: 100px !important;
+}
+
+#panel-tab-content tr th:nth-child(2),
+#panel-tab-content tr td:nth-child(2) {
+	max-inline-size: 500px !important;
+}

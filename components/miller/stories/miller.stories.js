@@ -17,11 +17,11 @@ export default {
 		rootClass: "spectrum-MillerColumns",
 		columns: [
 			{
+				isSelectable: false,
 				items: [
 					{
 						label: "Folder 1",
 						isBranch: true,
-						isSelectable: true,
 						isSelected: false,
 						ariaLabelledby: "assetitemlabel-1",
 						checkboxId: "checkbox-1",
@@ -29,7 +29,6 @@ export default {
 					{
 						label: "Folder 2",
 						isBranch: true,
-						isSelectable: true,
 						isSelected: true,
 						ariaLabelledby: "assetitemlabel-2",
 						checkboxId: "checkbox-2",
@@ -37,7 +36,6 @@ export default {
 					{
 						label: "Folder 3",
 						isBranch: true,
-						isSelectable: true,
 						isSelected: false,
 						image: "example-ava.png",
 						ariaLabelledby: "assetitemlabel-3",
@@ -46,11 +44,11 @@ export default {
 				],
 			},
 			{
+				isSelectable: true,
 				items: [
 					{
 						label: "Folder 2.1",
 						isBranch: true,
-						isSelectable: true,
 						isSelected: false,
 						ariaLabelledby: "assetitemlabel-4",
 						checkboxId: "checkbox-4",
@@ -58,7 +56,6 @@ export default {
 					{
 						label: "File 2.1",
 						isBranch: true,
-						isSelectable: true,
 						isSelected: true,
 						ariaLabelledby: "assetitemlabel-5",
 						checkboxId: "checkbox-5",
@@ -66,7 +63,6 @@ export default {
 					{
 						label: "File 2.2",
 						isBranch: true,
-						isSelectable: true,
 						isSelected: true,
 						image: "example-ava.png",
 						ariaLabelledby: "assetitemlabel-6",
@@ -79,7 +75,11 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
+	tags: ["unmigrated"],
 };
 
 /**
@@ -95,11 +95,11 @@ export const FilesSelectable = Template.bind({});
 FilesSelectable.args = {
 	columns: [
 		{
+			isSelectable: true,
 			items: [
 				{
 					label: "File 1",
 					isBranch: true,
-					isSelectable: false,
 					isSelected: false,
 					ariaLabelledby: "assetitemlabel-7",
 					checkboxId: "checkbox-7",
@@ -107,7 +107,6 @@ FilesSelectable.args = {
 				{
 					label: "File 2",
 					isBranch: false,
-					isSelectable: false,
 					isSelected: false,
 					ariaLabelledby: "assetitemlabel-8",
 					checkboxId: "checkbox-8",
@@ -115,7 +114,6 @@ FilesSelectable.args = {
 				{
 					label: "File 3",
 					isBranch: true,
-					isSelectable: false,
 					isSelected: false,
 					isNavigated: true,
 					image: "example-ava.png",
@@ -125,17 +123,16 @@ FilesSelectable.args = {
 			],
 		},
 		{
+			isSelectable: true,
 			items: [
 				{
 					label: "File 2.1",
 					isBranch: true,
-					isSelectable: false,
 					isSelected: false,
 				},
 				{
-					label: "File 2.2 Shows Text Truncation For Long Names",
+					label: "File 2.2 Shows text truncation for long names",
 					isBranch: false,
-					isSelectable: false,
 					isSelected: false,
 					ariaLabelledby: "assetitemlabel-10",
 					checkboxId: "checkbox-10",
@@ -143,7 +140,6 @@ FilesSelectable.args = {
 				{
 					label: "File 2.3",
 					isBranch: false,
-					isSelectable: false,
 					isSelected: true,
 					image: "example-ava.png",
 					ariaLabelledby: "assetitemlabel-11",

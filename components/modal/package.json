@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/modal",
-	"version": "7.2.0",
+	"version": "8.0.0-next.1",
 	"description": "The Spectrum CSS modal component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -19,14 +19,12 @@
 		"./package.json": "./package.json",
 		"./dist/*": "./dist/*",
 		"./index.css": "./dist/index.css",
-		"./index-*.css": "./dist/index-*.css",
 		"./metadata.json": "./dist/metadata.json",
-		"./themes/*": "./dist/themes/*",
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=16.0.1"
+		"@spectrum-css/tokens": ">=16.1.0-next.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/tokens": {
@@ -34,8 +32,7 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "11.1.0",
-		"@spectrum-css/tokens": "16.0.2"
+		"@spectrum-css/tokens": "16.1.0-next.10"
 	},
 	"keywords": [
 		"design-system",

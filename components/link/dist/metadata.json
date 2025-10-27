@@ -2,6 +2,7 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Link",
+    ".spectrum-Link--inline",
     ".spectrum-Link--quiet",
     ".spectrum-Link--quiet:hover",
     ".spectrum-Link--secondary",
@@ -9,26 +10,41 @@
     ".spectrum-Link--staticWhite",
     ".spectrum-Link:active",
     ".spectrum-Link:focus-visible",
-    ".spectrum-Link:hover"
+    ".spectrum-Link:hover",
+    ".spectrum-Link:lang(ja)",
+    ".spectrum-Link:lang(ko)",
+    ".spectrum-Link:lang(zh)"
   ],
   "modifiers": [
     "--mod-link-animation-duration",
+    "--mod-link-inline-font-weight",
+    "--mod-link-line-height-cjk",
     "--mod-link-text-color",
     "--mod-link-text-color-active",
     "--mod-link-text-color-black",
     "--mod-link-text-color-focus",
     "--mod-link-text-color-hover",
-    "--mod-link-text-color-primary-active",
-    "--mod-link-text-color-primary-default",
-    "--mod-link-text-color-primary-focus",
-    "--mod-link-text-color-primary-hover",
     "--mod-link-text-color-secondary-active",
     "--mod-link-text-color-secondary-default",
     "--mod-link-text-color-secondary-focus",
     "--mod-link-text-color-secondary-hover",
     "--mod-link-text-color-white"
   ],
-  "component": [],
+  "component": [
+    "--spectrum-link-corner-radius",
+    "--spectrum-link-default-font-family",
+    "--spectrum-link-focus-indicator-color",
+    "--spectrum-link-focus-indicator-gap",
+    "--spectrum-link-focus-indicator-thickness",
+    "--spectrum-link-font-size",
+    "--spectrum-link-font-style",
+    "--spectrum-link-font-weight",
+    "--spectrum-link-inline-font-weight",
+    "--spectrum-link-line-height",
+    "--spectrum-link-line-height-cjk",
+    "--spectrum-link-text-underline-gap",
+    "--spectrum-link-text-underline-thickness"
+  ],
   "global": [
     "--spectrum-accent-content-color-default",
     "--spectrum-accent-content-color-down",
@@ -36,13 +52,30 @@
     "--spectrum-accent-content-color-key-focus",
     "--spectrum-animation-duration-100",
     "--spectrum-black",
+    "--spectrum-cjk-line-height-100",
+    "--spectrum-corner-radius-100",
+    "--spectrum-default-font-style",
+    "--spectrum-focus-indicator-color",
+    "--spectrum-focus-indicator-gap",
+    "--spectrum-focus-indicator-thickness",
+    "--spectrum-font-size-100",
+    "--spectrum-line-height-100",
+    "--spectrum-medium-font-weight",
     "--spectrum-neutral-content-color-default",
     "--spectrum-neutral-content-color-down",
     "--spectrum-neutral-content-color-hover",
     "--spectrum-neutral-content-color-key-focus",
+    "--spectrum-regular-font-weight",
+    "--spectrum-sans-font-family-stack",
+    "--spectrum-static-black-focus-indicator-color",
+    "--spectrum-static-white-focus-indicator-color",
+    "--spectrum-text-underline-gap",
+    "--spectrum-text-underline-thickness",
     "--spectrum-white"
   ],
-  "system-theme": [],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-link-text-color"]
+  "high-contrast": [
+    "--highcontrast-link-focus-indicator-color",
+    "--highcontrast-link-text-color"
+  ]
 }

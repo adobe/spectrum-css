@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/preview",
-	"version": "12.0.5",
+	"version": "12.1.0-next.21",
 	"description": "A Spectrum CSS preview",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -39,14 +39,13 @@
 		"build": "yarn docs:report && cross-env NODE_ENV=development storybook build --stats-json --config-dir ."
 	},
 	"dependencies": {
-		"@adobe/spectrum-css-workflow-icons": "1.7.0",
-		"@spectrum-css/bundle": "1.0.1",
-		"@spectrum-css/tokens": "16.0.2",
-		"@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^15.2.0",
-		"@spectrum-css/ui-icons": "1.1.2"
+		"@adobe/spectrum-css-workflow-icons": "5.0.0",
+		"@spectrum-css/bundle": "2.0.0-next.17",
+		"@spectrum-css/tokens": "16.1.0-next.10",
+		"@spectrum-css/ui-icons": "2.0.0-next.2"
 	},
 	"devDependencies": {
-		"@babel/core": "7.28.4",
+		"@babel/core": "7.28.5",
 		"@chromatic-com/storybook": "3.2.7",
 		"@etchteam/storybook-addon-status": "5.0.0",
 		"@storybook/addon-a11y": "8.4.7",
@@ -61,22 +60,21 @@
 		"@storybook/core-events": "8.4.7",
 		"@storybook/manager-api": "8.4.7",
 		"@storybook/preview-api": "8.4.7",
-		"@storybook/test-runner": "0.22.0",
 		"@storybook/theming": "8.4.7",
 		"@storybook/web-components-vite": "8.4.7",
-		"@whitespace/storybook-addon-html": "7.0.0",
-		"chromatic": "13.2.0",
+		"@whitespace/storybook-addon-html": "8.0.2",
+		"chromatic": "13.3.1",
 		"lit": "3.3.1",
 		"lodash-es": "4.17.21",
 		"npm-registry-fetch": "19.0.0",
 		"postcss": "8.5.6",
 		"prettier": "3.6.2",
-		"react": "18.3.1",
-		"react-dom": "18.3.1",
+		"react": "19.2.0",
+		"react-dom": "19.2.0",
 		"react-syntax-highlighter": "15.6.6",
 		"remark-gfm": "4.0.1",
-		"storybook": "8.4.7",
-		"vite": "5.4.20"
+		"storybook": "8.6.14",
+		"vite": "7.1.12"
 	},
 	"keywords": [
 		"design-system",

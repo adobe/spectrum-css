@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -27,26 +27,105 @@
 
 	/* Size */
 	--spectrum-inlinealert-border-width: var(--spectrum-border-width-200);
-	--spectrum-inlinealert-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-inlinealert-border-radius: var(--spectrum-corner-radius-700);
 	--spectrum-inlinealert-icon-size: var(--spectrum-workflow-icon-size-100);
 	--spectrum-inlinealert-min-inline-size: var(--spectrum-in-line-alert-minimum-width);
 	--spectrum-inlinealert-header-min-block-size: var(--spectrum-component-height-50);
 
 	/* Spacing */
-	--spectrum-inlinealert-spacing-edge-to-text: var(--spectrum-spacing-400);
-	--spectrum-inlinealert-spacing-header-to-icon: var(--spectrum-spacing-400);
-	--spectrum-inlinealert-spacing-header-content-button: var(--spectrum-spacing-300);
+	--spectrum-inlinealert-spacing-edge-to-text: var(--spectrum-spacing-300);
+	--spectrum-inlinealert-min-spacing-header-to-icon: var(--spectrum-spacing-100);
+	--spectrum-inlinealert-spacing-header-content: var(--spectrum-spacing-100);
+	--spectrum-inlinealert-spacing-content-link-button: var(--spectrum-spacing-200);
 
 	/* Color */
 	--spectrum-inlinealert-background-color: var(--spectrum-background-layer-2-color);
 	--spectrum-inlinealert-border-and-icon-color: var(--spectrum-neutral-visual-color);
 	--spectrum-inlinealert-header-color: var(--spectrum-heading-color);
 	--spectrum-inlinealert-content-color: var(--spectrum-body-color);
-	--spectrum-inlinealert-border-and-icon-color-info: var(--spectrum-informative-visual-color);
-	--spectrum-inlinealert-border-and-icon-color-positive: var(--spectrum-positive-visual-color);
-	--spectrum-inlinealert-border-and-icon-color-notice: var(--spectrum-notice-visual-color);
-	--spectrum-inlinealert-border-and-icon-color-negative: var(--spectrum-negative-visual-color);
 
+	&.spectrum-InLineAlert--subtle {
+		--spectrum-inlinealert-border-width: 0px;
+	}
+
+	&.spectrum-InLineAlert--bold {
+		--spectrum-inlinealert-border-width: 0px;
+	}
+
+	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle, .spectrum-InLineAlert--notice) {
+		--spectrum-inlinealert-header-color: var(--spectrum-white);
+		--spectrum-inlinealert-content-color: var(--spectrum-white);
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-white);
+	}
+
+	&.spectrum-InLineAlert--info {
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-informative-visual-color);
+
+		&.spectrum-InLineAlert--subtle {
+			--spectrum-inlinealert-background-color: var(--spectrum-informative-subtle-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-informative-visual-color);
+		}
+
+		&.spectrum-InLineAlert--bold {
+			--spectrum-inlinealert-background-color: var(--spectrum-informative-background-color-default);
+		}
+	}
+
+	&.spectrum-InLineAlert--notice {
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-notice-visual-color);
+
+		&.spectrum-InLineAlert--subtle {
+			--spectrum-inlinealert-background-color: var(--spectrum-notice-subtle-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-notice-visual-color);
+		}
+
+		&.spectrum-InLineAlert--bold {
+			--spectrum-inlinealert-background-color: var(--spectrum-notice-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-black);
+		}
+	}
+
+	&.spectrum-InLineAlert--positive {
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-positive-visual-color);
+
+		&.spectrum-InLineAlert--subtle {
+			--spectrum-inlinealert-background-color: var(--spectrum-positive-subtle-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-positive-visual-color);
+		}
+
+		&.spectrum-InLineAlert--bold {
+			--spectrum-inlinealert-background-color: var(--spectrum-positive-background-color-default);
+		}
+	}
+
+	&.spectrum-InLineAlert--negative {
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-negative-visual-color);
+
+		&.spectrum-InLineAlert--subtle {
+			--spectrum-inlinealert-background-color: var(--spectrum-negative-subtle-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-negative-visual-color);
+		}
+
+		&.spectrum-InLineAlert--bold {
+			--spectrum-inlinealert-background-color: var(--spectrum-negative-background-color-default);
+		}
+	}
+
+	&.spectrum-InLineAlert--neutral {
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-neutral-visual-color);
+
+		&.spectrum-InLineAlert--subtle {
+			--spectrum-inlinealert-background-color: var(--spectrum-neutral-subtle-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-neutral-visual-color);
+		}
+
+		&.spectrum-InLineAlert--bold {
+			--spectrum-inlinealert-background-color: var(--spectrum-neutral-background-color-default);
+		}
+	}
+}
+
+.spectrum-InLineAlert {
 	position: relative;
 
 	display: inline-block;
@@ -56,8 +135,7 @@
 	padding-block: var(--mod-inlinealert-spacing-edge-to-text, var(--spectrum-inlinealert-spacing-edge-to-text));
 	padding-inline: var(--mod-inlinealert-spacing-edge-to-text, var(--spectrum-inlinealert-spacing-edge-to-text));
 
-	border-block-width: var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width));
-	border-inline-width: var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width));
+	border-width: var(--highcontrast-inlinealert-border-width, var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width)));
 	border-style: solid;
 	border-radius: var(--mod-inlinealert-border-radius, var(--spectrum-inlinealert-border-radius));
 
@@ -65,27 +143,19 @@
 	border-color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color, var(--spectrum-inlinealert-border-and-icon-color)));
 }
 
-@media (forced-colors: active) {
-	.spectrum-InLineAlert {
-		--highcontrast-inlinealert-background-color: Background;
-		--highcontrast-inlinealert-header-color: CanvasText;
-		--highcontrast-inlinealert-content-color: CanvasText;
-		--highcontrast-inlinealert-border-and-icon-color: ButtonBorder;
-	}
-}
-
 .spectrum-InLineAlert-icon {
 	inline-size: var(--mod-inlinealert-icon-size, var(--spectrum-inlinealert-icon-size));
 	block-size: var(--mod-inlinealert-icon-size, var(--spectrum-inlinealert-icon-size));
+	flex-shrink: 0;
+	color: var(--highcontrast-inlinealert-border-and-icon-color, var(--spectrum-inlinealert-border-and-icon-color));
 }
 
 .spectrum-InLineAlert-header {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 
-	/* Minimum space between header and icon */
-	gap: var(--mod-inlinealert-spacing-header-to-icon, var(--spectrum-inlinealert-spacing-header-to-icon));
+	gap: var(--mod-inlinealert-min-spacing-header-to-icon, var(--spectrum-inlinealert-min-spacing-header-to-icon));
+	margin-block-end: var(--mod-inlinealert-spacing-header-content, var(--spectrum-inlinealert-spacing-header-content));
 
 	font-weight: var(--mod-inlinealert-heading-font-weight, var(--spectrum-inlinealert-heading-font-weight));
 	font-family: var(--mod-inlinealert-heading-font-family, var(--spectrum-inlinealert-heading-font-family));
@@ -100,8 +170,10 @@
 }
 
 .spectrum-InLineAlert-content {
-	display: block;
-	margin-block-start: var(--mod-inlinealert-spacing-header-content-button, var(--spectrum-inlinealert-spacing-header-content-button));
+	display: flex;
+	justify-content: space-between;
+	gap: var(--mod-inlinealert-min-spacing-header-to-icon, var(--spectrum-inlinealert-min-spacing-header-to-icon));
+
 	margin-block-end: 0;
 	margin-inline-start: 0;
 	margin-inline-end: 0;
@@ -120,42 +192,25 @@
 
 .spectrum-InLineAlert-footer {
 	display: flex;
-	justify-content: flex-end;
-	margin-block-start: var(--mod-inlinealert-spacing-header-content-button, var(--spectrum-inlinealert-spacing-header-content-button));
+	justify-content: flex-start;
+	margin-block-start: var(--mod-inlinealert-spacing-content-link-button, var(--spectrum-inlinealert-spacing-content-link-button));
 
 	&:empty {
 		display: none;
 	}
 }
 
-.spectrum-InLineAlert--info {
-	border-color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color-info, var(--spectrum-inlinealert-border-and-icon-color-info)));
+@media (forced-colors: active) {
+	.spectrum-InLineAlert {
+		--highcontrast-inlinealert-header-color: CanvasText;
+		--highcontrast-inlinealert-content-color: CanvasText;
+		--highcontrast-inlinealert-border-and-icon-color: CanvasText;
 
-	.spectrum-InLineAlert-icon {
-		color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color-info, var(--spectrum-inlinealert-border-and-icon-color-info)));
-	}
-}
+		--highcontrast-inlinealert-background-color: Canvas;
 
-.spectrum-InLineAlert--notice {
-	border-color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color-notice, var(--spectrum-inlinealert-border-and-icon-color-notice)));
-
-	.spectrum-InLineAlert-icon {
-		color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color-notice, var(--spectrum-inlinealert-border-and-icon-color-notice)));
-	}
-}
-
-.spectrum-InLineAlert--positive {
-	border-color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color-positive, var(--spectrum-inlinealert-border-and-icon-color-positive)));
-
-	.spectrum-InLineAlert-icon {
-		color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color-positive, var(--spectrum-inlinealert-border-and-icon-color-positive)));
-	}
-}
-
-.spectrum-InLineAlert--negative {
-	border-color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color-negative, var(--spectrum-inlinealert-border-and-icon-color-negative)));
-
-	.spectrum-InLineAlert-icon {
-		color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color-negative, var(--spectrum-inlinealert-border-and-icon-color-negative)));
+		&.spectrum-InLineAlert--subtle,
+		&.spectrum-InLineAlert--bold {
+			--highcontrast-inlinealert-border-width: var(--spectrum-border-width-200);
+		}
 	}
 }

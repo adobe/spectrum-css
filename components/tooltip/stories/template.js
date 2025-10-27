@@ -1,4 +1,3 @@
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -7,32 +6,18 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Tooltip",
 	label,
-	variant = "neutral",
 	placement,
+	variant = "neutral",
 	isOpen = true,
 	isFocused = false,
 	showOnHover = false,
 	customStyles = {},
 	customClasses = [],
-} = {}, context = {}) => {
-	let variantIcon;
-	if (variant === "info") {
-		variantIcon = "Info";
-	}
-	else if (variant === "positive") {
-		variantIcon = "CheckmarkCircle";
-	}
-	else if (variant === "negative") {
-		variantIcon = "Alert";
-	}
-
+} = {}) => {
 	if (showOnHover) {
 		document.addEventListener("DOMContentLoaded", () => {
 			[...document.querySelectorAll(`.${rootClass}`)].forEach(tooltip => {
@@ -54,14 +39,6 @@ export const Template = ({
 			})}
 			style=${styleMap(customStyles)}
 		>
-			${when(variantIcon, () =>
-				Icon({
-					iconName: variantIcon,
-					setName: "workflow",
-					size: "m",
-					customClasses: [`${rootClass}-typeIcon`],
-				}, context)
-			)}
 			${when(label, () => html`
 				<span class=${classMap({
 					[`${rootClass}-label`]: true
@@ -150,7 +127,6 @@ export const SemanticVariantGroup = (args, context) => {
 	const variants = [
 		"neutral",
 		"info",
-		"positive",
 		"negative",
 	];
 

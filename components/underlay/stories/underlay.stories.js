@@ -31,7 +31,11 @@ export default {
 		chromatic: { disableSnapshot: true },
 		packageJson,
 		metadata,
-	}
+		status: {
+			type: "unmigrated",
+		},
+	},
+	tags: ["unmigrated"],
 };
 
 /**

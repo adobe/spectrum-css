@@ -1,5 +1,164 @@
 # Change log
 
+## 2.0.0-next.2
+
+### Minor Changes
+
+📝 [#3988](https://github.com/adobe/spectrum-css/pull/3988) [`86dd51d`](https://github.com/adobe/spectrum-css/commit/86dd51d884878a3090cb8463ca0bf44f21ee9f87) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Updates ui-icons to include linkout-75 icon.
+
+## 2.0.0-next.1
+
+### Minor Changes
+
+- [#3866](https://github.com/adobe/spectrum-css/pull/3866) [`1b33315`](https://github.com/adobe/spectrum-css/commit/1b33315fa1b65d65fe940d3be4ea4395d5394655) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Makes updates to the initial S2 icons update to include some additional icons with names as follows:
+
+  | Icon name     |
+  | ------------- |
+  | Add50         |
+  | Add75         |
+  | Add100        |
+  | Add200        |
+  | Add300        |
+  | DragHandle75  |
+  | DragHandle100 |
+  | DragHandle200 |
+  | DragHandle300 |
+  | Gripper100    |
+  | LinkOut100    |
+  | LinkOut200    |
+  | LinkOut300    |
+  | LinkOut400    |
+
+  Such that the full set of changes for Spectrum 2 is as follows:
+
+  | Icon name         | Migration notes |
+  | ----------------- | --------------- |
+  | Add50             | **New**         |
+  | Add75             | **New**         |
+  | Add100            | **New**         |
+  | Add200            | **New**         |
+  | Add300            | **New**         |
+  | Arrow75           | Deprecated      |
+  | Arrow100          | -               |
+  | Arrow200          | Deprecated      |
+  | Arrow300          | Deprecated      |
+  | Arrow400          | -               |
+  | Arrow500          | Deprecated      |
+  | Arrow600          | Deprecated      |
+  | Asterisk75        | Deprecated      |
+  | Asterisk100       | -               |
+  | Asterisk200       | -               |
+  | Asterisk300       | -               |
+  | Checkmark50       | -               |
+  | Checkmark75       | -               |
+  | Checkmark100      | -               |
+  | Checkmark200      | -               |
+  | Checkmark300      | -               |
+  | Checkmark400      | -               |
+  | Checkmark500      | Deprecated      |
+  | Checkmark600      | Deprecated      |
+  | Chevron50         | -               |
+  | Chevron75         | -               |
+  | Chevron100        | -               |
+  | Chevron200        | -               |
+  | Chevron300        | -               |
+  | Chevron400        | -               |
+  | Chevron500        | Deprecated      |
+  | Chevron600        | Deprecated      |
+  | CornerTriangle75  | -               |
+  | CornerTriangle100 | -               |
+  | CornerTriangle200 | -               |
+  | CornerTriangle300 | -               |
+  | Cross75           | -               |
+  | Cross100          | -               |
+  | Cross200          | -               |
+  | Cross300          | -               |
+  | Cross400          | -               |
+  | Cross500          | -               |
+  | Cross600          | -               |
+  | Dash50            | -               |
+  | Dash75            | -               |
+  | Dash100           | -               |
+  | Dash200           | -               |
+  | Dash300           | -               |
+  | Dash400           | Deprecated      |
+  | Dash500           | Deprecated      |
+  | Dash600           | Deprecated      |
+  | DragHandle75      | **New**         |
+  | DragHandle100     | **New**         |
+  | DragHandle200     | **New**         |
+  | DragHandle300     | **New**         |
+  | Gripper100        | **New**         |
+  | SingleGripper     | Deprecated      |
+  | DoubleGripper     | Deprecated      |
+  | TripleGripper     | Deprecated      |
+  | LinkOut100        | **New**         |
+  | LinkOut200        | **New**         |
+  | LinkOut300        | **New**         |
+  | LinkOut400        | **New**         |
+
+## 2.0.0-next.0
+
+### Major Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b) Thanks [@pfulton](https://github.com/pfulton)! - # Breaking change
+
+  Iconography in v1 inclued 2 sizes, `medium` and `large`, as well as a single SVG asset that included both versions to be toggled with classes via CSS (found in folder`combined`). Icons in v2 no longer have multiple sizes and all assets are sourced from a single folder`svg` which can be found in the `dist` directory of this workspace. **Raw SVG assets can no longer be sourced from the top-level of the workspace and must be loaded from `@spectrum-css/ui-icons/dist/svg/*.svg` instead.** Please find below an outline of the new, deprecated, and unchanged icons.
+
+  | Icon name         | Migration notes |
+  | ----------------- | --------------- |
+  | Arrow75           | Deprecated      |
+  | Arrow100          | -               |
+  | Arrow200          | Deprecated      |
+  | Arrow300          | Deprecated      |
+  | Arrow400          | -               |
+  | Arrow500          | Deprecated      |
+  | Arrow600          | Deprecated      |
+  | Asterisk75        | Deprecated      |
+  | Asterisk100       | -               |
+  | Asterisk200       | -               |
+  | Asterisk300       | -               |
+  | Checkmark50       | -               |
+  | Checkmark75       | -               |
+  | Checkmark100      | -               |
+  | Checkmark200      | -               |
+  | Checkmark300      | -               |
+  | Checkmark400      | -               |
+  | Checkmark500      | Deprecated      |
+  | Checkmark600      | Deprecated      |
+  | Chevron50         | -               |
+  | Chevron75         | -               |
+  | Chevron100        | -               |
+  | Chevron200        | -               |
+  | Chevron300        | -               |
+  | Chevron400        | -               |
+  | Chevron500        | Deprecated      |
+  | Chevron600        | Deprecated      |
+  | CornerTriangle75  | -               |
+  | CornerTriangle100 | -               |
+  | CornerTriangle200 | -               |
+  | CornerTriangle300 | -               |
+  | Cross75           | -               |
+  | Cross100          | -               |
+  | Cross200          | -               |
+  | Cross300          | -               |
+  | Cross400          | -               |
+  | Cross500          | -               |
+  | Cross600          | -               |
+  | Dash50            | -               |
+  | Dash75            | -               |
+  | Dash100           | -               |
+  | Dash200           | -               |
+  | Dash300           | -               |
+  | Dash400           | Deprecated      |
+  | Dash500           | Deprecated      |
+  | Dash600           | Deprecated      |
+  | SingleGripper     | Deprecated      |
+  | DoubleGripper     | Deprecated      |
+  | TripleGripper     | Deprecated      |
+
 ## 1.1.2
 
 🗓 2024-02-06

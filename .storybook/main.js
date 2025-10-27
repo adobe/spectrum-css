@@ -21,6 +21,11 @@ export default {
 			titlePrefix: "Guides",
 		},
 		{
+			directory: "./foundations",
+			files: "**/*.@(stories.js|mdx)",
+			titlePrefix: "Foundations",
+		},
+		{
 			directory: "./deprecated",
 			files: "**/*.@(stories.js|mdx)",
 			titlePrefix: "Deprecated",
@@ -85,6 +90,7 @@ export default {
 		const { mergeConfig } = await import("vite");
 
 		return mergeConfig(config, {
+			base: process.env.BASE_PATH || config.base,
 			publicDir: "./assets",
 			// Add dependencies to pre-optimization
 			optimizeDeps: {
@@ -138,8 +144,6 @@ export default {
 		check: false,
 	},
 	features: {
-		/* Code splitting flag; load stories on-demand */
-		storyStoreV7: true,
 		/* Builds stories.json to help with on-demand loading */
 		buildStoriesJson: true,
 	},

@@ -1,5 +1,117 @@
 # Change log
 
+## 7.0.0-next.4
+
+### Major Changes
+
+📝 [#3945](https://github.com/adobe/spectrum-css/pull/3945) [`8a39697`](https://github.com/adobe/spectrum-css/commit/8a3969751718d45ff1a4a0656e842cf490a8da94) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### New features
+
+- Emphasized track fill color
+- Precision control handle
+- Large and thin track heights
+- Embedded editable text field component
+
+#### Visual changes
+
+- No longer a gap between slider handle and the track
+- Updated dimensions of slider handles for each size variant
+- Updated WHCM for all variants
+
+#### New tokens
+
+`--spectrum-slider-control-to-field-label-editable-extra-large`
+`--spectrum-slider-control-to-field-label-editable-large`
+`--spectrum-slider-control-to-field-label-editable-medium`
+`--spectrum-slider-control-to-field-label-editable-small`
+`--spectrum-slider-control-to-side-field-label-extra-large`
+`--spectrum-slider-control-to-side-field-label-large`
+`--spectrum-slider-control-to-side-field-label-medium`
+`--spectrum-slider-control-to-side-field-label-small`
+`--spectrum-slider-control-to-text-field-extra-large`
+`--spectrum-slider-control-to-text-field-large`
+`--spectrum-slider-control-to-text-field-medium`
+`--spectrum-slider-control-to-text-field-small`
+`--spectrum-slider-editable-control-to-field-label`
+`--spectrum-slider-editable-control-to-text-field`
+`--spectrum-slider-editable-field-inline-size-extra-large`
+`--spectrum-slider-editable-field-inline-size-large`
+`--spectrum-slider-editable-field-inline-size-medium`
+`--spectrum-slider-editable-field-inline-size-small`
+`--spectrum-slider-emphasized-track-fill-color`
+`--spectrum-slider-precision-handle-height`
+`--spectrum-slider-precision-handle-height-extra-large`
+`--spectrum-slider-precision-handle-height-large`
+`--spectrum-slider-precision-handle-height-medium`
+`--spectrum-slider-precision-handle-height-small`
+`--spectrum-slider-precision-handle-width`
+`--spectrum-slider-handle-extra-large`
+`--spectrum-slider-handle-large`
+`--spectrum-slider-handle-medium`
+`--spectrum-slider-handle-small`
+
+#### New mods
+
+`--mod-slider-editable-control-to-text-field`
+`--mod-slider-editable-field-inline-size`
+`--mod-slider-disabled-border-color`
+`--mod-slider-emphasized-tick-mark-color`
+`--mod-slider-emphasized-track-fill-color`
+`--mod-slider-inline-size`
+`--mod-slider-label-font-style`
+`--mod-slider-label-font-weight`
+`--mod-slider-ramp-track-fill-color`
+`--mod-slider-tick-mark-color-filled-track`
+`--mod-slider-track-height-medium`
+
+#### Removed mods
+
+`--mod-disabled-border-color`
+`--mod-sectrum-slider-ramp-handle-border-color-active`
+`--mod-slider-handle-border-width-down`
+`--mod-slider-handle-gap`
+`--mod-slider-ramp-handle-background-color`
+`--mod-slider-tick-handle-background-color`
+`--mod-slider-tick-mark-color-disabled`
+`--mod-slider-track-handleoffset`
+`--mod-slider-track-margin-offset`
+`--mod-slider-track-middle-handleoffset`
+
+## 7.0.0-next.3
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+## 7.0.0-next.2
+
+### Minor Changes
+
+- [#3656](https://github.com/adobe/spectrum-css/pull/3656) [`911c390`](https://github.com/adobe/spectrum-css/commit/911c390b9fa0b43187e5ab535874f2ed1ffeb88d) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - #### Including the touch action rule for draggable content
+
+  The slider, color slider, color area, color wheel, color handle all deserve to have their touch-action property managed so that trying to set the value of those interfaces doesn't cause page scrolling in touch context.
+
+  Adding `touch-action: none` to a slider or any draggable component is necessary to prevent the browser's default touch behaviors—such as scrolling, pinch-zooming, or double-tap zooming from interfering with the component's intended interaction.
+
+  These components also include `user-select: none` to prevent selection or highlighting of any text elements.
+
+## 7.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies:
+  - @spectrum-css/stepper@8.0.0-next.0
+
 ## 6.4.0
 
 ### Minor Changes
@@ -12,17 +124,21 @@ Ensure accurate exports are present for each component. Specifically, adding `th
 
 ### Minor Changes
 
-- [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)! - By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
+📝 [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
 
 ## 6.2.0
 
 ### Minor Changes
 
-- [#3611](https://github.com/adobe/spectrum-css/pull/3611) [`8cb98c6`](https://github.com/adobe/spectrum-css/commit/8cb98c6127a91f902f305faeb800e3c787e97e66) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - # Slider: offset variant track fix
+📝 [#3611](https://github.com/adobe/spectrum-css/pull/3611) [`8cb98c6`](https://github.com/adobe/spectrum-css/commit/8cb98c6127a91f902f305faeb800e3c787e97e66) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
 
-  The border radius styles were not being applied to the second instance of the `spectrum-Slider-track` when the offset variant is activated. The reason for this bug is because when the `offset` is selected, the template structure changes as `spectrum-Slider-fill` gets added to the slider.
+#### Slider: offset variant track fix
 
-  Adding a sibling combinator `&~.spectrum-Slider-track` to `spectrum-Slider-track` when offset is activated resolved the issue.
+The border radius styles were not being applied to the second instance of the `spectrum-Slider-track` when the offset variant is activated. The reason for this bug is because when the `offset` is selected, the template structure changes as `spectrum-Slider-fill` gets added to the slider.
+
+Adding a sibling combinator `&~.spectrum-Slider-track` to `spectrum-Slider-track` when offset is activated resolved the issue.
 
 ## 6.1.0
 

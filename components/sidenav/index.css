@@ -11,41 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
-@media (forced-colors: active) {
-	/* forced-color-adjust: preserve-parent-color addresses svg bug on icon hover */
-	.spectrum-SideNav {
-		.spectrum-Icon {
-			forced-color-adjust: preserve-parent-color;
-		}
-	}
-
-	.spectrum-SideNav-item {
-		--highcontrast-sidenav-content-disabled-color: GrayText;
-
-		--highcontrast-sidenav-focus-ring-color: Highlight;
-
-		--highcontrast-sidenav-content-color-default-selected: SelectedItemText;
-		--highcontrast-sidenav-item-background-default-selected: SelectedItem;
-
-		--highcontrast-sidenav-background-key-focus-selected: Highlight;
-		--highcontrast-sidenav-background-hover-selected: Highlight;
-		--highcontrast-sidenav-item-background-down-selected: Highlight;
-
-		--highcontrast-sidenav-item-background-down: Highlight;
-		--highcontrast-sidenav-background-hover: Highlight;
-		--highcontrast-sidenav-content-color-hover: HighlightText;
-		--highcontrast-sidenav-background-key-focus: Highlight;
-
-		--highcontrast-sidenav-top-level-font-color: ButtonText;
-		--highcontrast-sidenav-content-color-default: ButtonText;
-		--highcontrast-sidenav-content-color-down: HighlightText;
-
-		forced-color-adjust: none;
-	}
-}
-
 .spectrum-SideNav {
 	/* focus indicator */
 	--spectrum-sidenav-focus-ring-size: var(--spectrum-focus-indicator-thickness);
@@ -78,6 +43,13 @@
 	/* color - background */
 	--spectrum-sidenav-background-disabled: transparent;
 	--spectrum-sidenav-background-default: transparent;
+	--spectrum-sidenav-background-hover: var(--spectrum-gray-100);
+	--spectrum-sidenav-item-background-down: var(--spectrum-gray-200);
+	--spectrum-sidenav-background-key-focus: var(--spectrum-gray-100);
+	--spectrum-sidenav-item-background-default-selected: var(--spectrum-gray-100);
+	--spectrum-sidenav-background-hover-selected: var(--spectrum-gray-200);
+	--spectrum-sidenav-item-background-down-selected: var(--spectrum-gray-200);
+	--spectrum-sidenav-background-key-focus-selected: var(--spectrum-gray-100);
 
 	/* color font */
 	--spectrum-sidenav-header-color: var(--spectrum-gray-600);
@@ -202,6 +174,9 @@
 	.spectrum-SideNav-link-text {
 		margin-block-start: var(--mod-sidenav-top-to-label, var(--spectrum-sidenav-top-to-label));
 		margin-block-end: var(--mod-sidenav-bottom-to-label, var(--spectrum-sidenav-bottom-to-label));
+
+		/* Allow overflow-wrap to work and prevent text overflow */
+		inline-size: 100%;
 	}
 
 	.spectrum-Icon {
@@ -274,5 +249,38 @@
 		.spectrum-SideNav .spectrum-SideNav-itemLink {
 			padding-inline-start: var(--mod-sidenav-start-to-content-with-icon-third-level, var(--spectrum-sidenav-start-to-content-with-icon-third-level));
 		}
+	}
+}
+
+@media (forced-colors: active) {
+	/* forced-color-adjust: preserve-parent-color addresses svg bug on icon hover */
+	.spectrum-SideNav {
+		.spectrum-Icon {
+			forced-color-adjust: preserve-parent-color;
+		}
+	}
+
+	.spectrum-SideNav-item {
+		--highcontrast-sidenav-content-disabled-color: GrayText;
+
+		--highcontrast-sidenav-focus-ring-color: Highlight;
+
+		--highcontrast-sidenav-content-color-default-selected: SelectedItemText;
+		--highcontrast-sidenav-item-background-default-selected: SelectedItem;
+
+		--highcontrast-sidenav-background-key-focus-selected: Highlight;
+		--highcontrast-sidenav-background-hover-selected: Highlight;
+		--highcontrast-sidenav-item-background-down-selected: Highlight;
+
+		--highcontrast-sidenav-item-background-down: Highlight;
+		--highcontrast-sidenav-background-hover: Highlight;
+		--highcontrast-sidenav-content-color-hover: HighlightText;
+		--highcontrast-sidenav-background-key-focus: Highlight;
+
+		--highcontrast-sidenav-top-level-font-color: ButtonText;
+		--highcontrast-sidenav-content-color-default: ButtonText;
+		--highcontrast-sidenav-content-color-down: HighlightText;
+
+		forced-color-adjust: none;
 	}
 }

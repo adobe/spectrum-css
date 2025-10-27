@@ -15,16 +15,28 @@ export default {
 	argTypes: {
 		size: size(["s", "m", "l"]),
 		isIndeterminate,
-		staticColor: {
-			...staticColor,
-			options: ["white"],
-		},
+		staticColor,
+		value: {
+			name: "Percent filled",
+			type: { name: "number" },
+			table: {
+				type: { summary: "number" },
+				category: "Content",
+			},
+			control: {
+				type: "range",
+				min: 0,
+				max: 100
+			},
+			if: { arg: "isIndeterminate", truthy: false },
+		}
 	},
 	args: {
 		rootClass: "spectrum-ProgressCircle",
 		size: "m",
 		isIndeterminate: false,
 		staticColor: undefined,
+		value: 43
 	},
 	parameters: {
 		design: {
@@ -33,7 +45,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 export const Default = ProgressCircleGroup.bind({});
@@ -100,5 +116,27 @@ StaticWhiteIndeterminate.args = {
 	isIndeterminate: true,
 };
 StaticWhiteIndeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackDeterminate = Sizing.bind({});
+StaticBlackDeterminate.tags = ["!dev"];
+StaticBlackDeterminate.storyName = "Static black, default";
+StaticBlackDeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: false,
+};
+StaticBlackDeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackIndeterminate = Sizing.bind({});
+StaticBlackIndeterminate.tags = ["!dev"];
+StaticBlackIndeterminate.storyName = "Static black, indeterminate";
+StaticBlackIndeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: true,
+};
+StaticBlackIndeterminate.parameters = {
 	chromatic: { disableSnapshot: true },
 };

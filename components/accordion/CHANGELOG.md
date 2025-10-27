@@ -1,5 +1,117 @@
 # Change log
 
+## 8.0.0-next.5
+
+### Major Changes
+
+📝 [#4249](https://github.com/adobe/spectrum-css/pull/4249) [`9629fe3`](https://github.com/adobe/spectrum-css/commit/9629fe37cad996d47c827a3eabcdf39092a27b0d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes `--mod-*` custom property hooks per SWC-1264, see also the RFC for extensible styling.
+
+- Remove all `--mod-*` custom property hooks.
+- Keep existing class selectors and variants unchanged.
+- Update stories to reflect the removal of the `--mod-*` override layer.
+
+Breaking change: the `--mod-*` override layer is removed. Consumers should set `--spectrum-*` variables directly where customization is needed.
+
+## 8.0.0-next.4
+
+### Minor Changes
+
+📝 [#4139](https://github.com/adobe/spectrum-css/pull/4139) [`6d835ff`](https://github.com/adobe/spectrum-css/commit/6d835ffeb77bc27bd5b2e4ddf48e2f5aa157a56b) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Changes values of `--spectrum-accordion-item-minimum-height` to align more closely with design spec, this affects the minimum height of accordion items for some combinations of size/density by giving them more space.
+
+New accordion minimum heights will use the heights/tokens:
+
+| Size | Compact                     | Regular                     | Spacious                    |
+| ---- | --------------------------- | --------------------------- | --------------------------- |
+| S    | 24px/`component-height-75`  | 32px/`component-height-100` | 40px/`component-height-200` |
+| M    | 32px/`component-height-100` | 40px/`component-height-200` | 48px/`component-height-300` |
+| L    | 40px/`component-height-200` | 48px/`component-height-300` | 56px/`component-height-400` |
+| XL   | 48px/`component-height-300` | 56px/`component-height-400` | 64px/`component-height-500` |
+
+## 8.0.0-next.3
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+### Minor Changes
+
+📝 [#4020](https://github.com/adobe/spectrum-css/pull/4020) [`dc5f820`](https://github.com/adobe/spectrum-css/commit/dc5f8202a330910c0af51b7c172aca35ec99a1e7) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Accordion now supports direct actions. Direct actions, which may consist of a quiet action button or a switch, or both, may be added to each accordion item's heading. Direct action items are vertically centered within the heading's first line of text for all sizes and densities, and maintain their own individual key focus states.
+
+To allow the same level of customizability found in other elements within this component, the following --mod custom properties have been added:
+
+- `--mod-accordion-item-direct-actions-height`
+- `--mod-accordion-item-direct-actions-spacing`
+- `--mod-accordion-item-direct-actions-vertical-spacing`
+
+## 8.0.0-next.2
+
+### Major Changes
+
+📝 [#3684](https://github.com/adobe/spectrum-css/pull/3684) [`f0c6273`](https://github.com/adobe/spectrum-css/commit/f0c6273310a8a7d8f392d6113919a3982ab07b2e) Thanks [@jawinn](https://github.com/jawinn)!
+
+#### Spectrum 2 migration
+
+Accordion now uses Spectrum 2 tokens and specifications.
+
+New sized tokens are used for corner rounding, the spacing around the disclosure icon, and
+the spacing around the content area.
+
+##### New features
+
+- Adds the optional "quiet" style, which does not show dividers between accordion items.
+- Adds CSS transition to animate the rotation of the disclosure indicator when expanding and
+  collapsing the accordion item.
+- Adds no inline padding variant (`.spectrum-Accordion--noInlinePadding`) in which the item
+  header does not have padding.
+- Per design spec, accordion items have a min-width and default width. Default width can be
+  overridden with `--mod-accordion-item-width` but should not be smaller than
+  `--spectrum-accordion-item-minimum-width`.
+
+##### Markup changes
+
+The HTML markup has changed slightly for the accordion header. The disclosure icon has been moved
+from outside the button (`spectrum-Accordion-itemHeader`), to within the button. The extra
+element with class `spectrum-Accordion-itemIconContainer`, previously wrapping the icon, has
+been removed. A span with class `spectrum-Accordion-itemTitle` has been added around the heading
+text.
+
+##### Modifier changes
+
+The following `--mod` custom properties have been renamed to better reflect how they are used:
+
+- `--mod-accordion-item-height` has been renamed to `--mod-accordion-item-minimum-height`
+- `--mod-accordion-min-block-size` has been renamed to `--mod-accordion-item-min-block-size`
+- `--mod-accordion-component-edge-to-text` has been renamed to `--mod-accordion-content-padding-inline`
+
+New modifiers:
+
+- `--mod-accordion-animation-duration`
+- `--mod-accordion-edge-to-content-area`
+- `--mod-accordion-item-minimum-width`
+- `--mod-accordion-top-to-disclosure-indicator`
+
+## 8.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 7.2.0
 
 ### Minor Changes

@@ -60,8 +60,8 @@ const ButtonIconGroup = (args, context) => Container({
 			testHeading: "UI icon (larger)",
 			content: Template({
 				...args,
-				// UI icon that is larger than workflow sizing:
-				iconName: "ArrowDown600",
+				// Largest UI icon from UI icon set:
+				iconName: "Cross600",
 				iconSet: "ui",
 			}, context),
 		},
@@ -109,8 +109,6 @@ export const ButtonGroups = Variants({
 			customStyles: {
 				"max-inline-size": "480px",
 			},
-			iconName: "Edit",
-			iconSet: "workflow",
 			label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 			withStates: false,
 		},
@@ -120,8 +118,6 @@ export const ButtonGroups = Variants({
 			customStyles: {
 				"max-inline-size": "120px",
 			},
-			iconName: "Edit",
-			iconSet: "workflow",
 			label: "Be a premium member",
 			noWrap: true,
 			withStates: false,

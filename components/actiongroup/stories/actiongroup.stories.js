@@ -5,7 +5,7 @@ import { size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ActionGroups } from "./actiongroup.test.js";
-import { OverflowOption, TreatmentTemplate } from "./template.js";
+import { OverflowOption, Template, TreatmentTemplate } from "./template.js";
 
 /**
  * An action group is a grouping of [action buttons](/docs/components-action-button--docs) that are related to each other.
@@ -99,7 +99,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 export const Default = ActionGroups.bind({});
@@ -276,6 +280,15 @@ JustifiedIconOnlyCompact.args = {
 };
 JustifiedIconOnlyCompact.storyName = "Justified (compact, icon-only)";
 JustifiedIconOnlyCompact.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Quiet = Template.bind({});
+Quiet.tags = ["!dev"];
+Quiet.args = {
+	areQuiet: true,
+};
+Quiet.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

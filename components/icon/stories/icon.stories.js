@@ -1,27 +1,11 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import { Sizes } from "@spectrum-css/preview/decorators";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { IconGroup } from "./icon.test.js";
-import { IconListTemplate, Template, UIDefaultTemplate } from "./template.js";
-import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
-
-/**
- * Create a list of all UI Icons with their sizing numbers.
- *
- * The list is a little long until Storybook adds a way to use conditional options
- * in controls, e.g. a "uiSize" control with options pulled from uiIconSizes:
- * @see https://github.com/storybookjs/storybook/discussions/24235
- */
-const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
-	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, "");
-	// Icons like Gripper that don't have sizes yet, represented by any empty array.
-	if (uiIconSizes[baseIconName]?.length == 0) {
-		return [baseIconName];
-	}
-	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
-}).flat();
+import { FullIconSetTemplate, Template, UIArrowsTemplate, UIDefaultTemplate, WorkflowDefaultTemplate } from "./template";
+import { uiIconsWithDirections, workflowIconsCleaned, workflowSizes } from "./utilities.js";
 
 /**
  * The Icon component contains all of the CSS used for displaying both workflow and UI icons.
@@ -44,7 +28,7 @@ export default {
 	component: "Icon",
 	argTypes: {
 		size: {
-			...size(["xs", "s", "m", "l", "xl", "xxl"]),
+			...size(workflowSizes),
 			if: { arg: "setName", eq: "workflow" },
 		},
 		setName: {
@@ -64,7 +48,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: workflowIcons,
+			options: workflowIconsCleaned,
 			control: "select",
 			if: { arg: "setName", eq: "workflow" },
 		},
@@ -75,9 +59,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: [
-				...uiIconNameOptions,
-			],
+			options: uiIconsWithDirections,
 			control: "select",
 			if: { arg: "setName", eq: "ui" },
 		},
@@ -90,24 +72,82 @@ export default {
 			},
 			control: "color",
 		},
-		useRef: { table: { disable: true } },
+		useRef: {
+			name: "Use sprite sheet reference",
+			description: "Storybook only: whether to display an SVG with a `<use>` reference to the icon within a loaded sprite sheet. This improves Storybook performance, especially for multiple icons. When set to `false`, the icon file's full markup is used.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Advanced",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Icon",
 		setName: "workflow",
-		iconName: "ABC",
+		iconName: "Color",
+		uiIconName: "Checkmark400",
 		size: "xl",
 		useRef: true,
 	},
 	parameters: {
 		packageJson,
 		metadata,
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/9qeVZSJ9t0kv6r7njzgHx7/S2-%2F-Styles-visualizer-(WIP)?node-id=295-24257&t=ZC7fyaQ0VQYQ5VYM-1",
+		},
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 export const Default = IconGroup.bind({});
 Default.args = {};
 Default.tags = ["!autodocs"];
+
+/**
+ * All icons in the Workflow icon set.
+ */
+export const Workflow = FullIconSetTemplate.bind({});
+Workflow.storyName = "Workflow icons";
+Workflow.tags = ["!autodocs"];
+Workflow.args = {
+	setName: "workflow",
+	useRef: true,
+};
+Workflow.argTypes = {
+	setName: { table: { disable: true } },
+	iconName: { table: { disable: true } },
+};
+Workflow.parameters = {
+	chromatic: { disableSnapshot: true },
+	// Layout other than "centered" needed for dynamic grid columns CSS to work correctly.
+	layout: "padded",
+};
+
+/**
+ * All icons in the UI icon set.
+ */
+export const UI = FullIconSetTemplate.bind({});
+UI.storyName = "UI icons";
+UI.tags = ["!autodocs"];
+UI.args = {
+	setName: "ui",
+	useRef: true,
+};
+UI.argTypes = {
+	setName: { table: { disable: true } },
+	uiIconName: { table: { disable: true } },
+};
+UI.parameters = {
+	chromatic: { disableSnapshot: true },
+	// Layout other than "centered" needed for dynamic grid columns CSS to work correctly.
+	layout: "padded",
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = IconGroup.bind({});
@@ -122,35 +162,16 @@ WithForcedColors.parameters = {
 	},
 };
 
-/* Stories for the MDX "Docs" only. */
+// ********* DOCS ONLY ********* //
 
 /**
  * The workflow icon set contains several hundred icons to choose from.
+ * For a full list of all icons within this set, see **[workflow icons](/story/components-icon--workflow)**.
  * These icons can be seen in use within [button](/docs/components-button--docs), [action button](/docs/components-action-button--docs), [menu](/docs/components-menu--docs), and many other components.
  * Here is an example of just a few of these icons:
  */
-export const WorkflowDefault = (args, context) => IconListTemplate(
-	{
-		...args,
-		setName: "workflow",
-		size: "xl",
-	},
-	[
-		"Alert",
-		"Asset",
-		"Actions",
-		"ArrowDown",
-		"Camera",
-		"Copy",
-		"DeviceDesktop",
-		"Download",
-		"FilterAdd",
-		"Form",
-		"Light",
-		"Polygon",
-	],
-	context
-);
+export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
+WorkflowDefault.storyName = "Workflow icons";
 WorkflowDefault.tags = ["!dev"];
 WorkflowDefault.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -158,8 +179,8 @@ WorkflowDefault.parameters = {
 WorkflowDefault.storyName = "Workflow icons";
 
 /**
- * Below is an example of a workflow icon displayed at all its available sizes, from extra-small to extra-extra-large.
- * Workflow icons use "t-shirt" sizes (e.g. small, medium), that are the same width and height for each icon in the set.
+ * An example of a Workflow icon displayed at all sizes, from small to extra-large.
+ * Note that the extra-extra-large size is currently *not* part of the design specifications and may be deprecated in the near future.
  */
 export const WorkflowSizing = (args, context) => Sizes({
 	Template,
@@ -167,6 +188,7 @@ export const WorkflowSizing = (args, context) => Sizes({
 	withHeading: false,
 	...args,
 }, context);
+WorkflowSizing.tags = ["!dev"];
 WorkflowSizing.args = {
 	setName: "workflow",
 	iconName: "Asset",
@@ -175,11 +197,13 @@ WorkflowSizing.tags = ["!dev"];
 WorkflowSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-WorkflowSizing.storyName = "Workflow sizing";
+WorkflowSizing.storyName = "Workflow icons - sizing";
 
 /**
  * UI icons are atomic pieces (e.g., arrows, crosses, etc.) that are used as part of some components.
  * The chevron within the [combobox component](/docs/components-combobox--docs) is one example.
+ * For a full list of all icons within this set, see **[ui icons](/story/components-icon--ui)**.
+ *
  * Unlike workflow icons, each UI icon comes in specific numbered sizes. They do not use "t-shirt" sizing. They have unique classes applied that set their size in CSS. For example:
  * - `.spectrum-UIIcon-Asterisk300`
  * - `.spectrum-UIIcon-ChevronDown75`
@@ -205,21 +229,26 @@ UIDefault.parameters = {
  * - `.spectrum-UIIcon-ArrowDown100`
  * - `.spectrum-UIIcon-ArrowUp100`
  */
-export const UIArrows = (args, context) => IconListTemplate(
-	{
-		...args,
-		setName: "ui",
-	},
-	[
-		"ArrowRight100",
-		"ArrowLeft100",
-		"ArrowDown100",
-		"ArrowUp100",
-	],
-	context
-);
+export const UIArrows = UIArrowsTemplate.bind({});
 UIArrows.storyName = "UI icons - directional";
 UIArrows.tags = ["!dev"];
 UIArrows.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * In Storybook documentation, if a workflow icon name does not exist in the set, the
+ * placeholder "Circle" icon will be shown. Missing ui icons will render
+ * nothing. The following example purposefully uses an icon name that does
+ * not exist to demonstrate this behavior.
+ */
+export const MissingWorkflowIcon = Default.bind({});
+MissingWorkflowIcon.storyName = "Workflow icons - missing workflow icon placeholder";
+MissingWorkflowIcon.tags = ["!dev"];
+MissingWorkflowIcon.args = {
+	setName: "workflow",
+	iconName: "ThisIconNameDoesNotExist",
+};
+MissingWorkflowIcon.parameters = {
 	chromatic: { disableSnapshot: true },
 };

@@ -25,7 +25,7 @@ function rgbMappingFunction ({
 }) {
 
 	return {
-		postcssPlugin: "postcss-rgb-mapping",
+		postcssPlugin: "@spectrum-tools/postcss-rgb-mapping",
 		/** @type {import('postcss').RootProcessor} */
 		Root(root) {
 			/* Gather all the custom properties that reference "unprocessed" transparent tokens (i.e. transparent-white-200) */

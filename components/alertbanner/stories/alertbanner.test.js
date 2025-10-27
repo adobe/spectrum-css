@@ -3,6 +3,7 @@ import { Template } from "./template.js";
 
 export const AlertBannerGroup = Variants({
 	Template,
+	TestTemplate: Template,
 	stateDirection: "column",
 	wrapperStyles: {
 		"inline-size": "100%",

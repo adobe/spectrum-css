@@ -1,5 +1,78 @@
 # Change log
 
+## 7.0.0-next.4
+
+### Patch Changes
+
+📝 [#4113](https://github.com/adobe/spectrum-css/pull/4113) [`cf4fc1a`](https://github.com/adobe/spectrum-css/commit/cf4fc1a01d23ba810f45a903ecc29a5c8aae33d1) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## Minor linting fixes
+
+- Removed unused custom properties across multiple components
+- Fixed color function notation by converting `rgba()` to `rgb()` where appropriate
+- Removed duplicate custom property declarations
+- Fixed deprecated CSS properties (e.g., `word-wrap` → `overflow-wrap`)
+- Removed unnecessary stylelint-disable comments
+
+_No visual or functional changes to components._
+
+## 7.0.0-next.3
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+## 7.0.0-next.2
+
+### Minor Changes
+
+- [#3656](https://github.com/adobe/spectrum-css/pull/3656) [`911c390`](https://github.com/adobe/spectrum-css/commit/911c390b9fa0b43187e5ab535874f2ed1ffeb88d) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - #### Including the touch action rule for draggable content
+
+  The slider, color slider, color area, color wheel, color handle all deserve to have their touch-action property managed so that trying to set the value of those interfaces doesn't cause page scrolling in touch context.
+
+  Adding `touch-action: none` to a slider or any draggable component is necessary to prevent the browser's default touch behaviors—such as scrolling, pinch-zooming, or double-tap zooming from interfering with the component's intended interaction.
+
+  These components also include `user-select: none` to prevent selection or highlighting of any text elements.
+
+## 7.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/colorarea@8.0.0-next.0
+  - @spectrum-css/colorhandle@11.0.0-next.0
+  - @spectrum-css/colorloupe@8.0.0-next.0
+
+## 7.0.0-next.0
+
+### Major Changes
+
+- [#3390](https://github.com/adobe/spectrum-css/pull/3390) [`b9f61e4`](https://github.com/adobe/spectrum-css/commit/b9f61e42486c3619de95423e0575e10ccc9be167) Thanks [@cdransf](https://github.com/cdransf)! - # colorwheel S2 migration
+
+  This change migrates the colorwheel component to S2. It adds the `--spectrum-colorwheel-border-color-rgb` and `--spectrum-colorwheel-border-opacity` custom properties. It updates `--spectrum-colorwheel-border-color` to leverage these tokens in an `rgba(...)` function.
+
+  This removes the `spectrum-ColorWheel-border` and associated template DOM node as the outside/underlying border are no longer present in the S2 designs. `::before` and `::after` pseudo elements are now used to draw the exterior and interior borders that overlay the exterior and interior edges of the color wheel.
+
+  Support is provided for the `240px` and `192px` sizes outlined in the design requirements.
+
+  The `forced-colors` media query has been moved to the bottom of the file consistent with our other component implementations.
+
+  Stories, tests and documentation have been updated to be consistent with these changes.
+
+  The following mods have been removed:
+
+  ```css
+  --mod-colorwheel-height
+  --mod-colorwheel-width
+  --mod-colorwheel-min-width
+  --mod-colorwheel-path-borders
+  --mod-colorwheel-colorarea-margin
+  --mod-colorwheel-border-width
+  ```
+
 ## 6.2.0
 
 ### Minor Changes

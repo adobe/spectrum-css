@@ -11,9 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Calendar {
+	--spectrum-calendar-day-background-color-selected-disabled: rgb(var(--spectrum-gray-100-rgb), 0.4);
+
 	--spectrum-calendar-day-width: var(--mod-calendar-day-width, var(--spectrum-component-height-100));
 	--spectrum-calendar-day-height: var(--mod-calendar-day-height, var(--spectrum-component-height-100));
 	--spectrum-calendar-day-border-size: var(--mod-calendar-day-border-size, var(--spectrum-border-width-200));
@@ -48,6 +48,7 @@
 	--spectrum-calendar-day-background: var(--mod-calendar-day-background-color, transparent);
 	--spectrum-calendar-day-background-selected: var(--highcontrast-calendar-day-background-selected, var(--mod-calendar-day-background-color-selected, var(--spectrum-calendar-day-background-color-selected)));
 	--spectrum-calendar-day-background-selected-hover: var(--highcontrast-calendar-day-background-selected-hover, var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover)));
+	--spectrum-calendar-day-background-color-selected-disabled: rgb(var(--spectrum-gray-100-rgb), 0.4);
 	--spectrum-calendar-day-background-cap-selected: var(--highcontrast-calendar-day-background-cap-selected, var(--mod-calendar-day-background-color-cap-selected, var(--spectrum-calendar-day-background-color-cap-selected)));
 	--spectrum-calendar-day-background-hover: var(--highcontrast-calendar-day-background-hover, var(--mod-calendar-day-background-color-hover, var(--spectrum-calendar-day-background-color-hover)));
 	--spectrum-calendar-day-background-focus: var(--highcontrast-calendar-day-background-focus, var(--mod-calendar-day-background-color-key-focus, var(--spectrum-calendar-day-background-color-key-focus)));
@@ -170,8 +171,7 @@
 
 .spectrum-Calendar-prevMonth,
 .spectrum-Calendar-nextMonth {
-	/* @passthrough start */
-	/* Mimic the placement and sizing of the dates in the grid below */
+	/* @passthrough start -- mimic the placement and sizing of the dates in the grid below */
 	--mod-actionbutton-edge-to-text: var(--spectrum-calendar-day-padding);
 	--mod-actionbutton-min-width: var(--spectrum-calendar-day-width);
 	--mod-actionbutton-content-color-default: var(--spectrum-calendar-button-icon-color);

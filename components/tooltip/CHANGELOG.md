@@ -1,5 +1,50 @@
 # Change log
 
+## 8.0.0-next.4
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+## 8.0.0-next.3
+
+### Patch Changes
+
+📝 [#4044](https://github.com/adobe/spectrum-css/pull/4044) [`b1166bd`](https://github.com/adobe/spectrum-css/commit/b1166bd9e4542b3a665cc95498011a633c56e72a) Thanks [@5t3ph](https://github.com/5t3ph)!
+
+Replace deprecated `word-break: break-word` with `overflow-wrap: break-word` to align with modern CSS standards and improve cross-browser compatibility. This property was deprecated in Chrome 44 (July 2015) in favor of the standardized `overflow-wrap` property.
+
+## 8.0.0-next.2
+
+### Minor Changes
+
+📝 [#3641](https://github.com/adobe/spectrum-css/pull/3641) [`0b730ea`](https://github.com/adobe/spectrum-css/commit/0b730ea73e16b98c4e01c7cc5e67beda8ef77e38) Thanks [@cdransf](https://github.com/cdransf)!
+
+#### S2: restore negative and informative semantic variants
+
+This restores the negative and informative tooltip semantic variant styles, story controls and test cases. Icons have been removed for all variants as they are not present in the specifications provided by design.
+
+##### Restored mods
+
+`--mod-tooltip-background-color-informative`
+`--mod-tooltip-background-color-negative"`
+
+## 8.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 7.2.0
 
 ### Minor Changes

@@ -5,7 +5,7 @@ import { Template } from "./template.js";
 export const PlacementVariants = Variants({
 	Template,
 	testData: [
-		...["neutral", "info", "positive", "negative"].map(variant => ({
+		...["neutral", "info", "negative"].map(variant => ({
 			testHeading: capitalize(variant),
 			variant,
 		})),

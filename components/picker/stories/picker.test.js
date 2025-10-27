@@ -17,10 +17,6 @@ export const PickerGroup = Variants({
 			currentValue: "The selected value of the picker, with long text the triggers the overflow behavior with ellipsis",
 		},
 		{
-			testHeading: "Quiet",
-			isQuiet: true,
-		},
-		{
 			testHeading: "Side label",
 			labelPosition: "side",
 		},
@@ -32,6 +28,7 @@ export const PickerGroup = Variants({
 		{
 			testHeading: "With thumbnail icon",
 			showWorkflowIcon: true,
+			contentIconName: "Image",
 		},
 	],
 	stateData: [

@@ -50,9 +50,9 @@ jobs:
 
             ## --- SETUP --- ##
             - name: Use Node LTS version
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v6
               with:
-                  node-version: 20.19.5
+                  node-version: 22.21.0
                   cache: yarn
                   cache-dependency-path: yarn.lock
 
@@ -68,7 +68,7 @@ jobs:
                   path: |
                       .cache/yarn
                       node_modules
-                  key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+                  key: ubuntu-latest-node22-${{ hashFiles('yarn.lock') }}
 
             ## --- INSTALL --- ##
             # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
@@ -86,16 +86,16 @@ jobs:
                   echo "base-path=${BRANCH//\//_}" >> "$GITHUB_OUTPUT"
 
             - name: Download build artifacts for head
-              uses: actions/download-artifact@v5
+              uses: actions/download-artifact@v6
               with:
-                  name: ubuntu-latest-node20-compiled-assets-${{ steps.derive-key.outputs.head-path }}
+                  name: ubuntu-latest-node22-compiled-assets-${{ steps.derive-key.outputs.head-path }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}
                   merge-multiple: true
 
             - name: Download build artifacts for base
-              uses: actions/download-artifact@v5
+              uses: actions/download-artifact@v6
               with:
-                  name: ubuntu-latest-node20-compiled-assets-${{ steps.derive-key.outputs.base-path }}
+                  name: ubuntu-latest-node22-compiled-assets-${{ steps.derive-key.outputs.base-path }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}
                   merge-multiple: true
 
@@ -120,7 +120,7 @@ jobs:
 
             - name: Upload changes
               if: ${{ steps.compare.outputs.has-changed }}
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v5
               with:
                 name: rich-diff
                 path: |
@@ -155,10 +155,10 @@ jobs:
               run: |
                   BRANCH=${{ matrix.branch }}
                   BRANCH=${BRANCH//\//_}
-                  echo "key=ubuntu-latest-node20-compiled-assets-${BRANCH}" >> "$GITHUB_OUTPUT"
+                  echo "key=ubuntu-latest-node22-compiled-assets-${BRANCH}" >> "$GITHUB_OUTPUT"
 
             - name: Check if build artifacts already exist
-              uses: actions/download-artifact@v5
+              uses: actions/download-artifact@v6
               id: artifact-found
               continue-on-error: true
               with:
@@ -177,9 +177,9 @@ jobs:
 
             ## --- SETUP --- ##
             - name: Use Node LTS version
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v6
               with:
-                  node-version: 20.19.5
+                  node-version: 22.21.0
                   cache: yarn
 
             - name: Enable Corepack
@@ -194,7 +194,7 @@ jobs:
                   path: |
                       .cache/yarn
                       node_modules
-                  key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+                  key: ubuntu-latest-node22-${{ hashFiles('yarn.lock') }}
 
             ## --- INSTALL --- ##
             # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
@@ -206,7 +206,7 @@ jobs:
             - name: Check for built assets
               continue-on-error: true
               id: download
-              uses: actions/download-artifact@v5
+              uses: actions/download-artifact@v6
               with:
                   path: |
                     ${{ github.workspace }}/components/*/dist/**
@@ -223,7 +223,7 @@ jobs:
               if: ${{ steps.download.outcome != 'success' }}
               continue-on-error: true
               id: upload
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v5
               with:
                   path: |
                     ${{ github.workspace }}/components/*/dist/**

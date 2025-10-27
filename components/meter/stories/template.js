@@ -8,7 +8,8 @@ export const Template = ({
 	rootClass = "spectrum-Meter",
 	customClasses = [],
 	fill,
-	size = "s",
+	helpText,
+	size = "m",
 	staticColor,
 	...item
 } = {}, context = {}) => {
@@ -27,6 +28,8 @@ export const Template = ({
 			typeof staticColor !== "undefined" ? `${rootClass}--static${capitalize(staticColor)}` : null,
 		].filter(Boolean),
 		staticColor,
+		helpText,
+		size,
 	}, context);
 };
 

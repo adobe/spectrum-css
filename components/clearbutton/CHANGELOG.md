@@ -1,5 +1,34 @@
 # Change log
 
+## 8.0.0-next.2
+
+### Major Changes
+
+📝 [#4043](https://github.com/adobe/spectrum-css/pull/4043) [`0242f7f`](https://github.com/adobe/spectrum-css/commit/0242f7f69ec24ef6c6f000324a7b44106e4603fa) Thanks [@cdransf](https://github.com/cdransf)!
+
+#### S2 migration for clear button
+
+This migrates the clear button component to the latest Spectrum 2 designs. Custom properties have been remapped and added per the design specification.
+
+- The quiet variant has been remove as all clear buttons have a transparent background.
+- The over-background and static color variants have been removed.
+- Test and stories for deprecated variants have been removed.
+- The down state has been added, corresponding controls and tests have been added.
+
+## 8.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 7.3.0
 
 ### Minor Changes
@@ -12,7 +41,9 @@ Ensure accurate exports are present for each component. Specifically, adding `th
 
 ### Minor Changes
 
-- [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)! - By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
+📝 [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
 
 ## 7.1.0
 

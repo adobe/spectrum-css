@@ -47,9 +47,9 @@ jobs:
             fetch-depth: 0
 
       - name: Use Node LTS version
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-            node-version: 20.19.5
+            node-version: 22.21.0
             cache: yarn
 
       - name: Enable Corepack
@@ -71,7 +71,7 @@ jobs:
             path: |
                 .cache/yarn
                 node_modules
-            key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+            key: ubuntu-latest-node22-${{ hashFiles('yarn.lock') }}
 
       ## --- INSTALL --- ##
       - name: Install dependencies
@@ -105,7 +105,7 @@ jobs:
           echo "docs_url=${docs_url}" >> $GITHUB_OUTPUT
           echo "Deployed to: ${docs_url}"
       - name: Post Previews Comment
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const { buildPreviewURLComment } = await import('${{ github.workspace }}/.github/scripts/build-preview-urls-comment.js');

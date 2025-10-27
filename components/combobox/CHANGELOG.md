@@ -1,5 +1,76 @@
 # Change log
 
+## 5.0.0-next.4
+
+### Patch Changes
+
+📝 [#4113](https://github.com/adobe/spectrum-css/pull/4113) [`cf4fc1a`](https://github.com/adobe/spectrum-css/commit/cf4fc1a01d23ba810f45a903ecc29a5c8aae33d1) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## Minor linting fixes
+
+- Removed unused custom properties across multiple components
+- Fixed color function notation by converting `rgba()` to `rgb()` where appropriate
+- Removed duplicate custom property declarations
+- Fixed deprecated CSS properties (e.g., `word-wrap` → `overflow-wrap`)
+- Removed unnecessary stylelint-disable comments
+
+_No visual or functional changes to components._
+
+## 5.0.0-next.3
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+## 5.0.0-next.2
+
+### Major Changes
+
+- [#3683](https://github.com/adobe/spectrum-css/pull/3683) [`e309613`](https://github.com/adobe/spectrum-css/commit/e309613c356ba5586b65cdcc26787d161a3b39e1) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - ### Combobox S2 Migration
+
+  #### New Changes
+  - Removed quiet styling variant
+  - Updated corner radius to match S2 specifications
+  - Changed outline thickness for better visibility
+  - Replaced picker button with in-field button component
+  - Added help text along with invalid state
+  - Modified the WHCM invalid/error state in help text
+
+  ### New tokens
+
+  `--spectrum-combobox-font-weight`
+  `--spectrum-combobox-line-height-cjk`
+  `--spectrum-combobox-spacing-alert-icon-to-text`
+  `--spectrum-combobox-spacing-to-help-text`
+
+  ### New mods
+
+  `--mod-combobox-line-height-cjk`
+  `--mod-combobox-popover-animation-distance`
+  `--mod-combobox-spacing-alert-icon-to-text`
+  `--mod-combobox-spacing-to-help-text`
+  `--mod-combobox-textfield-background-color`
+
+## 5.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/progresscircle@6.0.0-next.0
+
+## 5.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies:
+  - @spectrum-css/menu@10.0.0-next.0
+  - @spectrum-css/pickerbutton@7.0.0-next.0
+  - @spectrum-css/popover@9.0.0-next.0
+  - @spectrum-css/textfield@9.0.0-next.0
+
 ## 4.2.0
 
 ### Minor Changes
@@ -12,10 +83,13 @@ Ensure accurate exports are present for each component. Specifically, adding `th
 
 ### Patch Changes
 
-- [#3609](https://github.com/adobe/spectrum-css/pull/3609) [`851be13`](https://github.com/adobe/spectrum-css/commit/851be13295f9d42d548894fee6626009f053de61) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Fast follow fixes for combobox
-  - corrects container query for the `--system` reference to "legacy" in the combobox/themes/spectrum.css file
-  - corrects the border colors for several combobox states including focus, keyboardFocus, focus+hover, disabled, read-only for all themes
-  - adds `--spectrum-combobox-readonly-input-border-color: var(--spectrum-gray-400);` to express.css theme so that the default border and read-only border colors are the same
+📝 [#3609](https://github.com/adobe/spectrum-css/pull/3609) [`851be13`](https://github.com/adobe/spectrum-css/commit/851be13295f9d42d548894fee6626009f053de61) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+#### Fast follow fixes for combobox
+
+- corrects container query for the `--system` reference to "legacy" in the combobox/themes/spectrum.css file
+- corrects the border colors for several combobox states including focus, keyboardFocus, focus+hover, disabled, read-only for all themes
+- adds `--spectrum-combobox-readonly-input-border-color: var(--spectrum-gray-400);` to express.css theme so that the default border and read-only border colors are the same
 
 ## 4.1.1
 

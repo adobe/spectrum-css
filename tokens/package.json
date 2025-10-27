@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/tokens",
-	"version": "16.0.2",
+	"version": "16.1.0-next.10",
 	"description": "The Spectrum CSS tokens package",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -24,10 +24,11 @@
 	"main": "dist/css/index.css",
 	"module": "style-dictionary.config.js",
 	"devDependencies": {
-		"@adobe/spectrum-tokens": "0.0.0-s2-foundations-20241121221506",
+		"@adobe/spectrum-tokens": "13.16.0",
 		"@adobe/token-diff-generator": "2.0.0",
 		"@spectrum-tools/postcss-rgb-mapping": "1.1.0",
 		"deepmerge": "4.3.1",
+		"glob": "11.0.3",
 		"lodash-es": "4.17.21",
 		"postcss": "8.5.6",
 		"postcss-sorting": "9.1.0",

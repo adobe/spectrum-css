@@ -145,6 +145,7 @@ async function generateDiff({
 async function fetchPublishedComponent(packageName, {
 	cacheLocation,
 	outputLocation,
+	baseTag = "latest",
 }) {
 	const warnings = [];
 	let tag;
@@ -157,10 +158,9 @@ async function fetchPublishedComponent(packageName, {
 			warnings.push(err ?? `Failed to fetch ${packageName.yellow} from npm.\n`);
 		})) ?? {};
 
-	// If the component exists on npm, fetch the latest release data
-	// @todo what is the fallback if there isn't a latest tag?
-	if (npmData["dist-tags"]?.latest) {
-		tag = npmData["dist-tags"]?.latest;
+	// If the component exists on npm, fetch the base release data
+	if (npmData["dist-tags"]?.[baseTag]) {
+		tag = npmData["dist-tags"]?.[baseTag];
 	}
 
 	if (!tag) return;
@@ -206,12 +206,13 @@ async function processComponent(
 		cwd,
 		output = pathing.output,
 		cacheLocation = pathing.cache,
-	}
+		tag,
+	} = {}
 ) {
 	if (!component) return Promise.reject("No component specified.");
 
 	cleanAndMkdir(join(output, "diffs", component));
-	cleanAndMkdir(join(pathing.latest, component));
+	cleanAndMkdir(join(pathing.base, component));
 
 	const pkgPath = require.resolve(`@spectrum-css/${component}/package.json`) ?? join(cwd, component, "package.json");
 	const pkg = pkgPath && existsSync(pkgPath)
@@ -248,25 +249,26 @@ async function processComponent(
 		);
 	}
 
-	let tag = "latest";
+	let foundTag;
 	if (pkg?.name) {
 		const npmResults = await fetchPublishedComponent(pkg.name, {
 			cacheLocation,
-			outputLocation: join(pathing.latest, component),
+			outputLocation: join(pathing.base, component),
+			baseTag: tag,
 		});
 
 		if (npmResults?.tag) {
-			tag = npmResults.tag;
+			foundTag = npmResults.tag;
 		}
 
 		if (npmResults?.warnings?.length > 0) {
 			warnings.push(...npmResults.warnings);
 		}
 
-		if (existsSync(join(pathing.latest, component))) {
+		if (existsSync(join(pathing.base, component))) {
 			const files =
 				(await fg("**/*.css", {
-					cwd: join(pathing.latest, component),
+					cwd: join(pathing.base, component),
 				})) ?? [];
 
 			if (files.length > 0) found++;
@@ -292,7 +294,7 @@ async function processComponent(
 			processFile(
 				filename,
 				join(cwd, component, "dist"),
-				join(pathing.latest, component)
+				join(pathing.base, component)
 			)
 		)
 	).then((results) => {
@@ -304,7 +306,7 @@ async function processComponent(
 		return {
 			component,
 			warnings,
-			tag,
+			tag: foundTag,
 			pkg,
 			fileMap,
 		};
@@ -353,18 +355,15 @@ async function processFile(filename, localPath, comparePath) {
 async function main(
 	components,
 	output,
-	{ skipCache = false } = {}
+	{ skipCache = false, tag = "latest" } = {}
 ) {
 	if (!components || components.length === 0) {
 		components = getAllComponentNames(false);
 	}
 
-	// Strip out utilities
-	components = components.filter(c => !["actionmenu", "commons"].includes(c));
-
 	pathing.output = output;
 	pathing.cache = join(output, "packages");
-	pathing.latest = join(output, "latest");
+	pathing.base = join(output, "base");
 
 	/** Setup the folder structure */
 	cleanAndMkdir(pathing.output);
@@ -373,12 +372,12 @@ async function main(
 	// unless we want to re-fetch the tarballs
 	cleanAndMkdir(pathing.cache, skipCache);
 
-	cleanAndMkdir(pathing.latest);
+	cleanAndMkdir(pathing.base);
 
 	const promises = [];
 	// Copy the bundled CSS to the output directory
 	const renderAssets = [
-		join(dirs.root, "tools", "bundle", "dist", "index.min.css"),
+		join(dirs.root, "bundle", "dist", "index.min.css"),
 		join(require.resolve("diff2html"), "..", "..", "bundles", "css", "diff2html.min.css"),
 		join(require.resolve("diff2html"), "..", "..", "bundles", "js", "diff2html.min.js"),
 	];
@@ -391,7 +390,7 @@ async function main(
 
 	/**
 	 * Each component will report on it's file structure locally when compared
-	 * against it's latest tag on npm; then a console report will be logged and
+	 * against the base tag on npm; then a console report will be logged and
 	 * a visual diff generated for each file that has changed.
 	 */
 	const results = await Promise.all([
@@ -399,6 +398,7 @@ async function main(
 			return processComponent(component, {
 				output: pathing.output,
 				cacheLocation: pathing.cache,
+				tag,
 			}).catch((err) =>
 				Promise.resolve({
 					component,
@@ -435,7 +435,7 @@ async function main(
 	for (const {
 		component,
 		warnings = [],
-		tag,
+		tag: foundTag,
 		pkg = {},
 		fileMap = new Map(),
 	} of results) {
@@ -453,7 +453,7 @@ async function main(
 
 		componentData.set(component, {
 			pkg,
-			tag,
+			tag: foundTag,
 			files: fileMap,
 		});
 
@@ -471,7 +471,7 @@ async function main(
 
 		// Write a table of the file sizes to the console for easy comparison
 		cliOutput.push(
-			writeConsoleTable(["Filename", "Local", `Tag v${tag}`], { min: 15, max: maxColumnWidth + 5})
+			writeConsoleTable(["Filename", "Local", `Tag v${foundTag}`], { min: 15, max: maxColumnWidth + 5})
 		);
 
 		files.forEach(async (file) => {
@@ -552,9 +552,10 @@ let {
 	_: components,
 	output = join(dirs.root, ".diff-output"),
 	cache = true,
+	tag = "latest",
 	// @todo allow to run against local main or published versions
 } = yargs(hideBin(process.argv)).argv;
 
-main(components, output, { skipCache: !cache }).then((code) => {
+main(components, output, { skipCache: !cache, tag }).then((code) => {
 	process.exit(code);
 });

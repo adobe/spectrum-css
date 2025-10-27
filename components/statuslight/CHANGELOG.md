@@ -1,5 +1,31 @@
 # Change log
 
+## 10.0.0-next.2
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### S2 status light fix
+
+  This work removes the reference to `default-font-family` in favor for `sans-font-family-stack` to ensure the status light's font renders appropriately for web.
+
+## 10.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 9.1.1-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`dce3669`](https://github.com/adobe/spectrum-css/commit/dce366923562d004c61e8a19da216f6ea6a11d40) Thanks [@pfulton](https://github.com/pfulton)! - Removes references to the accent variant, since the accent status light was deprecated in S2.
+
+  Removed variant:
+
+  `.spectrum-StatusLight--accent`
+  `--spectrum-statuslight-semantic-accent-color`
+
 ## 9.2.0
 
 ### Minor Changes

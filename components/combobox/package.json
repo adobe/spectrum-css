@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/combobox",
-	"version": "4.2.0",
+	"version": "5.0.0-next.4",
 	"description": "The Spectrum CSS combobox component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -19,19 +19,17 @@
 		"./package.json": "./package.json",
 		"./dist/*": "./dist/*",
 		"./index.css": "./dist/index.css",
-		"./index-*.css": "./dist/index-*.css",
 		"./metadata.json": "./dist/metadata.json",
-		"./themes/*": "./dist/themes/*",
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/menu": ">=9.0.0 <10.0.0",
-		"@spectrum-css/pickerbutton": ">=6.0.0 <7.0.0",
-		"@spectrum-css/popover": ">=8.0.0 <9.0.0",
-		"@spectrum-css/progresscircle": ">=5.0.0 <6.0.0",
-		"@spectrum-css/textfield": ">=8.0.0 <9.0.0",
-		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+		"@spectrum-css/menu": ">=10.0.0-next.0",
+		"@spectrum-css/pickerbutton": ">=7.0.0-next.0",
+		"@spectrum-css/popover": ">=9.0.0-next.0",
+		"@spectrum-css/progresscircle": ">=6.0.0-next.0",
+		"@spectrum-css/textfield": ">=9.0.0-next.0",
+		"@spectrum-css/tokens": ">=16.1.0-next.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/menu": {
@@ -54,12 +52,12 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/menu": "9.3.0",
-		"@spectrum-css/pickerbutton": "6.2.0",
-		"@spectrum-css/popover": "8.3.0",
-		"@spectrum-css/progresscircle": "5.2.0",
-		"@spectrum-css/textfield": "8.2.0",
-		"@spectrum-css/tokens": "16.0.2"
+		"@spectrum-css/menu": "10.0.0-next.6",
+		"@spectrum-css/pickerbutton": "7.0.0-next.2",
+		"@spectrum-css/popover": "9.0.0-next.5",
+		"@spectrum-css/progresscircle": "6.0.0-next.0",
+		"@spectrum-css/textfield": "9.0.0-next.1",
+		"@spectrum-css/tokens": "16.1.0-next.10"
 	},
 	"keywords": [
 		"design-system",

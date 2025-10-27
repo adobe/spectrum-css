@@ -30,101 +30,9 @@ export const PopoverGroup = Variants({
 			"end-top",
 			"end-bottom",
 		].map((position) => {
-			const popoverHeight = 142;
-			const popoverWidth = 89;
-
-			let wrapperStyles = {
-				"justify-content": "center",
-				// Makes sure that padding does not add to the min-block-size set through the use of the story's parameters.docs.story.height setting.
-				"box-sizing": "border-box",
-			};
-			switch (position) {
-				case "top":
-				case "top-left":
-				case "top-right":
-				case "top-start":
-				case "top-end":
-					wrapperStyles["align-items"] = "end";
-					wrapperStyles["inline-size"] = `${popoverWidth + 20}px`;
-					wrapperStyles["padding-block-start"] = `${popoverHeight + 20}px`;
-					break;
-				case "bottom":
-				case "bottom-left":
-				case "bottom-right":
-				case "bottom-start":
-				case "bottom-end":
-					wrapperStyles["align-items"] = "start";
-					wrapperStyles["inline-size"] = `${popoverWidth + 20}px`;
-					wrapperStyles["padding-block-end"] = `${popoverHeight + 20}px`;
-					break;
-				case "right":
-					wrapperStyles["align-items"] = "center";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-right"] = `${popoverWidth + 20}px`;
-					break;
-				case "right-top":
-					wrapperStyles["align-items"] = "start";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-right"] = `${popoverWidth + 20}px`;
-					break;
-				case "right-bottom":
-					wrapperStyles["align-items"] = "end";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-right"] = `${popoverWidth + 20}px`;
-					break;
-				case "left":
-					wrapperStyles["align-items"] = "center";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-left"] = `${popoverWidth + 20}px`;
-					break;
-				case "left-top":
-					wrapperStyles["align-items"] = "start";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-left"] = `${popoverWidth + 20}px`;
-					break;
-				case "left-bottom":
-					wrapperStyles["align-items"] = "end";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-left"] = `${popoverWidth + 20}px`;
-					break;
-				case "start":
-					wrapperStyles["align-items"] = "center";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-inline-start"] = `${popoverWidth + 20}px`;
-					break;
-				case "start-top":
-					wrapperStyles["align-items"] = "start";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-inline-start"] = `${popoverWidth + 20}px`;
-					break;
-				case "start-bottom":
-					wrapperStyles["align-items"] = "end";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-inline-start"] = `${popoverWidth + 20}px`;
-					break;
-				case "end":
-					wrapperStyles["align-items"] = "center";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-inline-end"] = `${popoverWidth + 20}px`;
-					break;
-				case "end-top":
-					wrapperStyles["align-items"] = "start";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-inline-end"] = `${popoverWidth + 20}px`;
-					break;
-				case "end-bottom":
-					wrapperStyles["align-items"] = "end";
-					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
-					wrapperStyles["padding-inline-end"] = `${popoverWidth + 20}px`;
-					break;
-			}
-
 			return {
 				testHeading: `Position: ${position}`,
-				wrapperStyles,
 				position,
-				popoverHeight,
-				popoverWidth,
 			};
 		}),
 		{
@@ -139,7 +47,7 @@ export const PopoverGroup = Variants({
 				(passthroughs, context) => Dialog({
 					showModal: false,
 					size: "s",
-					isDismissable: false,
+					isDismissible: false,
 					heading: "Example heading",
 					hasFooter: false,
 					footer: [""],

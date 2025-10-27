@@ -3,8 +3,7 @@
 	"tag": ["tokens"],
 	"namedInputs": {
 		"core": [
-			"{projectRoot}/custom-express/*.css",
-			"{projectRoot}/custom-spectrum/*.css"
+			"{projectRoot}/custom/*.css"
 		],
 		"scripts": ["{projectRoot}/style-dictionary.config.js", "{projectRoot}/utilities/*.js"],
 		"tools": ["{projectRoot}/postcss.config.js", "{projectRoot}/tasks/token-rollup.js"]
@@ -17,7 +16,7 @@
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
-					"node --no-warnings ./tasks/token-rollup.js",
+					"node --no-warnings ./tasks/token-rollup.js"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
@@ -43,13 +42,14 @@
 		"diff": {
 			"cache": true,
 			"executor": "nx:run-commands",
-			"inputs": [{ "externalDependencies": ["@adobe/token-diff-generator"] }],
+			"inputs": [{ "externalDependencies": ["glob", "@adobe/token-diff-generator"] }],
 			"options": {
 				"commands": [
-					"tdiff report --old-token-version @adobe/spectrum-tokens@{args.v1} --new-token-version @adobe/spectrum-tokens@{args.v2} --format markdown --output dist/tokens-diff.md"
+					"tdiff report --old-token-version @adobe/spectrum-tokens@{args.v1} --new-token-version @adobe/spectrum-tokens@{args.v2} --format markdown --output {projectRoot}/dist/tokens-diff.md"
 				],
 				"forwardAllArgs": true,
-				"v1": "0.0.0-s2-foundations-20241121221506"
+				"v1": "13.13.0",
+				"v2": "13.14.0"
 			},
 			"outputs": [
 				"{projectRoot}/dist/tokens-diff.md"

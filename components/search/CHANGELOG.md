@@ -1,5 +1,55 @@
 # Change log
 
+## 9.0.0-next.3
+
+### Major Changes
+
+📝 [#4115](https://github.com/adobe/spectrum-css/pull/4115) [`e467fe0`](https://github.com/adobe/spectrum-css/commit/e467fe00cfef00311b77ec4b32c6ab1791b6923a) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+## S2 Collapsed search field
+
+The search component allows for a minimized state where the search field is collapsed to a button.
+
+### Anatomy
+
+The collapsed state consists of a single action button that has a hover, keyboard focused, and disabled state. This state is triggered by the `is-collapsed` class on the search component. When the search field is in this state, the textfield is hidden and the search button is displayed. The button can be hovered and focused, and will expand the search field when clicked.
+
+### Usage
+
+The collapsed state is used to reduce the amount of space taken up by the search field. It is most commonly used next a filter button to allow users to quickly search and filter content.
+
+## 9.0.0-next.2
+
+### Major Changes
+
+📝 [#2673](https://github.com/adobe/spectrum-css/pull/2673) [`89a3f2b`](https://github.com/adobe/spectrum-css/commit/89a3f2bfeed257a5eefeef229efaa3cc7555980c) Thanks [@mdt2](https://github.com/mdt2)!
+
+#### Search S2 migration
+
+Search now uses Spectrum 2 tokens and specifications. The following items have been adjusted:
+
+- Quiet variant has been deprecated and code removed (including removal of the custom property `--mod-search-quiet-button-offset`).
+- Updates to colors, corner rounding, and spacing.
+- Custom property mod adjustments:
+  - Added `--mod-search-top-to-icon`.
+  - Removed `--mod-workflow-icon-size-100`.
+
+## 9.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/clearbutton@8.0.0-next.0
+  - @spectrum-css/textfield@9.0.0-next.0
+
 ## 8.2.0
 
 ### Minor Changes
@@ -12,7 +62,9 @@ Ensure accurate exports are present for each component. Specifically, adding `th
 
 ### Patch Changes
 
-- [#3658](https://github.com/adobe/spectrum-css/pull/3658) [`e9fde67`](https://github.com/adobe/spectrum-css/commit/e9fde67bf341798a6ab34f227b2e7a417d1e5da7) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Change S2 theme border color to gray-800 on keyfocus per design request in order to align with text field.
+- [#3658](https://github.com/adobe/spectrum-css/pull/3658) [`e9fde67`](https://github.com/adobe/spectrum-css/commit/e9fde67bf341798a6ab34f227b2e7a417d1e5da7) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Change S2 theme border color to gray-800 on keyfocus per design request in order to align with text field.
 
 ## 8.1.1
 

@@ -1,5 +1,58 @@
 # Change log
 
+## 11.0.0-next.2
+
+### Major Changes
+
+- [#3531](https://github.com/adobe/spectrum-css/pull/3531) [`e4556f1`](https://github.com/adobe/spectrum-css/commit/e4556f1ad7443a5ee191b1e79721413e7ba5a83e) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### Spectrum 2 migration
+
+Checkbox's control and color tokens have been updated by the latest S2 tokens:
+
+##### Updates
+
+- Checkbox has a background color token: `--spectrum-checkbox-background-color`
+- New typography additions: line-height, font-weight, and font style
+- `spectrum-Checkbox--sizeM` is now the default style settings of the component.
+- Fixed typo in `--mod-focus-indicator-thickness`
+- Removed interactive state selectors in `--emphasized` variant that was overriding other variants
+- Refactored WHCM settings for read-only and disabled states
+- `--mod-checkbox-spacing` has been renamed to `--mod-checkbox-margin-block`
+
+##### New tokens
+
+`--spectrum-component-size-width-ratio-down`
+`--spectrum-checkbox-bottom-to-text`
+`--spectrum-checkbox-top-to-control`
+`--spectrum-accent-content-color-default`
+`--spectrum-accent-content-color-hover`
+`--spectrum-accent-content-color-down`
+`--spectrum-accent-content-color-key-focus`
+
+##### Modified tokens
+
+`--spectrum-checkbox-checkmark-color`
+`--spectrum-checkbox-invalid-color-down`
+`--spectrum-checkbox-control-color-default`
+`--spectrum-checkbox-control-color-hover`
+`--spectrum-checkbox-control-color-down`
+`--spectrum-checkbox-control-color-focus`
+
+## 11.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 11.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 10.2.0
 
 ### Minor Changes
@@ -29,8 +82,6 @@ Adds a `::before` pseudo element to properly target the `.spectrum-Checkbox-inpu
 ### Minor Changes
 
 📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
-
-## New feature
 
 Minified and gzipped outputs available for all compiled CSS assets.
 
@@ -219,6 +270,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ### 🛑 BREAKING CHANGE
 
 - Removes component-builder & component-builder-simple for script leveraging postcss
+
 - Imports added to index.css and themes/express.css
 
 ## 8.1.5

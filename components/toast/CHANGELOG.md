@@ -1,5 +1,56 @@
 # Change log
 
+## 12.0.0-next.2
+
+### Major Changes
+
+- [#3643](https://github.com/adobe/spectrum-css/pull/3643) [`bfe2e2c`](https://github.com/adobe/spectrum-css/commit/bfe2e2c8f780d8b6a26387c689980f2123d00bd3) Thanks [@cdransf](https://github.com/cdransf)!
+
+#### S2 toast migration
+
+This migrates the `toast` component to S2. Custom properties have been remapped per the design spec. Mods have been added and placeholder icons have been updated from the new workflow icons. The toast no longer supports a divider.
+
+##### Tokens
+
+| Before                       | After                        |
+| ---------------------------- | ---------------------------- |
+| --spectrum-corner-radius-100 | --spectrum-corner-radius-800 |
+
+##### Mods
+
+The following mods have been added.
+
+`--mod-toast-font-family`
+`--mod-toast-font-style`
+`--mod-toast-icon-block-size`
+`--mod-toast-spacing-action-button-to-close`
+`--mod-toast-spacing-bottom-edge-to-close-button`
+`--mod-toast-spacing-close-button-to-edge`
+`--mod-toast-spacing-text-to-close-button`
+`--mod-toast-spacing-top-edge-to-close-button`
+
+##### Passthroughs
+
+The following passthrough has been added.
+
+`--mod-closebutton-icon-color-default`
+
+## 12.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 12.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/button@15.0.0-next.0
+  - @spectrum-css/closebutton@7.0.0-next.0
+
 ## 11.2.0
 
 ### Minor Changes

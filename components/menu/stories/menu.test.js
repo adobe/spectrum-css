@@ -1,7 +1,5 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { MenuItem, Template } from "./template.js";
+import { Template } from "./template.js";
 
 export const MenuWithVariants = Variants({
 	Template,
@@ -35,7 +33,7 @@ export const MenuWithVariants = Variants({
 			items: [
 				{
 					label: "Web Design",
-					iconName: "DesktopAndMobile",
+					iconName: "DeviceMultiscreen",
 					iconSet: "workflow",
 					isCollapsible: true,
 					isOpen: true,
@@ -89,7 +87,7 @@ export const MenuWithVariants = Variants({
 				},
 				{
 					label: "Watches and longer truncated label that is really really much longer",
-					iconName: "Watch",
+					iconName: "Clock",
 					iconSet: "workflow",
 					isCollapsible: true,
 					items: [{ label: "Defaults to not visible within closed item" }],
@@ -101,26 +99,23 @@ export const MenuWithVariants = Variants({
 });
 
 export const MenuItemGroup = Variants({
-	Template: (args, context) => html`
-		<ul
-			class=${classMap({
-				"spectrum-Menu": true,
-				[`spectrum-Menu--size${args.size?.toUpperCase()}`]:
-					typeof args.size !== "undefined",
-				"is-selectable": args.selectionMode === "single",
-				"is-selectableMultiple": args.selectionMode === "multiple",
-				"is-open": args.isOpen,
-			})}
-		>
-			${MenuItem(
-				{
-					...args,
-					rootClass: "spectrum-Menu-item",
-				},
-				context,
-			)}
-		</ul>
-	`,
+	Template: ({
+		customStyles,
+		hasActions,
+		hasThumbnail,
+		selectionMode,
+		shouldTruncate,
+		...args
+	}, context) => Template({
+		customStyles,
+		hasActions,
+		selectionMode,
+		shouldTruncate,
+		items: [{
+			...args,
+			thumbnailUrl: hasThumbnail && !args.thumbnailUrl ? "thumbnail.png" : args.thumbnailUrl,
+		}],
+	}, context),
 	wrapperStyles: {
 		"min-block-size": "auto",
 	},
@@ -130,7 +125,16 @@ export const MenuItemGroup = Variants({
 			description: undefined,
 		},
 		{
+			testHeading: "No selection, with thumbnails",
+			description: undefined,
+			hasThumbnail: true,
+		},
+		{
 			testHeading: "No selection, with description",
+		},
+		{
+			testHeading: "No selection, with thumbnails, description",
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Single selection: selected",
@@ -138,6 +142,14 @@ export const MenuItemGroup = Variants({
 			value: undefined,
 			selectionMode: "single",
 			isSelected: true,
+		},
+		{
+			testHeading: "Single selection with thumbnails: selected",
+			description: undefined,
+			value: undefined,
+			selectionMode: "single",
+			isSelected: true,
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Single selection: unselected",
@@ -149,6 +161,16 @@ export const MenuItemGroup = Variants({
 			iconSet: "workflow",
 		},
 		{
+			testHeading: "Single selection with thumbnails: unselected",
+			description: undefined,
+			value: undefined,
+			selectionMode: "single",
+			label: "Share",
+			iconName: "Share",
+			iconSet: "workflow",
+			hasThumbnail: true,
+		},
+		{
 			testHeading: "Multi-selection: selected",
 			description: undefined,
 			value: undefined,
@@ -156,11 +178,29 @@ export const MenuItemGroup = Variants({
 			isSelected: true,
 		},
 		{
+			testHeading: "Multi-selection with thumbnails: selected",
+			description: undefined,
+			value: undefined,
+			selectionMode: "multiple",
+			isSelected: true,
+			hasThumbnail: true,
+		},
+		{
 			testHeading: "Multi-selection: unselected",
+			description: undefined,
 			selectionMode: "multiple",
 			label: "Share",
 			iconName: "Share",
 			iconSet: "workflow",
+		},
+		{
+			testHeading: "Multi-selection with thumbnails: unselected",
+			description: undefined,
+			selectionMode: "multiple",
+			label: "Share",
+			iconName: "Share",
+			iconSet: "workflow",
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Multi-selection: unselected switches",
@@ -168,6 +208,14 @@ export const MenuItemGroup = Variants({
 			hasActions: true,
 			value: undefined,
 			description: undefined,
+		},
+		{
+			testHeading: "Multi-selection with thumbnails: unselected switches",
+			selectionMode: "multiple",
+			hasActions: true,
+			value: undefined,
+			description: undefined,
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Multi-selection: selected switches",
@@ -178,10 +226,26 @@ export const MenuItemGroup = Variants({
 			isSelected: true,
 		},
 		{
-			testHeading: "Multi-selection: switches + labels",
+			testHeading: "Multi-selection with thumbnails: selected switches",
+			selectionMode: "multiple",
+			hasActions: true,
+			value: undefined,
+			description: undefined,
+			isSelected: true,
+			hasThumbnail: true,
+		},
+		{
+			testHeading: "Multi-selection: switches + description",
 			selectionMode: "multiple",
 			hasActions: true,
 			label: "Menu item",
+		},
+		{
+			testHeading: "Multi-selection with thumbnails: switches + description",
+			selectionMode: "multiple",
+			hasActions: true,
+			label: "Menu item",
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Drill-in",
@@ -198,6 +262,17 @@ export const MenuItemGroup = Variants({
 			},
 		},
 		{
+			testHeading: "Truncation with thumbnails",
+			description: "Description will wrap",
+			label: "Longer label will truncate",
+			shouldTruncate: true,
+			value: undefined,
+			customStyles: {
+				"inline-size": "175px",
+			},
+			hasThumbnail: true,
+		},
+		{
 			testHeading: "Text wrapping",
 			description: "Description will wrap",
 			label: "Longer label will always wrap",
@@ -205,6 +280,16 @@ export const MenuItemGroup = Variants({
 			customStyles: {
 				"inline-size": "150px",
 			},
+		},
+		{
+			testHeading: "Text wrapping with thumbnails",
+			description: "Description will wrap",
+			label: "Longer label will always wrap",
+			value: undefined,
+			customStyles: {
+				"inline-size": "175px",
+			},
+			hasThumbnail: true,
 		}
 	],
 	stateData: [
@@ -232,28 +317,29 @@ export const MenuItemGroup = Variants({
 		{
 			testHeading: "Without icon",
 			iconName: undefined,
+			include: ["No selection", "No selection, with description", "Single selection: selected", "Single selection: unselected", "Multi-selection: selected", "Multi-selection: unselected", "Multi-selection: unselected switches", "Multi-selection: selected switches", "Multi-selection: switches + description", "Drill-in", "Truncation", "Text wrapping"],
 		},
 		{
 			testHeading: "Without value",
 			value: undefined,
-			include: ["No selection", "No selection, with description", "Multi-selection: unselected", "Multi-selection: switches + labels", "Drill-in"],
+			include: ["No selection", "No selection, with thumbnails", "No selection, with description", "No selection, with thumbnails, description", "Multi-selection: unselected", "Multi-selection with thumbnails: unselected", "Multi-selection: switches + description", "Multi-selection with thumbnails: switches + description", "Drill-in", "Drill-in with thumbnails"],
 		},
 		{
 			testHeading: "Without value or icon",
 			iconName: undefined,
 			value: undefined,
-			include: ["No selection", "No selection, with description", "Multi-selection: unselected", "Multi-selection: switches + labels", "Drill-in"],
+			include: ["No selection", "No selection, with description", "Multi-selection: unselected", "Multi-selection: switches + description", "Drill-in"],
 		},
 		{
 			testHeading: "With value",
 			value: "⌘ N",
-			include: ["Truncation", "Text wrapping"],
+			include: ["Single selection: selected", "Single selection: unselected", "Multi-selection: selected", "Multi-selection: unselected", "Multi-selection: unselected switches", "Multi-selection: selected switches", "Multi-selection: switches + description", "Truncation", "Truncation with thumbnails", "Text wrapping", "Text wrapping with thumbnails"],
 		},
 		{
 			testHeading: "With multi-select switch",
 			selectionMode: "multiple",
 			hasActions: true,
-			include: ["Truncation", "Text wrapping"],
+			include: ["Truncation", "Truncation with thumbnails", "Text wrapping", "Text wrapping with thumbnails"],
 		},
 		{
 			testHeading: "With value and multi-select switch",
@@ -265,8 +351,45 @@ export const MenuItemGroup = Variants({
 		{
 			testHeading: "Without description",
 			description: undefined,
-			include: ["Drill-in", "Truncation", "Text wrapping"],
+			include: ["Drill-in", "Drill-in with thumbnails", "Truncation", "Truncation with thumbnails", "Text wrapping", "Text wrapping with thumbnails"],
 		},
+		{
+			testHeading: "With description",
+			description: "Menu item description",
+			include: ["Single selection: selected", "Single selection with thumbnails: selected", "Single selection: unselected", "Single selection with thumbnails: unselected", "Multi-selection: selected","Multi-selection with thumbnails: selected","Multi-selection: unselected","Multi-selection with thumbnails: unselected","Multi-selection: unselected switches","Multi-selection with thumbnails: unselected switches","Multi-selection: selected switches","Multi-selection with thumbnails: selected switches",]
+		},
+		{
+			testHeading: "Unavailable",
+			isUnavailable: true,
+			value: undefined,
+			include: ["No selection", "No selection, with thumbnails", "No selection, with description", "No selection, with thumbnails, description", "Truncation","Text wrapping"]
+		},
+		{
+			testHeading: "Unavailable without icon",
+			isUnavailable: true,
+			value: undefined,
+			iconName: undefined,
+			include: ["No selection", "No selection, with description","Truncation","Text wrapping"]
+		},
+		{
+			// Not allowed for use with thumbnails
+			testHeading: "External link",
+			hasExternalLink: true,
+			include: ["No selection", "No selection, with description", "Truncation", "Text wrapping"]
+		},
+		{
+			testHeading: "External link without value",
+			hasExternalLink: true,
+			value: undefined,
+			include: ["No selection", "No selection, with description"]
+		},
+		{
+			testHeading: "External link without value, icon",
+			hasExternalLink: true,
+			value: undefined,
+			iconName: undefined,
+			include: ["No selection", "No selection, with description", "Truncation", "Text wrapping"]
+		}
 		// {
 		// 	testHeading: "Highlighted",
 		// 	isHighlighted: true,

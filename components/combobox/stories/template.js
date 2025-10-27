@@ -1,5 +1,6 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
+import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
@@ -10,11 +11,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
-const Combobox = ({
+export const Template = ({
 	rootClass = "spectrum-Combobox",
 	id = getRandomId("combobox"),
 	testId,
@@ -23,15 +21,40 @@ const Combobox = ({
 	size = "m",
 	isOpen = true,
 	isInvalid = false,
-	isQuiet = false,
 	isDisabled = false,
+	isHovered = false,
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
 	isReadOnly = false,
+	helpText,
+	fieldLabelText = "Select location",
+	fieldLabelPosition = "top",
+	isLabelRequired = false,
+	showFieldLabel = false,
 	value = "",
+	autocomplete = true,
+	content = [],
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+	const comboboxId = id || getRandomId("combobox");
+
+	// Handle click outside of the combobox to close it
+	if (typeof window !== "undefined" && isOpen) {
+		// Use setTimeout to allow DOM to render first
+		setTimeout(() => {
+			const comboboxEl = document.getElementById(comboboxId);
+
+			const handleClickOutside = (event) => {
+				if (comboboxEl && !comboboxEl.contains(event.target)) {
+					updateArgs({ isOpen: false });
+					document.removeEventListener("mousedown", handleClickOutside);
+				}
+			};
+
+			document.addEventListener("mousedown", handleClickOutside);
+		}, 0);
+	}
 
 	return html`
 		<div
@@ -40,116 +63,129 @@ const Combobox = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				"is-open": !isDisabled && isOpen,
-				[`${rootClass}--quiet`]: isQuiet,
 				"is-invalid": !isDisabled && isInvalid,
+				"is-hovered": !isDisabled && isHovered,
 				"is-focused": !isDisabled && isFocused,
 				"is-keyboardFocused": !isDisabled && isKeyboardFocused,
 				"is-loading": isLoading,
 				"is-disabled": isDisabled,
 				"is-readOnly": isReadOnly,
+				[`${rootClass}--sideLabel`]: fieldLabelPosition === "side",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId ?? id)}
 			style=${styleMap(customStyles)}
+			role="combobox"
+			aria-expanded=${isOpen}
+			aria-haspopup="listbox"
+			aria-controls=${`${comboboxId}-popover`}
+			aria-owns=${`${comboboxId}-popover`}
+			aria-autocomplete=${ifDefined(autocomplete ? "list" : undefined)}
 		>
-			${TextField({
-				size,
-				isQuiet,
-				isDisabled,
-				isInvalid,
-				isFocused,
-				isKeyboardFocused,
-				customClasses: [
-					`${rootClass}-textfield`,
-					...(isLoading ? ["is-loading"] : []),
-				],
-				customInputClasses: [`${rootClass}-input`],
-				isLoading,
-				customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
-				name: "field",
-				isReadOnly,
-				value,
-				onclick: function () {
-					if (!isOpen) updateArgs({ isOpen: true });
-				},
-			}, context)}
-			${PickerButton({
-				customClasses: [
-					`${rootClass}-button`,
-					... isInvalid ? ["is-invalid"] : [],
-				],
-				size,
-				iconSet: "ui",
-				iconName: "ChevronDown",
-				isQuiet,
-				id: getRandomId("picker"),
-				isOpen,
-				isFocused,
-				isKeyboardFocused,
-				isDisabled,
-				position: "right",
-				onclick: function () {
-					updateArgs({ isOpen: !isOpen });
-				},
-				tabindex: "-1",
-			}, context)}
-		</div>
-	`;
-};
-
-export const Template = ({
-	size = "m",
-	isOpen = true,
-	isQuiet = false,
-	isDisabled = false,
-	showFieldLabel = false,
-	isReadOnly = false,
-	fieldLabelText = "Select location",
-	fieldLabelPosition = "top",
-	content = [],
-	value = "",
-	...args
-} = {}, context = {}) => {
-	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
-	return html`
-		<div style=${styleMap({
-			// This accounts for the height of the popover when it is open to prevent testing issues
-			// and allow docs containers to be the right height
-			["margin-block-end"]: !isReadOnly && isOpen && !isDisabled ? `${popoverHeight}px` : undefined,
-		})}>
 			${when(showFieldLabel, () =>
 				FieldLabel({
 					size,
 					label: fieldLabelText,
 					isDisabled,
-					customStyles: { "max-inline-size": "100px"},
-					alignment: fieldLabelPosition === "left" && "left",
+					customClasses: [`${rootClass}-label`],
+					alignment: fieldLabelPosition === "side" && "side",
+					isRequired: isLabelRequired,
 				}, context)
 			)}
-			${[
-				Popover({
-					isOpen: isOpen && !isDisabled && !isReadOnly,
-					withTip: false,
-					position: "bottom-start",
-					isQuiet,
-					trigger: (passthrough) => Combobox({
-						size,
-						isOpen,
-						isQuiet,
-						isDisabled,
-						isReadOnly,
-						value,
-						...args,
-						...passthrough,
-					}, context),
-					content,
-					popoverWidth: size === "s" ? 140 : size === "l" ? 191 : size === "xl" ? 192 : 166, // default value is "m"
-					popoverHeight,
-				}, context),
-			]}
+			<div class="${rootClass}-content">
+				${TextField({
+					size,
+					isDisabled,
+					isInvalid,
+					isFocused,
+					isHovered,
+					isKeyboardFocused,
+					customClasses: [
+						`${rootClass}-textfield`,
+						...(isLoading ? ["is-loading"] : []),
+					],
+					customInputClasses: [
+						`${rootClass}-input`,
+						...(autocomplete ? [`${rootClass}-autocomplete`] : [])
+					],
+					isLoading,
+					customInfieldProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
+					name: "field",
+					isReadOnly,
+					value,
+					autocomplete: autocomplete ? undefined : "off",
+					onclick: function () {
+						if (!isOpen) updateArgs({ isOpen: true });
+					},
+				}, context)}
+				${InfieldButton({
+					customClasses: [
+						`${rootClass}-button`,
+						...(!isDisabled && isOpen ? ["is-open"] : []),
+					],
+					size,
+					id: getRandomId("infieldbutton"),
+					isDisabled: isDisabled || isReadOnly,
+					tabindex: "-1",
+					onclick: function () {
+						updateArgs({
+							isOpen: !isOpen,
+						});
+					},
+				}, context)}
+			</div>
+			${Popover({
+				isOpen: isOpen && !isDisabled && !isReadOnly,
+				withTip: false,
+				position: "bottom-start",
+				customClasses: [`${rootClass}-popover`],
+				customStyles: {
+					"inline-size": size === "s" ? "192px" : size === "l" ? "224px" : size === "xl" ? "240px" : "208px",
+				},
+				content,
+			}, context)}
+			${when(helpText, () =>
+				HelpText({
+					customClasses: [`${rootClass}-helptext`],
+					size,
+					isDisabled,
+					hideIcon: true,
+					text: helpText,
+					variant: isInvalid ? "negative" : "neutral",
+				}, context)
+			)}
+
 		</div>
 	`;
+};
+
+export const HelpTextTemplate = (args, context) => {
+	const variants = [
+		{
+			heading: "Help text",
+			args: {...args, helpText: "Choose a topic. Add a new topic by typing it in the field, then selecting 'Enter.'"},
+		},
+		{
+			heading: "Help text with error",
+			args: {...args, helpText: "Choose or add at least one topic.", isInvalid: true},
+		}
+	];
+
+	return Container({
+		direction: "row",
+		withHeading: false,
+		withBorder: false,
+		content: html`${variants.map(variant => Container({
+			withBorder: false,
+			heading: variant.heading,
+			containerStyles: {"display": "inline"},
+			content: Template({
+				...variant.args,
+				customStyles: {"margin-top": "8px"}
+			}, context)},
+		context))}`,
+	}, context);
 };
 
 export const VariantGroup = (args, context) => {

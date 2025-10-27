@@ -51,12 +51,19 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
 	decorators: [
 		withUnderlayWrapper,
 	],
+	tags: ["unmigrated"],
 };
 
+/**
+ * The default modal does not include a background color itself, other than `transparent`. If implementations are in need of a background color, and one is not supported within the modal's child component (for example, the dialog defines its own background color), `--mod-modal-background-color` may be set on the `.spectrum-Modal` class.
+ */
 export const Default = ModalGroup.bind({});
 Default.args = {
 	content: [

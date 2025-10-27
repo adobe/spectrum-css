@@ -4,9 +4,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, upperCase } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Divider",
@@ -14,7 +11,6 @@ export const Template = ({
 	tag = "hr",
 	staticColor,
 	vertical = false,
-	minDimensionValues,
 	customClasses = [],
 	customStyles = {},
 } = {}) => {
@@ -28,11 +24,7 @@ export const Template = ({
 					typeof staticColor !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap({
-				"min-inline-size": minDimensionValues && !vertical ? "200px": undefined,
-				"min-block-size": minDimensionValues && vertical ? "20px": undefined,
-				...customStyles,
-			})}
+			style=${styleMap({...customStyles})}
 			role="separator"
 		/>`;
 	}
@@ -46,11 +38,7 @@ export const Template = ({
 				typeof staticColor !== "undefined",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
-		style=${styleMap({
-			"min-inline-size": minDimensionValues && !vertical ? "200px": undefined,
-			"min-block-size": minDimensionValues && vertical ? "20px": undefined,
-			...customStyles,
-		})}
+		style=${styleMap({...customStyles})}
 		role="separator"
 	></div>`;
 };

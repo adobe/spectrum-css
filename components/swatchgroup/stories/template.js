@@ -12,13 +12,10 @@ export const Template = ({
 	customClasses = [],
 	size = "m",
 	density = "regular",
-	rounding = "regular",
-	borderStyle = "noBorder",
+	rounding = "none",
 	containerWidth,
 	items = [],
 	customStyles = {},
-	isDisabled =false,
-	isSelected = false,
 	id = getRandomId("swatchgroup"),
 } = {}, context = {}) => html`
 	<div
@@ -38,9 +35,6 @@ export const Template = ({
 		${items.map((swatch) => Swatch({
 			size,
 			rounding,
-			isDisabled,
-			isSelected,
-			borderStyle,
 			...swatch,
 		}, context))}
 	</div>

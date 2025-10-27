@@ -1,5 +1,121 @@
 # Change log
 
+## 11.0.0-next.3
+
+### Patch Changes
+
+📝 [#4113](https://github.com/adobe/spectrum-css/pull/4113) [`cf4fc1a`](https://github.com/adobe/spectrum-css/commit/cf4fc1a01d23ba810f45a903ecc29a5c8aae33d1) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## Minor linting fixes
+
+- Removed unused custom properties across multiple components
+- Fixed color function notation by converting `rgba()` to `rgb()` where appropriate
+- Removed duplicate custom property declarations
+- Fixed deprecated CSS properties (e.g., `word-wrap` → `overflow-wrap`)
+- Removed unnecessary stylelint-disable comments
+
+_No visual or functional changes to components._
+
+## 11.0.0-next.2
+
+### Major Changes
+
+- [#3659](https://github.com/adobe/spectrum-css/pull/3659) [`83b2fe9`](https://github.com/adobe/spectrum-css/commit/83b2fe9a118936e68628ab02ccb9c03452eb1931) Thanks [@cdransf](https://github.com/cdransf)!
+
+#### Spectrum 2 migration
+
+This migrates the `in-line alert` component to Spectrum 2. Custom properties have been updated and added per the design specification.
+
+Subtle and bold treatments have been added for each badge variant.
+
+To use the subtle treatment, you will need to apply the `spectrum-InLineAlert--subtle` class:
+
+```html
+<div
+	class="spectrum-InLineAlert spectrum-InLineAlert--info spectrum-InLineAlert--subtle"
+>
+	<div class="spectrum-InLineAlert-header">
+		Info variant with subtle fill
+		<svg
+			focusable="false"
+			aria-hidden="true"
+			role="img"
+			class=" spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon "
+			id="icon-52w58"
+			aria-label="InfoCircle"
+		>
+			<title id="InfoCircle">Info Circle</title>
+			<use xlink:href="#icon-info-circle" href="#icon-info-circle"></use>
+		</svg>
+	</div>
+	<div class="spectrum-InLineAlert-content">This is an alert.</div>
+</div>
+```
+
+To use the bold treatment (which is reserved for high-attention alerts only), you will need to apply the `spectrum-InLineAlert--bold` class:
+
+```html
+<div
+	class="spectrum-InLineAlert spectrum-InLineAlert--info spectrum-InLineAlert--bold"
+>
+	<div class="spectrum-InLineAlert-header">
+		Info variant with bold fill
+		<svg
+			focusable="false"
+			aria-hidden="true"
+			role="img"
+			class=" spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon "
+			id="icon-mty2x"
+			aria-label="InfoCircle"
+		>
+			<title id="InfoCircle">Info Circle</title>
+			<use xlink:href="#icon-info-circle" href="#icon-info-circle"></use>
+		</svg>
+	</div>
+	<div class="spectrum-InLineAlert-content">This is an alert.</div>
+</div>
+```
+
+Because subtle and bold treatments draw a similar level of attention you should choose only one to use consistently within a single product.
+
+##### New mods
+
+`--mod-inlinealert-border-and-icon-color-neutral`
+`--mod-inlinealert-min-spacing-header-to-icon`
+`--mod-inlinealert-spacing-content-link-button`
+`--mod-inlinealert-spacing-header-content`
+
+##### Removed mods
+
+`--mod-inlinealert-spacing-header-content-button`
+`--mod-inlinealert-spacing-header-to-icon`
+
+##### New custom properties
+
+`--spectrum-inlinealert-min-spacing-header-to-icon`
+`--spectrum-inlinealert-spacing-content-link-button`
+`--spectrum-inlinealert-spacing-header-content`
+
+##### Removed custom properties
+
+`--spectrum-inlinealert-spacing-header-content-button`
+`--spectrum-inlinealert-spacing-header-to-icon`
+
+## 11.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 11.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/button@15.0.0-next.0
+
 ## 10.2.0
 
 ### Minor Changes
@@ -21,8 +137,6 @@ Minor linting fix of replacing `rgba` to the `rgb` shorthand syntax.
 ### Minor Changes
 
 📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
-
-## New feature
 
 Minified and gzipped outputs available for all compiled CSS assets.
 

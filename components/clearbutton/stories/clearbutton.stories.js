@@ -1,17 +1,65 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isQuiet, size, staticColor } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isHovered, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ClearButtonGroup } from "./clearbutton.test.js";
 import { Template } from "./template.js";
 
 /**
- * The clear button component is an in-field button used in search and tags.
- *
- * ## Usage Notes
+ * The clear button component is an in-field button used in [search](/docs/components-search-field--docs) and [tags](/docs/components-tag--docs).
+ */
+export default {
+	title: "Clear button",
+	component: "ClearButton",
+	argTypes: {
+		size: size(["s", "m", "l", "xl"]),
+		isDisabled,
+		isHovered,
+		isActive,
+		isFocusable: {
+			table: { disable: true },
+			type: { name: "boolean" },
+		},
+	},
+	args: {
+		rootClass: "spectrum-ClearButton",
+		size: "m",
+		isDisabled: false,
+		isHovered: false,
+		isActive: false,
+	},
+	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=13078-14989",
+		},
+		packageJson,
+		metadata,
+		status: {
+			type: "migrated",
+		},
+	},
+	tags: ["migrated"],
+};
 
-	Use the correct cross icon size that corresponds to the t-shirt size you require for the clear button.
+export const Default = ClearButtonGroup.bind({});
+Default.args = {};
+
+/**
+ * When disabled, the clear button color changes to `--spectrum-disabled-content-color` and is not interactive.
+ */
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true,
+};
+Disabled.tags = ["!dev"];
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Use the correct cross icon size that corresponds to the t-shirt size you require for the clear button. The default size is medium.
 
 	<table>
 		<thead>
@@ -39,63 +87,8 @@ import { Template } from "./template.js";
 			</tr>
 		</tbody>
 	</table>
+ *
  */
-export default {
-	title: "Clear button",
-	component: "ClearButton",
-	argTypes: {
-		size: size(["s", "m", "l", "xl"]),
-		isDisabled,
-		isQuiet,
-		staticColor: {
-			...staticColor,
-			options: ["white"],
-		},
-	},
-	args: {
-		rootClass: "spectrum-ClearButton",
-		size: "m",
-		isDisabled: false,
-		isQuiet: false,
-	},
-	parameters: {
-		design: {
-			type: "figma",
-			url: "https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=13078-14989",
-		},
-		packageJson,
-		metadata,
-	},
-};
-
-/**
- * The default size for clear button is medium.
- */
-
-export const Default = ClearButtonGroup.bind({});
-Default.args = {};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-	isDisabled: true,
-};
-Disabled.tags = ["!dev"];
-Disabled.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * The `.spectrum-ClearButton--quiet` class will use a transparent background (including when the Express theme is active).
- */
-export const Quiet = Template.bind({});
-Quiet.args = {
-	isQuiet: true,
-};
-Quiet.tags = ["!dev"];
-Quiet.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withHeading: false,
@@ -107,15 +100,6 @@ Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 
-};
-
-export const OverBackground = ClearButtonGroup.bind({});
-OverBackground.tags = ["!dev"];
-OverBackground.args = {
-	staticColor: "white",
-};
-OverBackground.parameters = {
-	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //

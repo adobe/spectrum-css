@@ -6,17 +6,16 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-ClearButton",
 	isDisabled = false,
+	isHovered = false,
+	isActive = false,
 	size = "m",
-	isQuiet = false,
-	staticColor,
+	isFocusable = true,
 	id = getRandomId("clearbutton"),
+	onclick = () => {},
 	customClasses = [],
 	customStyles = {},
 }, context) => html`
@@ -25,19 +24,17 @@ export const Template = ({
 		class=${classMap({
 			[rootClass]: true,
 			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-			[`${rootClass}--quiet`]: isQuiet,
-			[`${rootClass}--overBackground`]: staticColor === "white",
-			/**
-			 * There aren't styles for `--staticWhite` in clear button (yet)
-			 * but this makes it easier to support in the testing grid
-			 */
-			[`${rootClass}--staticWhite`]: staticColor === "white",
 			"is-disabled": isDisabled,
+			"is-hover": isHovered,
+			"is-active": isActive,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}
 		style=${styleMap(customStyles)}
 		?disabled=${isDisabled}
+		tabindex=${isFocusable ? 0 : -1}
+		aria-hidden=${isFocusable}
+		@click=${onclick}
 	>
 		<div class="${rootClass}-fill">
 			${Icon({

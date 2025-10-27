@@ -53,7 +53,7 @@ jobs:
                     - macos-latest
                     - ubuntu-latest
                 node-version:
-                    - 20
+                    - 22
                 # experimental:
                 #     - false
                 # include:
@@ -106,8 +106,6 @@ jobs:
                   files_yaml: |
                       styles:
                         - components/*/index.css
-                        - components/*/themes/spectrum.css
-                        - components/*/themes/express.css
                       eslint:
                         - components/*/stories/*.js
                       mdlint:
@@ -117,7 +115,7 @@ jobs:
                         - components/*/*.md
                         - plugins/*/*.md
                         - tokens/*.md
-                        - tools/*/*.md
+                        - bundle/*.md
                         - ui-icons/*.md
                       plugins:
                         - plugins/**/*
@@ -153,9 +151,9 @@ jobs:
               uses: actions/checkout@v5
 
             - name: Use Node LTS version
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v6
               with:
-                  node-version: 20.19.5
+                  node-version: 22.21.0
                   cache: yarn
 
             - name: Enable Corepack
@@ -170,7 +168,7 @@ jobs:
                   path: |
                       .cache/yarn
                       node_modules
-                  key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+                  key: ubuntu-latest-node22-${{ hashFiles('yarn.lock') }}
 
             ## --- INSTALL --- ##
             # If statement isn't needed here b/c yarn will leverage the cache if it exists

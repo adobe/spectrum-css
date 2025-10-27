@@ -63,7 +63,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 /**
@@ -97,6 +101,9 @@ export const Sizing = (args, context) => Sizes({
 Sizing.storyName = "Sizing";
 Sizing.args = {
 	variant: "negative",
+	customStyles: {
+		"--mod-helptext-align-text": "center",
+	},
 };
 Sizing.tags = ["!dev"];
 Sizing.parameters = {

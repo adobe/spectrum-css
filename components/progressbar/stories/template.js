@@ -1,28 +1,27 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressBar",
 	customClasses = [],
 	labelPosition,
 	staticColor,
-	customWidth,
 	isIndeterminate = false,
 	label,
 	value,
 	showValueLabel = true,
 	trackFill,
 	progressBarFill,
+	helpText,
 	customStyles = {},
 	size = "m",
 } = {}, context = {}) => {
@@ -36,12 +35,11 @@ export const Template = ({
 				[`${rootClass}--indeterminate`]: isIndeterminate,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap({
-				"width": `${customWidth}px`,
+			style=${ifDefined(styleMap({
 				...customStyles,
 				"--mod-progressbar-track-color": trackFill,
 				"--mod-progressbar-fill-color": progressBarFill,
-			})}
+			}))}
 			value=${ifDefined(value ? `${value}%` : undefined)}
 			aria-valuenow=${ifDefined(value ? `${value}%` : undefined)}
 			role="progressbar"
@@ -65,6 +63,13 @@ export const Template = ({
 					style=${styleMap({ "inline-size": `${value}%` })}
 				></div>
 			</div>
+			${when(helpText, () =>
+				HelpText({
+					size,
+					text: helpText,
+					hideIcon: true,
+					customClasses: [`${rootClass}-helptext`],
+				}, context))}
 		</div>
 	`;
 };

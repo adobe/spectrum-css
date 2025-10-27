@@ -4,7 +4,6 @@
     ".spectrum-TreeView",
     ".spectrum-TreeView .spectrum-TreeView",
     ".spectrum-TreeView--sizeL",
-    ".spectrum-TreeView--sizeM",
     ".spectrum-TreeView--sizeS",
     ".spectrum-TreeView--sizeXL",
     ".spectrum-TreeView--thumbnail .spectrum-TreeView-itemThumbnail",
@@ -49,8 +48,7 @@
     ".spectrum-TreeView.spectrum-TreeView--detached",
     ".spectrum-TreeView.spectrum-TreeView--quiet",
     ".spectrum-TreeView.spectrum-TreeView--thumbnail",
-    ".spectrum-TreeView:dir(rtl)",
-    "[dir=\"rtl\"] .spectrum-TreeView"
+    ".spectrum-TreeView:dir(rtl)"
   ],
   "modifiers": [
     "--mod-treeview-font-size",
@@ -167,10 +165,6 @@
     "--spectrum-logical-rotation",
     "--spectrum-neutral-content-color-default",
     "--spectrum-text-to-visual-75"
-  ],
-  "system-theme": [
-    "--system-tree-view-item-background-color-focus",
-    "--system-tree-view-item-background-color-hover"
   ],
   "passthroughs": [],
   "high-contrast": [
