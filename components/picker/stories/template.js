@@ -129,7 +129,7 @@ export const Template = ({
 	customPopoverStyles = {
 		// Demonstrate popover at 100% of the width of the Picker.
 		minInlineSize: "100%",
-		"--mod-menu-inline-size": "100%",
+		"--spectrum-menu-inline-size": "100%",
 		// Helps ensure that Popover appears below the Picker, with side labels layout.
 		display: "block",
 	},

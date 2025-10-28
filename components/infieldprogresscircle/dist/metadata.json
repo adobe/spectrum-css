@@ -7,7 +7,6 @@
     ".spectrum-InfieldProgressCircle--sizeS",
     ".spectrum-InfieldProgressCircle--sizeXL"
   ],
-  "modifiers": [],
   "component": [
     "--spectrum-in-field-progress-circle-edge-to-fill",
     "--spectrum-in-field-progress-circle-size-100",
@@ -16,10 +15,11 @@
     "--spectrum-in-field-progress-circle-size-75",
     "--spectrum-infieldprogresscircle-padding-block"
   ],
-  "global": ["--spectrum-progress-circle-thickness-small"],
-  "passthroughs": [
-    "--mod-progress-circle-size",
-    "--mod-progress-circle-thickness"
+  "global": [
+    "--spectrum-progress-circle-size",
+    "--spectrum-progress-circle-thickness",
+    "--spectrum-progress-circle-thickness-small"
   ],
+  "passthroughs": [],
   "high-contrast": []
 }

@@ -148,8 +148,8 @@ Nested.args = {
 		...passthroughs,
 	}, context),
 	customStyles: {
-		"--mod-popover-width": "0px",
-		"--mod-popover-height": "0px",
+		"--spectrum-popover-width-override": "0px",
+		"--spectrum-popover-height-override": "0px",
 	},
 	content: [
 		(passthroughs, context) => Menu({

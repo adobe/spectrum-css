@@ -34,7 +34,7 @@
 	--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
 
 	/* @passthrough -- custom sizing for opacity checkerboard */
-	--mod-opacity-checkerboard-size: var(--spectrum-thumbnail-opacity-checkerboard-square-size);
+	--spectrum-opacity-checkerboard-size: var(--spectrum-thumbnail-opacity-checkerboard-square-size);
 }
 
 .spectrum-Thumbnail--size50 {
@@ -93,10 +93,10 @@
 	padding: 0;
 	display: block;
 
-	inline-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
-	block-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
+	inline-size: var(--spectrum-thumbnail-size);
+	block-size: var(--spectrum-thumbnail-size);
 
-	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+	border-radius: var(--spectrum-thumbnail-border-radius);
 
 	/* Friends should align to the top of the tabs */
 	vertical-align: top;
@@ -109,12 +109,12 @@
 		position: absolute;
 		inline-size: 100%;
 		block-size: 100%;
-		border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
-		box-shadow: inset 0 0 0 var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width)) var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, var(--spectrum-thumbnail-border-color)));
+		border-radius: var(--spectrum-thumbnail-border-radius);
+		box-shadow: inset 0 0 0 var(--spectrum-thumbnail-border-width) var(--highcontrast-thumbnail-border-color, var(--spectrum-thumbnail-border-color));
 	}
 
 	&.is-disabled {
-		opacity: var(--mod-thumbnail-color-opacity-disabled, var(--spectrum-thumbnail-color-opacity-disabled));
+		opacity: var(--spectrum-thumbnail-color-opacity-disabled);
 	}
 
 	&.is-focused {
@@ -123,24 +123,24 @@
 		&::after {
 			content: "";
 			border-style: solid;
-			border-width: var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness));
-			border-color: var(--highcontrast-thumbnail-focus-indicator-color, var(--mod-thumbnail-focus-indicator-color, var(--spectrum-thumbnail-focus-indicator-color)));
-			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+			border-width: var(--spectrum-thumbnail-focus-indicator-thickness);
+			border-color: var(--highcontrast-thumbnail-focus-indicator-color, var(--spectrum-thumbnail-focus-indicator-color));
+			border-radius: var(--spectrum-thumbnail-border-radius);
 			position: absolute;
-			inset: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
+			inset: calc((var(--spectrum-thumbnail-focus-indicator-gap) + var(--spectrum-thumbnail-focus-indicator-thickness)) * -1);
 		}
 
 		.spectrum-Thumbnail-image-wrapper {
 			overflow: hidden;
-			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+			border-radius: var(--spectrum-thumbnail-border-radius);
 		}
 	}
 }
 
 .spectrum-Thumbnail-layer {
 	border-style: solid;
-	border-width: var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer));
-	border-color: var(--highcontrast-thumbnail-layer-border-color-outer, var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-thumbnail-layer-border-color-outer)));
+	border-width: var(--spectrum-thumbnail-layer-border-width-outer);
+	border-color: var(--highcontrast-thumbnail-layer-border-color-outer, var(--spectrum-thumbnail-layer-border-color-outer));
 	box-sizing: border-box;
 
 	display: flex;
@@ -153,9 +153,9 @@
 
 	&.is-selected {
 		outline-style: solid;
-		outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected)));
-		outline-width: var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected));
-		outline-offset: calc(var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected)) - var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)));
+		outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected));
+		outline-width: var(--spectrum-thumbnail-border-width-selected);
+		outline-offset: calc(var(--spectrum-thumbnail-border-width-selected) - var(--spectrum-thumbnail-layer-border-width-inner));
 	}
 }
 
@@ -164,11 +164,11 @@
 	align-items: center;
 	justify-content: center;
 
-	inline-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
-	block-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
+	inline-size: calc(var(--spectrum-thumbnail-size) - ((var(--spectrum-thumbnail-layer-border-width-inner))) * 2);
+	block-size: calc(var(--spectrum-thumbnail-size) - ((var(--spectrum-thumbnail-layer-border-width-inner))) * 2);
 	outline-style: solid;
-	outline-color: var(--highcontrast-thumbnail-layer-border-color-inner, var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner)));
-	outline-width: calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
+	outline-color: var(--highcontrast-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner));
+	outline-width: calc(var(--spectrum-thumbnail-layer-border-width-inner) - var(--spectrum-thumbnail-layer-border-width-outer));
 }
 
 .spectrum-Thumbnail-image-wrapper {
@@ -206,7 +206,7 @@
 	inline-size: 100%;
 	background-size: cover;
 	background-position: center center;
-	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+	border-radius: var(--spectrum-thumbnail-border-radius);
 }
 
 /* Windows High Contrast Mode */

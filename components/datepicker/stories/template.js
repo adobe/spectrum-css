@@ -90,7 +90,7 @@ export const DatePicker = ({
 				iconName: "Calendar",
 				iconSet: "workflow",
 				isQuiet,
-				customStyles: isReadOnly ? { "display": "none" } : { "--mod-icon-size": "var(--spectrum-workflow-icon-size-50)" },
+				customStyles: isReadOnly ? { "display": "none" } : { "--spectrum-icon-size": "var(--spectrum-workflow-icon-size-50)" },
 				// @todo this is not added to the button on the website; need to make sure it's not a bug
 				// isOpen,
 				isInvalid,

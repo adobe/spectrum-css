@@ -35,10 +35,10 @@
 	block-size: var(--spectrum-colorloupe-height);
 
 	position: absolute;
-	transform: translate(0, var(--mod-colorloupe-animation-distance, var(--spectrum-colorloupe-animation-distance)));
+	transform: translate(0, var(--spectrum-colorloupe-animation-distance));
 	opacity: 0;
 	transform-origin: bottom center;
-	inset-block-end: calc((var(--spectrum-color-handle-size) - var(--spectrum-color-handle-outer-border-width)) + var(--mod-colorloupe-offset, var(--spectrum-colorloupe-offset)));
+	inset-block-end: calc((var(--spectrum-color-handle-size) - var(--spectrum-color-handle-outer-border-width)) + var(--spectrum-colorloupe-offset));
 	inset-inline-end: calc(50% - (var(--spectrum-colorloupe-width) / 2));
 
 	transition:
@@ -46,7 +46,7 @@
 		opacity 125ms ease-in-out;
 	pointer-events: none;
 
-	filter: drop-shadow(var(--mod-colorloupe-drop-shadow-x, var(--spectrum-colorloupe-drop-shadow-x)) var(--mod-colorloupe-drop-shadow-y, var(--spectrum-colorloupe-drop-shadow-y)) var(--mod-colorloupe-drop-shadow-blur, var(--spectrum-colorloupe-drop-shadow-blur)) var(--mod-colorloupe-drop-shadow-color, var(--spectrum-colorloupe-drop-shadow-color)));
+	filter: drop-shadow(var(--spectrum-colorloupe-drop-shadow-x) var(--spectrum-colorloupe-drop-shadow-y) var(--spectrum-colorloupe-drop-shadow-blur) var(--spectrum-colorloupe-drop-shadow-color));
 
 	&:dir(rtl) {
 		inset-inline-end: calc(50% - (var(--spectrum-colorloupe-width) / 2) - 1px);
@@ -65,14 +65,14 @@
 .spectrum-ColorLoupe-inner-border {
 	/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
 	fill: var(--spectrum-picked-color);
-	stroke: var(--mod-colorloupe-inner-border-color, var(--spectrum-colorloupe-inner-border-color));
-	stroke-width: var(--mod-colorloupe-inner-border-width, var(--spectrum-colorloupe-inner-border-width));
+	stroke: var(--spectrum-colorloupe-inner-border-color);
+	stroke-width: var(--spectrum-colorloupe-inner-border-width);
 }
 
 .spectrum-ColorLoupe-outer-border {
 	fill: none;
-	stroke: var(--highcontrast-colorloupe-outer-border-color, var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color)));
-	stroke-width: calc(var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width)) + 2px);
+	stroke: var(--spectrum-colorloupe-outer-border-color);
+	stroke-width: calc(var(--spectrum-colorloupe-outer-border-width) + 2px);
 }
 
 /* The checkerboard classes use opacity checkerboard tokens for dark and light color.
@@ -91,7 +91,7 @@
 }
 
 @media (forced-colors: active) {
-	.spectrum-ColorLoupe {
-		--highcontrast-colorloupe-outer-border-color: CanvasText;
+	.spectrum-ColorLoupe-outer-border {
+		stroke: CanvasText;
 	}
 }

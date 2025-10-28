@@ -37,7 +37,7 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Component",
-				defaultValue: { summary: "Info" },
+				defaultValue: { summary: "InfoCircle" },
 			},
 			options: ["InfoCircle", "HelpCircle"],
 			control: "select",

@@ -13,7 +13,7 @@ import { Template } from "./template.js";
  * - All active stars have the class `is-selected` applied.
  * - The current value (the last active star) has the class `is-currentValue` applied.
  * - When the rating receives focus, the class `is-focused` should be added to the component's root element (`.spectrum-Rating`).
- * - A rating may have a partially filled star. The width and fill of this star is controlled by adding `.is-partial` to the parent `span` with classes of `spectrum-Rating-icon` and `is-selected` and then setting `--mod-rating-icon-fill` to the necessary fill percentage (e.g. `50%`).
+ * - A rating may have a partially filled star. The width and fill of this star is controlled by adding `.is-partial` to the parent `span` with classes of `spectrum-Rating-icon` and `is-selected` and then setting `--spectrum-rating-icon-fill` to the necessary fill percentage (e.g. `50%`).
  */
 export default {
 	title: "Rating",
@@ -187,7 +187,7 @@ WithTooltip.parameters = {
 };
 
 /**
- * To implement a partially filled rating star, the star must have the `is-selected` class applied to its parent and the `is-partial` and `spectrum-Rating-starActive` classes applied. The fill can then be adjusted by setting `--mod-rating-icon-fill` to a valid percentage (e.g. 50%).
+ * To implement a partially filled rating star, the star must have the `is-selected` class applied to its parent and the `is-partial` and `spectrum-Rating-starActive` classes applied. The fill can then be adjusted by setting `--spectrum-rating-icon-fill` to a valid percentage (e.g. 50%).
  */
 export const WithPartial = Template.bind({});
 WithPartial.tags = ["!dev"];
@@ -195,7 +195,7 @@ WithPartial.args = {
 	isPartial: true,
 	value: 5,
 	customStyles: {
-		"--mod-rating-icon-fill": "50%"
+		"--spectrum-rating-icon-fill": "50%"
 	}
 };
 WithPartial.parameters = {

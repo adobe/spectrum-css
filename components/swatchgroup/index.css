@@ -14,7 +14,10 @@
 .spectrum-SwatchGroup {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-75);
 
-	--mod-swatch-border-opacity: 0.2;
+	.spectrum-Swatch {
+		/* @passthrough - nested Swatch component */
+		--spectrum-swatch-border-opacity: 0.2;
+	}
 }
 
 .spectrum-SwatchGroup {
@@ -22,7 +25,7 @@
 	flex-flow: row wrap;
 	align-items: flex-start;
 	justify-content: flex-start;
-	gap: var(--mod-swatchgroup-spacing, var(--spectrum-swatchgroup-spacing));
+	gap: var(--spectrum-swatchgroup-spacing);
 }
 
 .spectrum-SwatchGroup--compact {

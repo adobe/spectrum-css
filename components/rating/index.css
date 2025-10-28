@@ -52,16 +52,16 @@
 	flex: 0 0 auto;
 	justify-content: center;
 	align-items: center;
-	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
-	padding-block: var(--mod-rating-top-to-content-area, var(--spectrum-rating-top-to-content-area)) var(--mod-rating-bottom-to-content-area, var(--spectrum-rating-bottom-to-content-area));
-	padding-inline: var(--mod-rating-edge-to-content-area, var(--spectrum-rating-edge-to-content-area));
+	gap: var(--spectrum-rating-icon-spacing);
+	padding-block: var(--spectrum-rating-top-to-content-area) var(--spectrum-rating-bottom-to-content-area);
+	padding-inline: var(--spectrum-rating-edge-to-content-area);
 
-	border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+	border-radius: var(--spectrum-rating-border-radius);
 
 	cursor: pointer;
 
-	block-size: var(--mod-rating-height, var(--spectrum-rating-height));
-	inline-size: var(--mod-rating-width, var(--spectrum-rating-width));
+	block-size: var(--spectrum-rating-height);
+	inline-size: var(--spectrum-rating-width);
 
 	&:not(.is-readOnly) {
 		.spectrum-Rating-input:not(:disabled) ~ .spectrum-Rating-icon:active {
@@ -70,23 +70,23 @@
 	}
 
 	&.is-focused {
-		outline: var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) solid var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
-		outline-offset: var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap));
+		outline: var(--spectrum-rating-focus-indicator-thickness) solid var(--spectrum-rating-focus-indicator-color);
+		outline-offset: var(--spectrum-rating-focus-indicator-gap);
 	}
 
 	&:hover {
 		.spectrum-Rating-icon {
 			/* Make all stars colored when the component is hovered */
-			color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+			color: var(--spectrum-rating-icon-color-default);
 		}
 
 		/* The icon that's actually hovered is darker */
 		.spectrum-Rating-icon:hover {
-			color: var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover));
+			color: var(--spectrum-rating-icon-color-hover);
 		}
 
 		.spectrum-Rating-icon:active {
-			color: var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down));
+			color: var(--spectrum-rating-icon-color-down);
 		}
 
 		/* When the entire component is hovered, show all solid icons */
@@ -107,18 +107,18 @@
 }
 
 .spectrum-Rating--sizeS {
-	--mod-rating-height: var(--spectrum-rating-height-small);
-	--mod-rating-width: var(--spectrum-rating-width-small);
-	--mod-rating-top-to-content-area: var(--spectrum-rating-top-to-content-area-small);
-	--mod-rating-edge-to-content-area: var(--spectrum-rating-edge-to-content-area-small);
-	--mod-rating-bottom-to-content-area: var(--spectrum-rating-bottom-to-content-area-small);
+	--spectrum-rating-height: var(--spectrum-rating-height-small);
+	--spectrum-rating-width: var(--spectrum-rating-width-small);
+	--spectrum-rating-top-to-content-area: var(--spectrum-rating-top-to-content-area-small);
+	--spectrum-rating-edge-to-content-area: var(--spectrum-rating-edge-to-content-area-small);
+	--spectrum-rating-bottom-to-content-area: var(--spectrum-rating-bottom-to-content-area-small);
 
 	/* Icon */
-	--mod-rating-icon-height: var(--spectrum-workflow-icon-size-75);
-	--mod-rating-icon-width: var(--spectrum-workflow-icon-size-75);
+	--spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-75);
+	--spectrum-rating-icon-width: var(--spectrum-workflow-icon-size-75);
 
 	/* Focus ring */
-	--mod-rating-border-radius: var(--spectrum-corner-radius-medium-size-small);
+	--spectrum-rating-border-radius: var(--spectrum-corner-radius-medium-size-small);
 }
 
 .spectrum-Rating-input {
@@ -132,17 +132,17 @@
 }
 
 .spectrum-Rating-icon {
-	--spectrum-rating-icon-fill: var(--mod-rating-icon-fill, 100%);
+	--spectrum-rating-icon-fill: 100%;
 
 	position: relative;
 	background-size: contain;
 	background-repeat: no-repeat;
-	inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
-	block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
+	inline-size: var(--spectrum-rating-icon-width);
+	block-size: var(--spectrum-rating-icon-height);
 
 	svg {
-		inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
-		block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
+		inline-size: var(--spectrum-rating-icon-width);
+		block-size: var(--spectrum-rating-icon-height);
 	}
 
 	.spectrum-Rating-starActive {
@@ -192,16 +192,16 @@
 }
 
 .spectrum-Rating-icon {
-	color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+	color: var(--spectrum-rating-icon-color-default);
 
 	&.is-selected {
-		color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+		color: var(--spectrum-rating-icon-color-default);
 	}
 
 	&:hover {
 		/* All stars following the hovered star */
 		& ~ .spectrum-Rating-icon {
-			color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+			color: var(--spectrum-rating-icon-color-default);
 		}
 	}
 }
@@ -209,38 +209,38 @@
 .spectrum-Rating--emphasized {
 	&.is-focused {
 		.spectrum-Rating-icon.is-selected {
-			color: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
+			color: var(--spectrum-rating-emphasized-icon-color-key-focus);
 		}
 	}
 
 	.spectrum-Rating-icon {
-		color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+		color: var(--spectrum-rating-icon-color-default);
 
 		&.is-selected {
-			color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
+			color: var(--highcontrast-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default));
 		}
 
 		/* All stars following the hovered star */
 		&:hover ~ .spectrum-Rating-icon {
-			color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+			color: var(--spectrum-rating-icon-color-default);
 		}
 	}
 
 	&:hover .spectrum-Rating-icon {
 		/* Make all stars selected when the component is hovered */
-		color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
+		color: var(--highcontrast-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default));
 
 		&:hover {
 			/* The icon that's actually hovered is darker */
-			color: var(--highcontrast-rating-emphasized-icon-color-hover, var(--mod-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover)));
+			color: var(--highcontrast-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover));
 		}
 
 		&:hover ~ .spectrum-Rating-icon {
-			color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+			color: var(--spectrum-rating-icon-color-default);
 		}
 
 		&:active {
-			color: var(--highcontrast-rating-emphasized-icon-color-down, var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down)));
+			color: var(--highcontrast-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down));
 		}
 	}
 }
@@ -248,10 +248,10 @@
 /* Disabled */
 .spectrum-Rating.is-disabled {
 	.spectrum-Rating-icon {
-		color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
+		color: var(--highcontrast-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled));
 
 		&.is-selected {
-			color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
+			color: var(--highcontrast-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled));
 		}
 	}
 }

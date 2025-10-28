@@ -19,6 +19,8 @@
 }
 
 .spectrum-MillerColumns-item {
+	--spectrum-millercolumns-inline-size: 272px;
+
 	display: inline-block;
 	inline-size: var(--spectrum-field-default-width-large);
 	vertical-align: top;

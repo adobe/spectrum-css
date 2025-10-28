@@ -12,13 +12,6 @@
     ".spectrum-Pagination-textfield",
     ".spectrum-Pagination:dir(rtl)"
   ],
-  "modifiers": [
-    "--mod-pagination-counter-color",
-    "--mod-pagination-counter-font-size",
-    "--mod-pagination-counter-line-height",
-    "--mod-pagination-page-button-inline-spacing",
-    "--mod-pagination-textfield-width"
-  ],
   "component": [
     "--spectrum-pagination-counter-color",
     "--spectrum-pagination-counter-font-size",
@@ -31,8 +24,10 @@
     "--spectrum-font-size-100",
     "--spectrum-line-height-100",
     "--spectrum-logical-rotation",
-    "--spectrum-neutral-subdued-content-color-default"
+    "--spectrum-neutral-subdued-content-color-default",
+    "--spectrum-textfield-min-width",
+    "--spectrum-textfield-width"
   ],
-  "passthroughs": ["--mod-textfield-min-width", "--mod-textfield-width"],
+  "passthroughs": [],
   "high-contrast": []
 }

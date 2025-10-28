@@ -36,9 +36,9 @@ governing permissions and limitations under the License.
 
 .spectrum-ProgressCircle {
 	display: inline-block;
-	inline-size: var(--mod-progress-circle-size, var(--spectrum-progress-circle-size));
-	block-size: var(--mod-progress-circle-size, var(--spectrum-progress-circle-size));
-	position: var(--mod-progress-circle-position, relative);
+	inline-size: var(--spectrum-progress-circle-size);
+	block-size: var(--spectrum-progress-circle-size);
+	position: relative;
 	direction: ltr;
 
 	/* Fix for Safari rendering bug */
@@ -59,19 +59,19 @@ governing permissions and limitations under the License.
 .spectrum-ProgressCircle-track,
 .spectrum-ProgressCircle-fill {
 	box-sizing: border-box;
-	inline-size: var(--mod-progress-circle-size, var(--spectrum-progress-circle-size));
-	block-size: var(--mod-progress-circle-size, var(--spectrum-progress-circle-size));
+	inline-size: var(--spectrum-progress-circle-size);
+	block-size: var(--spectrum-progress-circle-size);
 }
 
 .spectrum-ProgressCircle-track {
-	stroke-width: var(--mod-progress-circle-thickness, var(--spectrum-progress-circle-thickness));
-	stroke: var(--highcontrast-progress-circle-track-color, var(--mod-progress-circle-track-border-color, var(--spectrum-progress-circle-track-border-color)));
+	stroke-width: var(--spectrum-progress-circle-thickness);
+	stroke: var(--highcontrast-progress-circle-track-color, var(--spectrum-progress-circle-track-border-color));
 }
 
 /* circle progress filled */
 .spectrum-ProgressCircle-fill {
-	stroke-width: var(--mod-progress-circle-thickness, var(--spectrum-progress-circle-thickness));
-	stroke: var(--highcontrast-progress-circle-fill-border-color, var(--mod-progress-circle-fill-border-color, var(--spectrum-progress-circle-fill-border-color)));
+	stroke-width: var(--spectrum-progress-circle-thickness);
+	stroke: var(--highcontrast-progress-circle-fill-border-color, var(--spectrum-progress-circle-fill-border-color));
 	transform: rotate(-90deg);
 	transform-origin: center;
 }
