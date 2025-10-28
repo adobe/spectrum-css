@@ -581,3 +581,82 @@ export const renderContent = (content = [], {
 export const getRandomId = (prefix = "spectrum") => {
 	return `${prefix}-${Math.random().toString(36).substring(2, 7)}`;
 };
+
+/**
+ * For a given array of test or state descriptor objects, generate all non-empty combinations of the provided items.
+ *
+ * rules and behavior:
+ * - each input item must include a unique `testHeading` string.
+ * - items may include `not: string[]` where each string is a `testHeading` that
+ *   cannot co-exist with the item in the same combination.
+ * - combinations that include any forbidden pairs (as declared via `not`) are
+ *   excluded from the output.
+ * - output objects merge all boolean flags from members of the combination
+ *   (e.g., `isChecked`, `isDisabled`, etc.).
+ * - the `not` property is never merged into the output; only behavioral flags
+ *   and the concatenated `testHeading` are emitted.
+ *
+ * implementation notes:
+ * - combinations are enumerated via a bitmask from 1..(2^n - 1), thereby
+ *   excluding the empty set by design.
+ * - constraint checking is done using the human-readable `testHeading` values
+ *   so authors can declare `not: ["Heading A", "Heading B"]` without having
+ *   to repeat flag keys.
+ *
+ * @typedef {Object} StateItem
+ * @property {string} testHeading human-readable name for the state.
+ * @property {string[]} [not] list of `testHeading` values that cannot co-exist.
+ * @property {boolean} [isChecked]
+ * @property {boolean} [isIndeterminate]
+ * @property {boolean} [isEmphasized]
+ * @property {boolean} [isReadOnly]
+ * @property {boolean} [isDisabled]
+ * @property {boolean} [isHovered]
+ * @property {boolean} [isActive]
+ * @property {boolean} [isFocused]
+ *
+ * @param {StateItem[]} items array of state descriptor objects.
+ * @returns {Array<Record<string, unknown>>} all valid merged combinations.
+ */
+export const getAllCombinations = (items) => {
+	// store all valid combinations
+	const combos = [];
+	const count = items.length;
+
+	// use a bitmask to generate the power set (excluding empty set)
+	for (let mask = 1; mask < (1 << count); mask++) {
+		// materialize the current combination from selected bits
+		const combo = [];
+		for (let i = 0; i < count; i++) {
+			if (mask & (1 << i)) combo.push(items[i]);
+		}
+
+		// build a set of headings present in this combination for fast lookup
+		const headings = new Set(combo.map((s) => s.testHeading));
+
+		// if any item declares a `not` array that includes any other heading in the
+		// combination, then the combination is invalid and must be skipped
+		const hasForbiddenPair = combo.some((item) => {
+			const blocked = Array.isArray(item.not) ? item.not : [];
+			return blocked.some((h) => headings.has(h));
+		});
+		if (hasForbiddenPair) continue;
+
+		// merge flags from items in the combination, skipping meta fields
+		const flags = combo.reduce((acc, cur) => {
+			for (const [key, value] of Object.entries(cur)) {
+				if (key === "testHeading" || key === "not") continue;
+				acc[key] = value;
+			}
+			return acc;
+		}, {});
+
+		// emit merged flags and a concatenated, readable heading
+		combos.push({
+			...flags,
+			testHeading: combo.map((s) => s.testHeading).join(" + "),
+		});
+	}
+
+	return combos;
+};
