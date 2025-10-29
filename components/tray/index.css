@@ -24,20 +24,18 @@
 
 .spectrum-Tray {
 	/* Maximum width for landscape */
-	--spectrum-tray-max-inline-size: var(--mod-tray-max-inline-size, 375px);
+	--spectrum-tray-max-inline-size: 375px;
 
 	/* https://spectrum.adobe.com/page/tray/#Maximum-height */
-	--spectrum-tray-spacing-edge-to-tray-safe-zone: var(--mod-tray-spacing-edge-to-tray-safe-zone, 64px);
+	--spectrum-tray-spacing-edge-to-tray-safe-zone: 64px;
 
-	--spectrum-tray-entry-animation-delay: var(--mod-tray-entry-animation-delay, 160ms);
-	--spectrum-tray-entry-animation-duration: var(--mod-tray-entry-animation-duration, var(--spectrum-animation-duration-500));
-	--spectrum-tray-exit-animation-delay: var(--mod-tray-exit-animation-delay, 0ms);
-	--spectrum-tray-exit-animation-duration: var(--mod-tray-exit-animation-duration, var(--spectrum-animation-duration-100));
+	--spectrum-tray-entry-animation-delay: 160ms;
+	--spectrum-tray-entry-animation-duration: var(--spectrum-animation-duration-500);
+	--spectrum-tray-exit-animation-delay: 0ms;
+	--spectrum-tray-exit-animation-duration: var(--spectrum-animation-duration-100);
 
-	--spectrum-tray-corner-radius: var(--mod-tray-corner-radius, var(--spectrum-corner-radius-100));
-	--spectrum-tray-background-color: var(--highcontrast-tray-background-color, var(--mod-tray-background-color, var(--spectrum-background-layer-2-color)));
-
-	--mod-modal-max-width: 100%;
+	--spectrum-tray-corner-radius: var(--spectrum-corner-radius-100);
+	--spectrum-tray-background-color: var(--highcontrast-tray-background-color, var(--spectrum-background-layer-2-color));
 
 	/* Default to full width when the viewport is in portrait orientation */
 	inline-size: 100%;
@@ -45,12 +43,12 @@
 
 	max-block-size: calc(100vh - var(--spectrum-tray-spacing-edge-to-tray-safe-zone));
 	margin-block-start: var(--spectrum-tray-spacing-edge-to-tray-safe-zone);
-	padding-block-start: var(--mod-tray-top-to-content-area, var(--spectrum-tray-top-to-content-area));
-	padding-block-end: var(--mod-tray-bottom-to-content-area, var(--spectrum-tray-top-to-content-area));
+	padding-block-start: var(--spectrum-tray-top-to-content-area);
+	padding-block-end: var(--spectrum-tray-top-to-content-area);
 	box-sizing: border-box;
 	overflow: auto;
 	outline: none;
-	border-radius: var(--mod-tray-corner-radius-portrait, 0) var(--mod-tray-corner-radius-portrait, 0) 0 0;
+	border-radius: 0;
 
 	/* Start offset by the animation distance */
 	transform: translateY(100%);
@@ -70,6 +68,11 @@
 		transition:
 			transform var(--spectrum-tray-entry-animation-duration) cubic-bezier(0, 0, 0.4, 1) var(--spectrum-tray-entry-animation-delay),
 			opacity var(--spectrum-tray-entry-animation-duration) cubic-bezier(0, 0, 0.4, 1) var(--spectrum-tray-entry-animation-delay);
+	}
+
+	&.spectrum-Modal {
+		/* @passthrough */
+		--spectrum-modal-max-width: 100%;
 	}
 }
 

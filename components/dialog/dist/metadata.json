@@ -41,33 +41,6 @@
     ".spectrum-Dialog-heading",
     ".spectrum-Dialog-hero"
   ],
-  "modifiers": [
-    "--mod-standard-dialog-background-color",
-    "--mod-standard-dialog-border-radius",
-    "--mod-standard-dialog-description-font-size",
-    "--mod-standard-dialog-description-font-weight",
-    "--mod-standard-dialog-description-line-height",
-    "--mod-standard-dialog-description-text-color",
-    "--mod-standard-dialog-header-content-font-size",
-    "--mod-standard-dialog-heading-font-size",
-    "--mod-standard-dialog-heading-font-weight",
-    "--mod-standard-dialog-heading-line-height",
-    "--mod-standard-dialog-heading-text-color",
-    "--mod-standard-dialog-hero-block-size",
-    "--mod-standard-dialog-max-width",
-    "--mod-standard-dialog-max-width-large",
-    "--mod-standard-dialog-max-width-small",
-    "--mod-standard-dialog-min-inline-size",
-    "--mod-standard-dialog-spacing-description-to-footer",
-    "--mod-standard-dialog-spacing-edge-to-close-button",
-    "--mod-standard-dialog-spacing-footer-to-button-group",
-    "--mod-standard-dialog-spacing-grid-padding",
-    "--mod-standard-dialog-spacing-title-to-description",
-    "--mod-standard-dialog-spacing-title-to-header-content",
-    "--mod-takeover-dialog-grid-spacing",
-    "--mod-takeover-dialog-spacing-header-content-gap",
-    "--mod-takeover-dialog-title-font-size"
-  ],
   "component": [],
   "global": [
     "--spectrum-background-layer-2-color",
@@ -75,6 +48,8 @@
     "--spectrum-body-color",
     "--spectrum-body-sans-serif-font-style",
     "--spectrum-body-sans-serif-font-weight",
+    "--spectrum-buttongroup-flex-wrap",
+    "--spectrum-buttongroup-justify-content",
     "--spectrum-corner-radius-extra-large-default",
     "--spectrum-heading-color",
     "--spectrum-line-height-200",
@@ -133,9 +108,6 @@
     "--spectrum-title-sans-serif-font-weight",
     "--spectrum-title-size-xxl"
   ],
-  "passthroughs": [
-    "--mod-buttongroup-flex-wrap",
-    "--mod-buttongroup-justify-content"
-  ],
+  "passthroughs": [],
   "high-contrast": []
 }

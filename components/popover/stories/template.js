@@ -28,7 +28,7 @@ export const Template = ({
 	// If the popover is open, create a min-container size for VRTs
 	if (isOpen || !showTestingGrid) {
 		if (["top", "bottom"].some((e) => position.startsWith(e))) {
-			positioningStyles["min-inline-size"] = "var(--spectrum-popover-width)";
+			customWrapperStyles["min-inline-size"] = "var(--spectrum-popover-width)";
 			positioningStyles["min-block-size"] = "calc(var(--spectrum-popover-height) + var(--spectrum-popover-trigger-height, 0px) + var(--spectrum-popover-animation-distance, var(--spectrum-spacing-100)) * 2)";
 		}
 		else {

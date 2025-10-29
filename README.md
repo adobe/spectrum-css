@@ -7,7 +7,7 @@
 <h1 align="center">Spectrum CSS</h1>
 <h3 align="center">A CSS-implementation of the Spectrum design language</h3>
 
-<img src=".storybook/assets/images/spectrum-css_illustration_desktop.png">
+<img src=".storybook/assets/images/spectrum-css_illustration_desktop.png" alt="Spectrum CSS illustration" />
 
 ## Features
 
@@ -16,7 +16,7 @@
 - 🧪 **Rigorously tested**: These individually-versioned components have been vetted to be accessible and inclusive of global audiences.
 - 📱 **Multi-platform support**: We support [evergreen browsers](https://github.com/adobe/spectrum-css?tab=readme-ov-file#browser-support) for scalability and flexibility.
 
-&nbsp;&nbsp;&nbsp;&nbsp; [<img src="https://img.shields.io/badge/Get%20started-F0F0F0?style=for-the-badge&logo=adobe&logoColor=%23FF0000"/>](https://opensource.adobe.com/spectrum-css/get-started.html) &nbsp; [<img src="https://img.shields.io/badge/Storybook-F0F0F0?style=for-the-badge&logo=storybook&logoColor=%23FF4785"/>](https://opensource.adobe.com/spectrum-css/)
+&nbsp;&nbsp;&nbsp;&nbsp; [<img src="https://img.shields.io/badge/Get%20started-F0F0F0?style=for-the-badge&logo=adobe&logoColor=%23FF0000" alt="Get started" />](https://opensource.adobe.com/spectrum-css/get-started.html) &nbsp; [<img src="https://img.shields.io/badge/Storybook-F0F0F0?style=for-the-badge&logo=storybook&logoColor=%23FF4785" alt="Storybook" />](https://opensource.adobe.com/spectrum-css/)
 
 ## Using Spectrum CSS
 
@@ -44,13 +44,13 @@ yarn add -DW @spectrum-css/tokens @spectrum-css/typography @spectrum-css/page @s
 
 Installed components will be available in the `node_modules/@spectrum-css/` folder of your project.
 
-All components in this library have a peer dependency on [`@spectrum-css/tokens`](tokens), which is a local package that serves up the [Spectrum design tokens](https://github.com/adobe/spectrum-tokens) as CSS custom properties (via [Style dictionary](https://amzn.github.io/style-dictionary/#/)). These custom properties are leveraged in all components to create a cohesive visual language and to allow for easy theming. If you choose not to use the provided `@spectrum-css/tokens` package, you must define your own custom properties or your components will render with a significant number of missing styles. When overriding certain styles is necessary, modifying styles is supported through the use of component-specific `--mod` prefixed properties. [More on this below](https://github.com/adobe/spectrum-css?tab=readme-ov-file#modifying-components).
+All components in this library have a peer dependency on [`@spectrum-css/tokens`](tokens), which is a local package that serves up the [Spectrum design tokens](https://github.com/adobe/spectrum-tokens) as CSS custom properties (via [Style dictionary](https://amzn.github.io/style-dictionary/#/)). These custom properties are leveraged in all components to create a cohesive visual language and to allow for easy theming. If you choose not to use the provided `@spectrum-css/tokens` package, you must define your own custom properties or your components will render with a significant number of missing styles.
 
 ### Using components in your project
 
 Spectrum CSS components have build output that is designed to be used in a variety of ways:
 
-- `index.css` - _Preferred and most commonly used to incorporate Spectrum CSS into a project_. This file includes the component's styles and variable definitions. In this version, token-driven CSS properties<sup>[1](#token-footnote)</sup> are mapped to empty `--mod` prefixed variables (for customization) with a fallback to variables prefixed with `--spectrum` (sourced from the design tokens).
+- `index.css` - _Preferred and most commonly used to incorporate Spectrum CSS into a project_. This file includes the component's styles and variable definitions. In this version, component-specific custom properties<sup>[1](#token-footnote)</sup> are mapped to variables sourced from the design tokens.
 
 <sup><a name="token-footnote">1</a></sup>: Token-driven CSS properties are properties whose values are mapped to a value in the `@spectrum-css/tokens` package. These values represent design-language and are meant to be used across platforms. In contrast, properties specific to web-based implementations will not have a token value assigned, so not all CSS properties will use custom properties.
 
@@ -103,10 +103,6 @@ Put together, we would define the context for our application in the following w
 ```
 
 Because CSS custom properties honor the cascading nature of CSS, you can infinitely nest different contexts. For example, you could have a `.spectrum--dark` context inside of a `.spectrum--light` context, and components will honor the innermost context.
-
-### Modifying components
-
-You can override variables and modify Spectrum CSS' look and feel by re-defining the custom properties in context. Look for the **Custom Property API** section in each component to determine which custom properties you can override. See [Action Button for a complete example](https://opensource.adobe.com/spectrum-css/actionbutton.html#custompropertiesapi).
 
 ### Importing UI icons
 
