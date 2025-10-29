@@ -7,6 +7,7 @@
 "@spectrum-css/badge": major
 "@spectrum-css/breadcrumb": major
 "@spectrum-css/divider": major
+"@spectrum-css/icon": major
 "@spectrum-css/miller": major
 "@spectrum-css/page": major
 "@spectrum-css/well": major
