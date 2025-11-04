@@ -12,61 +12,61 @@
  */
 
 .spectrum-Tabs {
-	--spectrum-tabs-item-height: var(--mod-tabs-item-height, var(--spectrum-tab-item-height-medium));
-	--spectrum-tabs-start-to-edge: var(--mod-tabs-start-to-edge, var(--spectrum-tab-item-start-to-edge-medium));
-	--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text, var(--spectrum-tab-item-top-to-text-medium));
-	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text, var(--spectrum-tab-item-bottom-to-text-medium));
-	--spectrum-tabs-label-to-selection-indicator: var(--mod-tabs-label-to-selection-indicator, var(--spectrum-spacing-200));
-	--spectrum-tabs-item-horizontal-spacing: var(--mod-tabs-item-horizontal-spacing, var(--spectrum-tab-item-to-tab-item-horizontal-medium));
+	--spectrum-tabs-item-height: var(--spectrum-tab-item-height-medium);
+	--spectrum-tabs-start-to-edge: var(--spectrum-tab-item-start-to-edge-medium);
+	--spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-medium);
+	--spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-bottom-to-text-medium);
+	--spectrum-tabs-label-to-selection-indicator: var(--spectrum-spacing-200);
+	--spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-medium);
 
-	--spectrum-tabs-icon-size: var(--mod-tabs-icon-size, var(--spectrum-workflow-icon-size-100));
-	--spectrum-tabs-icon-to-text: var(--mod-tabs-icon-to-text, var(--spectrum-text-to-visual-100));
-	--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon, var(--spectrum-tab-item-top-to-workflow-icon-medium));
-	--spectrum-tabs-side-to-icon: var(--mod-tabs-side-to-icon, var(--spectrum-tab-item-side-to-workflow-icon-medium));
+	--spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-100);
+	--spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-100);
+	--spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-medium);
+	--spectrum-tabs-side-to-icon: var(--spectrum-tab-item-side-to-workflow-icon-medium);
 
-	--spectrum-tabs-item-border-radius: var(--mod-tabs-item-border-radius, var(--spectrum-corner-radius-0));
+	--spectrum-tabs-item-border-radius: var(--spectrum-corner-radius-0);
 
-	--spectrum-tabs-color: var(--highcontrast-tabs-color, var(--mod-tabs-color, var(--spectrum-neutral-subdued-content-color-default)));
-	--spectrum-tabs-color-hover: var(--highcontrast-tabs-color-hover, var(--mod-tabs-color-hover, var(--spectrum-neutral-subdued-content-color-hover)));
-	--spectrum-tabs-color-key-focus: var(--highcontrast-tabs-color-key-focus, var(--mod-tabs-color-key-focus, var(--spectrum-neutral-subdued-content-color-key-focus)));
-	--spectrum-tabs-color-selected: var(--highcontrast-tabs-color-selected, var(--mod-tabs-color-selected, var(--spectrum-neutral-content-color-default)));
-	--spectrum-tabs-color-selected-hover: var(--highcontrast-tabs-color-selected-hover, var(--mod-tabs-color-selected-hover, var(--spectrum-neutral-content-color-hover)));
-	--spectrum-tabs-color-selected-key-focus: var(--highcontrast-tabs-color-selected-key-focus, var(--mod-tabs-color-selected-key-focus, var(--spectrum-neutral-content-color-key-focus)));
-	--spectrum-tabs-color-disabled: var(--highcontrast-tabs-color-disabled, var(--mod-tabs-color-disabled, var(--spectrum-disabled-content-color)));
-	--spectrum-tabs-selection-indicator-color-disabled: var(--highcontrast-tabs-selection-indicator-color-disabled, var(--mod-tabs-selection-indicator-color-disabled, var(--spectrum-disabled-border-color)));
+	--spectrum-tabs-color: var(--highcontrast-tabs-color, var(--spectrum-neutral-subdued-content-color-default));
+	--spectrum-tabs-color-hover: var(--highcontrast-tabs-color-hover, var(--spectrum-neutral-subdued-content-color-hover));
+	--spectrum-tabs-color-key-focus: var(--highcontrast-tabs-color-key-focus, var(--spectrum-neutral-subdued-content-color-key-focus));
+	--spectrum-tabs-color-selected: var(--highcontrast-tabs-color-selected, var(--spectrum-neutral-content-color-default));
+	--spectrum-tabs-color-selected-hover: var(--highcontrast-tabs-color-selected-hover, var(--spectrum-neutral-content-color-hover));
+	--spectrum-tabs-color-selected-key-focus: var(--highcontrast-tabs-color-selected-key-focus, var(--spectrum-neutral-content-color-key-focus));
+	--spectrum-tabs-color-disabled: var(--highcontrast-tabs-color-disabled, var(--spectrum-disabled-content-color));
+	--spectrum-tabs-selection-indicator-color-disabled: var(--highcontrast-tabs-selection-indicator-color-disabled, var(--spectrum-disabled-border-color));
 
-	--spectrum-tabs-font-weight: var(--mod-tabs-font-weight, var(--spectrum-regular-font-weight));
-	--spectrum-tabs-font-family: var(--mod-tabs-font-family, var(--spectrum-sans-font-family-stack));
-	--spectrum-tabs-font-style: var(--mod-tabs-font-style, var(--spectrum-default-font-style));
-	--spectrum-tabs-font-size: var(--mod-tabs-font-size, var(--spectrum-font-size-100));
-	--spectrum-tabs-line-height: var(--mod-tabs-line-height, var(--spectrum-line-height-100));
+	--spectrum-tabs-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-tabs-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-tabs-font-style: var(--spectrum-default-font-style);
+	--spectrum-tabs-font-size: var(--spectrum-font-size-100);
+	--spectrum-tabs-line-height: var(--spectrum-line-height-100);
 
-	--spectrum-tabs-focus-indicator-width: var(--mod-tabs-focus-indicator-width, var(--spectrum-focus-indicator-thickness));
-	--spectrum-tabs-focus-indicator-border-radius: var(--mod-tabs-focus-indicator-border-radius, var(--spectrum-corner-radius-100)); /* component rounding + focus indicator thickness + focus indicator gap = 0 + 2px + 2px = 4px */
-	--spectrum-tabs-focus-indicator-gap: var(--mod-tabs-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
-	--spectrum-tabs-focus-indicator-color: var(--highcontrast-tabs-focus-indicator-color, var(--mod-tabs-focus-indicator-color, var(--spectrum-focus-indicator-color)));
+	--spectrum-tabs-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
+	--spectrum-tabs-focus-indicator-border-radius: var(--spectrum-corner-radius-100); /* component rounding + focus indicator thickness + focus indicator gap = 0 + 2px + 2px = 4px */
+	--spectrum-tabs-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--spectrum-tabs-focus-indicator-color: var(--highcontrast-tabs-focus-indicator-color, var(--spectrum-focus-indicator-color));
 
-	--spectrum-tabs-selection-indicator-color: var(--highcontrast-tabs-selection-indicator-color, var(--mod-tabs-selection-indicator-color, var(--spectrum-neutral-subdued-content-color-down)));
-	--spectrum-tabs-selection-indicator-thickness: var(--mod-tabs-selection-indicator-thickness, var(--spectrum-tab-selection-indicator-thickness));
-	--spectrum-tabs-selection-indicator-border-radius: var(--mod-tabs-selection-indicator-border-radius, var(--spectrum-corner-radius-full));
+	--spectrum-tabs-selection-indicator-color: var(--highcontrast-tabs-selection-indicator-color, var(--spectrum-neutral-subdued-content-color-down));
+	--spectrum-tabs-selection-indicator-thickness: var(--spectrum-tab-selection-indicator-thickness);
+	--spectrum-tabs-selection-indicator-border-radius: var(--spectrum-corner-radius-full);
 
-	--spectrum-tabs-animation-duration: var(--mod-tabs-animation-duration, var(--spectrum-animation-duration-100));
-	--spectrum-tabs-animation-ease: var(--mod-tabs-animation-ease, var(--spectrum-animation-ease-in-out));
+	--spectrum-tabs-animation-duration: var(--spectrum-animation-duration-100);
+	--spectrum-tabs-animation-ease: var(--spectrum-animation-ease-in-out);
 }
 
 .spectrum-Tabs.spectrum-Tabs--compact {
-	--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-medium));
-	--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
-	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-bottom-to-text-compact-medium));
-	--spectrum-tabs-label-to-selection-indicator: var(--mod-tabs-label-to-selection-indicator-compact, var(--spectrum-spacing-75));
-	--spectrum-tabs-item-horizontal-spacing: var(--mod-tabs-item-horizontal-spacing-compact, var(--spectrum-tab-item-to-tab-item-compact-horizontal-medium));
-	--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-medium));
-	--spectrum-tabs-side-to-icon: var(--mod-tabs-side-to-icon-compact, var(--spectrum-tab-item-side-to-workflow-icon-compact-medium));
+	--spectrum-tabs-item-height: var(--spectrum-tab-item-compact-height-medium);
+	--spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-compact-medium);
+	--spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-bottom-to-text-compact-medium);
+	--spectrum-tabs-label-to-selection-indicator: var(--spectrum-spacing-75);
+	--spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-compact-horizontal-medium);
+	--spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-compact-medium);
+	--spectrum-tabs-side-to-icon: var(--spectrum-tab-item-side-to-workflow-icon-compact-medium);
 }
 
 /* @passthrough -- picker styling for overflow tabs */
 .spectrum-Tabs .spectrum-Picker-button {
-	--mod-picker-block-size: var(--spectrum-tabs-item-height);
+	--spectrum-picker-block-size: var(--spectrum-tabs-item-height);
 }
 
 .spectrum-Tabs {

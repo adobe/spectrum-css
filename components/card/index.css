@@ -12,62 +12,62 @@
  */
 
 .spectrum-Card {
-	--spectrum-card-border-color: var(--mod-card-border-color, var(--spectrum-gray-100));
-	--spectrum-card-border-color-hover: var(--mod-card-border-color-hover, var(--spectrum-gray-200));
-	--spectrum-card-border-color-selected: var(--mod-card-border-color-selected, var(--spectrum-blue-700));
+	--spectrum-card-border-color: var(--spectrum-gray-100);
+	--spectrum-card-border-color-hover: var(--spectrum-gray-200);
+	--spectrum-card-border-color-selected: var(--spectrum-blue-700);
 
-	--spectrum-card-divider-color: var(--mod-card-divider-color, var(--spectrum-gray-200));
-	--spectrum-card-preview-background-color: var(--mod-card-preview-background-color, var(--mod-card-background-color, var(--spectrum-gray-100)));
-	--spectrum-card-preview-background-color-hover: var(--mod-card-preview-background-color-hover, var(--mod-card-background-color-hover, var(--spectrum-gray-200)));
+	--spectrum-card-divider-color: var(--spectrum-gray-200);
+	--spectrum-card-preview-background-color: var(--spectrum-gray-100);
+	--spectrum-card-preview-background-color-hover: var(--spectrum-gray-200);
 
 	/* Default Layout */
-	--spectrum-card-background-color: var(--mod-card-background-color, var(--spectrum-background-layer-2-color));
-	--spectrum-card-body-spacing: var(--mod-card-body-spacing, var(--spectrum-spacing-400));
-	--spectrum-card-body-padding-block-start: var(--mod-card-body-padding-block-start, var(--spectrum-spacing-300));
-	--spectrum-card-title-padding-right: var(--mod-card-title-padding-right, var(--spectrum-spacing-400));
-	--spectrum-card-content-margin-top: var(--mod-card-content-margin-top, var(--spectrum-spacing-100));
-	--spectrum-card-content-margin-bottom: var(--mod-card-content-margin-bottom, var(--spectrum-spacing-300));
-	--spectrum-card-footer-padding-top: var(--mod-card-footer-padding-block-start, var(--spectrum-spacing-100));
-	--spectrum-card-subtitle-padding-right: var(--mod-card-subtitle-padding-right, var(--spectrum-spacing-100));
+	--spectrum-card-background-color: var(--spectrum-background-layer-2-color);
+	--spectrum-card-body-spacing: var(--spectrum-spacing-400);
+	--spectrum-card-body-padding-block-start: var(--spectrum-spacing-300);
+	--spectrum-card-title-padding-right: var(--spectrum-spacing-400);
+	--spectrum-card-content-margin-top: var(--spectrum-spacing-100);
+	--spectrum-card-content-margin-bottom: var(--spectrum-spacing-300);
+	--spectrum-card-footer-padding-top: var(--spectrum-spacing-100);
+	--spectrum-card-subtitle-padding-right: var(--spectrum-spacing-100);
 
-	--spectrum-card-border-width: var(--mod-card-border-width, var(--spectrum-border-width-100));
-	--spectrum-card-corner-radius: var(--mod-card-corner-radius, var(--spectrum-corner-radius-100));
+	--spectrum-card-border-width: var(--spectrum-border-width-100);
+	--spectrum-card-corner-radius: var(--spectrum-corner-radius-100);
 
 	/* Typography */
-	--spectrum-card-title-font-family: var(--mod-card-title-font-family, var(--spectrum-sans-font-family-stack));
-	--spectrum-card-title-font-size: var(--mod-card-title-font-size, var(--spectrum-heading-size-xxs));
-	--spectrum-card-title-font-weight: var(--mod-card-title-font-weight, var(--spectrum-heading-sans-serif-font-weight));
-	--spectrum-card-title-font-style: var(--mod-card-title-font-style, var(--spectrum-heading-sans-serif-font-style));
-	--spectrum-card-title-line-height: var(--mod-card-title-line-height, var(--spectrum-heading-line-height));
-	--spectrum-card-title-font-color: var(--mod-card-title-font-color, var(--spectrum-heading-color));
+	--spectrum-card-title-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-card-title-font-size: var(--spectrum-heading-size-xxs);
+	--spectrum-card-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+	--spectrum-card-title-font-style: var(--spectrum-heading-sans-serif-font-style);
+	--spectrum-card-title-line-height: var(--spectrum-heading-line-height);
+	--spectrum-card-title-font-color: var(--spectrum-heading-color);
 
-	--spectrum-card-body-font-family: var(--mod-card-body-font-family, var(--spectrum-sans-font-family-stack));
-	--spectrum-card-body-font-size: var(--mod-card-body-font-size, var(--spectrum-body-size-s));
-	--spectrum-card-body-font-weight: var(--mod-card-body-font-weight, var(--spectrum-body-sans-serif-font-weight));
-	--spectrum-card-body-font-style: var(--mod-card-body-font-style, var(--spectrum-body-sans-serif-font-style));
-	--spectrum-card-body-line-height: var(--mod-card-body-line-height, var(--spectrum-body-line-height));
-	--spectrum-card-body-font-color: var(--mod-card-body-font-color, var(--spectrum-body-color));
+	--spectrum-card-body-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-card-body-font-size: var(--spectrum-body-size-s);
+	--spectrum-card-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--spectrum-card-body-font-style: var(--spectrum-body-sans-serif-font-style);
+	--spectrum-card-body-line-height: var(--spectrum-body-line-height);
+	--spectrum-card-body-font-color: var(--spectrum-body-color);
 
 	/* Quick Actions */
-	--spectrum-card-actions-spacing: var(--mod-card-actions-spacing, var(--spectrum-spacing-300));
-	--spectrum-card-actions-size: var(--mod-card-actions-size, var(--spectrum-card-selection-background-size));
-	--spectrum-card-actions-border-radius: var(--mod-card-actions-border-radius, var(--spectrum-corner-radius-100));
+	--spectrum-card-actions-spacing: var(--spectrum-spacing-300);
+	--spectrum-card-actions-size: var(--spectrum-card-selection-background-size);
+	--spectrum-card-actions-border-radius: var(--spectrum-corner-radius-100);
 
-	--spectrum-card-actions-drop-shadow-color: var(--mod-card-actions-drop-shadow-color, var(--spectrum-drop-shadow-color));
-	--spectrum-card-actions-drop-shadow-x: var(--mod-card-actions-drop-shadow-x, var(--spectrum-drop-shadow-x));
-	--spectrum-card-actions-drop-shadow-y: var(--mod-card-actions-drop-shadow-y, var(--spectrum-drop-shadow-y));
-	--spectrum-card-actions-drop-shadow-blur: var(--mod-card-actions-drop-shadow-blur, var(--spectrum-drop-shadow-blur));
+	--spectrum-card-actions-drop-shadow-color: var(--spectrum-drop-shadow-color);
+	--spectrum-card-actions-drop-shadow-x: var(--spectrum-drop-shadow-x);
+	--spectrum-card-actions-drop-shadow-y: var(--spectrum-drop-shadow-y);
+	--spectrum-card-actions-drop-shadow-blur: var(--spectrum-drop-shadow-blur);
 
 	/* Focus */
-	--spectrum-card-focus-indicator-color: var(--mod-card-focus-indicator-color, var(--spectrum-focus-indicator-color));
-	--spectrum-card-focus-indicator-width: var(--mod-card-focus-indicator-width, var(--spectrum-focus-indicator-thickness));
+	--spectrum-card-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-card-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
 
 	/* Selected */
-	--spectrum-card-selected-background-opacity: var(--mod-card-selected-background-opacity, 0.1); /* table-selected-row-background-opacity does not exist in tokens yet */
+	--spectrum-card-selected-background-opacity: 0.1; /* table-selected-row-background-opacity does not exist in tokens yet */
 
 	/* Horizontal */
-	--spectrum-card-horizontal-body-padding: var(--mod-card-horizontal-body-padding, var(--spectrum-spacing-300));
-	--spectrum-card-horizontal-preview-padding: var(--mod-card-horizontal-preview-padding, var(--spectrum-spacing-200));
+	--spectrum-card-horizontal-body-padding: var(--spectrum-spacing-300);
+	--spectrum-card-horizontal-preview-padding: var(--spectrum-spacing-200);
 
 	&.spectrum-Card--gallery {
 		--spectrum-card-content-margin-top: var(--spectrum-spacing-100);
@@ -79,7 +79,7 @@
 	box-sizing: border-box;
 	text-decoration: none;
 
-	min-inline-size: var(--mod-card-minimum-width, var(--spectrum-card-minimum-width));
+	min-inline-size: var(--spectrum-card-minimum-width);
 	block-size: 100%;
 
 	border: var(--spectrum-card-border-width) solid transparent;
@@ -134,20 +134,19 @@
 	}
 
 	&:hover {
-		--mod-card-border-color: var(--spectrum-card-border-color-hover);
+		--spectrum-card-border-color: var(--spectrum-card-border-color-hover);
 	}
 
 	&.is-selected {
-		--mod-card-border-color: var(--spectrum-card-border-color-selected);
+		--spectrum-card-border-color: var(--spectrum-card-border-color-selected);
 
 		&::before {
-			/* @deprecated --mod-card-selected-background-color-rgb. Use --mod-card-background-color-selected instead. */
-			background-color: var(--mod-card-background-color-selected, var(--spectrum-card-selection-background-color));
+			background-color: var(--spectrum-card-selection-background-color);
 		}
 	}
 
 	&.is-drop-target {
-		--mod-card-background-color: var(--spectrum-background-base-color);
+		--spectrum-card-background-color: var(--spectrum-background-base-color);
 
 		box-shadow: 0 0 0 1px var(--spectrum-card-border-color);
 	}
@@ -186,9 +185,9 @@
 	box-sizing: border-box;
 
 	transition:
-		transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
-		opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
-		visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
+		transform var(--spectrum-animation-duration-100, 130ms) ease-in-out,
+		opacity var(--spectrum-animation-duration-100, 130ms) ease-in-out,
+		visibility 0ms linear var(--spectrum-animation-duration-100, 130ms);
 }
 
 .spectrum-Card-actions {
@@ -198,7 +197,7 @@
 
 .spectrum-Card-coverPhoto {
 	position: relative;
-	block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
+	block-size: var(--spectrum-card-preview-minimum-height);
 	box-sizing: border-box;
 	overflow: hidden;
 
@@ -230,9 +229,9 @@
 
 .spectrum-Card-body {
 	padding-block-start: var(--spectrum-card-body-padding-block-start);
-	padding-inline-end: var(--mod-card-body-padding-inline-end, calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width)));
-	padding-inline-start: var(--mod-card-body-padding-inline-start, calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width)));
-	padding-block-end: var(--mod-card-body-padding-block-end, calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width)));
+	padding-inline-end: calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width));
+	padding-inline-start: calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width));
+	padding-block-end: calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width));
 }
 
 .spectrum-Card-preview {
@@ -278,10 +277,10 @@
 
 .spectrum-Card-footer {
 	/* Accommodate for wanting less spacing between body and footer */
-	margin-block-start: var(--mod-card-footer-margin-block-start, calc(-1 * (var(--spectrum-card-body-spacing) - var(--spectrum-card-content-margin-bottom))));
-	margin-inline-start: var(--mod-card-footer-margin-inline-start, var(--spectrum-card-body-spacing));
-	margin-inline-end: var(--mod-card-footer-margin-inline-end, var(--spectrum-card-body-spacing));
-	padding-block-end: var(--mod-card-footer-padding-block-end, calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width)));
+	margin-block-start: calc(-1 * (var(--spectrum-card-body-spacing) - var(--spectrum-card-content-margin-bottom)));
+	margin-inline-start: var(--spectrum-card-body-spacing);
+	margin-inline-end: var(--spectrum-card-body-spacing);
+	padding-block-end: calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width));
 	padding-block-start: var(--spectrum-card-footer-padding-top);
 
 	color: var(--spectrum-card-body-font-color);
@@ -300,7 +299,7 @@
 }
 
 .spectrum-Card--gallery {
-	--mod-card-border-color-hover: transparent;
+	--spectrum-card-border-color-hover: transparent;
 
 	border-width: 0;
 	border-radius: 0;
@@ -315,15 +314,14 @@
 	.spectrum-Card-preview {
 		border-radius: var(--spectrum-card-corner-radius);
 		background-color: var(--spectrum-card-preview-background-color);
-		min-block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
+		min-block-size: var(--spectrum-card-preview-minimum-height);
 		inline-size: 100%;
 		flex: 1;
 		margin: 0 auto;
 		box-sizing: border-box;
 		position: relative;
 
-		/* @deprecation --mod-animation-duration-100 has been renamed and will be removed in a future version. */
-		transition: background-color var(--mod-card-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)));
+		transition: background-color var(--spectrum-animation-duration-100);
 		overflow: visible;
 
 		/* Use ::before to show the selected overlay */
@@ -376,7 +374,7 @@
 	}
 
 	&.is-selected .spectrum-Card-preview::before {
-		background-color: rgb(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--mod-card-selected-background-opacity, var(--spectrum-card-selected-background-opacity)));
+		background-color: rgb(var(--spectrum-card-selected-background-color-rgb), var(--spectrum-card-selected-background-opacity));
 	}
 
 	.spectrum-Card-body {
@@ -394,7 +392,7 @@
 	flex-direction: row;
 
 	&:hover .spectrum-Card-preview {
-		--mod-card-border-color: var(--spectrum-card-border-color-hover);
+		--spectrum-card-border-color: var(--spectrum-card-border-color-hover);
 	}
 
 	.spectrum-Card-preview {

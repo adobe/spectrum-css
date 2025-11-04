@@ -15,20 +15,6 @@
     ".spectrum-FieldLabel:lang(ko)",
     ".spectrum-FieldLabel:lang(zh)"
   ],
-  "modifiers": [
-    "--mod-fieldlabel-asterisk-vertical-align",
-    "--mod-fieldlabel-bottom-to-text",
-    "--mod-fieldlabel-font-size",
-    "--mod-fieldlabel-font-weight",
-    "--mod-fieldlabel-line-height",
-    "--mod-fieldlabel-line-height-cjk",
-    "--mod-fieldlabel-min-height",
-    "--mod-fieldlabel-padding-inline",
-    "--mod-fieldlabel-side-margin-block-start",
-    "--mod-fieldlabel-side-padding-right",
-    "--mod-fieldlabel-text-to-asterisk",
-    "--mod-fieldlabel-top-to-text"
-  ],
   "component": [
     "--spectrum-field-label-text-to-asterisk-extra-large",
     "--spectrum-field-label-text-to-asterisk-large",
@@ -77,5 +63,5 @@
     "--spectrum-white"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-fieldlabel-disabled-content-color"]
+  "high-contrast": []
 }
