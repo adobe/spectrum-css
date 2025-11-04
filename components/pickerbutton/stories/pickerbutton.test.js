@@ -16,9 +16,6 @@ export const PickerGroup = Variants({
 			testHeading: "Custom sized workflow icon",
 			iconName: "Calendar",
 			iconSet: "workflow",
-			customStyles: {
-				"--mod-icon-size": "var(--spectrum-workflow-icon-size-50)",
-			},
 		}
 	],
 	stateData: [

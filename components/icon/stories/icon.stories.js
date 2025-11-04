@@ -16,7 +16,7 @@ import { uiIconsWithDirections, workflowIconsCleaned, workflowSizes } from "./ut
  *
  * ## Repositories for the icon SVG files
  * The UI icon SVGs are within the Spectrum CSS repository, which has its own package published to NPM:
- * - GitHub: [adobe/spectrum-css — ui-icons folder](https://github.com/adobe/spectrum-css/tree/main/ui-icons)
+ * - GitHub: [adobe/spectrum-css - ui-icons folder](https://github.com/adobe/spectrum-css/tree/main/ui-icons)
  * - NPM: [@spectrum-css/ui-icons](https://www.npmjs.com/package/@spectrum-css/ui-icons).
  *
  * The workflow icon SVGs are within a separate repository, which is also published to NPM:
