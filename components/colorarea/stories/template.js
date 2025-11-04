@@ -26,8 +26,8 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap({
-				"--mod-colorarea-height": customHeight,
-				"--mod-colorarea-width": customWidth,
+				"--spectrum-color-area-height": customHeight,
+				"--spectrum-color-area-width": customWidth,
 				...customStyles,
 			})}
 			@focusin=${function() {
@@ -49,7 +49,7 @@ export const Template = ({
 				customClasses: [`${rootClass}-handle`],
 				customStyles: {
 					"--spectrum-picked-color": selectedColor,
-					"transform": customWidth ? "translate(var(--mod-colorarea-width), 0)" : undefined,
+					"transform": customWidth ? "translate(var(--spectrum-color-area-width), 0)" : undefined,
 				},
 			}, context)}
 			<input
