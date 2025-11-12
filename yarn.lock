@@ -135,7 +135,7 @@ __metadata:
     jsonc-eslint-parser: "npm:2.4.1"
     lint-staged: "npm:16.2.3"
     lodash: "npm:4.17.21"
-    markdownlint: "npm:0.38.0"
+    markdownlint: "npm:0.39.0"
     markdownlint-cli: "npm:0.45.0"
     npm-registry-fetch: "npm:19.0.0"
     nunjucks: "npm:3.2.4"
@@ -14401,7 +14401,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdownlint@npm:0.38.0, markdownlint@npm:~0.38.0":
+"markdownlint@npm:0.39.0":
+  version: 0.39.0
+  resolution: "markdownlint@npm:0.39.0"
+  dependencies:
+    micromark: "npm:4.0.2"
+    micromark-core-commonmark: "npm:2.0.3"
+    micromark-extension-directive: "npm:4.0.0"
+    micromark-extension-gfm-autolink-literal: "npm:2.1.0"
+    micromark-extension-gfm-footnote: "npm:2.1.0"
+    micromark-extension-gfm-table: "npm:2.1.1"
+    micromark-extension-math: "npm:3.1.0"
+    micromark-util-types: "npm:2.0.2"
+  checksum: 10c0/aaa079902fa1585e3769a0f699478cdcca0e2bf205916e5cc90a362746548b5530aa8e0a762e255b5e05dc481d86f9e8859780d4e5943e3ace8a5fb48023b6af
+  languageName: node
+  linkType: hard
+
+"markdownlint@npm:~0.38.0":
   version: 0.38.0
   resolution: "markdownlint@npm:0.38.0"
   dependencies:
