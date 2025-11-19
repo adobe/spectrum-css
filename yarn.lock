@@ -133,7 +133,7 @@ __metadata:
     gh-pages: "npm:6.3.0"
     husky: "npm:9.1.7"
     jsonc-eslint-parser: "npm:2.4.1"
-    lint-staged: "npm:16.2.4"
+    lint-staged: "npm:16.2.5"
     lodash: "npm:4.17.21"
     markdownlint: "npm:0.39.0"
     markdownlint-cli: "npm:0.45.0"
@@ -13921,9 +13921,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:16.2.4":
-  version: 16.2.4
-  resolution: "lint-staged@npm:16.2.4"
+"lint-staged@npm:16.2.5":
+  version: 16.2.5
+  resolution: "lint-staged@npm:16.2.5"
   dependencies:
     commander: "npm:^14.0.1"
     listr2: "npm:^9.0.4"
@@ -13934,7 +13934,7 @@ __metadata:
     yaml: "npm:^2.8.1"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10c0/101b32040b9601938a7da6aa58195ce5a1f7a1a96998e8f700c219d9a1070e0f87ade9289d85ff8041a5f901252e834411c7e4f35538593678ed304ba2c58eba
+  checksum: 10c0/debe2815d9c20c675eb8063f7ad0ce4a94e828832d975b0d8ad7d464e3ee387120056e0e0deaa7bd23a4849edfdc28c9c4f32e99a40746509ba3b76fd78e175a
   languageName: node
   linkType: hard
 
