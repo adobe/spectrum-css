@@ -44,7 +44,7 @@ jobs:
             has-changed: ${{ steps.compare.outputs.has-changed }}
             total-size: ${{ steps.compare.outputs.total-size }}
         steps:
-            - uses: actions/checkout@v5
+            - uses: actions/checkout@v6
               with:
                   fetch-depth: 0
 
@@ -170,7 +170,7 @@ jobs:
               run: exit 0
 
             - name: Check out code
-              uses: actions/checkout@v5
+              uses: actions/checkout@v6
               with:
                   fetch-depth: 0
                   ref: ${{ matrix.branch }}

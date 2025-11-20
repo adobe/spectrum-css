@@ -86,7 +86,7 @@ jobs:
                   echo "key=${{ matrix.system }}-node${{ matrix.node-version }}-compiled-assets-${BRANCH}" >> "$GITHUB_OUTPUT"
 
             - name: Check out code
-              uses: actions/checkout@v5
+              uses: actions/checkout@v6
               with:
                   ref: ${{ inputs.ref || github.head_ref }}
                   fetch-depth: 0

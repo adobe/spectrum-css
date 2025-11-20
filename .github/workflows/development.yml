@@ -148,7 +148,7 @@ jobs:
         if: ${{ needs.changed_files.outputs.plugins_added_files != '' || needs.changed_files.outputs.plugins_modified_files != '' }}
         steps:
             - name: Check out code
-              uses: actions/checkout@v5
+              uses: actions/checkout@v6
 
             - name: Use Node LTS version
               uses: actions/setup-node@v6
