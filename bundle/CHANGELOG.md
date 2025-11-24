@@ -1,5 +1,24 @@
 # Change Log
 
+## 2.0.0-next.18
+
+### Patch Changes
+
+Updated dependencies [[`ec16396`](https://github.com/adobe/spectrum-css/commit/ec16396fa134d066add2ecd553e2cb9a2b81e3eb), [`20807a5`](https://github.com/adobe/spectrum-css/commit/20807a5ab334303c640c70450ed40ccd80eac76e)]:
+
+- @spectrum-css/tokens@16.1.0-next.11
+- @spectrum-css/alertdialog@5.0.0-next.5
+- @spectrum-css/asset@8.0.0-next.1
+- @spectrum-css/assetcard@6.0.0-next.3
+- @spectrum-css/assetlist@9.0.0-next.3
+- @spectrum-css/avatar@10.0.0-next.1
+- @spectrum-css/badge@7.0.0-next.3
+- @spectrum-css/breadcrumb@12.0.0-next.4
+- @spectrum-css/divider@6.0.0-next.2
+- @spectrum-css/miller@9.0.0-next.2
+- @spectrum-css/page@10.0.0-next.2
+- @spectrum-css/well@8.0.0-next.2
+
 ## 2.0.0-next.17
 
 ### Patch Changes
