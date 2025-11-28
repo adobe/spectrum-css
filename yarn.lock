@@ -123,7 +123,7 @@ __metadata:
     colors: "npm:1.4.0"
     cross-env: "npm:10.1.0"
     cssnano: "npm:7.1.1"
-    cssnano-preset-advanced: "npm:7.0.9"
+    cssnano-preset-advanced: "npm:7.0.10"
     diff: "npm:8.0.2"
     diff2html: "npm:3.4.52"
     eslint: "npm:8.57.1"
@@ -7853,7 +7853,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.0.0, browserslist@npm:^4.24.0, browserslist@npm:^4.24.4, browserslist@npm:^4.25.1, browserslist@npm:^4.26.0, browserslist@npm:^4.27.0":
+"browserslist@npm:^4.0.0, browserslist@npm:^4.24.0, browserslist@npm:^4.24.4, browserslist@npm:^4.26.0, browserslist@npm:^4.27.0":
   version: 4.27.0
   resolution: "browserslist@npm:4.27.0"
   dependencies:
@@ -9129,24 +9129,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano-preset-advanced@npm:7.0.9":
-  version: 7.0.9
-  resolution: "cssnano-preset-advanced@npm:7.0.9"
+"cssnano-preset-advanced@npm:7.0.10":
+  version: 7.0.10
+  resolution: "cssnano-preset-advanced@npm:7.0.10"
   dependencies:
     autoprefixer: "npm:^10.4.21"
-    browserslist: "npm:^4.25.1"
-    cssnano-preset-default: "npm:^7.0.9"
+    browserslist: "npm:^4.27.0"
+    cssnano-preset-default: "npm:^7.0.10"
     postcss-discard-unused: "npm:^7.0.4"
     postcss-merge-idents: "npm:^7.0.1"
     postcss-reduce-idents: "npm:^7.0.1"
     postcss-zindex: "npm:^7.0.1"
   peerDependencies:
     postcss: ^8.4.32
-  checksum: 10c0/d26b5567b657f6c7ef862f97578b4ad021b9efa1adec7eb8f754a03c973fa43a6f154f3c6d172e0619c60dbf4158e037b5df261ad212dad48452aba0a3715c4f
+  checksum: 10c0/9b94af5093f2b3bbf5ce3ad4742aa7ba61ac75932e6105abf7bd7821285fad1614f71ef3ed99cddb8e6049cfba825e04b7f5e992c38c49935cbf387ae31115c7
   languageName: node
   linkType: hard
 
-"cssnano-preset-default@npm:^7.0.9":
+"cssnano-preset-default@npm:^7.0.10, cssnano-preset-default@npm:^7.0.9":
   version: 7.0.10
   resolution: "cssnano-preset-default@npm:7.0.10"
   dependencies:
