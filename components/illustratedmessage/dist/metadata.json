@@ -21,34 +21,6 @@
     ".spectrum-IllustratedMessage:lang(ko)",
     ".spectrum-IllustratedMessage:lang(zh)"
   ],
-  "modifiers": [
-    "--mod-illustrated-message-description-color",
-    "--mod-illustrated-message-description-font-family",
-    "--mod-illustrated-message-description-font-size",
-    "--mod-illustrated-message-description-font-style",
-    "--mod-illustrated-message-description-font-weight",
-    "--mod-illustrated-message-description-line-height",
-    "--mod-illustrated-message-description-pointer-events",
-    "--mod-illustrated-message-description-position",
-    "--mod-illustrated-message-description-to-action",
-    "--mod-illustrated-message-description-z-index",
-    "--mod-illustrated-message-display",
-    "--mod-illustrated-message-heading-to-description",
-    "--mod-illustrated-message-horizontal-maximum-width",
-    "--mod-illustrated-message-illustrated-inline-size",
-    "--mod-illustrated-message-illustration-block-size",
-    "--mod-illustrated-message-illustration-color",
-    "--mod-illustrated-message-illustration-size",
-    "--mod-illustrated-message-illustration-to-heading",
-    "--mod-illustrated-message-pointer-events",
-    "--mod-illustrated-message-title-color",
-    "--mod-illustrated-message-title-font-family",
-    "--mod-illustrated-message-title-font-size",
-    "--mod-illustrated-message-title-font-style",
-    "--mod-illustrated-message-title-font-weight",
-    "--mod-illustrated-message-title-line-height",
-    "--mod-illustrated-message-vertical-maximum-width"
-  ],
   "component": [
     "--spectrum-illustrated-message-description-color",
     "--spectrum-illustrated-message-description-font-family",
@@ -84,6 +56,7 @@
     "--spectrum-body-color",
     "--spectrum-body-sans-serif-font-style",
     "--spectrum-body-sans-serif-font-weight",
+    "--spectrum-buttongroup-justify-content",
     "--spectrum-heading-color",
     "--spectrum-line-height-200",
     "--spectrum-neutral-content-color-default",
@@ -96,6 +69,6 @@
     "--spectrum-title-sans-serif-font-style",
     "--spectrum-title-sans-serif-font-weight"
   ],
-  "passthroughs": ["--mod-buttongroup-justify-content"],
-  "high-contrast": ["--highcontrast-illustrated-message-illustration-color"]
+  "passthroughs": [],
+  "high-contrast": []
 }

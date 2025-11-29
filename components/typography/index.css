@@ -26,18 +26,8 @@
 	}
 
 	/* Add margin when inside a Typography component */
-	.spectrum-Heading {
-		--spectrum-heading-margin-start: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-top-multiplier));
-		--spectrum-heading-margin-end: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-bottom-multiplier));
-	}
-
 	.spectrum-Body {
-		--spectrum-body-margin-end: calc(var(--mod-body-font-size, var(--spectrum-body-font-size)) * var(--spectrum-body-margin-multiplier));
-	}
-
-	.spectrum-Detail {
-		--spectrum-detail-margin-start: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-top-multiplier));
-		--spectrum-detail-margin-end: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-bottom-multiplier));
+		--spectrum-body-margin-end: calc(var(--spectrum-body-font-size) * var(--spectrum-body-margin-multiplier));
 	}
 }
 
@@ -111,244 +101,244 @@
 
 	--spectrum-heading-font-color: var(--spectrum-heading-color);
 
-	--spectrum-heading-margin-start: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-top-multiplier));
-	--spectrum-heading-margin-end: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-bottom-multiplier));
+	--spectrum-heading-margin-start: calc(var(--spectrum-heading-font-size) * var(--spectrum-heading-margin-top-multiplier));
+	--spectrum-heading-margin-end: calc(var(--spectrum-heading-font-size) * var(--spectrum-heading-margin-bottom-multiplier));
 
-	font-family: var(--mod-heading-sans-serif-font-family, var(--spectrum-heading-sans-serif-font-family));
-	font-style: var(--mod-heading-sans-serif-font-style, var(--spectrum-heading-sans-serif-font-style));
-	font-weight: var(--mod-heading-sans-serif-font-weight, var(--spectrum-heading-sans-serif-font-weight));
-	font-size: var(--mod-heading-font-size, var(--spectrum-heading-font-size));
-	color: var(--highcontrast-heading-font-color, var(--mod-heading-font-color, var(--spectrum-heading-font-color)));
-	line-height: var(--mod-heading-line-height, var(--spectrum-heading-line-height));
-	margin-block-start: var(--mod-heading-margin-start, var(--spectrum-heading-margin-start, 0));
-	margin-block-end: var(--mod-heading-margin-end, var(--spectrum-heading-margin-end, 0));
+	font-family: var(--spectrum-heading-sans-serif-font-family);
+	font-style: var(--spectrum-heading-sans-serif-font-style);
+	font-weight: var(--spectrum-heading-sans-serif-font-weight);
+	font-size: var(--spectrum-heading-font-size);
+	color: var(--highcontrast-heading-font-color, var(--spectrum-heading-font-color));
+	line-height: var(--spectrum-heading-line-height);
+	margin-block-start: var(--spectrum-heading-margin-start, 0);
+	margin-block-end: var(--spectrum-heading-margin-end, 0);
 
 	strong,
 	.spectrum-Heading-strong {
-		font-style: var(--mod-heading-sans-serif-strong-font-style, var(--spectrum-heading-sans-serif-strong-font-style));
-		font-weight: var(--mod-heading-sans-serif-strong-font-weight, var(--spectrum-heading-sans-serif-strong-font-weight));
+		font-style: var(--spectrum-heading-sans-serif-strong-font-style);
+		font-weight: var(--spectrum-heading-sans-serif-strong-font-weight);
 	}
 
 	em,
 	.spectrum-Heading-emphasized {
-		font-style: var(--mod-heading-sans-serif-emphasized-font-style, var(--spectrum-heading-sans-serif-emphasized-font-style));
-		font-weight: var(--mod-heading-sans-serif-emphasized-font-weight, var(--spectrum-heading-sans-serif-emphasized-font-weight));
+		font-style: var(--spectrum-heading-sans-serif-emphasized-font-style);
+		font-weight: var(--spectrum-heading-sans-serif-emphasized-font-weight);
 	}
 
 	.spectrum-Heading-strong.spectrum-Heading-emphasized,
 	strong em,
 	em strong {
-		font-style: var(--mod-heading-sans-serif-strong-emphasized-font-style, var(--spectrum-heading-sans-serif-strong-emphasized-font-style));
-		font-weight: var(--mod-heading-sans-serif-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-strong-emphasized-font-weight));
+		font-style: var(--spectrum-heading-sans-serif-strong-emphasized-font-style);
+		font-weight: var(--spectrum-heading-sans-serif-strong-emphasized-font-weight);
 	}
 
 	&:lang(zh),
 	&:lang(ja),
 	&:lang(ko) {
-		font-family: var(--mod-heading-cjk-font-family, var(--spectrum-heading-cjk-font-family));
-		font-style: var(--mod-heading-cjk-font-style, var(--spectrum-heading-cjk-font-style));
-		font-weight: var(--mod-heading-cjk-font-weight, var(--spectrum-heading-cjk-font-weight));
-		font-size: var(--mod-heading-cjk-font-size, var(--spectrum-heading-cjk-font-size));
+		font-family: var(--spectrum-heading-cjk-font-family);
+		font-style: var(--spectrum-heading-cjk-font-style);
+		font-weight: var(--spectrum-heading-cjk-font-weight);
+		font-size: var(--spectrum-heading-cjk-font-size);
 
-		line-height: var(--mod-heading-cjk-line-height, var(--spectrum-heading-cjk-line-height));
-		letter-spacing: var(--mod-heading-cjk-letter-spacing, var(--spectrum-heading-cjk-letter-spacing));
+		line-height: var(--spectrum-heading-cjk-line-height);
+		letter-spacing: var(--spectrum-heading-cjk-letter-spacing);
 
 		em,
 		.spectrum-Heading-emphasized {
-			font-style: var(--mod-heading-cjk-emphasized-font-style, var(--spectrum-heading-cjk-emphasized-font-style));
-			font-weight: var(--mod-heading-cjk-emphasized-font-weight, var(--spectrum-heading-cjk-emphasized-font-weight));
+			font-style: var(--spectrum-heading-cjk-emphasized-font-style);
+			font-weight: var(--spectrum-heading-cjk-emphasized-font-weight);
 		}
 
 		strong,
 		.spectrum-Heading-strong {
-			font-style: var(--mod-heading-cjk-strong-font-style, var(--spectrum-heading-cjk-strong-font-style));
-			font-weight: var(--mod-heading-cjk-strong-font-weight, var(--spectrum-heading-cjk-strong-font-weight));
+			font-style: var(--spectrum-heading-cjk-strong-font-style);
+			font-weight: var(--spectrum-heading-cjk-strong-font-weight);
 		}
 
 		.spectrum-Heading-strong.spectrum-Heading-emphasized,
 		strong em,
 		em strong {
-			font-style: var(--mod-heading-cjk-strong-emphasized-font-style, var(--spectrum-heading-cjk-strong-emphasized-font-style));
-			font-weight: var(--mod-heading-cjk-strong-emphasized-font-weight, var(--spectrum-heading-cjk-strong-emphasized-font-weight));
+			font-style: var(--spectrum-heading-cjk-strong-emphasized-font-style);
+			font-weight: var(--spectrum-heading-cjk-strong-emphasized-font-weight);
 		}
 	}
 }
 
 /* Heading - Heavy */
 .spectrum-Heading--heavy {
-	font-style: var(--mod-heading-sans-serif-heavy-font-style, var(--spectrum-heading-sans-serif-heavy-font-style));
-	font-weight: var(--mod-heading-sans-serif-heavy-font-weight, var(--spectrum-heading-sans-serif-heavy-font-weight));
+	font-style: var(--spectrum-heading-sans-serif-heavy-font-style);
+	font-weight: var(--spectrum-heading-sans-serif-heavy-font-weight);
 
 	strong,
 	.spectrum-Heading-strong {
-		font-style: var(--mod-heading-sans-serif-heavy-strong-font-style, var(--spectrum-heading-sans-serif-heavy-strong-font-style));
-		font-weight: var(--mod-heading-sans-serif-heavy-strong-font-weight, var(--spectrum-heading-sans-serif-heavy-strong-font-weight));
+		font-style: var(--spectrum-heading-sans-serif-heavy-strong-font-style);
+		font-weight: var(--spectrum-heading-sans-serif-heavy-strong-font-weight);
 	}
 
 	em,
 	.spectrum-Heading-emphasized {
-		font-style: var(--mod-heading-sans-serif-heavy-emphasized-font-style, var(--spectrum-heading-sans-serif-heavy-emphasized-font-style));
-		font-weight: var(--mod-heading-sans-serif-heavy-emphasized-font-weight, var(--spectrum-heading-sans-serif-heavy-emphasized-font-weight));
+		font-style: var(--spectrum-heading-sans-serif-heavy-emphasized-font-style);
+		font-weight: var(--spectrum-heading-sans-serif-heavy-emphasized-font-weight);
 	}
 
 	.spectrum-Heading-strong.spectrum-Heading-emphasized,
 	strong em,
 	em strong {
-		font-style: var(--mod-heading-sans-serif-heavy-strong-emphasized-font-style, var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-style));
-		font-weight: var(--mod-heading-sans-serif-heavy-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight));
+		font-style: var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-style);
+		font-weight: var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight);
 	}
 
 	&:lang(zh),
 	&:lang(ja),
 	&:lang(ko) {
-		font-style: var(--mod-heading-cjk-heavy-font-style, var(--spectrum-heading-cjk-heavy-font-style));
-		font-weight: var(--mod-heading-cjk-heavy-font-weight, var(--spectrum-heading-cjk-heavy-font-weight));
+		font-style: var(--spectrum-heading-cjk-heavy-font-style);
+		font-weight: var(--spectrum-heading-cjk-heavy-font-weight);
 
 		em,
 		.spectrum-Heading-emphasized {
-			font-style: var(--mod-heading-cjk-heavy-emphasized-font-style, var(--spectrum-heading-cjk-heavy-emphasized-font-style));
-			font-weight: var(--mod-heading-cjk-heavy-emphasized-font-weight, var(--spectrum-heading-cjk-heavy-emphasized-font-weight));
+			font-style: var(--spectrum-heading-cjk-heavy-emphasized-font-style);
+			font-weight: var(--spectrum-heading-cjk-heavy-emphasized-font-weight);
 		}
 
 		strong,
 		.spectrum-Heading-strong {
-			font-style: var(--mod-heading-cjk-heavy-strong-font-style, var(--spectrum-heading-cjk-heavy-strong-font-style));
-			font-weight: var(--mod-heading-cjk-heavy-strong-font-weight, var(--spectrum-heading-cjk-heavy-strong-font-weight));
+			font-style: var(--spectrum-heading-cjk-heavy-strong-font-style);
+			font-weight: var(--spectrum-heading-cjk-heavy-strong-font-weight);
 		}
 
 		.spectrum-Heading-strong.spectrum-Heading-emphasized,
 		strong em,
 		em strong {
-			font-style: var(--mod-heading-cjk-heavy-strong-emphasized-font-style, var(--spectrum-heading-cjk-heavy-strong-emphasized-font-style));
-			font-weight: var(--mod-heading-cjk-heavy-strong-emphasized-font-weight, var(--spectrum-heading-cjk-heavy-strong-emphasized-font-weight));
+			font-style: var(--spectrum-heading-cjk-heavy-strong-emphasized-font-style);
+			font-weight: var(--spectrum-heading-cjk-heavy-strong-emphasized-font-weight);
 		}
 	}
 }
 
 /* Heading - Light */
 .spectrum-Heading--light {
-	font-style: var(--mod-heading-sans-serif-light-font-style, var(--spectrum-heading-sans-serif-light-font-style));
-	font-weight: var(--mod-heading-sans-serif-light-font-weight, var(--spectrum-heading-sans-serif-light-font-weight));
+	font-style: var(--spectrum-heading-sans-serif-light-font-style);
+	font-weight: var(--spectrum-heading-sans-serif-light-font-weight);
 
 	em,
 	.spectrum-Heading-emphasized {
-		font-style: var(--mod-heading-sans-serif-light-emphasized-font-style, var(--spectrum-heading-sans-serif-light-emphasized-font-style));
-		font-weight: var(--mod-heading-sans-serif-light-emphasized-font-weight, var(--spectrum-heading-sans-serif-light-emphasized-font-weight));
+		font-style: var(--spectrum-heading-sans-serif-light-emphasized-font-style);
+		font-weight: var(--spectrum-heading-sans-serif-light-emphasized-font-weight);
 	}
 
 	strong,
 	.spectrum-Heading-strong {
-		font-style: var(--mod-heading-sans-serif-light-strong-font-style, var(--spectrum-heading-sans-serif-light-strong-font-style));
-		font-weight: var(--mod-heading-sans-serif-light-strong-font-weight, var(--spectrum-heading-sans-serif-light-strong-font-weight));
+		font-style: var(--spectrum-heading-sans-serif-light-strong-font-style);
+		font-weight: var(--spectrum-heading-sans-serif-light-strong-font-weight);
 	}
 
 	.spectrum-Heading-strong.spectrum-Heading-emphasized,
 	strong em,
 	em strong {
-		font-style: var(--mod-heading-sans-serif-light-strong-emphasized-font-style, var(--spectrum-heading-sans-serif-light-strong-emphasized-font-style));
-		font-weight: var(--mod-heading-sans-serif-light-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-light-strong-emphasized-font-weight));
+		font-style: var(--spectrum-heading-sans-serif-light-strong-emphasized-font-style);
+		font-weight: var(--spectrum-heading-sans-serif-light-strong-emphasized-font-weight);
 	}
 
 	&:lang(zh),
 	&:lang(ja),
 	&:lang(ko) {
-		font-style: var(--mod-heading-cjk-light-font-style, var(--spectrum-heading-cjk-light-font-style));
-		font-weight: var(--mod-heading-cjk-light-font-weight, var(--spectrum-heading-cjk-light-font-weight));
+		font-style: var(--spectrum-heading-cjk-light-font-style);
+		font-weight: var(--spectrum-heading-cjk-light-font-weight);
 
 		strong,
 		.spectrum-Heading-strong {
-			font-style: var(--mod-heading-cjk-light-strong-font-style, var(--spectrum-heading-cjk-light-strong-font-style));
-			font-weight: var(--mod-heading-cjk-light-strong-font-weight, var(--spectrum-heading-cjk-light-strong-font-weight));
+			font-style: var(--spectrum-heading-cjk-light-strong-font-style);
+			font-weight: var(--spectrum-heading-cjk-light-strong-font-weight);
 		}
 
 		em,
 		.spectrum-Heading-emphasized {
-			font-style: var(--mod-heading-cjk-light-emphasized-font-style, var(--spectrum-heading-cjk-light-emphasized-font-style));
-			font-weight: var(--mod-heading-cjk-light-emphasized-font-weight, var(--spectrum-heading-cjk-light-emphasized-font-weight));
+			font-style: var(--spectrum-heading-cjk-light-emphasized-font-style);
+			font-weight: var(--spectrum-heading-cjk-light-emphasized-font-weight);
 		}
 
 		.spectrum-Heading-strong.spectrum-Heading-emphasized,
 		strong em,
 		em strong {
-			font-style: var(--mod-heading-cjk-light-strong-emphasized-font-style, var(--spectrum-heading-cjk-light-strong-emphasized-font-style));
-			font-weight: var(--mod-heading-cjk-light-strong-emphasized-font-weight, var(--spectrum-heading-cjk-light-strong-emphasized-font-weight));
+			font-style: var(--spectrum-heading-cjk-light-strong-emphasized-font-style);
+			font-weight: var(--spectrum-heading-cjk-light-strong-emphasized-font-weight);
 		}
 	}
 }
 
 /* Heading - Serif */
 .spectrum-Heading--serif {
-	font-family: var(--mod-heading-serif-font-family, var(--spectrum-heading-serif-font-family));
-	font-style: var(--mod-heading-serif-font-style, var(--spectrum-heading-serif-font-style));
-	font-weight: var(--mod-heading-serif-font-weight, var(--spectrum-heading-serif-font-weight));
+	font-family: var(--spectrum-heading-serif-font-family);
+	font-style: var(--spectrum-heading-serif-font-style);
+	font-weight: var(--spectrum-heading-serif-font-weight);
 
 	em,
 	.spectrum-Heading-emphasized {
-		font-style: var(--mod-heading-serif-emphasized-font-style, var(--spectrum-heading-serif-emphasized-font-style));
-		font-weight: var(--mod-heading-serif-emphasized-font-weight, var(--spectrum-heading-serif-emphasized-font-weight));
+		font-style: var(--spectrum-heading-serif-emphasized-font-style);
+		font-weight: var(--spectrum-heading-serif-emphasized-font-weight);
 	}
 
 	strong,
 	.spectrum-Heading-strong {
-		font-style: var(--mod-heading-serif-strong-font-style, var(--spectrum-heading-serif-strong-font-style));
-		font-weight: var(--mod-heading-serif-strong-font-weight, var(--spectrum-heading-serif-strong-font-weight));
+		font-style: var(--spectrum-heading-serif-strong-font-style);
+		font-weight: var(--spectrum-heading-serif-strong-font-weight);
 	}
 
 	.spectrum-Heading-strong.spectrum-Heading-emphasized,
 	strong em,
 	em strong {
-		font-style: var(--mod-heading-serif-strong-emphasized-font-style, var(--spectrum-heading-serif-strong-emphasized-font-style));
-		font-weight: var(--mod-heading-serif-strong-emphasized-font-weight, var(--spectrum-heading-serif-strong-emphasized-font-weight));
+		font-style: var(--spectrum-heading-serif-strong-emphasized-font-style);
+		font-weight: var(--spectrum-heading-serif-strong-emphasized-font-weight);
 	}
 }
 
 /* Heading - Serif - Heavy */
 .spectrum-Heading--serif.spectrum-Heading--heavy {
-	font-style: var(--mod-heading-serif-heavy-font-style, var(--spectrum-heading-serif-heavy-font-style));
-	font-weight: var(--mod-heading-serif-heavy-font-weight, var(--spectrum-heading-serif-heavy-font-weight));
+	font-style: var(--spectrum-heading-serif-heavy-font-style);
+	font-weight: var(--spectrum-heading-serif-heavy-font-weight);
 
 	strong,
 	.spectrum-Heading-strong {
-		font-style: var(--mod-heading-serif-heavy-strong-font-style, var(--spectrum-heading-serif-heavy-strong-font-style));
-		font-weight: var(--mod-heading-serif-heavy-strong-font-weight, var(--spectrum-heading-serif-heavy-strong-font-weight));
+		font-style: var(--spectrum-heading-serif-heavy-strong-font-style);
+		font-weight: var(--spectrum-heading-serif-heavy-strong-font-weight);
 	}
 
 	em,
 	.spectrum-Heading-emphasized {
-		font-style: var(--mod-heading-serif-heavy-emphasized-font-style, var(--spectrum-heading-serif-heavy-emphasized-font-style));
-		font-weight: var(--mod-heading-serif-heavy-emphasized-font-weight, var(--spectrum-heading-serif-heavy-emphasized-font-weight));
+		font-style: var(--spectrum-heading-serif-heavy-emphasized-font-style);
+		font-weight: var(--spectrum-heading-serif-heavy-emphasized-font-weight);
 	}
 
 	.spectrum-Heading-strong.spectrum-Heading-emphasized,
 	strong em,
 	em strong {
-		font-style: var(--mod-heading-serif-heavy-strong-emphasized-font-style, var(--spectrum-heading-serif-heavy-strong-emphasized-font-style));
-		font-weight: var(--mod-heading-serif-heavy-strong-emphasized-font-weight, var(--spectrum-heading-serif-heavy-strong-emphasized-font-weight));
+		font-style: var(--spectrum-heading-serif-heavy-strong-emphasized-font-style);
+		font-weight: var(--spectrum-heading-serif-heavy-strong-emphasized-font-weight);
 	}
 }
 
 /* Heading - Serif - Light */
 .spectrum-Heading--serif.spectrum-Heading--light {
-	font-style: var(--mod-heading-serif-light-font-style, var(--spectrum-heading-serif-light-font-style));
-	font-weight: var(--mod-heading-serif-light-font-weight, var(--spectrum-heading-serif-light-font-weight));
+	font-style: var(--spectrum-heading-serif-light-font-style);
+	font-weight: var(--spectrum-heading-serif-light-font-weight);
 
 	em,
 	.spectrum-Heading-emphasized {
-		font-style: var(--mod-heading-serif-light-emphasized-font-style, var(--spectrum-heading-serif-light-emphasized-font-style));
-		font-weight: var(--mod-heading-serif-light-emphasized-font-weight, var(--spectrum-heading-serif-light-emphasized-font-weight));
+		font-style: var(--spectrum-heading-serif-light-emphasized-font-style);
+		font-weight: var(--spectrum-heading-serif-light-emphasized-font-weight);
 	}
 
 	strong,
 	.spectrum-Heading-strong {
-		font-style: var(--mod-heading-serif-light-strong-font-style, var(--spectrum-heading-serif-light-strong-font-style));
-		font-weight: var(--mod-heading-serif-light-strong-font-weight, var(--spectrum-heading-serif-light-strong-font-weight));
+		font-style: var(--spectrum-heading-serif-light-strong-font-style);
+		font-weight: var(--spectrum-heading-serif-light-strong-font-weight);
 	}
 
 	.spectrum-Heading-strong.spectrum-Heading-emphasized,
 	strong em,
 	em strong {
-		font-style: var(--mod-heading-serif-light-strong-emphasized-font-style, var(--spectrum-heading-serif-light-strong-emphasized-font-style));
-		font-weight: var(--mod-heading-serif-light-strong-emphasized-font-weight, var(--spectrum-heading-serif-light-strong-emphasized-font-weight));
+		font-style: var(--spectrum-heading-serif-light-strong-emphasized-font-style);
+		font-weight: var(--spectrum-heading-serif-light-strong-emphasized-font-weight);
 	}
 }
 
@@ -391,91 +381,91 @@
 
 	--spectrum-body-font-color: var(--spectrum-body-color);
 
-	font-family: var(--mod-body-sans-serif-font-family, var(--spectrum-body-sans-serif-font-family));
-	font-style: var(--mod-body-sans-serif-font-style, var(--spectrum-body-sans-serif-font-style));
-	font-weight: var(--mod-body-sans-serif-font-weight, var(--spectrum-body-sans-serif-font-weight));
-	font-size: var(--mod-body-font-size, var(--spectrum-body-font-size));
-	color: var(--highcontrast-body-font-color, var(--mod-body-font-color, var(--spectrum-body-font-color)));
+	font-family: var(--spectrum-body-sans-serif-font-family);
+	font-style: var(--spectrum-body-sans-serif-font-style);
+	font-weight: var(--spectrum-body-sans-serif-font-weight);
+	font-size: var(--spectrum-body-font-size);
+	color: var(--highcontrast-body-font-color, var(--spectrum-body-font-color));
 
-	margin-block-start: var(--mod-body-margin-start, var(--mod-body-margin, 0));
-	margin-block-end: var(--mod-body-margin-end, var(--mod-body-margin, var(--spectrum-body-margin-end, 0)));
+	margin-block-start: 0;
+	margin-block-end: var(--spectrum-body-margin-end, 0);
 
-	line-height: var(--mod-body-line-height, var(--spectrum-body-line-height));
+	line-height: var(--spectrum-body-line-height);
 
 	strong,
 	.spectrum-Body-strong {
-		font-style: var(--mod-body-sans-serif-strong-font-style, var(--spectrum-body-sans-serif-strong-font-style));
-		font-weight: var(--mod-body-sans-serif-strong-font-weight, var(--spectrum-body-sans-serif-strong-font-weight));
+		font-style: var(--spectrum-body-sans-serif-strong-font-style);
+		font-weight: var(--spectrum-body-sans-serif-strong-font-weight);
 	}
 
 	em,
 	.spectrum-Body-emphasized {
-		font-style: var(--mod-body-sans-serif-emphasized-font-style, var(--spectrum-body-sans-serif-emphasized-font-style));
-		font-weight: var(--mod-body-sans-serif-emphasized-font-weight, var(--spectrum-body-sans-serif-emphasized-font-weight));
+		font-style: var(--spectrum-body-sans-serif-emphasized-font-style);
+		font-weight: var(--spectrum-body-sans-serif-emphasized-font-weight);
 	}
 
 	.spectrum-Body-strong.spectrum-Body-emphasized,
 	em strong,
 	strong em {
-		font-style: var(--mod-body-sans-serif-strong-emphasized-font-style, var(--spectrum-body-sans-serif-strong-emphasized-font-style));
-		font-weight: var(--mod-body-sans-serif-strong-emphasized-font-weight, var(--spectrum-body-sans-serif-strong-emphasized-font-weight));
+		font-style: var(--spectrum-body-sans-serif-strong-emphasized-font-style);
+		font-weight: var(--spectrum-body-sans-serif-strong-emphasized-font-weight);
 	}
 
 	&:lang(zh),
 	&:lang(ja),
 	&:lang(ko) {
-		font-family: var(--mod-body-cjk-font-family, var(--spectrum-body-cjk-font-family));
-		font-style: var(--mod-body-cjk-font-style, var(--spectrum-body-cjk-font-style));
-		font-weight: var(--mod-body-cjk-font-weight, var(--spectrum-body-cjk-font-weight));
+		font-family: var(--spectrum-body-cjk-font-family);
+		font-style: var(--spectrum-body-cjk-font-style);
+		font-weight: var(--spectrum-body-cjk-font-weight);
 
-		line-height: var(--mod-body-cjk-line-height, var(--spectrum-body-cjk-line-height));
+		line-height: var(--spectrum-body-cjk-line-height);
 
-		letter-spacing: var(--mod-body-cjk-letter-spacing, var(--spectrum-body-cjk-letter-spacing));
+		letter-spacing: var(--spectrum-body-cjk-letter-spacing);
 
 		strong,
 		.spectrum-Body-strong {
-			font-style: var(--mod-body-cjk-strong-font-style, var(--spectrum-body-cjk-strong-font-style));
-			font-weight: var(--mod-body-cjk-strong-font-weight, var(--spectrum-body-cjk-strong-font-weight));
+			font-style: var(--spectrum-body-cjk-strong-font-style);
+			font-weight: var(--spectrum-body-cjk-strong-font-weight);
 		}
 
 		em,
 		.spectrum-Body-emphasized {
-			font-style: var(--mod-body-cjk-emphasized-font-style, var(--spectrum-body-cjk-emphasized-font-style));
-			font-weight: var(--mod-body-cjk-emphasized-font-weight, var(--spectrum-body-cjk-emphasized-font-weight));
+			font-style: var(--spectrum-body-cjk-emphasized-font-style);
+			font-weight: var(--spectrum-body-cjk-emphasized-font-weight);
 		}
 
 		.spectrum-Body-strong.spectrum-Body-emphasized,
 		em strong,
 		strong em {
-			font-style: var(--mod-body-cjk-strong-emphasized-font-style, var(--spectrum-body-cjk-strong-emphasized-font-style));
-			font-weight: var(--mod-body-cjk-strong-emphasized-font-weight, var(--spectrum-body-cjk-strong-emphasized-font-weight));
+			font-style: var(--spectrum-body-cjk-strong-emphasized-font-style);
+			font-weight: var(--spectrum-body-cjk-strong-emphasized-font-weight);
 		}
 	}
 }
 
 /* Body - Serif */
 .spectrum-Body--serif {
-	font-family: var(--mod-body-serif-font-family, var(--spectrum-body-serif-font-family));
-	font-weight: var(--mod-body-serif-font-weight, var(--spectrum-body-serif-font-weight));
-	font-style: var(--mod-body-serif-font-style, var(--spectrum-body-serif-font-style));
+	font-family: var(--spectrum-body-serif-font-family);
+	font-weight: var(--spectrum-body-serif-font-weight);
+	font-style: var(--spectrum-body-serif-font-style);
 
 	strong,
 	.spectrum-Body-strong {
-		font-style: var(--mod-body-serif-strong-font-style, var(--spectrum-body-serif-strong-font-style));
-		font-weight: var(--mod-body-serif-strong-font-weight, var(--spectrum-body-serif-strong-font-weight));
+		font-style: var(--spectrum-body-serif-strong-font-style);
+		font-weight: var(--spectrum-body-serif-strong-font-weight);
 	}
 
 	em,
 	.spectrum-Body-emphasized {
-		font-style: var(--mod-body-serif-emphasized-font-style, var(--spectrum-body-serif-emphasized-font-style));
-		font-weight: var(--mod-body-serif-emphasized-font-weight, var(--spectrum-body-serif-emphasized-font-weight));
+		font-style: var(--spectrum-body-serif-emphasized-font-style);
+		font-weight: var(--spectrum-body-serif-emphasized-font-weight);
 	}
 
 	.spectrum-Body-strong.spectrum-Body-emphasized,
 	em strong,
 	strong em {
-		font-style: var(--mod-body-serif-strong-emphasized-font-style, var(--spectrum-body-serif-strong-emphasized-font-style));
-		font-weight: var(--mod-body-serif-strong-emphasized-font-weight, var(--spectrum-body-serif-strong-emphasized-font-weight));
+		font-style: var(--spectrum-body-serif-strong-emphasized-font-style);
+		font-weight: var(--spectrum-body-serif-strong-emphasized-font-weight);
 	}
 }
 
@@ -502,170 +492,170 @@
 	--spectrum-detail-serif-font-family: var(--spectrum-serif-font-family-stack);
 	--spectrum-detail-cjk-font-family: var(--spectrum-cjk-font-family-stack);
 
-	--spectrum-detail-margin-start: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-top-multiplier));
-	--spectrum-detail-margin-end: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-bottom-multiplier));
+	--spectrum-detail-margin-start: calc(var(--spectrum-detail-font-size) * var(--spectrum-detail-margin-top-multiplier));
+	--spectrum-detail-margin-end: calc(var(--spectrum-detail-font-size) * var(--spectrum-detail-margin-bottom-multiplier));
 
 	--spectrum-detail-font-color: var(--spectrum-detail-color);
 
-	font-family: var(--mod-detail-sans-serif-font-family, var(--spectrum-detail-sans-serif-font-family));
-	font-style: var(--mod-detail-sans-serif-font-style, var(--spectrum-detail-sans-serif-font-style));
-	font-weight: var(--mod-detail-sans-serif-font-weight, var(--spectrum-detail-sans-serif-font-weight));
-	font-size: var(--mod-detail-font-size, var(--spectrum-detail-font-size));
-	margin-block-start: var(--mod-detail-margin-start, var(--spectrum-detail-margin-start, 0));
-	margin-block-end: var(--mod-detail-margin-end, var(--spectrum-detail-margin-end, 0));
+	font-family: var(--spectrum-detail-sans-serif-font-family);
+	font-style: var(--spectrum-detail-sans-serif-font-style);
+	font-weight: var(--spectrum-detail-sans-serif-font-weight);
+	font-size: var(--spectrum-detail-font-size);
+	margin-block-start: var(--spectrum-detail-margin-start, 0);
+	margin-block-end: var(--spectrum-detail-margin-end, 0);
 
-	color: var(--highcontrast-detail-font-color, var(--mod-detail-font-color, var(--spectrum-detail-font-color)));
+	color: var(--highcontrast-detail-font-color, var(--spectrum-detail-font-color));
 
-	line-height: var(--mod-detail-line-height, var(--spectrum-detail-line-height));
-	letter-spacing: var(--mod-detail-letter-spacing, var(--spectrum-detail-letter-spacing));
+	line-height: var(--spectrum-detail-line-height);
+	letter-spacing: var(--spectrum-detail-letter-spacing);
 	text-transform: uppercase;
 
 	strong,
 	.spectrum-Detail-strong {
-		font-style: var(--mod-detail-sans-serif-strong-font-style, var(--spectrum-detail-sans-serif-strong-font-style));
-		font-weight: var(--mod-detail-sans-serif-strong-font-weight, var(--spectrum-detail-sans-serif-strong-font-weight));
+		font-style: var(--spectrum-detail-sans-serif-strong-font-style);
+		font-weight: var(--spectrum-detail-sans-serif-strong-font-weight);
 	}
 
 	em,
 	.spectrum-Detail-emphasized {
-		font-style: var(--mod-detail-sans-serif-emphasized-font-style, var(--spectrum-detail-sans-serif-emphasized-font-style));
-		font-weight: var(--mod-detail-sans-serif-emphasized-font-weight, var(--spectrum-detail-sans-serif-emphasized-font-weight));
+		font-style: var(--spectrum-detail-sans-serif-emphasized-font-style);
+		font-weight: var(--spectrum-detail-sans-serif-emphasized-font-weight);
 	}
 
 	.spectrum-Detail-strong.spectrum-Detail-emphasized,
 	em strong,
 	strong em {
-		font-style: var(--mod-detail-sans-serif-strong-emphasized-font-style, var(--spectrum-detail-sans-serif-strong-emphasized-font-style));
-		font-weight: var(--mod-detail-sans-serif-strong-emphasized-font-weight, var(--spectrum-detail-sans-serif-strong-emphasized-font-weight));
+		font-style: var(--spectrum-detail-sans-serif-strong-emphasized-font-style);
+		font-weight: var(--spectrum-detail-sans-serif-strong-emphasized-font-weight);
 	}
 
 	&:lang(zh),
 	&:lang(ja),
 	&:lang(ko) {
-		font-family: var(--mod-detail-cjk-font-family, var(--spectrum-detail-cjk-font-family));
-		font-style: var(--mod-detail-cjk-font-style, var(--spectrum-detail-cjk-font-style));
-		font-weight: var(--mod-detail-cjk-font-weight, var(--spectrum-detail-cjk-font-weight));
+		font-family: var(--spectrum-detail-cjk-font-family);
+		font-style: var(--spectrum-detail-cjk-font-style);
+		font-weight: var(--spectrum-detail-cjk-font-weight);
 
-		line-height: var(--mod-detail-cjk-line-height, var(--spectrum-detail-cjk-line-height));
+		line-height: var(--spectrum-detail-cjk-line-height);
 
 		strong,
 		.spectrum-Detail-strong {
-			font-style: var(--mod-detail-cjk-strong-font-style, var(--spectrum-detail-cjk-strong-font-style));
-			font-weight: var(--mod-detail-cjk-strong-font-weight, var(--spectrum-detail-cjk-strong-font-weight));
+			font-style: var(--spectrum-detail-cjk-strong-font-style);
+			font-weight: var(--spectrum-detail-cjk-strong-font-weight);
 		}
 
 		em,
 		.spectrum-Detail-emphasized {
-			font-style: var(--mod-detail-cjk-emphasized-font-style, var(--spectrum-detail-cjk-emphasized-font-style));
-			font-weight: var(--mod-detail-cjk-emphasized-font-weight, var(--spectrum-detail-cjk-emphasized-font-weight));
+			font-style: var(--spectrum-detail-cjk-emphasized-font-style);
+			font-weight: var(--spectrum-detail-cjk-emphasized-font-weight);
 		}
 
 		.spectrum-Detail-strong.spectrum-Detail-emphasized,
 		em strong,
 		strong em {
-			font-style: var(--mod-detail-cjk-strong-emphasized-font-style, var(--spectrum-detail-cjk-strong-emphasized-font-style));
-			font-weight: var(--mod-detail-cjk-strong-emphasized-font-weight, var(--spectrum-detail-cjk-strong-emphasized-font-weight));
+			font-style: var(--spectrum-detail-cjk-strong-emphasized-font-style);
+			font-weight: var(--spectrum-detail-cjk-strong-emphasized-font-weight);
 		}
 	}
 }
 
 /* Detail - Serif */
 .spectrum-Detail--serif {
-	font-family: var(--mod-detail-serif-font-family, var(--spectrum-detail-serif-font-family));
-	font-style: var(--mod-detail-serif-font-style, var(--spectrum-detail-serif-font-style));
-	font-weight: var(--mod-detail-serif-font-weight, var(--spectrum-detail-serif-font-weight));
+	font-family: var(--spectrum-detail-serif-font-family);
+	font-style: var(--spectrum-detail-serif-font-style);
+	font-weight: var(--spectrum-detail-serif-font-weight);
 
 	strong,
 	.spectrum-Detail-strong {
-		font-style: var(--mod-detail-serif-strong-font-style, var(--spectrum-detail-serif-strong-font-style));
-		font-weight: var(--mod-detail-serif-strong-font-weight, var(--spectrum-detail-serif-strong-font-weight));
+		font-style: var(--spectrum-detail-serif-strong-font-style);
+		font-weight: var(--spectrum-detail-serif-strong-font-weight);
 	}
 
 	em,
 	.spectrum-Detail-emphasized {
-		font-style: var(--mod-detail-serif-emphasized-font-style, var(--spectrum-detail-serif-emphasized-font-style));
-		font-weight: var(--mod-detail-serif-emphasized-font-weight, var(--spectrum-detail-serif-emphasized-font-weight));
+		font-style: var(--spectrum-detail-serif-emphasized-font-style);
+		font-weight: var(--spectrum-detail-serif-emphasized-font-weight);
 	}
 
 	.spectrum-Detail-strong.spectrum-Detail-emphasized,
 	em strong,
 	strong em {
-		font-style: var(--mod-detail-serif-strong-emphasized-font-style, var(--spectrum-detail-serif-strong-emphasized-font-style));
-		font-weight: var(--mod-detail-serif-strong-emphasized-font-weight, var(--spectrum-detail-serif-strong-emphasized-font-weight));
+		font-style: var(--spectrum-detail-serif-strong-emphasized-font-style);
+		font-weight: var(--spectrum-detail-serif-strong-emphasized-font-weight);
 	}
 }
 
 /* Detail - Light */
 .spectrum-Detail--light {
-	font-style: var(--mod-detail-sans-serif-light-font-style, var(--spectrum-detail-sans-serif-light-font-style));
-	font-weight: var(--spectrum-detail-sans-serif-light-font-weight, var(--spectrum-detail-sans-serif-light-font-weight));
+	font-style: var(--spectrum-detail-sans-serif-light-font-style);
+	font-weight: var(--spectrum-detail-sans-serif-light-font-weight);
 
 	strong,
 	.spectrum-Detail-strong {
-		font-style: var(--mod-detail-sans-serif-light-strong-font-style, var(--spectrum-detail-sans-serif-light-strong-font-style));
-		font-weight: var(--mod-detail-sans-serif-light-strong-font-weight, var(--spectrum-detail-sans-serif-light-strong-font-weight));
+		font-style: var(--spectrum-detail-sans-serif-light-strong-font-style);
+		font-weight: var(--spectrum-detail-sans-serif-light-strong-font-weight);
 	}
 
 	em,
 	.spectrum-Detail-emphasized {
-		font-style: var(--mod-detail-sans-serif-light-emphasized-font-style, var(--spectrum-detail-sans-serif-light-emphasized-font-style));
-		font-weight: var(--mod-detail-sans-serif-light-emphasized-font-weight, var(--spectrum-detail-sans-serif-light-emphasized-font-weight));
+		font-style: var(--spectrum-detail-sans-serif-light-emphasized-font-style);
+		font-weight: var(--spectrum-detail-sans-serif-light-emphasized-font-weight);
 	}
 
 	.spectrum-Detail-strong.spectrum-Body-emphasized,
 	em strong,
 	strong em {
-		font-style: var(--mod-detail-sans-serif-light-strong-emphasized-font-style, var(--spectrum-detail-sans-serif-light-strong-emphasized-font-style));
-		font-weight: var(--mod-detail-sans-serif-light-strong-emphasized-font-weight, var(--spectrum-detail-sans-serif-light-strong-emphasized-font-weight));
+		font-style: var(--spectrum-detail-sans-serif-light-strong-emphasized-font-style);
+		font-weight: var(--spectrum-detail-sans-serif-light-strong-emphasized-font-weight);
 	}
 
 	&:lang(zh),
 	&:lang(ja),
 	&:lang(ko) {
-		font-style: var(--mod-detail-cjk-light-font-style, var(--spectrum-detail-cjk-light-font-style));
-		font-weight: var(--mod-detail-cjk-light-font-weight, var(--spectrum-detail-cjk-light-font-weight));
+		font-style: var(--spectrum-detail-cjk-light-font-style);
+		font-weight: var(--spectrum-detail-cjk-light-font-weight);
 
 		strong,
 		.spectrum-Detail-strong {
-			font-style: var(--mod-detail-cjk-light-strong-font-style, var(--spectrum-detail-cjk-light-strong-font-style));
-			font-weight: var(--mod-detail-cjk-light-strong-font-weight, var(--spectrum-detail-cjk-light-strong-font-weight));
+			font-style: var(--spectrum-detail-cjk-light-strong-font-style);
+			font-weight: var(--spectrum-detail-cjk-light-strong-font-weight);
 		}
 
 		em,
 		.spectrum-Detail-emphasized {
-			font-style: var(--mod-detail-cjk-light-emphasized-font-style, var(--spectrum-detail-cjk-light-emphasized-font-style));
-			font-weight: var(--mod-detail-cjk-light-emphasized-font-weight, var(--spectrum-detail-cjk-light-emphasized-font-weight));
+			font-style: var(--spectrum-detail-cjk-light-emphasized-font-style);
+			font-weight: var(--spectrum-detail-cjk-light-emphasized-font-weight);
 		}
 
 		.spectrum-Detail-strong.spectrum-Detail-emphasized {
-			font-style: var(--mod-detail-cjk-light-strong-emphasized-font-style, var(--spectrum-detail-cjk-light-strong-emphasized-font-style));
-			font-weight: var(--mod-detail-cjk-light-strong-emphasized-font-weight, var(--spectrum-detail-cjk-light-strong-emphasized-font-weight));
+			font-style: var(--spectrum-detail-cjk-light-strong-emphasized-font-style);
+			font-weight: var(--spectrum-detail-cjk-light-strong-emphasized-font-weight);
 		}
 	}
 }
 
 /* Detail - Serif - Light */
 .spectrum-Detail--serif.spectrum-Detail--light {
-	font-style: var(--mod-detail-serif-light-font-style, var(--spectrum-detail-serif-light-font-style));
-	font-weight: var(--mod-detail-serif-light-font-weight, var(--spectrum-detail-serif-light-font-weight));
+	font-style: var(--spectrum-detail-serif-light-font-style);
+	font-weight: var(--spectrum-detail-serif-light-font-weight);
 
 	strong,
 	.spectrum-Detail-strong {
-		font-style: var(--mod-detail-serif-light-strong-font-style, var(--spectrum-detail-serif-light-strong-font-style));
-		font-weight: var(--mod-detail-serif-light-strong-font-weight, var(--spectrum-detail-serif-light-strong-font-weight));
+		font-style: var(--spectrum-detail-serif-light-strong-font-style);
+		font-weight: var(--spectrum-detail-serif-light-strong-font-weight);
 	}
 
 	em,
 	.spectrum-Detail-emphasized {
-		font-style: var(--mod-detail-serif-light-emphasized-font-style, var(--spectrum-detail-serif-light-emphasized-font-style));
-		font-weight: var(--mod-detail-serif-light-emphasized-font-weight, var(--spectrum-detail-serif-light-emphasized-font-weight));
+		font-style: var(--spectrum-detail-serif-light-emphasized-font-style);
+		font-weight: var(--spectrum-detail-serif-light-emphasized-font-weight);
 	}
 
 	.spectrum-Detail-strong.spectrum-Body-emphasized,
 	em strong,
 	strong em {
-		font-style: var(--mod-detail-serif-light-strong-emphasized-font-style, var(--spectrum-detail-serif-light-strong-emphasized-font-style));
-		font-weight: var(--mod-detail-serif-light-strong-emphasized-font-weight, var(--spectrum-detail-serif-light-strong-emphasized-font-weight));
+		font-style: var(--spectrum-detail-serif-light-strong-emphasized-font-style);
+		font-weight: var(--spectrum-detail-serif-light-strong-emphasized-font-weight);
 	}
 }
 
@@ -696,63 +686,63 @@
 	--spectrum-code-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
 	--spectrum-code-font-color: var(--spectrum-code-color);
 
-	font-family: var(--mod-code-font-family, var(--spectrum-code-font-family));
-	font-style: var(--mod-code-font-style, var(--spectrum-code-font-style));
-	font-weight: var(--mod-code-font-weight, var(--spectrum-code-font-weight));
-	font-size: var(--mod-code-font-size, var(--spectrum-code-font-size));
-	margin-block-start: var(--mod-code-margin-start, 0);
-	margin-block-end: var(--mod-code-margin-end, 0);
+	font-family: var(--spectrum-code-font-family);
+	font-style: var(--spectrum-code-font-style);
+	font-weight: var(--spectrum-code-font-weight);
+	font-size: var(--spectrum-code-font-size);
+	margin-block-start: 0;
+	margin-block-end: 0;
 
-	line-height: var(--mod-code-line-height, var(--spectrum-code-line-height));
+	line-height: var(--spectrum-code-line-height);
 
-	color: var(--highcontrast-code-font-color, var(--mod-code-font-color, var(--spectrum-code-font-color)));
+	color: var(--highcontrast-code-font-color, var(--spectrum-code-font-color));
 
 	strong,
 	.spectrum-Code-strong {
-		font-style: var(--mod-code-strong-font-style, var(--spectrum-code-strong-font-style));
-		font-weight: var(--mod-code-strong-font-weight, var(--spectrum-code-strong-font-weight));
+		font-style: var(--spectrum-code-strong-font-style);
+		font-weight: var(--spectrum-code-strong-font-weight);
 	}
 
 	em,
 	.spectrum-Code-emphasized {
-		font-style: var(--mod-code-emphasized-font-style, var(--spectrum-code-emphasized-font-style));
-		font-weight: var(--mod-code-emphasized-font-weight, var(--spectrum-code-emphasized-font-weight));
+		font-style: var(--spectrum-code-emphasized-font-style);
+		font-weight: var(--spectrum-code-emphasized-font-weight);
 	}
 
 	.spectrum-Code-strong.spectrum-Code-emphasized,
 	em strong,
 	strong em {
-		font-style: var(--mod-code-strong-emphasized-font-style, var(--spectrum-code-strong-emphasized-font-style));
-		font-weight: var(--mod-code-strong-emphasized-font-weight, var(--spectrum-code-strong-emphasized-font-weight));
+		font-style: var(--spectrum-code-strong-emphasized-font-style);
+		font-weight: var(--spectrum-code-strong-emphasized-font-weight);
 	}
 
 	&:lang(zh),
 	&:lang(ja),
 	&:lang(ko) {
-		font-family: var(--mod-code-cjk-font-family, var(--spectrum-code-cjk-font-family));
-		font-style: var(--mod-code-cjk-font-style, var(--spectrum-code-cjk-font-style));
-		font-weight: var(--mod-code-cjk-font-weight, var(--spectrum-code-cjk-font-weight));
+		font-family: var(--spectrum-code-cjk-font-family);
+		font-style: var(--spectrum-code-cjk-font-style);
+		font-weight: var(--spectrum-code-cjk-font-weight);
 
-		line-height: var(--mod-code-cjk-line-height, var(--spectrum-code-cjk-line-height));
-		letter-spacing: var(--mod-code-cjk-letter-spacing, var(--spectrum-code-cjk-letter-spacing));
+		line-height: var(--spectrum-code-cjk-line-height);
+		letter-spacing: var(--spectrum-code-cjk-letter-spacing);
 
 		strong,
 		.spectrum-Code-strong {
-			font-style: var(--mod-code-cjk-strong-font-style, var(--spectrum-code-cjk-strong-font-style));
-			font-weight: var(--mod-code-cjk-strong-font-weight, var(--spectrum-code-cjk-strong-font-weight));
+			font-style: var(--spectrum-code-cjk-strong-font-style);
+			font-weight: var(--spectrum-code-cjk-strong-font-weight);
 		}
 
 		em,
 		.spectrum-Code-emphasized {
-			font-style: var(--mod-code-cjk-emphasized-font-style, var(--spectrum-code-cjk-emphasized-font-style));
-			font-weight: var(--mod-code-cjk-emphasized-font-weight, var(--spectrum-code-cjk-emphasized-font-weight));
+			font-style: var(--spectrum-code-cjk-emphasized-font-style);
+			font-weight: var(--spectrum-code-cjk-emphasized-font-weight);
 		}
 
 		.spectrum-Code-strong.spectrum-Code-emphasized,
 		em strong,
 		strong em {
-			font-style: var(--mod-code-cjk-strong-emphasized-font-style, var(--spectrum-code-cjk-strong-emphasized-font-style));
-			font-weight: var(--mod-code-cjk-strong-emphasized-font-weight, var(--spectrum-code-cjk-strong-emphasized-font-weight));
+			font-style: var(--spectrum-code-cjk-strong-emphasized-font-style);
+			font-weight: var(--spectrum-code-cjk-strong-emphasized-font-weight);
 		}
 	}
 }

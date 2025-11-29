@@ -12,17 +12,6 @@
  */
 
 .spectrum-Underlay {
-	--spectrum-underlay-background-exit-animation-duration: var(--mod-underlay-background-exit-animation-duration, var(--spectrum-animation-duration-300));
-	--spectrum-underlay-background-exit-animation-ease: var(--mod-underlay-background-exit-animation-ease, var(--spectrum-animation-ease-in));
-	--spectrum-underlay-background-exit-animation-delay: var(--mod-underlay-background-exit-animation-delay, var(--spectrum-animation-duration-200));
-	--spectrum-underlay-background-entry-animation-duration: var(--mod-underlay-background-entry-animation-duration, var(--spectrum-animation-duration-600));
-	--spectrum-underlay-background-entry-animation-ease: var(--mod-underlay-background-entry-animation-ease, var(--spectrum-animation-ease-out));
-	/* @deprecated --mod-overlay-animation-duration-opened in favor of --mod-underlay-background-entry-animation-delay */
-	--spectrum-underlay-background-entry-animation-delay: var(--mod-underlay-background-entry-animation-delay, var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0)));
-
-	/* TODO update to --spectrum-overlay-color token once an RGB stripped value is available */
-	--spectrum-underlay-background-color: var(--mod-underlay-background-color, rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity)));
-
 	pointer-events: none;
 	visibility: hidden;
 	opacity: 0;
@@ -31,7 +20,8 @@
 	inset-block: 0;
 	inset-inline: 0;
 
-	background-color: var(--spectrum-underlay-background-color);
+	/* TODO update to --spectrum-overlay-color token once an RGB stripped value is available */
+	background-color: rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
 
 	/* Float above things by default */
 	z-index: 1;
@@ -40,8 +30,8 @@
 
 	/* Exit animations */
 	transition:
-		opacity var(--spectrum-underlay-background-exit-animation-duration) var(--spectrum-underlay-background-exit-animation-ease) var(--spectrum-underlay-background-exit-animation-delay),
-		visibility 0ms linear calc(var(--spectrum-underlay-background-exit-animation-delay) + var(--spectrum-underlay-background-exit-animation-duration));
+		opacity var(--spectrum-animation-duration-300) var(--spectrum-animation-ease-in) var(--spectrum-animation-duration-200),
+		visibility 0ms linear calc(var(--spectrum-animation-duration-200) + var(--spectrum-animation-duration-300));
 
 	&.is-open {
 		pointer-events: auto;
@@ -49,7 +39,7 @@
 		opacity: 1;
 
 		/* Entry animations */
-		transition: opacity var(--spectrum-underlay-background-entry-animation-duration) var(--spectrum-underlay-background-entry-animation-ease) var(--spectrum-underlay-background-entry-animation-delay);
-		transition-delay: var(--spectrum-underlay-background-entry-animation-delay);
+		transition: opacity var(--spectrum-animation-duration-600) var(--spectrum-animation-ease-out) var(--spectrum-animation-duration-0);
+		transition-delay: var(--spectrum-animation-duration-0);
 	}
 }

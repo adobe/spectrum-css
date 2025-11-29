@@ -30,7 +30,7 @@
 	&:lang(ja),
 	&:lang(zh),
 	&:lang(ko) {
-		--mod-helptext-line-height: var(--mod-helptext-line-height-cjk, var(--spectrum-cjk-line-height-100));
+		--spectrum-helptext-line-height: var(--spectrum-cjk-line-height-100);
 	}
 
 	&.spectrum-HelpText--sizeS {
@@ -81,66 +81,69 @@
 }
 
 .spectrum-HelpText {
-	color: var(--highcontrast-helptext-content-color-default, var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default)));
+	color: var(--spectrum-helptext-content-color-default);
 	display: flex;
-	font-size: var(--mod-helptext-font-size, var(--spectrum-helptext-font-size));
-	min-block-size: var(--mod-helptext-min-height, var(--spectrum-helptext-min-height));
+	font-size: var(--spectrum-helptext-font-size);
+	min-block-size: var(--spectrum-helptext-min-height);
 
 	.spectrum-HelpText-validationIcon {
-		margin-inline-end: var(--mod-helptext-text-to-visual, var(--spectrum-helptext-text-to-visual));
-		padding-block-start: var(--mod-helptext-top-edge-to-workflow-icon, var(--spectrum-helptext-edge-to-workflow-icon));
-		padding-block-end: var(--mod-helptext-bottom-edge-to-workflow-icon, var(--spectrum-helptext-edge-to-workflow-icon));
+		margin-inline-end: var(--spectrum-helptext-text-to-visual);
+		padding-block-start: var(--spectrum-helptext-edge-to-workflow-icon);
+		padding-block-end: var(--spectrum-helptext-edge-to-workflow-icon);
 		flex-shrink: 0;
-		block-size: var(--mod-helptext-icon-size, var(--spectrum-helptext-icon-size));
-		inline-size: var(--mod-helptext-icon-size, var(--spectrum-helptext-icon-size));
+		block-size: var(--spectrum-helptext-icon-size);
+		inline-size: var(--spectrum-helptext-icon-size);
 	}
 
 	.spectrum-HelpText-text {
-		padding-block-start: var(--mod-helptext-top-to-text, var(--spectrum-helptext-top-to-text));
-		padding-block-end: var(--mod-helptext-bottom-to-text, var(--spectrum-helptext-bottom-to-text));
-		line-height: var(--mod-helptext-line-height, var(--spectrum-helptext-line-height));
-		font-family: var(--mod-helptext-font-family, var(--spectrum-helptext-font-family));
-		font-style: var(--mod-helptext-font-style, var(--spectrum-helptext-font-style));
-		font-weight: var(--mod-helptext-font-weight, var(--spectrum-helptext-font-weight));
+		padding-block-start: var(--spectrum-helptext-top-to-text);
+		padding-block-end: var(--spectrum-helptext-bottom-to-text);
+		line-height: var(--spectrum-helptext-line-height);
+		font-family: var(--spectrum-helptext-font-family);
+		font-style: var(--spectrum-helptext-font-style);
+		font-weight: var(--spectrum-helptext-font-weight);
 	}
 
 	/* Variants -- Neutral, negative, disabled */
 	&.spectrum-HelpText--neutral {
 		.spectrum-HelpText-text {
-			color: var(--highcontrast-helptext-content-color-default, var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default)));
+			color: var(--spectrum-helptext-content-color-default);
 		}
 
 		.spectrum-HelpText-validationIcon {
-			color: var(--highcontrast-helptext-icon-color-default, var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default)));
+			color: var(--spectrum-helptext-icon-color-default);
 		}
 	}
 
 	&.spectrum-HelpText--negative {
 		.spectrum-HelpText-text {
-			color: var(--highcontrast-helptext-content-color-default, var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default)));
+			color: var(--spectrum-helptext-content-color-default);
 		}
 
 		.spectrum-HelpText-validationIcon {
-			color: var(--highcontrast-helptext-icon-color-default, var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default)));
+			color: var(--spectrum-helptext-icon-color-default);
 		}
 	}
 
 	&.is-disabled {
 		.spectrum-HelpText-text {
-			color: var(--highcontrast-helptext-content-color-disabled, var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default)));
+			color: var(--spectrum-helptext-content-color-default);
 		}
 
 		.spectrum-HelpText-validationIcon {
-			color: var(--highcontrast-helptext-icon-color-disabled, var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default)));
+			color: var(--spectrum-helptext-icon-color-default);
 		}
 	}
 }
 
 @media (forced-colors: active) {
 	.spectrum-HelpText {
-		--highcontrast-helptext-content-color-default: CanvasText;
-		--highcontrast-helptext-icon-color-default: CanvasText;
-		--highcontrast-helptext-icon-color-disabled: GrayText;
-		--highcontrast-helptext-content-color-disabled: GrayText;
+		--spectrum-helptext-content-color-default: CanvasText;
+		--spectrum-helptext-icon-color-default: CanvasText;
+
+		&.is-disabled {
+			--spectrum-helptext-content-color-default: GrayText;
+			--spectrum-helptext-icon-color-default: GrayText;
+		}
 	}
 }
