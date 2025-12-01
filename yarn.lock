@@ -137,7 +137,7 @@ __metadata:
     lodash: "npm:4.17.21"
     markdownlint: "npm:0.39.0"
     markdownlint-cli: "npm:0.45.0"
-    npm-registry-fetch: "npm:19.0.0"
+    npm-registry-fetch: "npm:19.1.0"
     nunjucks: "npm:3.2.4"
     nx: "npm:21.6.6"
     open: "npm:10.2.0"
@@ -5189,7 +5189,7 @@ __metadata:
     chromatic: "npm:13.3.3"
     lit: "npm:3.3.1"
     lodash-es: "npm:4.17.21"
-    npm-registry-fetch: "npm:19.0.0"
+    npm-registry-fetch: "npm:19.1.0"
     postcss: "npm:8.5.6"
     prettier: "npm:3.6.2"
     react: "npm:18.3.1"
@@ -15490,9 +15490,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-registry-fetch@npm:19.0.0":
-  version: 19.0.0
-  resolution: "npm-registry-fetch@npm:19.0.0"
+"npm-registry-fetch@npm:19.1.0":
+  version: 19.1.0
+  resolution: "npm-registry-fetch@npm:19.1.0"
   dependencies:
     "@npmcli/redact": "npm:^3.0.0"
     jsonparse: "npm:^1.3.1"
@@ -15502,7 +15502,7 @@ __metadata:
     minizlib: "npm:^3.0.1"
     npm-package-arg: "npm:^13.0.0"
     proc-log: "npm:^5.0.0"
-  checksum: 10c0/1b5c5cf2a89e60f83be43edc62ef31cb942565a583c07dacdfd9d2a339cd8f1dee340b502656fbf23fe17a4380e58aca36c85f06d632c1b3e89131ee68b0b86c
+  checksum: 10c0/f326a0ba808b159da0ef8aec28411eec49972477584485211f48a47915d90750c9c589c187521dadb4053b5959bde911c4a6151596cb4ff19bd42aada315c609
   languageName: node
   linkType: hard
 
