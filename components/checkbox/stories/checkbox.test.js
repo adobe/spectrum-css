@@ -18,6 +18,7 @@ export const CheckboxGroup = Variants({
 			{
 				testHeading: "Indeterminate",
 				isIndeterminate: true,
+				isChecked: true,
 				not: ["Checked"],
 			},
 			{
