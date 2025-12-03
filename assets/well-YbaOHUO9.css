@@ -1,0 +1,23 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */.spectrum-Well{--spectrum-well-border-width:var(--spectrum-border-width-100);--spectrum-well-content-color:var(--spectrum-body-color);--spectrum-well-background-color:rgb(var(--spectrum-gray-800-rgb),.02);text-align:start;display:block;min-inline-size:var(--mod-well-min-width,var(--spectrum-well-min-width));padding:var(--mod-well-padding,var(--spectrum-well-padding));margin-block-start:var(--mod-well-margin-top,var(--spectrum-well-margin-top));border-width:var(--mod-well-border-width,var(--spectrum-well-border-width));border-style:solid;border-radius:var(--mod-well-border-radius,var(--spectrum-well-border-radius));background-color:var(--mod-well-background-color,var(--spectrum-well-background-color));border-color:var(--mod-well-border-color,var(--spectrum-well-border-color));color:var(--mod-well-content-color,var(--spectrum-well-content-color));--spectrum-well-border-color:var(--system-well-border-color)}/*!
+* Copyright 2024 Adobe. All rights reserved.
+*
+* This file is licensed to you under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License. You may obtain a copy
+* of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+*
+* Unless required by applicable law or agreed to in writing, software distributed under
+* the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+* OF ANY KIND, either express or implied. See the License for the specific language
+* governing permissions and limitations under the License.
+*/.spectrum{--system-well-border-color:rgb(var(--spectrum-gray-1000-rgb),.05)}.spectrum--legacy{--system-well-border-color:rgb(var(--spectrum-gray-900-rgb),.05)}.spectrum-Well{--spectrum-well-border-color:var(--system-well-border-color)}
