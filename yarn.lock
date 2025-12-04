@@ -1916,12 +1916,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@etchteam/storybook-addon-status@npm:5.0.0":
-  version: 5.0.0
-  resolution: "@etchteam/storybook-addon-status@npm:5.0.0"
+"@etchteam/storybook-addon-status@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@etchteam/storybook-addon-status@npm:8.0.0"
   dependencies:
     lodash: "npm:^4.17.21"
-  checksum: 10c0/43cc8483a766eb23cc5184f932213e6db35ffe7d1f90b07e5f55d243e9c22603a94eda25d403e4201da497fe75f86fc1347a7d3ae0d9892be0c11342d43dde70
+  peerDependencies:
+    storybook: ^10.0.0
+  checksum: 10c0/aa5887ac777389ef3d51dcffb06ba68dc49df1287892376d21a42e45a80c7a51449751abde49bd7fae42bd9ebc508048dc3aa9d84aac49fe8a02fff72bd7d196
   languageName: node
   linkType: hard
 
@@ -4464,7 +4466,7 @@ __metadata:
     "@adobe/spectrum-css-workflow-icons": "npm:5.0.0"
     "@babel/core": "npm:7.28.5"
     "@chromatic-com/storybook": "npm:3.2.7"
-    "@etchteam/storybook-addon-status": "npm:5.0.0"
+    "@etchteam/storybook-addon-status": "npm:8.0.0"
     "@spectrum-css/bundle": "npm:2.0.0-next.17"
     "@spectrum-css/tokens": "npm:16.1.0-next.10"
     "@spectrum-css/ui-icons": "npm:2.0.0-next.2"
