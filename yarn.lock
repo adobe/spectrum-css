@@ -122,7 +122,7 @@ __metadata:
     autoprefixer: "npm:10.4.21"
     colors: "npm:1.4.0"
     cross-env: "npm:10.1.0"
-    cssnano: "npm:7.1.1"
+    cssnano: "npm:7.1.2"
     cssnano-preset-advanced: "npm:7.0.10"
     diff: "npm:8.0.2"
     diff2html: "npm:3.4.52"
@@ -9146,7 +9146,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano-preset-default@npm:^7.0.10, cssnano-preset-default@npm:^7.0.9":
+"cssnano-preset-default@npm:^7.0.10":
   version: 7.0.10
   resolution: "cssnano-preset-default@npm:7.0.10"
   dependencies:
@@ -9195,15 +9195,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano@npm:7.1.1":
-  version: 7.1.1
-  resolution: "cssnano@npm:7.1.1"
+"cssnano@npm:7.1.2":
+  version: 7.1.2
+  resolution: "cssnano@npm:7.1.2"
   dependencies:
-    cssnano-preset-default: "npm:^7.0.9"
+    cssnano-preset-default: "npm:^7.0.10"
     lilconfig: "npm:^3.1.3"
   peerDependencies:
     postcss: ^8.4.32
-  checksum: 10c0/d761e86277dabfa986a34de4c8c79c555b0982b66b9e80a4a4c60956b5d34ae94c5464d74ab8c222578ee5f78c157ff7310386827a0f9cb847263797f738b300
+  checksum: 10c0/3879ea5d3dd649b8dc1b96d3917c505895be6da9e7251b88f9d4a7567fcead95fdc0bd96482284df06997b08f0e36b9f917a2f6d6710d46186dd92dc953c6216
   languageName: node
   linkType: hard
 
