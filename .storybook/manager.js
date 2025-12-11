@@ -9,6 +9,14 @@ import pkg from "./package.json";
 const root = document.body ?? document.documentElement;
 if (root) root.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 
+const archivedNotice = document.createElement("div");
+archivedNotice.id = "archived-notice";
+archivedNotice.innerHTML = `
+  <p>This documentation is archived. It is no longer being updated, but is available for reference. <br>View the <a href='https://github.com/adobe/spectrum-web-components/blob/main/CONTRIBUTOR-DOCS/README.md'>Spectrum Web Components contribution guidelines</a> for more information on how to contribute to the project.</p>
+`;
+
+root.insertBefore(archivedNotice, root.firstChild);
+
 addons.setConfig({
 	theme: create({
 		base: "light",
