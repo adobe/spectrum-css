@@ -36,6 +36,30 @@ body:lang(he) {
 	font-family: var(--spectrum-font-family-he);
 }
 
+#archived-notice {
+	background-color: rgb(215, 50, 32);
+	color: rgb(255, 255, 255);
+	font-family:
+		adobe-clean,
+		"Source Sans Pro",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Ubuntu,
+		"Trebuchet MS",
+		"Lucida Grande",
+		sans-serif;
+	font-size: 16px;
+	padding: 6px;
+	text-align: center;
+}
+
+#archived-notice a {
+	color: rgb(255, 255, 255);
+	text-decoration: underline;
+}
+
 /* Hide the SVG elements that only include references */
 svg:has(symbol):not(:has(use)) {
 	display: none;
