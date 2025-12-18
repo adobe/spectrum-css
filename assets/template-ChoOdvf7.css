@@ -1,0 +1,23 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */@media (forced-colors:active){.spectrum-Divider{--highcontrast-divider-background-color:CanvasText}}.spectrum-Divider{--spectrum-divider-thickness:var(--spectrum-divider-thickness-medium)}.spectrum-Divider--sizeS{--spectrum-divider-thickness:var(--spectrum-divider-thickness-small)}.spectrum-Divider--sizeL{--spectrum-divider-thickness:var(--spectrum-divider-thickness-large);--spectrum-divider-background-color:var(--spectrum-gray-800)}.spectrum-Divider--staticWhite{--mod-divider-background-color:var(--mod-divider-background-color-medium-static-white,var(--spectrum-divider-background-color-static-white))}.spectrum-Divider--staticWhite.spectrum-Divider--sizeS{--mod-divider-background-color:var(--mod-divider-background-color-small-static-white,var(--spectrum-divider-background-color-static-white))}.spectrum-Divider--staticWhite.spectrum-Divider--sizeL{--mod-divider-background-color:var(--mod-divider-background-color-large-static-white,var(--spectrum-transparent-white-800))}.spectrum-Divider--staticBlack{--mod-divider-background-color:var(--mod-divider-background-color-medium-static-black,var(--spectrum-divider-background-color-static-black))}.spectrum-Divider--staticBlack.spectrum-Divider--sizeS{--mod-divider-background-color:var(--mod-divider-background-color-small-static-black,var(--spectrum-divider-background-color-static-black))}.spectrum-Divider--staticBlack.spectrum-Divider--sizeL{--mod-divider-background-color:var(--mod-divider-background-color-large-static-black,var(--spectrum-transparent-black-800))}.spectrum-Divider{block-size:var(--mod-divider-thickness,var(--spectrum-divider-thickness));inline-size:100%;overflow:visible;border:none;border-width:var(--mod-divider-thickness,var(--spectrum-divider-thickness));border-radius:var(--mod-divider-thickness,var(--spectrum-divider-thickness));background-color:var(--highcontrast-divider-background-color,var(--mod-divider-background-color,var(--spectrum-divider-background-color)))}.spectrum-Divider--vertical{inline-size:var(--mod-divider-thickness,var(--spectrum-divider-thickness));block-size:var(--mod-divider-vertical-height,100%);margin-block:var(--mod-divider-vertical-margin);align-self:var(--mod-divider-vertical-align)}/*!
+* Copyright 2024 Adobe. All rights reserved.
+*
+* This file is licensed to you under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License. You may obtain a copy
+* of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+*
+* Unless required by applicable law or agreed to in writing, software distributed under
+* the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+* OF ANY KIND, either express or implied. See the License for the specific language
+* governing permissions and limitations under the License.
+*/.spectrum{--system-divider-background-color:var(--spectrum-gray-200);--system-divider-background-color-static-white:var(--spectrum-transparent-white-200);--system-divider-background-color-static-black:var(--spectrum-transparent-black-200)}.spectrum--legacy{--system-divider-background-color:var(--spectrum-gray-300);--system-divider-background-color-static-white:var(--spectrum-transparent-white-300);--system-divider-background-color-static-black:var(--spectrum-transparent-black-300)}.spectrum-Divider{--spectrum-divider-background-color:var(--system-divider-background-color);--spectrum-divider-background-color-static-white:var(--system-divider-background-color-static-white);--spectrum-divider-background-color-static-black:var(--system-divider-background-color-static-black)}

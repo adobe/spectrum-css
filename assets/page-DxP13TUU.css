@@ -1,0 +1,23 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */:root{background:var(--mod-page-background,var(--spectrum-page-background-color));-webkit-tap-highlight-color:var(--mod-page-content-tap-highlight,var(--spectrum-page-content-tap-highlight));--spectrum-page-background-color:var(--system-root-page-background-color);--spectrum-page-content-tap-highlight:var(--system-root-page-content-tap-highlight)}/*!
+* Copyright 2024 Adobe. All rights reserved.
+*
+* This file is licensed to you under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License. You may obtain a copy
+* of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+*
+* Unless required by applicable law or agreed to in writing, software distributed under
+* the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+* OF ANY KIND, either express or implied. See the License for the specific language
+* governing permissions and limitations under the License.
+*/.spectrum{--system-root-page-background-color:var(--spectrum-gray-75);--system-root-page-content-tap-highlight:var(--spectrum-transparent-black-25)}.spectrum--legacy{--system-root-page-background-color:var(--spectrum-gray-100);--system-root-page-content-tap-highlight:var(--spectrum-transparent-black-100)}:root{--spectrum-page-background-color:var(--system-root-page-background-color);--spectrum-page-content-tap-highlight:var(--system-root-page-content-tap-highlight)}
