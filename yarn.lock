@@ -991,17 +991,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@changesets/get-github-info@npm:0.6.0":
-  version: 0.6.0
-  resolution: "@changesets/get-github-info@npm:0.6.0"
-  dependencies:
-    dataloader: "npm:^1.4.0"
-    node-fetch: "npm:^2.5.0"
-  checksum: 10c0/21fde8a8cb48091a8ea8be37defbc0dca5defe10a097025968b273076657f354032803a5db31ffe0fa86ab089383faa981ab674489d31e38bf7bc4dcf981ad79
-  languageName: node
-  linkType: hard
-
-"@changesets/get-github-info@npm:^0.7.0":
+"@changesets/get-github-info@npm:0.7.0, @changesets/get-github-info@npm:^0.7.0":
   version: 0.7.0
   resolution: "@changesets/get-github-info@npm:0.7.0"
   dependencies:
@@ -5562,7 +5552,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/changesets-changelog-github@workspace:plugins/changesets-changelog-github"
   dependencies:
-    "@changesets/get-github-info": "npm:0.6.0"
+    "@changesets/get-github-info": "npm:0.7.0"
     "@changesets/parse": "npm:0.4.2"
     "@changesets/types": "npm:6.1.0"
     ava: "npm:6.4.1"
