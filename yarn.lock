@@ -132,7 +132,7 @@ __metadata:
     fast-glob: "npm:3.3.3"
     gh-pages: "npm:6.3.0"
     husky: "npm:9.1.7"
-    jsonc-eslint-parser: "npm:2.4.1"
+    jsonc-eslint-parser: "npm:2.4.2"
     lint-staged: "npm:16.2.7"
     lodash: "npm:4.17.21"
     markdownlint: "npm:0.40.0"
@@ -13772,7 +13772,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonc-eslint-parser@npm:2.4.1, jsonc-eslint-parser@npm:^2.4.0":
+"jsonc-eslint-parser@npm:2.4.2":
+  version: 2.4.2
+  resolution: "jsonc-eslint-parser@npm:2.4.2"
+  dependencies:
+    acorn: "npm:^8.5.0"
+    eslint-visitor-keys: "npm:^3.0.0"
+    espree: "npm:^9.0.0"
+    semver: "npm:^7.3.5"
+  checksum: 10c0/821af0231cb8eba2afde34535bd76d723ed5b4b3711fdccff3f300f32de7bbf463ceab3ce2de9e6fd78dc3b24a9c7248ca12eb43e280cfa2695f49bd16908f87
+  languageName: node
+  linkType: hard
+
+"jsonc-eslint-parser@npm:^2.4.0":
   version: 2.4.1
   resolution: "jsonc-eslint-parser@npm:2.4.1"
   dependencies:
