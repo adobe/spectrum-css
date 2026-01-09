@@ -25,7 +25,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/core@npm:1.11.1, @actions/core@npm:^1.10.0, @actions/core@npm:^1.9.1":
+"@actions/core@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@actions/core@npm:2.0.0"
+  dependencies:
+    "@actions/exec": "npm:^1.1.1"
+    "@actions/http-client": "npm:^3.0.0"
+  checksum: 10c0/e7fd8d1cbc30a258d417b0487b4988396ca4575eb4c601aeb9bcfb2c6b8ebe13fee1d0bbb944472b0851e55ad513d3091796e5d7e87d737222913853a27a68a2
+  languageName: node
+  linkType: hard
+
+"@actions/core@npm:^1.10.0, @actions/core@npm:^1.9.1":
   version: 1.11.1
   resolution: "@actions/core@npm:1.11.1"
   dependencies:
@@ -88,6 +98,16 @@ __metadata:
     tunnel: "npm:^0.0.6"
     undici: "npm:^5.25.4"
   checksum: 10c0/13141b66a42aa4afd8c50f7479e13a5cdb5084ccb3c73ec48894b8029743389a3d2bf8cdc18e23fb70cd33995740526dd308815613907571e897c3aa1e5eada6
+  languageName: node
+  linkType: hard
+
+"@actions/http-client@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "@actions/http-client@npm:3.0.1"
+  dependencies:
+    tunnel: "npm:^0.0.6"
+    undici: "npm:^5.28.5"
+  checksum: 10c0/01c48d6c47225168575630b693ec60bc75fb6e96b7ff244b365fa40915f0e33f656fd7bc5c5d0d96a92727715fb905cb1d4287e6f38fd1f70271fe174de5b0ce
   languageName: node
   linkType: hard
 
@@ -4871,7 +4891,7 @@ __metadata:
   resolution: "@spectrum-tools/gh-action-file-diff@workspace:.github/actions/file-diff"
   dependencies:
     "@actions/artifact": "npm:2.3.2"
-    "@actions/core": "npm:1.11.1"
+    "@actions/core": "npm:2.0.0"
     "@actions/github": "npm:6.0.1"
     "@actions/glob": "npm:0.5.0"
     diff: "npm:8.0.2"
