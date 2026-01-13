@@ -12,8 +12,6 @@
  */
 
 .spectrum-Tag {
-	--spectrum-tag-animation-duration: var(--spectrum-animation-duration-100);
-
 	/* border color - transparent unless modified or high contrast mode */
 	--spectrum-tag-border-width: var(--spectrum-border-width-100);
 	--spectrum-tag-border-color: var(--highcontrast-tag-border-color, var(--mod-tag-border-color, transparent));
@@ -49,7 +47,6 @@
 	--spectrum-tag-height: var(--spectrum-component-height-75);
 	--spectrum-tag-min-inline-size: var(--spectrum-tag-minimum-width-small);
 	--spectrum-tag-font-size: var(--spectrum-font-size-75);
-	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-75);
 	--spectrum-tag-corner-radius: var(--spectrum-corner-radius-medium-size-small);
 
 	--spectrum-tag-clear-button-size: var(--spectrum-cross-icon-size-75);
@@ -80,8 +77,6 @@
 	--mod-clear-button-icon-color: currentColor;
 	--mod-clear-button-icon-color-hover: currentColor;
 	--mod-clear-button-icon-color-key-focus: currentColor;
-
-	--mod-icon-size: var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size));
 
 	/* clear icon inline spacing + icon size */
 	--mod-clear-button-width: calc(var(--mod-tag-label-to-clear-icon, var(--spectrum-tag-label-to-clear-icon)) + var(--mod-tag-edge-to-clear-icon, var(--spectrum-tag-edge-to-clear-icon)) + var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size)));
@@ -144,7 +139,6 @@
 	--spectrum-tag-height: var(--spectrum-component-height-100);
 	--spectrum-tag-min-inline-size: var(--spectrum-tag-minimum-width-medium);
 	--spectrum-tag-font-size: var(--spectrum-font-size-100);
-	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
 	--spectrum-tag-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
 
 	--spectrum-tag-clear-button-size: var(--spectrum-cross-icon-size-100);
@@ -172,7 +166,6 @@
 	--spectrum-tag-height: var(--spectrum-component-height-200);
 	--spectrum-tag-min-inline-size: var(--spectrum-tag-minimum-width-large);
 	--spectrum-tag-font-size: var(--spectrum-font-size-200);
-	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-200);
 	--spectrum-tag-corner-radius: var(--spectrum-corner-radius-medium-size-large);
 
 	--spectrum-tag-clear-button-size: var(--spectrum-cross-icon-size-200);
@@ -197,7 +190,6 @@
 }
 
 .spectrum-Tag {
-	/* mod/highcontrast colors specified at top */
 	border-color: var(--spectrum-tag-border-color);
 	background-color: var(--spectrum-tag-background-color);
 	color: var(--spectrum-tag-content-color);
@@ -219,15 +211,7 @@
 	max-inline-size: calc(var(--mod-tag-height, var(--spectrum-tag-height)) * var(--mod-tag-maximum-width-multiplier, var(--spectrum-tag-maximum-width-multiplier)));
 	outline: none;
 
-	transition:
-		border-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
-		color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
-		background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
-
-	.spectrum-Tag-itemIcon {
-		block-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
-		inline-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
-
+	> .spectrum-Icon {
 		margin-block-start: calc(var(--mod-tag-icon-spacing-block-start, var(--spectrum-tag-icon-spacing-block-start)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 		margin-block-end: calc(var(--mod-tag-icon-spacing-block-end, var(--spectrum-tag-icon-spacing-block-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 		flex-shrink: 0;
@@ -243,9 +227,9 @@
 		flex-shrink: 0;
 	}
 
-	.spectrum-Tag-itemIcon,
-	.spectrum-Avatar,
-	.spectrum-Thumbnail {
+	> .spectrum-Icon,
+	> .spectrum-Avatar,
+	> .spectrum-Thumbnail {
 		/* set visual inline-start spacing, but take away label spacing, this will result in negative margin - this calc does not need border width */
 		margin-inline-start: calc(var(--mod-tag-visual-spacing-inline-start, var(--spectrum-tag-visual-spacing-inline-start)) - var(--mod-tag-label-spacing-inline, var(--spectrum-tag-label-spacing-inline)));
 		margin-inline-end: var(--mod-tag-visual-spacing-inline-end, var(--spectrum-tag-visual-spacing-inline-end));
@@ -319,19 +303,19 @@
 			pointer-events: none;
 		}
 	}
-}
 
-/* disabled */
-.spectrum-Tag.is-disabled {
-	pointer-events: none;
-	user-select: none;
+	/* disabled */
+	&.is-disabled {
+		pointer-events: none;
+		user-select: none;
 
-	.spectrum-Avatar {
-		opacity: var(--mod-avatar-opacity-disabled, var(--spectrum-avatar-opacity-disabled));
-	}
+		.spectrum-Avatar {
+			opacity: var(--mod-avatar-opacity-disabled, var(--spectrum-avatar-opacity-disabled));
+		}
 
-	.spectrum-Thumbnail {
-		opacity: var(--mod-thumbnail-opacity-disabled, var(--spectrum-thumbnail-opacity-disabled));
+		.spectrum-Thumbnail {
+			opacity: var(--mod-thumbnail-opacity-disabled, var(--spectrum-thumbnail-opacity-disabled));
+		}
 	}
 }
 
