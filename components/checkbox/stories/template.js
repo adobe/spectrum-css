@@ -30,6 +30,15 @@ export const Template = ({
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
+	/* Only way to set the indeterminate state consistently across browsers is with JavaScript */
+	document.addEventListener("DOMContentLoaded", () => {
+		const checkboxes = document.querySelectorAll(".is-indeterminate input");
+		if (!checkboxes) return;
+		checkboxes.forEach(checkbox => {
+			checkbox.indeterminate = true;
+		});
+	});
+
 	let iconSize = "75";
 	switch (size) {
 		case "s":
@@ -43,6 +52,7 @@ export const Template = ({
 			break;
 		default:
 			iconSize = "75";
+			break;
 	}
 
 	return html`
@@ -56,6 +66,7 @@ export const Template = ({
 				["is-disabled"]: isDisabled,
 				["is-invalid"]: isInvalid,
 				["is-hover"]: isHovered && !isDisabled,
+				["is-focus-visible"]: isFocused && !isDisabled,
 				["is-readOnly"]: isReadOnly,
 				["is-active"]: isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -71,8 +82,9 @@ export const Template = ({
 					[`${rootClass}-input`]: true })}
 				aria-labelledby=${ifDefined(ariaLabelledby)}
 				aria-disabled=${ifDefined(isReadOnly ? "true" : undefined)}
-				?checked=${isChecked}
+				?checked=${isChecked && !isIndeterminate}
 				?disabled=${isDisabled}
+				?indeterminate=${isIndeterminate}
 				title=${ifDefined(title)}
 				value=${ifDefined(value)}
 				@change=${(e) => {
@@ -87,19 +99,16 @@ export const Template = ({
 				id=${ifDefined(id ? `${id}-input` : undefined)}
 			/>
 			<span class="${rootClass}-box">
-				${Icon({
-					size,
+				${when(isChecked && !isIndeterminate, () => Icon({
 					iconName: `Checkmark${iconSize}`,
 					setName: "ui",
-					customClasses: [`${rootClass}-checkmark`],
-				}, context)}
-				${Icon({
-					size,
+				}, context))}
+				${when(isChecked && isIndeterminate, () => Icon({
 					iconName: `Dash${iconSize}`,
 					setName: "ui",
-					customClasses: [`${rootClass}-partialCheckmark`],
-				}, context)}
+				}, context))}
 			</span>
+
 			${when(
 				label,
 				() => html`<span class="${rootClass}-label">${label}</span>`
