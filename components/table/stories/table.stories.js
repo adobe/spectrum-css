@@ -625,9 +625,9 @@ SectionHeaderQuiet.tags = ["!dev"];
 /**
  * A table can be wrapped in a fixed height `div` with the `.spectrum-Table-scroller` class. This allows scrolling of the table body and makes the column headers sticky (i.e. fixed to the top on scroll).
  *
- * When using the scrollable wrapper, the column headers must have a solid background color set. This can be customized to match the parent background with the custom property `--mod-table-header-background-color-scrollable`.
+ * When using the scrollable wrapper, the column headers must have a solid background color set. This can be customized to match the parent background with the custom property `--spectrum-table-header-background-color-scrollable`.
  *
- * To make sure that reverse keyboard link navigation (shift-tab) keeps the whole cell in focus, `--mod-table-current-header-height` should be dynamically updated with JS to match the height of `.spectrum-Table-head`.
+ * To make sure that reverse keyboard link navigation (shift-tab) keeps the whole cell in focus, `--spectrum-table-current-header-height` should be dynamically updated with JS to match the height of `.spectrum-Table-head`.
  *
  * This example is showing the use of the scrollable wrapper element with table markup. This allows a fixed height and scrolling, along with column headers that are fixed to the top when scrolled.
  */

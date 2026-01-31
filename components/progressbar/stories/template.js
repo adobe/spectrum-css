@@ -37,8 +37,8 @@ export const Template = ({
 			})}
 			style=${ifDefined(styleMap({
 				...customStyles,
-				"--mod-progressbar-track-color": trackFill,
-				"--mod-progressbar-fill-color": progressBarFill,
+				"--spectrum-progressbar-track-color": trackFill,
+				"--spectrum-progressbar-fill-color": progressBarFill,
 			}))}
 			value=${ifDefined(value ? `${value}%` : undefined)}
 			aria-valuenow=${ifDefined(value ? `${value}%` : undefined)}
