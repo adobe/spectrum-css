@@ -132,7 +132,7 @@ __metadata:
     cssnano: "npm:7.1.2"
     cssnano-preset-advanced: "npm:7.0.10"
     diff: "npm:8.0.2"
-    diff2html: "npm:3.4.52"
+    diff2html: "npm:3.4.55"
     eslint: "npm:8.57.1"
     eslint-plugin-jsonc: "npm:2.21.0"
     eslint-plugin-prettier: "npm:5.5.4"
@@ -3421,6 +3421,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@profoundlogic/hogan@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@profoundlogic/hogan@npm:3.0.4"
+  dependencies:
+    nopt: "npm:1.0.10"
+  bin:
+    hulk: bin/hulk
+  checksum: 10c0/55848a0c2924a48301de565e40782780fad5c482889e76b81097f198138b636edba7108289da80e923f37600fa05f8fb2f6eb7eff3c93f8be4ab929e957c9ca9
+  languageName: node
+  linkType: hard
+
 "@protobuf-ts/plugin@npm:^2.2.3-alpha.1":
   version: 2.11.1
   resolution: "@protobuf-ts/plugin@npm:2.11.1"
@@ -5614,7 +5625,7 @@ __metadata:
     "@actions/github": "npm:6.0.1"
     "@actions/glob": "npm:0.5.0"
     diff: "npm:8.0.2"
-    diff2html: "npm:3.4.52"
+    diff2html: "npm:3.4.55"
   languageName: unknown
   linkType: soft
 
@@ -9433,17 +9444,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff2html@npm:3.4.52":
-  version: 3.4.52
-  resolution: "diff2html@npm:3.4.52"
+"diff2html@npm:3.4.55":
+  version: 3.4.55
+  resolution: "diff2html@npm:3.4.55"
   dependencies:
+    "@profoundlogic/hogan": "npm:^3.0.4"
     diff: "npm:^7.0.0"
     highlight.js: "npm:11.9.0"
-    hogan.js: "npm:3.0.2"
   dependenciesMeta:
     highlight.js:
       optional: true
-  checksum: 10c0/068404bfeb0b740207397d5ac968c8d7a3458fa69afc05891b1033a2e8896624e8ef168b5c67b30505b61ec56ce9a4b9a3e2aa79fb463bc1ab08df2533528e85
+  checksum: 10c0/608b51496930c3acd98fd72d0a94324e939fec03350df1f958a644b7b107d786fa6b72e708ede14fa61d963eab3bb662fe1af4c4ebc146c877efd1e41956a5bc
   languageName: node
   linkType: hard
 
@@ -11775,18 +11786,6 @@ __metadata:
   bin:
     hjson: ./bin/hjson
   checksum: 10c0/053ac18287f6a31a35096fa36f71bffe0f8ed92b6e6aa45c2dea4533b315d16e3cbd2c53cf4f70adc2b72b2fb2ff35a0c9dfef0c4c06830b18cbca995053331a
-  languageName: node
-  linkType: hard
-
-"hogan.js@npm:3.0.2":
-  version: 3.0.2
-  resolution: "hogan.js@npm:3.0.2"
-  dependencies:
-    mkdirp: "npm:0.3.0"
-    nopt: "npm:1.0.10"
-  bin:
-    hulk: ./bin/hulk
-  checksum: 10c0/fa5c9d2eaf3fa712e72e67cce5e3435a1c5823282b81051514aefdca7d4b706cc4dbef7a34be19ee320c6ebaf3687d5781f12bc0aac04d3d902aa26861493679
   languageName: node
   linkType: hard
 
@@ -15132,13 +15131,6 @@ __metadata:
   dependencies:
     minipass: "npm:^7.1.2"
   checksum: 10c0/5aad75ab0090b8266069c9aabe582c021ae53eb33c6c691054a13a45db3b4f91a7fb1bd79151e6b4e9e9a86727b522527c0a06ec7d45206b745d54cd3097bcec
-  languageName: node
-  linkType: hard
-
-"mkdirp@npm:0.3.0":
-  version: 0.3.0
-  resolution: "mkdirp@npm:0.3.0"
-  checksum: 10c0/cd9e54878490571df79770de1cdceba48ab6682c004616666d23a38315feaf5822d443aeb500ac298a12d7f6f5e11dc05cea3207d500e547d938218bf22d8629
   languageName: node
   linkType: hard
 
