@@ -128,7 +128,7 @@ jobs:
               continue-on-error: true
               id: upload
               if: ${{ matrix.system == 'ubuntu-latest' }}
-              uses: actions/upload-artifact@v5
+              uses: actions/upload-artifact@v6
               with:
                   path: |
                       ${{ github.workspace }}/components/*/dist/**
@@ -165,7 +165,7 @@ jobs:
 
             - name: Upload changes
               if: ${{ failure() }}
-              uses: actions/upload-artifact@v5
+              uses: actions/upload-artifact@v6
               with:
                 path: changes.diff
                 name: changes.diff
