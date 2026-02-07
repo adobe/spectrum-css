@@ -119,8 +119,8 @@ __metadata:
     "@adobe/token-diff-generator": "npm:2.5.2"
     "@changesets/changelog-github": "npm:0.5.2"
     "@changesets/cli": "npm:2.29.8"
-    "@commitlint/cli": "npm:20.3.0"
-    "@commitlint/config-conventional": "npm:20.3.0"
+    "@commitlint/cli": "npm:20.3.1"
+    "@commitlint/config-conventional": "npm:20.3.1"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     "@yarnpkg/types": "npm:4.0.1"
     at-rule-packer: "npm:0.5.0"
@@ -920,30 +920,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:20.3.0":
-  version: 20.3.0
-  resolution: "@commitlint/cli@npm:20.3.0"
+"@commitlint/cli@npm:20.3.1":
+  version: 20.3.1
+  resolution: "@commitlint/cli@npm:20.3.1"
   dependencies:
-    "@commitlint/format": "npm:^20.2.0"
-    "@commitlint/lint": "npm:^20.3.0"
-    "@commitlint/load": "npm:^20.3.0"
-    "@commitlint/read": "npm:^20.2.0"
-    "@commitlint/types": "npm:^20.2.0"
+    "@commitlint/format": "npm:^20.3.1"
+    "@commitlint/lint": "npm:^20.3.1"
+    "@commitlint/load": "npm:^20.3.1"
+    "@commitlint/read": "npm:^20.3.1"
+    "@commitlint/types": "npm:^20.3.1"
     tinyexec: "npm:^1.0.0"
     yargs: "npm:^17.0.0"
   bin:
     commitlint: ./cli.js
-  checksum: 10c0/8adc9939b0d23e98d07da8a7098eba77ece6702021a95ca22a733c5c854f6faf092e73792544529b3f134a13a9f77521ae880f2d5d2c3d45d741adc06fa47c25
+  checksum: 10c0/5e9a6869df6e890db70c4be8e172f73ff0c9b304ae8f265490b32338cf3789f273403f30d369458eb2d229c706e9fe7344c6a77eec6eb37d46e2c89f042e8e25
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:20.3.0":
-  version: 20.3.0
-  resolution: "@commitlint/config-conventional@npm:20.3.0"
+"@commitlint/config-conventional@npm:20.3.1":
+  version: 20.3.1
+  resolution: "@commitlint/config-conventional@npm:20.3.1"
   dependencies:
-    "@commitlint/types": "npm:^20.2.0"
+    "@commitlint/types": "npm:^20.3.1"
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
-  checksum: 10c0/ab71b0dc519723df689dafca205af5eef9ce99e62d079411672d57a1241ff90da76e7f741d21800b08df358ffa153190e221103a69af27e9e66eacd02bee80fc
+  checksum: 10c0/e7ee21f0fd725ab8d97c6ac39ac8f52bdc004ad9efc44700323f2eb781db2bb624936d81d889fb0eb2ebcdc9cbc9f7223e8be90a897b32f5e2dba6cba4b3aadf
   languageName: node
   linkType: hard
 
@@ -978,7 +978,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/format@npm:^20.2.0":
+"@commitlint/format@npm:^20.3.1":
   version: 20.4.0
   resolution: "@commitlint/format@npm:20.4.0"
   dependencies:
@@ -998,7 +998,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/lint@npm:^20.3.0":
+"@commitlint/lint@npm:^20.3.1":
   version: 20.4.1
   resolution: "@commitlint/lint@npm:20.4.1"
   dependencies:
@@ -1010,7 +1010,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:^20.3.0":
+"@commitlint/load@npm:^20.3.1":
   version: 20.4.0
   resolution: "@commitlint/load@npm:20.4.0"
   dependencies:
@@ -1045,7 +1045,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/read@npm:^20.2.0":
+"@commitlint/read@npm:^20.3.1":
   version: 20.4.0
   resolution: "@commitlint/read@npm:20.4.0"
   dependencies:
@@ -1100,7 +1100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/types@npm:^20.2.0, @commitlint/types@npm:^20.4.0":
+"@commitlint/types@npm:^20.3.1, @commitlint/types@npm:^20.4.0":
   version: 20.4.0
   resolution: "@commitlint/types@npm:20.4.0"
   dependencies:
