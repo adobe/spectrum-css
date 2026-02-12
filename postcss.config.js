@@ -114,8 +114,7 @@ module.exports = ({
 						discardComments: {
 							remove: (comment) => !comment.includes("stylelint-"),
 						},
-						// @todo yarn add -DW css-declaration-sorter
-						cssDeclarationSorter: false, // @todo { order: "smacss" }
+						cssDeclarationSorter: false,
 						normalizeWhitespace: minify || isProduction,
 					},
 				],

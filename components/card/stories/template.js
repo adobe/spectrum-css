@@ -81,7 +81,7 @@ export const Template = ({
                 () =>
                   Icon(
                     {
-                      size: "xxl",
+                      size: "xl",
                       iconName: showAsset === "folder" ? "Folder" : "Document",
                       setName: "workflow",
                     },
