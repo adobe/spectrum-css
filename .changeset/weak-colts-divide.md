@@ -6,6 +6,7 @@
 "@spectrum-css/avatar": major
 "@spectrum-css/badge": major
 "@spectrum-css/breadcrumb": major
+"@spectrum-css/colorarea": major
 "@spectrum-css/divider": major
 "@spectrum-css/miller": major
 "@spectrum-css/page": major

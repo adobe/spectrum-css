@@ -110,7 +110,7 @@ Disabled.parameters = {
 /**
  * The color wheel is often used together with the [color area component](/docs/components-color-area--docs) for color selection. When placing the color area inside the color wheel, make sure to leave enough of a margin between the two components to ensure there’s enough space for the both handles.
  *
- * To display a color area inside of the color wheel, add a color area component to `.spectrum-ColorWheel-colorarea-container` element and define the custom width and height styles with `--mod-colorarea-width` and `--mod-colorarea-height` variables.
+ * To display a color area inside of the color wheel, add a color area component to `.spectrum-ColorWheel-colorarea-container` element and define the custom width and height styles with `--spectrum-color-area-width` and `--spectrum-color-area-height` variables.
  *
  * The `.spectrum-colorwheel-colorarea-container-size` is hard coded to position the color area within the color wheel using `.spectrum-color-wheel-color-area-margin`. Implementations using JS can calculate the container size with `Math.sqrt(2 * R * R)`, where `R` is the inner radius as calculated for the clip paths.
  *
