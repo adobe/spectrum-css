@@ -18,7 +18,7 @@ export default {
 				category: "Component",
 			},
 			control: "text",
-			description: "Value for <code>--mod-opacity-checkerboard-position</code>. Accepts any valid CSS background-position property value.",
+			description: "Value for <code>--spectrum-opacity-checkerboard-position</code>. Accepts any valid CSS background-position property value.",
 		},
 		size: {
 			name: "Size",
@@ -69,7 +69,7 @@ CheckerboardPosition.parameters = {
 	docs: {
 		description: {
 			story:
-				"An example of using the <code>--mod-opacity-checkerboard-position</code> custom property to adjust the position of the checkerboard pattern.",
+				"An example of using the <code>--spectrum-opacity-checkerboard-position</code> custom property to adjust the position of the checkerboard pattern.",
 		},
 	},
 	chromatic: {

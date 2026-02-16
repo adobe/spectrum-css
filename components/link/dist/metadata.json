@@ -15,21 +15,6 @@
     ".spectrum-Link:lang(ko)",
     ".spectrum-Link:lang(zh)"
   ],
-  "modifiers": [
-    "--mod-link-animation-duration",
-    "--mod-link-inline-font-weight",
-    "--mod-link-line-height-cjk",
-    "--mod-link-text-color",
-    "--mod-link-text-color-active",
-    "--mod-link-text-color-black",
-    "--mod-link-text-color-focus",
-    "--mod-link-text-color-hover",
-    "--mod-link-text-color-secondary-active",
-    "--mod-link-text-color-secondary-default",
-    "--mod-link-text-color-secondary-focus",
-    "--mod-link-text-color-secondary-hover",
-    "--mod-link-text-color-white"
-  ],
   "component": [
     "--spectrum-link-corner-radius",
     "--spectrum-link-default-font-family",
@@ -42,6 +27,10 @@
     "--spectrum-link-inline-font-weight",
     "--spectrum-link-line-height",
     "--spectrum-link-line-height-cjk",
+    "--spectrum-link-text-color",
+    "--spectrum-link-text-color-down",
+    "--spectrum-link-text-color-focus",
+    "--spectrum-link-text-color-hover",
     "--spectrum-link-text-underline-gap",
     "--spectrum-link-text-underline-thickness"
   ],
@@ -74,8 +63,5 @@
     "--spectrum-white"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-link-focus-indicator-color",
-    "--highcontrast-link-text-color"
-  ]
+  "high-contrast": []
 }

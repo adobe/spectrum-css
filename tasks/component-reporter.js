@@ -34,7 +34,7 @@ const {
 const { processCSS } = require("./component-builder.js");
 
 /**
- * Extract custom property modifers to report
+ * Extract custom properties to report
  * @param {string} sourcePath
  * @param {object} [options={}]
  * @param {string} [options.componentName] - The name of the component being built
@@ -103,13 +103,13 @@ async function extractModifiers(
 		return;
 	}
 
-	const componentLevel = new Set(spectrum.map((value) => isComponentVar(value, componentName)).filter(Boolean));
+	let componentLevel = new Set(spectrum.map((value) => isComponentVar(value, componentName)).filter(Boolean));
 
 	// Filter out the component level values from the global spectrum values
 	meta.global = spectrum.filter((value) => !componentLevel.has(value));
 
-	// Filter out mods that reference other components --mod-<componentName>-*
-	meta.passthroughs = meta.modifiers.filter((mod) => {
+	// Filter out properties that reference other components
+	meta.passthroughs = [...componentLevel].filter((mod) => {
 		if (!componentName) return false;
 
 		if (isComponentVar(mod, componentName)) return false;
@@ -119,8 +119,8 @@ async function extractModifiers(
 		// If the mod doesn't reference any other components, it's not a passthrough, maybe it's a global or deprecated mod?
 		if (!otherComponents.some((component) => isComponentVar(mod, component))) return false;
 
-		// Remove the mod from the modifiers list if it's a passthrough
-		meta.modifiers = meta.modifiers.filter((m) => m !== mod);
+		// Remove the property from the list if it's a passthrough
+		componentLevel = [...componentLevel].filter((m) => m !== mod);
 		return true;
 	});
 
@@ -188,7 +188,6 @@ async function main({
 			componentName,
 			baseSelectors: [".spectrum"],
 			dataModel: {
-				modifiers: ["mod"],
 				spectrum: ["spectrum"],
 				"high-contrast": ["highcontrast"],
 			},
@@ -201,7 +200,6 @@ async function main({
 				JSON.stringify({
 					sourceFile: meta.sourceFile,
 					selectors: meta.selectors,
-					modifiers: meta.modifiers,
 					component: meta.component,
 					global: meta.global,
 					passthroughs: meta.passthroughs,

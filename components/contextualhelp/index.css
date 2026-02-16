@@ -29,16 +29,11 @@
 	--spectrum-contextual-help-min-inline-size: var(--spectrum-contextual-help-minimum-width);
 	--spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
 	--spectrum-contextual-help-padding: var(--spectrum-spacing-400);
-
-	/* @passthrough start */
-	--mod-popover-animation-distance: var(--spectrum-spacing-100);
-	--mod-popover-corner-radius: var(--spectrum-corner-radius-large-default);
-	/* @passthrough end */
 }
 
 .spectrum-ContextualHelp {
 	position: relative;
-	min-inline-size: var(--mod-contextual-help-min-inline-size, var(--spectrum-contextual-help-min-inline-size));
+	min-inline-size: var(--spectrum-contextual-help-min-inline-size);
 }
 
 .spectrum-ContextualHelp-button {
@@ -46,11 +41,14 @@
 }
 
 .spectrum-ContextualHelp-popover {
-	padding: var(--mod-contextual-help-padding, var(--spectrum-contextual-help-padding));
-	font-size: var(--mod-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
-	color: var(--highcontrast-contextual-help-body-color, var(--mod-contextual-help-body-color, var(--spectrum-body-color)));
+	/* @passthrough start */
+	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
+	--spectrum-popover-corner-radius: var(--spectrum-corner-radius-large-default);
+	/* @passthrough end */
 
-	max-inline-size: var(--mod-contextual-help-popover-maximum-width);
+	padding: var(--spectrum-contextual-help-padding);
+	font-size: var(--spectrum-contextual-help-body-size);
+	color: var(--highcontrast-contextual-help-body-color, var(--spectrum-contextual-help-body-color));
 
 	.spectrum-ContextualHelp-heading,
 	.spectrum-ContextualHelp-body {
@@ -58,27 +56,27 @@
 	}
 
 	.spectrum-ContextualHelp-heading {
-		font-family: var(--mod-contextual-help-title-sans-serif-font-family, var(--spectrum-contextual-help-title-sans-serif-font-family));
-		font-weight: var(--mod-contextual-help-title-font-weight, var(--spectrum-contextual-help-title-font-weight));
-		font-size: var(--mod-contextual-help-heading-size, var(--spectrum-contextual-help-title-size));
-		font-style: var(--mod-contextual-help-title-font-style, var(--spectrum-contextual-help-title-font-style));
-		line-height: var(--mod-contextual-help-title-line-height, var(--spectrum-contextual-help-title-line-height));
-		color: var(--highcontrast-contextual-help-title-color, var(--mod-contextual-help-title-color, var(--spectrum-contextual-help-title-color)));
-		margin-block-end: var(--mod-contextual-help-content-spacing, var(--spectrum-contextual-help-content-spacing));
+		font-family: var(--spectrum-contextual-help-title-sans-serif-font-family);
+		font-weight: var(--spectrum-contextual-help-title-font-weight);
+		font-size: var(--spectrum-contextual-help-title-size);
+		font-style: var(--spectrum-contextual-help-title-font-style);
+		line-height: var(--spectrum-contextual-help-title-line-height);
+		color: var(--highcontrast-contextual-help-title-color, var(--spectrum-contextual-help-title-color));
+		margin-block-end: var(--spectrum-contextual-help-content-spacing);
 	}
 
 	.spectrum-ContextualHelp-body {
-		font-size: var(--mod-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
-		font-family: var(--mod-contextual-help-body-sans-serif-font-family, var(--spectrum-contextual-help-body-sans-serif-font-family));
-		font-weight: var(--mod-contextual-help-body-sans-serif-font-weight, var(--spectrum-contextual-help-body-sans-serif-font-weight));
-		font-style: var(--mod-contextual-help-body-sans-serif-font-style, var(--spectrum-contextual-help-body-sans-serif-font-style));
-		line-height: var(--mod-contextual-help-body-line-height, var(--spectrum-contextual-help-body-line-height));
-		color: var(--mod-contextual-help-body-color, var(--spectrum-contextual-help-body-color));
+		font-size: var(--spectrum-contextual-help-body-size);
+		font-family: var(--spectrum-contextual-help-body-sans-serif-font-family);
+		font-weight: var(--spectrum-contextual-help-body-sans-serif-font-weight);
+		font-style: var(--spectrum-contextual-help-body-sans-serif-font-style);
+		line-height: var(--spectrum-contextual-help-body-line-height);
+		color: var(--spectrum-contextual-help-body-color);
 	}
 }
 
 .spectrum-ContextualHelp-link {
-	margin-block-start: var(--mod-contextual-help-link-spacing, var(--spectrum-contextual-help-link-spacing));
+	margin-block-start: var(--spectrum-contextual-help-link-spacing);
 }
 
 @media (forced-colors: active) {

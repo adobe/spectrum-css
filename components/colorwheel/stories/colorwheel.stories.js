@@ -74,22 +74,22 @@ export const Default = ColorWheelGroup.bind({});
 Default.args = {};
 
 /**
- * By default, the color wheel has both a fixed size and a minimum size. The color wheel may be displayed at custom sizes by setting some of its modifiable custom properties. Below, the wheel is displayed at `300px` with the following mod values:
+ * By default, the color wheel has both a fixed size and a minimum size. The color wheel may be displayed at custom sizes by setting custom properties. Below, the wheel is displayed at `300px` with the following mod values:
  * ```
- * "--mod-colorwheel-inline-size": "300px",
- * "--mod-colorwheel-block-size": "300px",
- * "--mod-colorwheel-track-width": "30px",
- * "--mod-colorwheel-path": '"M 149 149 m -149 0 a 149 149 0 1 0 298 0 a 149 149 0 1 0 -298 0 M 149 149 m -121 0 a 121 121 0 1 0 242 0 a 121 121 0 1 0 -242 0"',
+ * "--spectrum-colorwheel-inline-size": "300px",
+ * "--spectrum-colorwheel-block-size": "300px",
+ * "--spectrum-colorwheel-track-width": "30px",
+ * "--spectrum-colorwheel-path": '"M 149 149 m -149 0 a 149 149 0 1 0 298 0 a 149 149 0 1 0 -298 0 M 149 149 m -121 0 a 121 121 0 1 0 242 0 a 121 121 0 1 0 -242 0"',
  * ```
  */
 export const CustomSizing = Template.bind({});
 CustomSizing.tags = ["!dev"];
 CustomSizing.args = {
 	customStyles: {
-		"--mod-colorwheel-inline-size": "300px",
-		"--mod-colorwheel-block-size": "300px",
-		"--mod-colorwheel-track-width": "30px",
-		"--mod-colorwheel-path": "\"M 149 149 m -149 0 a 149 149 0 1 0 298 0 a 149 149 0 1 0 -298 0 M 149 149 m -121 0 a 121 121 0 1 0 242 0 a 121 121 0 1 0 -242 0\"",
+		"--spectrum-colorwheel-inline-size": "300px",
+		"--spectrum-colorwheel-block-size": "300px",
+		"--spectrum-colorwheel-track-width": "30px",
+		"--spectrum-colorwheel-path": "\"M 149 149 m -149 0 a 149 149 0 1 0 298 0 a 149 149 0 1 0 -298 0 M 149 149 m -121 0 a 121 121 0 1 0 242 0 a 121 121 0 1 0 -242 0\"",
 	}
 };
 CustomSizing.parameters = {
@@ -110,7 +110,7 @@ Disabled.parameters = {
 /**
  * The color wheel is often used together with the [color area component](/docs/components-color-area--docs) for color selection. When placing the color area inside the color wheel, make sure to leave enough of a margin between the two components to ensure there’s enough space for the both handles.
  *
- * To display a color area inside of the color wheel, add a color area component to `.spectrum-ColorWheel-colorarea-container` element and define the custom width and height styles with `--mod-colorarea-width` and `--mod-colorarea-height` variables.
+ * To display a color area inside of the color wheel, add a color area component to `.spectrum-ColorWheel-colorarea-container` element and define the custom width and height styles with `--spectrum-colorarea-width` and `--spectrum-colorarea-height` variables.
  *
  * The `.spectrum-colorwheel-colorarea-container-size` is hard coded to position the color area within the color wheel using `.spectrum-color-wheel-color-area-margin`. Implementations using JS can calculate the container size with `Math.sqrt(2 * R * R)`, where `R` is the inner radius as calculated for the clip paths.
  *

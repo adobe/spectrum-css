@@ -15,7 +15,7 @@ import { Template } from "./template.js";
  * The alert variants that were previously a part of Dialog were moved to their own component, [alert dialog](/docs/components-alert-dialog--docs).
  *
  * ## Usage with modal component
- * When a dialog component is used in tandem with a [modal](/docs/components-modal--docs), implementations should set `--mod-modal-background-color` to `transparent`. This will prevent any background color used in the modal from peeking through from behind the dialog at the rounded corners, allowing the dialog's background color to take precedence.
+ * When a dialog component is used in tandem with a [modal](/docs/components-modal--docs), implementations should set `--spectrum-modal-background-color` to `transparent`. This will prevent any background color used in the modal from peeking through from behind the dialog at the rounded corners, allowing the dialog's background color to take precedence.
  *
  */
 export default {

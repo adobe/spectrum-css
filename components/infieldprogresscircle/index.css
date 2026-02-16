@@ -11,21 +11,30 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-InfieldProgressCircle {
-	--mod-progress-circle-thickness: var(--spectrum-progress-circle-thickness-small);
-	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-100);
+	/* @passthrough start */
+	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-small);
+	--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-100);
+	/* @passthrough end */
+
 	--spectrum-infieldprogresscircle-padding-block: var(--spectrum-in-field-progress-circle-edge-to-fill);
 }
 
 .spectrum-InfieldProgressCircle--sizeS {
-	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-75);
+	/* @passthrough start */
+	--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-75);
+	/* @passthrough end */
 }
 
 .spectrum-InfieldProgressCircle--sizeL {
-	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-200);
+	/* @passthrough start */
+	--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-200);
+	/* @passthrough end */
 }
 
 .spectrum-InfieldProgressCircle--sizeXL {
-	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-300);
+	/* @passthrough start */
+	--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-300);
+	/* @passthrough end */
 }
 
 .spectrum-InfieldProgressCircle {

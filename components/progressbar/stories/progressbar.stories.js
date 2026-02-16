@@ -128,14 +128,14 @@ Indeterminate.parameters = {
 };
 
 /**
- * By default, the progress bar has a minimum, maximum, and fixed size. The progress bar may be displayed at a custom width by setting `--mod-progressbar-inline-size` to the desired width. The progress bar below is displayed at `400px` using that modifiable custom property.
+ * By default, the progress bar has a minimum, maximum, and fixed size. The progress bar may be displayed at a custom width by setting `--spectrum-progressbar-inline-size` to the desired width. The progress bar below is displayed at `400px` using that modifiable custom property.
  */
 export const CustomWidth = Template.bind({});
 CustomWidth.storyName = "Custom width";
 CustomWidth.args = {
 	value: 83,
 	customStyles: {
-		"--mod-progressbar-inline-size": "400px",
+		"--spectrum-progressbar-inline-size": "400px",
 	},
 };
 CustomWidth.tags = ["!dev"];
