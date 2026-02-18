@@ -4,9 +4,11 @@
     ".spectrum-Tag",
     ".spectrum-Tag .spectrum-Avatar",
     ".spectrum-Tag .spectrum-Tag-clearButton",
-    ".spectrum-Tag .spectrum-Tag-itemIcon",
     ".spectrum-Tag .spectrum-Tag-itemLabel",
     ".spectrum-Tag .spectrum-Thumbnail",
+    ".spectrum-Tag > .spectrum-Avatar",
+    ".spectrum-Tag > .spectrum-Icon",
+    ".spectrum-Tag > .spectrum-Thumbnail",
     ".spectrum-Tag--sizeL",
     ".spectrum-Tag--sizeM",
     ".spectrum-Tag.is-disabled",
@@ -26,7 +28,6 @@
     ".spectrum-Tag:not(.is-disabled, .is-readOnly):hover"
   ],
   "modifiers": [
-    "--mod-tag-animation-duration",
     "--mod-tag-avatar-size",
     "--mod-tag-avatar-spacing-block-end",
     "--mod-tag-avatar-spacing-block-start",
@@ -67,7 +68,6 @@
     "--mod-tag-focus-ring-thickness",
     "--mod-tag-font-size",
     "--mod-tag-height",
-    "--mod-tag-icon-size",
     "--mod-tag-icon-spacing-block-end",
     "--mod-tag-icon-spacing-block-start",
     "--mod-tag-label-font-family",
@@ -85,7 +85,6 @@
     "--mod-tag-visual-spacing-inline-start"
   ],
   "component": [
-    "--spectrum-tag-animation-duration",
     "--spectrum-tag-avatar-size",
     "--spectrum-tag-avatar-spacing-block-end",
     "--spectrum-tag-avatar-spacing-block-start",
@@ -114,7 +113,6 @@
     "--spectrum-tag-focus-ring-thickness",
     "--spectrum-tag-font-size",
     "--spectrum-tag-height",
-    "--spectrum-tag-icon-size",
     "--spectrum-tag-icon-spacing-block-end",
     "--spectrum-tag-icon-spacing-block-start",
     "--spectrum-tag-label-font-family",
@@ -148,7 +146,6 @@
     "--spectrum-accent-background-color-down",
     "--spectrum-accent-background-color-hover",
     "--spectrum-accent-background-color-key-focus",
-    "--spectrum-animation-duration-100",
     "--spectrum-avatar-opacity-disabled",
     "--spectrum-avatar-size-100",
     "--spectrum-avatar-size-50",
@@ -210,10 +207,7 @@
     "--spectrum-thumbnail-size-100",
     "--spectrum-thumbnail-size-50",
     "--spectrum-thumbnail-size-75",
-    "--spectrum-white",
-    "--spectrum-workflow-icon-size-100",
-    "--spectrum-workflow-icon-size-200",
-    "--spectrum-workflow-icon-size-75"
+    "--spectrum-white"
   ],
   "passthroughs": [
     "--mod-avatar-block-size",
@@ -225,7 +219,6 @@
     "--mod-clear-button-icon-color-hover",
     "--mod-clear-button-icon-color-key-focus",
     "--mod-clear-button-width",
-    "--mod-icon-size",
     "--mod-thumbnail-opacity-disabled",
     "--mod-thumbnail-size"
   ],

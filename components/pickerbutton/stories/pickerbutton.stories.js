@@ -153,7 +153,7 @@ Open.parameters = {
 };
 
 /**
- * These examples use custom icons. The icon on the left is a custom UI icon, and the icon on the right is a custom workflow icon. The size of the icon can also be modified by using the `--mod-icon-size` custom property. Here, `--mod-icon-size` is set to `14px`.
+ * These examples use custom icons. The icon on the left is a custom UI icon, and the icon on the right is a custom workflow icon. The size of the icon can also be modified by using the `--spectrum-icon-size` custom property on the icon component.
  *
  * By default, the picker button supports a UI icon. If using a workflow icon, please apply the `.spectrum-PickerButton--workflowicon` class to the picker button to best support the use of a workflow icon.
  */
@@ -161,9 +161,6 @@ export const CustomIcon = PickerIconOptions.bind({});
 CustomIcon.args = {
 	uiIconName: "ArrowDown100",
 	workflowIconName: "Calendar",
-	customStyles: {
-		"--mod-icon-size": "14px",
-	}
 };
 CustomIcon.storyName = "With custom icon";
 CustomIcon.tags = ["!dev"];

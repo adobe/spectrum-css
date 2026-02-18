@@ -14,10 +14,10 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Tag",
 	size = "s",
-	iconName = "",
-	avatarUrl = "",
-	thumbnailUrl = "",
-	label = "",
+	iconName,
+	avatarUrl,
+	thumbnailUrl,
+	label,
 	isSelected = false,
 	isEmphasized = false,
 	isDisabled = false,
@@ -70,7 +70,6 @@ export const Template = ({
 					size,
 					iconName,
 					setName: "workflow",
-					customClasses: [`${rootClass}-itemIcon`],
 				}, context)
 			)}
 			${when(thumbnailUrl, () =>
