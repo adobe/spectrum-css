@@ -141,7 +141,7 @@ __metadata:
     husky: "npm:9.1.7"
     jsonc-eslint-parser: "npm:2.4.2"
     lint-staged: "npm:16.2.7"
-    lodash: "npm:4.17.21"
+    lodash: "npm:4.17.23"
     markdownlint: "npm:0.40.0"
     markdownlint-cli: "npm:0.47.0"
     npm-registry-fetch: "npm:19.1.1"
@@ -5259,7 +5259,7 @@ __metadata:
     "@whitespace/storybook-addon-html": "npm:7.0.0"
     chromatic: "npm:13.3.5"
     lit: "npm:3.3.2"
-    lodash-es: "npm:4.17.22"
+    lodash-es: "npm:4.17.23"
     npm-registry-fetch: "npm:19.1.1"
     postcss: "npm:8.5.6"
     prettier: "npm:3.8.0"
@@ -5688,7 +5688,7 @@ __metadata:
     "@adobe/token-diff-generator": "npm:2.5.2"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     deepmerge: "npm:4.3.1"
-    lodash-es: "npm:4.17.22"
+    lodash-es: "npm:4.17.23"
     postcss: "npm:8.5.6"
     postcss-sorting: "npm:9.1.0"
     style-dictionary: "npm:4.4.0"
@@ -14078,14 +14078,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash-es@npm:4.17.22":
-  version: 4.17.22
-  resolution: "lodash-es@npm:4.17.22"
-  checksum: 10c0/5f28a262183cca43e08c580622557f393cb889386df2d8adf7c852bfdff7a84c5e629df5aa6c5c6274e83b38172f239d3e4e72e1ad27352d9ae9766627338089
-  languageName: node
-  linkType: hard
-
-"lodash-es@npm:^4.17.21":
+"lodash-es@npm:4.17.23, lodash-es@npm:^4.17.21":
   version: 4.17.23
   resolution: "lodash-es@npm:4.17.23"
   checksum: 10c0/3150fb6660c14c7a6b5f23bd11597d884b140c0e862a17fdb415aaa5ef7741523182904a6b7929f04e5f60a11edb5a79499eb448734381c99ffb3c4734beeddd
@@ -14176,14 +14169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:4.17.21":
-  version: 4.17.21
-  resolution: "lodash@npm:4.17.21"
-  checksum: 10c0/d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
-  languageName: node
-  linkType: hard
-
-"lodash@npm:>=4.17.21, lodash@npm:^4.0.0, lodash@npm:^4.17.15, lodash@npm:^4.17.21":
+"lodash@npm:4.17.23, lodash@npm:>=4.17.21, lodash@npm:^4.0.0, lodash@npm:^4.17.15, lodash@npm:^4.17.21":
   version: 4.17.23
   resolution: "lodash@npm:4.17.23"
   checksum: 10c0/1264a90469f5bb95d4739c43eb6277d15b6d9e186df4ac68c3620443160fc669e2f14c11e7d8b2ccf078b81d06147c01a8ccced9aab9f9f63d50dcf8cace6bf6
