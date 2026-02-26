@@ -1,5 +1,21 @@
 # Change log
 
+## 9.0.0-next.3
+
+### Major Changes
+
+📝 [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`20807a5`](https://github.com/adobe/spectrum-css/commit/20807a5ab334303c640c70450ed40ccd80eac76e) Thanks [@pfulton](https://github.com/pfulton)!
+
+This update removes `--mod-*` custom property hooks per SWC-1264, see also the RFC for extensible styling. In addition, this update cleans up any component-level custom properties that did not rely on the CSS cascade to define the styles; this was done to reduce the number of custom properties that are defined at the component level and trim down the size of the CSS we are shipping to consumers.
+
+- Remove all `--mod-*` custom property hooks.
+- Keep existing class selectors and variants unchanged.
+- Update stories to reflect the removal of the `--mod-*` override layer.
+- Remove any component-level custom properties that did not rely on the CSS cascade to define the styles.
+- Remove any high contrast mode styles being used where the default styles are sufficient.
+
+Breaking change: the `--mod-*` override layer is removed. Consumers should set `--spectrum-*` variables directly where customization is needed.
+
 ## 9.0.0-next.2
 
 ### Major Changes
