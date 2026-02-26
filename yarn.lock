@@ -4704,8 +4704,8 @@ __metadata:
     npm-registry-fetch: "npm:19.1.1"
     postcss: "npm:8.5.6"
     prettier: "npm:3.7.4"
-    react: "npm:19.2.3"
-    react-dom: "npm:19.2.3"
+    react: "npm:19.2.4"
+    react-dom: "npm:19.2.4"
     react-syntax-highlighter: "npm:15.6.6"
     remark-gfm: "npm:4.0.1"
     storybook: "npm:8.6.15"
@@ -14603,18 +14603,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.2.3":
-  version: 19.2.3
-  resolution: "react-dom@npm:19.2.3"
-  dependencies:
-    scheduler: "npm:^0.27.0"
-  peerDependencies:
-    react: ^19.2.3
-  checksum: 10c0/dc43f7ede06f46f3acc16ee83107c925530de9b91d1d0b3824583814746ff4c498ea64fd65cd83aba363205268adff52e2827c582634ae7b15069deaeabc4892
-  languageName: node
-  linkType: hard
-
-"react-dom@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
+"react-dom@npm:19.2.4, react-dom@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
   version: 19.2.4
   resolution: "react-dom@npm:19.2.4"
   dependencies:
@@ -14655,14 +14644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.2.3":
-  version: 19.2.3
-  resolution: "react@npm:19.2.3"
-  checksum: 10c0/094220b3ba3a76c1b668f972ace1dd15509b157aead1b40391d1c8e657e720c201d9719537375eff08f5e0514748c0319063392a6f000e31303aafc4471f1436
-  languageName: node
-  linkType: hard
-
-"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
+"react@npm:19.2.4, react@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
   version: 19.2.4
   resolution: "react@npm:19.2.4"
   checksum: 10c0/cd2c9ff67a720799cc3b38a516009986f7fc4cb8d3e15716c6211cf098d1357ee3e348ab05ad0600042bbb0fd888530ba92e329198c92eafa0994f5213396596
