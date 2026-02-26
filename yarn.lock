@@ -129,7 +129,7 @@ __metadata:
     cross-env: "npm:10.1.0"
     cssnano: "npm:7.1.2"
     cssnano-preset-advanced: "npm:7.0.10"
-    diff: "npm:8.0.2"
+    diff: "npm:8.0.3"
     diff2html: "npm:3.4.55"
     eslint: "npm:8.57.1"
     eslint-plugin-jsonc: "npm:2.21.0"
@@ -5271,7 +5271,7 @@ __metadata:
     "@actions/core": "npm:1.11.1"
     "@actions/github": "npm:6.0.1"
     "@actions/glob": "npm:0.5.0"
-    diff: "npm:8.0.2"
+    diff: "npm:8.0.3"
     diff2html: "npm:3.4.55"
   languageName: unknown
   linkType: soft
@@ -8259,10 +8259,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff@npm:8.0.2":
-  version: 8.0.2
-  resolution: "diff@npm:8.0.2"
-  checksum: 10c0/abfb387f033e089df3ec3be960205d17b54df8abf0924d982a7ced3a94c557a4e6cbff2e78b121f216b85f466b3d8d041673a386177c311aaea41459286cc9bc
+"diff@npm:8.0.3, diff@npm:^8.0.2":
+  version: 8.0.3
+  resolution: "diff@npm:8.0.3"
+  checksum: 10c0/d29321c70d3545fdcb56c5fdd76028c3f04c012462779e062303d4c3c531af80d2c360c26b871e6e2b9a971d2422d47e1779a859106c4cac4b5d2d143df70e20
   languageName: node
   linkType: hard
 
@@ -8270,13 +8270,6 @@ __metadata:
   version: 7.0.0
   resolution: "diff@npm:7.0.0"
   checksum: 10c0/251fd15f85ffdf814cfc35a728d526b8d2ad3de338dcbd011ac6e57c461417090766b28995f8ff733135b5fbc3699c392db1d5e27711ac4e00244768cd1d577b
-  languageName: node
-  linkType: hard
-
-"diff@npm:^8.0.2":
-  version: 8.0.3
-  resolution: "diff@npm:8.0.3"
-  checksum: 10c0/d29321c70d3545fdcb56c5fdd76028c3f04c012462779e062303d4c3c531af80d2c360c26b871e6e2b9a971d2422d47e1779a859106c4cac4b5d2d143df70e20
   languageName: node
   linkType: hard
 
