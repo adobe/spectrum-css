@@ -918,18 +918,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chromatic-com/storybook@npm:3.2.7":
-  version: 3.2.7
-  resolution: "@chromatic-com/storybook@npm:3.2.7"
+"@chromatic-com/storybook@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@chromatic-com/storybook@npm:5.0.0"
   dependencies:
-    chromatic: "npm:^11.15.0"
+    "@neoconfetti/react": "npm:^1.0.0"
+    chromatic: "npm:^13.3.4"
     filesize: "npm:^10.0.12"
     jsonfile: "npm:^6.1.0"
-    react-confetti: "npm:^6.1.0"
     strip-ansi: "npm:^7.1.0"
   peerDependencies:
-    storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
-  checksum: 10c0/b9f84df1efbf20a91f58a3a25bc37b5c89a207b398096ff943c098f97b904572b331155c440594c384085d5a20cd186f8a8dc529fec02ab6929f2e7f14be8d37
+    storybook: ^0.0.0-0 || ^10.1.0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0
+  checksum: 10c0/8e4dcba6c70b2943a5b68fd3d690084328844d757fffccef26adebf1eadfc3b0d2fee80280e57c40d6897dee3ab9c6c202de46eb1de39991d316df5e36b4fe89
   languageName: node
   linkType: hard
 
@@ -2716,6 +2716,13 @@ __metadata:
     "@emnapi/runtime": "npm:^1.1.0"
     "@tybys/wasm-util": "npm:^0.9.0"
   checksum: 10c0/1040de49b2ef509db207e2517465dbf7fb3474f20e8ec32897672a962ff4f59872385666dac61dc9dbeae3cae5dad265d8dc3865da756adeb07d1634c67b03a1
+  languageName: node
+  linkType: hard
+
+"@neoconfetti/react@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@neoconfetti/react@npm:1.0.0"
+  checksum: 10c0/dfa487965b69f88b39562ccd910114cd68b00a90c7eb79cfb1a483c7ac717b720f9f095e5aea13cef8a9b9bea05533d380ddff5e44d3bc3f7dc4d5c66716765c
   languageName: node
   linkType: hard
 
@@ -4678,7 +4685,7 @@ __metadata:
   dependencies:
     "@adobe/spectrum-css-workflow-icons": "npm:5.0.0"
     "@babel/core": "npm:7.28.6"
-    "@chromatic-com/storybook": "npm:3.2.7"
+    "@chromatic-com/storybook": "npm:5.0.0"
     "@etchteam/storybook-addon-status": "npm:5.0.0"
     "@spectrum-css/bundle": "npm:2.0.0-next.17"
     "@spectrum-css/tokens": "npm:16.1.0-next.10"
@@ -7190,7 +7197,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:13.3.5":
+"chromatic@npm:13.3.5, chromatic@npm:^13.3.4":
   version: 13.3.5
   resolution: "chromatic@npm:13.3.5"
   peerDependencies:
@@ -7206,25 +7213,6 @@ __metadata:
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
   checksum: 10c0/58b3d7984db000f8c7b605788569a24c3f3cd41bb6b2d3a94f18acc9ff11ce6c6881f795c8390a94ff721ccfcf8a2d7942e78a54a1f70294a7b3d35ccc382154
-  languageName: node
-  linkType: hard
-
-"chromatic@npm:^11.15.0":
-  version: 11.29.0
-  resolution: "chromatic@npm:11.29.0"
-  peerDependencies:
-    "@chromatic-com/cypress": ^0.*.* || ^1.0.0
-    "@chromatic-com/playwright": ^0.*.* || ^1.0.0
-  peerDependenciesMeta:
-    "@chromatic-com/cypress":
-      optional: true
-    "@chromatic-com/playwright":
-      optional: true
-  bin:
-    chroma: dist/bin.js
-    chromatic: dist/bin.js
-    chromatic-cli: dist/bin.js
-  checksum: 10c0/4c26e00a170cb40b38f837358fbcab51ab0bdf3644a396b166074cd167696be6a34eeb5583e65425f4392845c8a3052f6d538ea9fb0d09a903100c52d858b4f9
   languageName: node
   linkType: hard
 
@@ -14592,17 +14580,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-confetti@npm:^6.1.0":
-  version: 6.4.0
-  resolution: "react-confetti@npm:6.4.0"
-  dependencies:
-    tween-functions: "npm:^1.2.0"
-  peerDependencies:
-    react: ^16.3.0 || ^17.0.1 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/a0e1bfc826cc086e13c18f2f8997e1825025be8ea80f5b1ffdd4871babe89a6876eac99f43525d4d4cbf141fab2a9372f5d51d19fa5995b64e77e6717ac4b286
-  languageName: node
-  linkType: hard
-
 "react-dom@npm:19.2.3":
   version: 19.2.3
   resolution: "react-dom@npm:19.2.3"
@@ -16319,13 +16296,6 @@ __metadata:
   version: 0.0.6
   resolution: "tunnel@npm:0.0.6"
   checksum: 10c0/e27e7e896f2426c1c747325b5f54efebc1a004647d853fad892b46d64e37591ccd0b97439470795e5262b5c0748d22beb4489a04a0a448029636670bfd801b75
-  languageName: node
-  linkType: hard
-
-"tween-functions@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "tween-functions@npm:1.2.0"
-  checksum: 10c0/7e59295b8b0ee4132ed2fe335f56a9db5c87056dad6b6fd3011be72239fd20398003ddb4403bc98ad9f5c94468890830f64016edbbde35581faf95b32cda8305
   languageName: node
   linkType: hard
 
