@@ -116,7 +116,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@adobe/spectrum-css-monorepo@workspace:."
   dependencies:
-    "@adobe/token-diff-generator": "npm:2.5.2"
+    "@adobe/token-diff-generator": "npm:2.5.3"
     "@changesets/changelog-github": "npm:0.5.2"
     "@changesets/cli": "npm:2.29.8"
     "@commitlint/cli": "npm:20.3.1"
@@ -203,9 +203,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/token-diff-generator@npm:2.5.2":
-  version: 2.5.2
-  resolution: "@adobe/token-diff-generator@npm:2.5.2"
+"@adobe/token-diff-generator@npm:2.5.3":
+  version: 2.5.3
+  resolution: "@adobe/token-diff-generator@npm:2.5.3"
   dependencies:
     "@adobe/optimized-diff": "npm:1.0.0"
     "@adobe/spectrum-diff-core": "npm:1.1.1"
@@ -216,7 +216,7 @@ __metadata:
     node-emoji: "npm:^2.2.0"
   bin:
     tdiff: src/lib/cli.js
-  checksum: 10c0/fd9c466c5f20d73453710c45ab10e941afb72b17f7f65781cd7d9ba2e32df37fe6af0131d7de25b66d0cf74bed6b778550778a7ece0cce5135de677bd78b1865
+  checksum: 10c0/c4e3b6f1dcecb13e95524ec64ac88a0fa6408c688fb52d730912340a10716cd45eb627e7f0b74dc37f4290ab1967f1d5230d5c66154db9cc238658b0285b59ab
   languageName: node
   linkType: hard
 
@@ -5119,7 +5119,7 @@ __metadata:
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
     "@adobe/spectrum-tokens": "npm:13.16.0"
-    "@adobe/token-diff-generator": "npm:2.5.2"
+    "@adobe/token-diff-generator": "npm:2.5.3"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     deepmerge: "npm:4.3.1"
     glob: "npm:11.0.3"
