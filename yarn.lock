@@ -124,7 +124,7 @@ __metadata:
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     "@yarnpkg/types": "npm:4.0.1"
     at-rule-packer: "npm:0.5.0"
-    autoprefixer: "npm:10.4.23"
+    autoprefixer: "npm:10.4.24"
     colors: "npm:1.4.0"
     cross-env: "npm:10.1.0"
     cssnano: "npm:7.1.2"
@@ -6517,24 +6517,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.4.23":
-  version: 10.4.23
-  resolution: "autoprefixer@npm:10.4.23"
-  dependencies:
-    browserslist: "npm:^4.28.1"
-    caniuse-lite: "npm:^1.0.30001760"
-    fraction.js: "npm:^5.3.4"
-    picocolors: "npm:^1.1.1"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.1.0
-  bin:
-    autoprefixer: bin/autoprefixer
-  checksum: 10c0/3765c5d0fa3e95fb2ebe9d5a6d4da0156f5d346c7ec9ac0fbf5c97c8139d0ca1e8743bf5dc1b4aa954467be6929fddf8498a3b6202d468d70b5f359f3b6af90f
-  languageName: node
-  linkType: hard
-
-"autoprefixer@npm:^10.4.21, autoprefixer@npm:^10.4.23":
+"autoprefixer@npm:10.4.24, autoprefixer@npm:^10.4.21, autoprefixer@npm:^10.4.23":
   version: 10.4.24
   resolution: "autoprefixer@npm:10.4.24"
   dependencies:
@@ -6979,7 +6962,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001759, caniuse-lite@npm:^1.0.30001760, caniuse-lite@npm:^1.0.30001766":
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001759, caniuse-lite@npm:^1.0.30001766":
   version: 1.0.30001767
   resolution: "caniuse-lite@npm:1.0.30001767"
   checksum: 10c0/37067c6d2b26623f81494a1f206adbff2b80baed3318ba430684e428bd7d81be889f39db8ef081501d1db5f7dd5d15972892f173eb59c9f3bb780e0b38e6610a
