@@ -130,7 +130,7 @@ __metadata:
     cssnano: "npm:7.1.2"
     cssnano-preset-advanced: "npm:7.0.10"
     diff: "npm:8.0.3"
-    diff2html: "npm:3.4.55"
+    diff2html: "npm:3.4.56"
     eslint: "npm:8.57.1"
     eslint-plugin-jsonc: "npm:2.21.0"
     eslint-plugin-prettier: "npm:5.5.5"
@@ -5276,7 +5276,7 @@ __metadata:
     "@actions/github": "npm:6.0.1"
     "@actions/glob": "npm:0.5.0"
     diff: "npm:8.0.3"
-    diff2html: "npm:3.4.55"
+    diff2html: "npm:3.4.56"
   languageName: unknown
   linkType: soft
 
@@ -8261,31 +8261,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff2html@npm:3.4.55":
-  version: 3.4.55
-  resolution: "diff2html@npm:3.4.55"
+"diff2html@npm:3.4.56":
+  version: 3.4.56
+  resolution: "diff2html@npm:3.4.56"
   dependencies:
     "@profoundlogic/hogan": "npm:^3.0.4"
-    diff: "npm:^7.0.0"
-    highlight.js: "npm:11.9.0"
+    diff: "npm:^8.0.3"
+    highlight.js: "npm:11.11.1"
   dependenciesMeta:
     highlight.js:
       optional: true
-  checksum: 10c0/608b51496930c3acd98fd72d0a94324e939fec03350df1f958a644b7b107d786fa6b72e708ede14fa61d963eab3bb662fe1af4c4ebc146c877efd1e41956a5bc
+  checksum: 10c0/082d7fdb2c66ba968940a3bf3be2b864e66f55e5b0ef068fb973b6d451e2a18cf8750c142a43b3ebd2eb5564a99c85023dcfea84c2c56dfe582a5bb7bab29514
   languageName: node
   linkType: hard
 
-"diff@npm:8.0.3, diff@npm:^8.0.2":
+"diff@npm:8.0.3, diff@npm:^8.0.2, diff@npm:^8.0.3":
   version: 8.0.3
   resolution: "diff@npm:8.0.3"
   checksum: 10c0/d29321c70d3545fdcb56c5fdd76028c3f04c012462779e062303d4c3c531af80d2c360c26b871e6e2b9a971d2422d47e1779a859106c4cac4b5d2d143df70e20
-  languageName: node
-  linkType: hard
-
-"diff@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "diff@npm:7.0.0"
-  checksum: 10c0/251fd15f85ffdf814cfc35a728d526b8d2ad3de338dcbd011ac6e57c461417090766b28995f8ff733135b5fbc3699c392db1d5e27711ac4e00244768cd1d577b
   languageName: node
   linkType: hard
 
@@ -10171,10 +10164,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"highlight.js@npm:11.9.0":
-  version: 11.9.0
-  resolution: "highlight.js@npm:11.9.0"
-  checksum: 10c0/27cfa8717dc9d200aecbdb383eb122d5f45ce715d2f468583785d36fbfe5076ce033abb02486dc13b407171721cda6f474ed3f3a5a8e8c3d91367fa5f51ee374
+"highlight.js@npm:11.11.1":
+  version: 11.11.1
+  resolution: "highlight.js@npm:11.11.1"
+  checksum: 10c0/40f53ac19dac079891fcefd5bd8a21cf2e8931fd47da5bd1dca73b7e4375c1defed0636fc39120c639b9c44119b7d110f7f0c15aa899557a5a1c8910f3c0144c
   languageName: node
   linkType: hard
 
