@@ -86,14 +86,14 @@ jobs:
                   echo "base-path=${BRANCH//\//_}" >> "$GITHUB_OUTPUT"
 
             - name: Download build artifacts for head
-              uses: actions/download-artifact@v6
+              uses: actions/download-artifact@v8
               with:
                   name: ubuntu-latest-node22-compiled-assets-${{ steps.derive-key.outputs.head-path }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}
                   merge-multiple: true
 
             - name: Download build artifacts for base
-              uses: actions/download-artifact@v6
+              uses: actions/download-artifact@v8
               with:
                   name: ubuntu-latest-node22-compiled-assets-${{ steps.derive-key.outputs.base-path }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}
@@ -120,7 +120,7 @@ jobs:
 
             - name: Upload changes
               if: ${{ steps.compare.outputs.has-changed }}
-              uses: actions/upload-artifact@v5
+              uses: actions/upload-artifact@v7
               with:
                 name: rich-diff
                 path: |
@@ -158,7 +158,7 @@ jobs:
                   echo "key=ubuntu-latest-node22-compiled-assets-${BRANCH}" >> "$GITHUB_OUTPUT"
 
             - name: Check if build artifacts already exist
-              uses: actions/download-artifact@v6
+              uses: actions/download-artifact@v8
               id: artifact-found
               continue-on-error: true
               with:
@@ -206,7 +206,7 @@ jobs:
             - name: Check for built assets
               continue-on-error: true
               id: download
-              uses: actions/download-artifact@v6
+              uses: actions/download-artifact@v8
               with:
                   path: |
                     ${{ github.workspace }}/components/*/dist/**
@@ -223,7 +223,7 @@ jobs:
               if: ${{ steps.download.outcome != 'success' }}
               continue-on-error: true
               id: upload
-              uses: actions/upload-artifact@v5
+              uses: actions/upload-artifact@v7
               with:
                   path: |
                     ${{ github.workspace }}/components/*/dist/**
