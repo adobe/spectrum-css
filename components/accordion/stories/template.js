@@ -156,7 +156,7 @@ export const Template = ({
 					hasActionButton: item.hasActionButton || hasActionButtons,
 					actionButtonIconName: item.actionButtonIconName || actionButtonIconName,
 					hasSwitch: item.hasSwitch || hasSwitches,
-					iconSize: `${size}`,
+					iconSize: size,
 					isDisabled: item.isDisabled || disableAll,
 					isOpen: collapseAll === true ? false : item.isOpen,
 					onclick: function() {
