@@ -12,10 +12,10 @@
  */
 
 .spectrum-Pagination {
-	--spectrum-pagination-counter-color: var(--mod-pagination-counter-color, var(--spectrum-neutral-subdued-content-color-default));
-	--spectrum-pagination-counter-font-size: var(--mod-pagination-counter-font-size, var(--spectrum-font-size-100));
-	--spectrum-pagination-counter-line-height: var(--mod-pagination-counter-line-height, var(--spectrum-line-height-100));
-	--spectrum-pagination-counter-inline-spacing: var(--mod-pagination-page-button-inline-spacing, var(--spectrum-pagination-item-inline-spacing));
+	--spectrum-pagination-counter-color: var(--spectrum-neutral-subdued-content-color-default);
+	--spectrum-pagination-counter-font-size: var(--spectrum-font-size-100);
+	--spectrum-pagination-counter-line-height: var(--spectrum-line-height-100);
+	--spectrum-pagination-counter-inline-spacing: var(--spectrum-pagination-item-inline-spacing);
 
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
@@ -32,8 +32,8 @@
 /* Explicit variant elements */
 .spectrum-Pagination-textfield {
 	/* @passthrough start */
-	--mod-textfield-width: var(--mod-pagination-textfield-width, var(--spectrum-pagination-textfield-width));
-	--mod-textfield-min-width: var(--mod-pagination-textfield-width, var(--spectrum-pagination-textfield-width));
+	--spectrum-textfield-width: var(--spectrum-pagination-textfield-width);
+	--spectrum-textfield-min-width: var(--spectrum-pagination-textfield-width);
 	/* @passthrough end */
 }
 

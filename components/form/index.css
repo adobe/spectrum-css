@@ -22,10 +22,10 @@
 
 	margin: 0;
 	display: grid;
-	grid-template-columns: var(--mod-form-grid-template-columns, var(--spectrum-form-grid-template-columns));
-	inline-size: var(--mod-form-inline-size, fit-content);
+	grid-template-columns: var(--spectrum-form-grid-template-columns);
+	inline-size: fit-content;
 	justify-content: start;
-	row-gap: var(--mod-form-item-block-spacing, var(--spectrum-form-item-block-spacing));
+	row-gap: var(--spectrum-form-item-block-spacing);
 }
 
 /* Row */
@@ -53,8 +53,8 @@
 
 /* Rows with stacked alignment */
 .spectrum-Form--labelsAbove {
-	--mod-form-item-block-spacing: var(--mod-form-item-block-spacing-labels-above, var(--spectrum-form-item-block-spacing-labels-above));
-	--mod-form-grid-template-columns: var(--mod-form-grid-template-columns-labels-above, var(--spectrum-form-grid-template-columns-labels-above));
+	--spectrum-form-item-block-spacing: var(--spectrum-form-item-block-spacing-labels-above);
+	--spectrum-form-grid-template-columns: var(--spectrum-form-grid-template-columns-labels-above);
 
 	.spectrum-Form-item {
 		display: block;
@@ -64,10 +64,10 @@
 /********* Disabled state *********/
 .spectrum-Form-itemLabel {
 	&.is-disabled {
-		color: var(--highcontrast-form-item-disabled-content-color, var(--mod-disabled-content-color, var(--spectrum-form-item-disabled-content-color)));
+		color: var(--spectrum-form-item-disabled-content-color);
 
 		.spectrum-FieldLabel-requiredIcon {
-			color: var(--highcontrast-form-item-disabled-content-color, var(--mod-disabled-content-color, var(--spectrum-form-item-disabled-content-color)));
+			color: var(--spectrum-form-item-disabled-content-color);
 		}
 	}
 }
@@ -75,6 +75,6 @@
 /********* WHCM *********/
 @media (forced-colors: active) {
 	.spectrum-Form {
-		--highcontrast-form-item-disabled-content-color: GrayText;
+		--spectrum-form-item-disabled-content-color: GrayText;
 	}
 }
