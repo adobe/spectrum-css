@@ -39,7 +39,7 @@ export const TestTemplate = (args, context) => html`
 							size: "s",
 							content: [scale],
 							customStyles: {
-								"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+								"color": "var(--spectrum-seafoam-900)",
 							}
 						})}
 					</div>
@@ -98,7 +98,7 @@ export const TestTemplate = (args, context) => html`
 							size: "s",
 							content: [scale],
 							customStyles: {
-								"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+								"color": "var(--spectrum-seafoam-900)",
 							}
 						})}
 					</div>
