@@ -3,11 +3,15 @@
 ![GitHub Actions build status on main](https://img.shields.io/github/actions/workflow/status/adobe/spectrum-css/production.yml?branch=main&style=for-the-badge&label=main) <br/> ![GitHub Actions build status on spectrum-two](https://img.shields.io/github/actions/workflow/status/adobe/spectrum-css/production.yml?branch=spectrum-two&style=for-the-badge&label=spectrum-two)
 
 </div>
-
 <h1 align="center">Spectrum CSS</h1>
 <h3 align="center">A CSS-implementation of the Spectrum design language</h3>
 
 <img src=".storybook/assets/images/spectrum-css_illustration_desktop.png">
+
+## 🚨 ARCHIVED 🚨
+This project has been archived and is now read-only.
+
+Please direct your attention to [Spectrum Web Components](https://github.com/adobe/spectrum-web-components/).
 
 ## Features
 
