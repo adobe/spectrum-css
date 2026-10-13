@@ -1072,7 +1072,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@changesets/parse@npm:0.4.2, @changesets/parse@npm:^0.4.2":
+"@changesets/parse@npm:0.4.3":
+  version: 0.4.3
+  resolution: "@changesets/parse@npm:0.4.3"
+  dependencies:
+    "@changesets/types": "npm:^6.1.0"
+    js-yaml: "npm:^4.1.1"
+  checksum: 10c0/4d8488eaf224974ae335fec964dc1dc486abcfa9f96856cf4267c2765b02ed6af1778375ec03d38252ebab9e191aa4a11c5f37a6ad42e907e08290fed2b9690c
+  languageName: node
+  linkType: hard
+
+"@changesets/parse@npm:^0.4.2":
   version: 0.4.2
   resolution: "@changesets/parse@npm:0.4.2"
   dependencies:
@@ -5823,7 +5833,7 @@ __metadata:
   resolution: "@spectrum-tools/changesets-changelog-github@workspace:plugins/changesets-changelog-github"
   dependencies:
     "@changesets/get-github-info": "npm:0.7.0"
-    "@changesets/parse": "npm:0.4.2"
+    "@changesets/parse": "npm:0.4.3"
     "@changesets/types": "npm:6.1.0"
     ava: "npm:6.4.1"
     dotenv: "npm:17.2.3"
